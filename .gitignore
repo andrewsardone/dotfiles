@@ -1,5 +1,5 @@
-emacs.di/auto-save-list/
+emacs.di/auto-save-list/*
 emacs.d/loaddefs.el*
-emacs.d/backups
+emacs.d/backups/*
 emacs.d/places
 *elc
