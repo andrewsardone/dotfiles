@@ -1,4 +1,5 @@
-loaddefs.el*
-backups/*
+emacs.di/auto-save-list
+emacs.d/loaddefs.el*
+emacs.d/backups
+emacs.d/places
 *elc
-places
