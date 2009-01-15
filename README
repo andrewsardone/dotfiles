@@ -1,0 +1,6 @@
+Inspired by others to put my dot files under git's control.
+
+Currently takes advantage of symlinking.
+
+TODO write script to automate "deployment" (i.e., symlinking)
+TODO write better README
