@@ -1,0 +1,44 @@
+LC_ALL=en_US.UTF-8
+
+IP_ADDRESS=`ifconfig en0 inet | tail -1 | cut -f 2 -d ' '`
+
+PATH=$PATH:$HOME/bin:/usr/local/bin
+
+if [ -f $HOME/.alias.custom ]; then
+   . $HOME/.alias.custom
+fi
+
+if [ -f $HOME/.atyponrc ]; then
+   . $HOME/.atyponrc
+fi
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+   . /etc/bashrc
+fi
+
+DYLD_LIBRARY_PATH=${DYLD_LIBRARY_PATH}
+export DYLD_LIBRARY_PATH
+
+export LC_ALL PATH IP_ADDRESS
+
+# Shell Color
+CLICOLOR="YES"; export CLICOLOR
+# Magenta directories
+#LSCOLORS="fxgxcxdxbxegedabagacad"
+# Green and Gold
+LSCOLORS="dxfxcxdxbxegedabagacad"
+export LSCOLORS
+
+#export PS1='\[\e[0;36m\][\u@\h \W]\$\[\e[0m\] '
+export export PS1='\[\e[0;36m\][\h:\W]\$\[\e[0m\] '
+
+# lesspipe-1.55
+LESSOPEN="|/usr/local/bin/lesspipe.sh %s"; export LESSOPEN
+
+# Terminal Window Title
+export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}: ${PWD/#$HOME/~}\007"'
+
+# Default options for the zip command
+# zip ZIPOPTS archive.zip source
+ZIPOPT="-rug"; export ZIPOPT

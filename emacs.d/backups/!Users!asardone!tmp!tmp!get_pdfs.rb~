@@ -1,0 +1,157 @@
+#!/usr/bin/env jruby 
+# == Synopsis 
+#   Download random article PDFs for a given list of issue DOIs
+# == Examples
+#   get_pdfs dois.lst
+#
+#   Other examples:
+#     get_pdfs -d database.yml dois.lst
+# == Usage 
+#   get_pdfs [options] source_dois_file
+#
+#   For help use: get_pdfs -h
+# == Options
+#   -h, --help          Displays help message
+#   -v, --version       Display the version, then exit
+#   -V, --verbose       Verbose output
+#   -d, --database      Use a yaml database configuration
+
+require 'optparse' 
+require 'rdoc/usage'
+require 'ostruct'
+require 'date'
+require 'net/http'
+require 'rubygems'
+require 'java'
+require 'active_record'
+require 'jdbc_adapter'
+
+class App
+  VERSION = '0.0.1'
+  
+  attr_reader :options
+
+  def initialize(arguments, stdin)
+    @arguments = arguments
+    @stdin = stdin
+    
+n    # Set defaults
+    @options = OpenStruct.new
+    @options.verbose = false
+    @options.quiet = false
+ ƒƒƒƒƒƒƒ   @options.database = false
+  end
+
+  # Parse options, check arguments, then process the command
+  def run
+    if parsed_options? && arguments_valid? 
+      
+      puts "Start at #{DateTime.now}\n\n" if @options.verbose
+      
+      output_options if @options.verbose
+            
+      process_arguments            
+      process_command
+      
+      puts "\nFinished at #{DateTime.now}" if @options.verbose
+      
+    else
+      output_usage
+    end
+  end
+  
+  protected
+    def parsed_options?
+      
+      # Specify options
+      opts = OptionParser.new 
+      opts.on('-v', '--version')    { output_version ; exit 0 }
+      opts.on('-h', '--help')       { output_help }
+      opts.on('-V', '--verbose')    { @options.verbose = true }  
+      opts.on('-q', '--quiet')      { @options.quiet = true }
+      opts.on('-d', '--database')   { @options.database = true }
+            
+      opts.parse!(@arguments) rescue return false
+      
+      process_options
+      true      
+    end
+
+    # Performs post-parse processing on options
+    def process_options
+      @options.verbose = false if @options.quiet
+    end
+    
+    def output_options
+      puts "Options:\n"
+      
+      @options.marshal_dump.each do |name, val|        
+        puts "  #{name} = #{val}"
+      end
+    end
+
+    # True if required arguments were provided
+    def arguments_valid?
+      # TO DO - implement
+    end
+  
+    def process_arguments
+      #TO DO - place in local vars, etc
+    end
+
+
+    # Setup the arguments
+    def process_arguments
+      # TO DO - place in local vars, etc
+    end
+    
+    def output_help
+      output_version
+      RDoc::usage() #exits app
+    end
+    
+    def output_usage
+      RDoc::usage('usage') # gets usage from comments above
+    end
+    
+    def output_version
+      puts "#{File.basename(__FILE__)} version #{VERSION}"
+    end
+    
+    def process_command
+      # TO DO - do whatever this app does
+      puts "hello world"
+      
+      #process_standard_input # [Optional]
+    end
+
+    def process_standard_input
+      input = @stdin.read      
+      # TO DO - process input
+      
+      # [Optional]
+      # @stdin.each do |line| 
+      #  # TO DO - process each line
+      #end
+    end
+end
+
+class Issue < ActiveRecord::Base
+  set_table_name "ISSUE_META"
+  set_primary_key "ISSUEID"
+  #has_many :articlemeta
+  
+  def self.find_by_doi(doi)
+    doi_for_query = "%" + doi
+    Issue.find(:first, :readonly, :conditions => ["PATH LIKE ?", doi_for_query])
+  end
+  
+  def random_article_id()
+    ids = connection.select_all("SELECT ARTICLEID FROM ARTICLE_META WHERE ISSUEID = #{issueid}")
+    random_article_id = ids[rand(ids.length)]["articleid"]
+  end
+end
+
+# Create and run the application
+app = App.new(ARGV, STDIN)
+app.run

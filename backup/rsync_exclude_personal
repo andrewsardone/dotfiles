@@ -1,0 +1,33 @@
+.Trash
+.svn
+apps/
+deployconf.xml
+Developer/CHCR/*
+Developer/tmp/*
+Developer/Virtualization/*
+Documents/CHCR/*
+Documents/Microsoft\ User\ Data/*
+Downloads/*
+engines
+Library/Address\ Book\ Plug-Ins
+Library/Application\ Support/Adobe/
+Library/Application\ Support/Google
+Library/Application\ Support/Microsoft/
+Library/Application\ Support/MobileSync/
+Library/Application\ Support/SyncServices/
+Library/Caches/*
+Library/Fonts\ Disabled/*
+Library/iTunes/*
+Library/Logs/*
+Library/Mail/IMAP-office\asardone@imap3.jstor.org/
+Library/Mail/IMAP-sardone@mail.umich.edu/
+Library/Mail/Mailboxes/
+Library/Mail\ Downloads/
+Library/VirtualBox/*
+logs
+Music/iTunes/iTunes\ Music/*
+Pictures/iPhoto\ Library/*
+publisher
+servers
+source
+tmp/Do\ Not\ Backup/*

@@ -1,0 +1,14 @@
+;; Emacs-W3 HTTP cookies file
+;; Automatically generated file!!! DO NOT EDIT!!!
+
+(setq url-cookie-storage
+ '((".facebook.com"
+  [cookie "datr" "1231866894-b32b611d02325037ea25e35f1bb7c330a51ae805875cb4345e3f5" "12-Feb-2009 17:14:54.00 GMT" "/" ".facebook.com" nil]))
+)
+(setq url-cookie-secure-storage
+ 'nil)
+
+;; Local Variables:
+;; version-control: never
+;; no-byte-compile: t
+;; End:

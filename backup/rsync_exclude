@@ -1,0 +1,25 @@
+.Trash
+.svn
+Developer/CHCR/*
+Developer/tmp/*
+Developer/Virtualization/*
+Documents/CHCR/*
+Documents/Microsoft\ User\ Data/*
+Downloads/*
+Library/Acrobat\ User\ Data/*
+Library/Application\ Support/Adobe/*
+Library/Application\ Support/Microsoft/*
+Library/Application\ Support/MobileSync/*
+Library/Application\ Support/SyncServices/*
+Library/Application\ Support/TechSmith/*
+Library/Caches/*
+Library/Fonts\ Disabled/*
+Library/iTunes/*
+Library/Logs/*
+Library/Mail/IMAP-sardone@mail.umich.edu/*
+Library/Mail/Mailboxes/*
+Library/Mail\ Downloads/*
+Library/VirtualBox/*
+Pictures/iPhoto\ Library/*
+Music/iTunes/iTunes\ Music/*
+tmp/Do\ Not\ Backup/*
