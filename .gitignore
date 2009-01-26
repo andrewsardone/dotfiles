@@ -1,3 +1,4 @@
+# Project specific ignores
 emacs.di/auto-save-list/*
 emacs.d/loaddefs.el*
 emacs.d/backups/*
