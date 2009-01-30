@@ -131,8 +131,11 @@
 (server-start)
 
 ;; Objective-J syntax highlighting
-;; (setq auto-mode-alist
-;;      (append '(("\\.j$" . objc-mode))))
+;; This is really just a hack, since I'm setting Objective-J files to
+;; open in Objective-c mode
+(setq auto-mode-alist
+      (cons '("\\.j$" . objc-mode) auto-mode-alist))
+
 
 ;; Experimentation
 ;; TODO Move to separate theme file.
@@ -155,6 +158,8 @@
 ;; (color-theme-snowish)
 ;; (color-theme-blackboard)
 ;; (color-theme-zenburn)
-(color-theme-charcoal-black)
+;; (color-theme-charcoal-black)
+(color-theme-wunki)
+;; (color-theme-arjen)
 
 (provide 'andrew)
