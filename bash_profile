@@ -42,3 +42,7 @@ export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}: ${PWD/#$HOME/~}
 # Default options for the zip command
 # zip ZIPOPTS archive.zip source
 ZIPOPT="-rug"; export ZIPOPT
+
+# Objective-J / Cappuccino
+export OBJJ_HOME="/usr/local/share/objj"
+export STEAM_BUILD="$HOME/build/objj"
