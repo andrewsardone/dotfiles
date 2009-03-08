@@ -159,7 +159,8 @@
 ;; (color-theme-blackboard)
 ;; (color-theme-zenburn)
 ;; (color-theme-charcoal-black)
-(color-theme-wunki)
+;; (color-theme-wunki)
 ;; (color-theme-arjen)
+(color-theme-sunburst)
 
 (provide 'andrew)
