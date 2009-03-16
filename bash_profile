@@ -22,6 +22,17 @@ export DYLD_LIBRARY_PATH
 
 export LC_ALL PATH IP_ADDRESS
 
+export PATH=/opt/local/bin:$PATH
+
+# User Installed Shared Developer libraries
+export SHARED_DEV_LIB=/Users/Shared/Developer/lib
+
+# JRuby
+export JRUBY_HOME=$SHARED_DEV_LIB/jruby/current
+export JRUBY_BIN=$JRUBY_HOME/bin
+export PATH=$PATH:$JRUBY_BIN
+export CLASSPATH=$CLASSPATH:`find -L $JRUBY_HOME/lib -name '*.jar'|tr '\n' ':'`.
+
 # Shell Color
 CLICOLOR="YES"; export CLICOLOR
 # Magenta directories
@@ -42,3 +53,7 @@ export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}: ${PWD/#$HOME/~}
 # Default options for the zip command
 # zip ZIPOPTS archive.zip source
 ZIPOPT="-rug"; export ZIPOPT
+
+# Objective-J / Cappuccino
+export OBJJ_HOME="/usr/local/share/objj"
+export STEAM_BUILD="$HOME/build/objj"

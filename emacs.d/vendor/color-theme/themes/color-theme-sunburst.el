@@ -2,7 +2,7 @@
   "Color theme by dngpng, created 2007-09-11."
   (interactive)
   (color-theme-install
-   '(color-theme-tm
+   '(color-theme-sunburst
      ((background-color . "#111")
       (background-mode . dark)
       (border-color . "#111")
