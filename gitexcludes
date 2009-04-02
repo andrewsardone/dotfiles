@@ -2,7 +2,8 @@
 *.swp
 *~.nib
 
-build
+Build/
+build/
 
 *.pbxuser
 *.perspective
