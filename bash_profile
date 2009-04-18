@@ -50,7 +50,7 @@ LESSOPEN="|/usr/local/bin/lesspipe.sh %s"; export LESSOPEN
 # Terminal Window Title
 export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}: ${PWD/#$HOME/~}\007"'
 
-export EDITOR="mate -w"
+# export EDITOR="mate -w"
 
 # Default options for the zip command
 # zip ZIPOPTS archive.zip source
