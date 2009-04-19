@@ -1,6 +1,9 @@
 ; no splash screen
 (setq inhibit-startup-screen t)
 
+; no toolbar
+(tool-bar-mode 0)
+
 ; show column number
 (column-number-mode 1)
 
