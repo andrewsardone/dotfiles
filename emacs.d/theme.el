@@ -1,10 +1,10 @@
 (setq load-path (cons "~/.emacs.d/vendor/color-theme-6.6.0" load-path))
+;;(add-to-list 'load-path (concat dotfiles-dir "~/emacs.d/vendor/themes"))
 (require 'color-theme)
 (color-theme-initialize)
 (setq color-theme-is-global t)
 
-;; (load "~/.emacs.d/vendor/color-theme-ir-black")
-;; (color-theme-ir-black)
+(color-theme-railscasts)
 
 (setq mac-allow-anti-aliasing t)
 
