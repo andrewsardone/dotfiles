@@ -8,8 +8,6 @@
 (setq vendor-dir (concat dotfiles-dir "vendor"))
 (add-to-list 'load-path vendor-dir)
 
-
-
 (require 'global)
 (require 'defuns)
 (require 'bindings)
@@ -26,5 +24,12 @@
      (expand-file-name "~/.emacs.d/elpa/package.el"))
   (package-initialize))
 
-(provide 'init)
+;; Interactively Do Things (highly recommended, but not strictly required)
+(require 'ido)
+(ido-mode t)
 
+;; Rinari
+(add-to-list 'load-path "~/.emacs.d/vendor/rinari")
+(require 'rinari)
+
+(provide 'init)
