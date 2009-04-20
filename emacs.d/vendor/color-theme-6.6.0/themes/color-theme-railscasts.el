@@ -1,3 +1,7 @@
+;;; Built off of Josh Peek's original recreation of the TextMate
+;;; Railscasts' theme.
+;;; http://bit.ly/12ewuf
+
 (defun color-theme-railscasts ()
   (interactive)
   (color-theme-install
