@@ -4,6 +4,9 @@
 ; no toolbar
 (tool-bar-mode 0)
 
+; OS X Shortcut Keys
+(mac-key-mode)
+
 ; show column number
 (column-number-mode 1)
 
