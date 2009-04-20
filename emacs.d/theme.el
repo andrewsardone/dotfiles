@@ -14,6 +14,6 @@
 	(width . 145) (height . 50)))
 
 ; font
-(set-face-font 'default "-apple-monaco-medium-r-normal--12-120-72-72-m-120-iso10646-1")
+(set-face-font 'default "-apple-monaco-medium-r-normal--13-130-72-72-m-130-iso10646-1")
 
 (provide 'theme)
