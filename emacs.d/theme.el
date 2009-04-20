@@ -11,7 +11,7 @@
 ; window size and position
 (setq initial-frame-alist
       '((left . 30) (top . 40)
-	(width . 135) (height . 60)))
+	(width . 145) (height . 50)))
 
 ; font
 (set-face-font 'default "-apple-monaco-medium-r-normal--12-120-72-72-m-120-iso10646-1")
