@@ -22,4 +22,9 @@
       (find-file (concat "/sudo:root@localhost:" (ido-read-file-name "File: ")))
     (find-alternate-file (concat "/sudo:root@localhost:" buffer-file-name))))
 
+(defun markdown-custom ()
+  "markdown-mode-hook"
+  (longlines-mode))
+(add-hook 'markdown-mode-hook '(lambda() (markdown-custom)))
+
 (provide 'defuns)
