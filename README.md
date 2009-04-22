@@ -12,6 +12,14 @@ This is my emacs configuration, mainly targeted at Carbon Emacs. It's focused on
         git clone git://github.com/andrewsardone/emacs.git
         ./symlinker.sh
 
+3. I use the [Rinari](http://rinari.rubyforge.org/), a Ruby on Rails Minor Mode for Emacs, and have it included as a git submodule. You'll need pull down the Rinari submodule and its submodules (jump.el and ert.git)
+
+        git submodule init
+        git submodule update
+        cd emacs.d/vendor/rinari
+        git submodule init
+        git submodule update
+
 ## TODO
 
 ## ELPA
