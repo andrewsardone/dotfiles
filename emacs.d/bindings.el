@@ -4,6 +4,6 @@
 (global-set-key "\C-x\C-i" 'ido-imenu)
 
 ; fuzzy matching
-(global-set-key "\C-t" 'fuzzy-find-in-project)
+(global-set-key "\M-f" 'fuzzy-find-in-project)
 
 (provide 'bindings)
