@@ -9,7 +9,7 @@ This is my emacs configuration, mainly targeted at Carbon Emacs. It's focused on
    Otherwise, use your OS's available package manager.
 2. Clone the my emacs repository and run `symlinker.sh` to symlink the `.emacs.d` directory in your home folder.
 
-        git clone git://github.com:andrewsardone/emacs.git
+        git clone git://github.com/andrewsardone/emacs.git
         ./symlinker.sh
 
 ## TODO
