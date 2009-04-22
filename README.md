@@ -1,6 +1,6 @@
 # Emacs Configuration
 
-My emacs configuration, mainly targeted at Carbon Emacs. It's focused on being light, simple and consistent with GNU Emacs and Mac OS X's normal functionality with an emphasis on dynamic languages.
+This is my emacs configuration, mainly targeted at Carbon Emacs. It's focused on being light, simple and consistent with GNU Emacs and Mac OS X's normal functionality with an emphasis on dynamic languages.
 
 ## Installation
 
