@@ -1,3 +1,6 @@
 [submodule "emacs.d/vendor/rinari"]
 	path = emacs.d/vendor/rinari
 	url = git://github.com/eschulte/rinari.git
+[submodule "emacs.d/vendor/fuzzy-find-in-project"]
+	path = emacs.d/vendor/fuzzy-find-in-project
+	url = git://github.com/avvo/fuzzy-find-in-project.git

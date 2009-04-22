@@ -32,4 +32,10 @@
 (add-to-list 'load-path "~/.emacs.d/vendor/rinari")
 (require 'rinari)
 
+;; fuzzy-find-in-project
+;; When in a new project directory, set the project root:
+;;   (fuzzy-find-project-root "~/path/to/project")
+(add-to-list 'load-path "~/.emacs.d/vendor/fuzzy-find-in-project")
+(require 'fuzzy-find-in-project)
+
 (provide 'init)
