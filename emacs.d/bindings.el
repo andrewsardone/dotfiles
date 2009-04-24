@@ -3,7 +3,10 @@
 ;; Jump to a definition in the current file.
 (global-set-key "\C-x\C-i" 'ido-imenu)
 
-; fuzzy matching
+; fuzzy matching / file finding
 (global-set-key "\M-f" 'fuzzy-find-in-project)
+
+;; Completion that uses many different methods to find options.
+(global-set-key (kbd "C-'") 'dabbrev-expand)
 
 (provide 'bindings)
