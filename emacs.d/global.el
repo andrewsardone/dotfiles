@@ -23,7 +23,7 @@
 (prefer-coding-system 'utf-8)
 
 ; no tabs
-(setq indent-tabs-mode nil)
+(setq-default indent-tabs-mode nil)
 
 
 (provide 'global)
