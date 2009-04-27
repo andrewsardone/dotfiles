@@ -6,6 +6,7 @@
 (add-to-list 'load-path dotfiles-dir)
 (setq custom-file (concat dotfiles-dir "custom.el"))
 (setq vendor-dir (concat dotfiles-dir "vendor"))
+(setq ext-dir (concat dotfiles-dir "ext"))
 (add-to-list 'load-path vendor-dir)
 
 (require 'global)
@@ -13,6 +14,10 @@
 (require 'bindings)
 (require 'modes)
 (require 'theme)
+
+;; Language specific stuff
+(require 'ruby)
+(require 'misc)
 
 ;;; Installed by package-install.el.
 ;;; This provides support for the package system and
