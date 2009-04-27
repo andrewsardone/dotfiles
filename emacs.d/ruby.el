@@ -52,5 +52,12 @@ exec-to-string command, but it works and seems fast"
 
 (add-hook 'ruby-mode-hook 'coding-hook)
 
+(require 'ruby-electric)
+
+(defun ruby-custom ()
+  "ruby-mode-hook"
+  (ruby-electric-mode))
+(add-hook 'ruby-mode-hook '(lambda() (ruby-custom)))
+
 (provide 'ruby)
 ;; ruby.el ends here
