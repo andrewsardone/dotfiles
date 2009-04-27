@@ -65,19 +65,19 @@
 is to be inserted."
   :type 'regexp :group 'ruby-electric)
 
-(defcustom ruby-electric-expand-delimiters-list '(all)
-  "*List of contexts where matching delimiter should be
-inserted. The word 'all' will do all insertions."
-  :type '(set :extra-offset 8
-	      (const :tag "Everything" all )
-	      (const :tag "Curly brace" ?\{ )
-	      (const :tag "Square brace" ?\[ )
-	      (const :tag "Round brace" ?\( )
-	      (const :tag "Quote" ?\' )
-	      (const :tag "Double quote" ?\" )
-	      (const :tag "Back quote" ?\` )
-	      (const :tag "Veritcal bar" ?\| ))
-  :group 'ruby-electric) 
+;; (defcustom ruby-electric-expand-delimiters-list '(all)
+;;   "*List of contexts where matching delimiter should be
+;; inserted. The word 'all' will do all insertions."
+;;   :type '(set :extra-offset 8
+;; 	      (const :tag "Everything" all )
+;; 	      (const :tag "Curly brace" ?\{ )
+;; 	      (const :tag "Square brace" ?\[ )
+;; 	      (const :tag "Round brace" ?\( )
+;; 	      (const :tag "Quote" ?\' )
+;; 	      (const :tag "Double quote" ?\" )
+;; 	      (const :tag "Back quote" ?\` )
+;; 	      (const :tag "Veritcal bar" ?\| ))
+;;   :group 'ruby-electric) 
 
 (defcustom ruby-electric-newline-before-closing-bracket nil
   "*Controls whether a newline should be inserted before the
