@@ -10,7 +10,7 @@
 
 ; window size and position
 (setq initial-frame-alist
-      '((left . 30) (top . 40)
+      '((left . 30) (top . 24)
 	(width . 145) (height . 50)))
 
 ; font
