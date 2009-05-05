@@ -25,5 +25,6 @@
 ; no tabs
 (setq-default indent-tabs-mode nil)
 
+(setenv "PATH" (concat "/usr/local/git/bin/" ":" (getenv "PATH")))
 
 (provide 'global)
