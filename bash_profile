@@ -41,8 +41,7 @@ CLICOLOR="YES"; export CLICOLOR
 LSCOLORS="dxfxcxdxbxegedabagacad"
 export LSCOLORS
 
-#export PS1='\[\e[0;36m\][\u@\h \W]\$\[\e[0m\] '
-export export PS1='\[\e[0;36m\][\h:\W]\$\[\e[0m\] '
+export PS1='[\u:\W]$ '
 
 # lesspipe-1.55
 LESSOPEN="|/usr/local/bin/lesspipe.sh %s"; export LESSOPEN
