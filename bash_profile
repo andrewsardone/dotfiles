@@ -1,7 +1,5 @@
 LC_ALL=en_US.UTF-8
 
-IP_ADDRESS=`ifconfig en0 inet | tail -1 | cut -f 2 -d ' '`
-
 PATH=$PATH:$HOME/bin:/usr/local/bin
 source ~/.git-completion.sh
 
