@@ -5,7 +5,7 @@ This is my emacs configuration, mainly targeted at Carbon Emacs. It's focused on
 ## Installation
 
 1. Install Emacs, version >= 22.
-   On the Mac, I suggest [Carbon Emacs](http://homepage.mac.com/zenitani/emacs-e.html)
+   On the Mac, I suggest [Carbon Emacs](http://homepage.mac.com/zenitani/emacs-e.html) (more stable) or a nightly build of [Cocoa Emacs 23](http://atomized.org/wp-content/cocoa-emacs-nightly/) (more cutting edge).
    Otherwise, use your OS's available package manager.
 2. Clone the my emacs repository and run `symlinker.sh` to symlink the `.emacs.d` directory in your home folder.
 
