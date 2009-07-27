@@ -3,6 +3,8 @@ LC_ALL=en_US.UTF-8
 PATH=$PATH:$HOME/bin:/usr/local/bin
 source ~/.git-completion.sh
 
+export VISUAL="open -a Emacs.app"
+
 if [ -f $HOME/.alias.custom ]; then
    . $HOME/.alias.custom
 fi

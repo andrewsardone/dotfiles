@@ -9,3 +9,4 @@
 	token = 97b14bc57a893fe2b5bee78f920f4658
 [core]
 	excludesfile = /Users/andrew/.gitexcludes
+        editor = vi
