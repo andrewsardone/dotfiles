@@ -122,6 +122,12 @@ strings. Note that you must have Font Lock enabled."
 	(newline)
 	(ruby-insert-end))))
 
+(defun ruby-insert-end ()
+  (interactive)
+  (insert "end")
+  (ruby-indent-line t)
+  (end-of-line))
+
 (defun ruby-electric-code-at-point-p()
   (and ruby-electric-mode
        (let* ((properties (text-properties-at (point))))
