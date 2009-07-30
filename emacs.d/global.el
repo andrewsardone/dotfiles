@@ -4,6 +4,9 @@
 ; no toolbar
 (tool-bar-mode 0)
 
+; emacs server
+(server-start)
+
 ; OS X Shortcut Keys
 ; (mac-key-mode)
 
