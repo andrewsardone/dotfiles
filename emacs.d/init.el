@@ -43,4 +43,11 @@
 (add-to-list 'load-path "~/.emacs.d/vendor/fuzzy-find-in-project")
 (require 'fuzzy-find-in-project)
 
+;; yasnippet
+;; http://yasnippet.googlecode.com/svn/trunk/doc/index.html
+(add-to-list 'load-path "~/.emacs.d/vendor/yasnippet-0.6.0c")
+(require 'yasnippet)
+(yas/initialize)
+(yas/load-directory "~/.emacs.d/vendor/yasnippet-0.6.0c/snippets")
+
 (provide 'init)
