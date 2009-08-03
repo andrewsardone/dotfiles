@@ -1,6 +1,17 @@
 alias ls="/bin/ls -G"
 alias chmod="/bin/chmod"
-alias eclipse="/Users/asardone/Applications/eclipse34/eclipse &"
 alias dock2d="defaults write com.apple.dock no-glass -boolean YES; killall Dock"
 alias dock3d="defaults write com.apple.dock no-glass -boolean NO; killall Dock"
 alias emacs="open -a Emacs.app"
+
+# alternative to "rails" command to use templates
+# Grabbed from ryanb's dotfiles
+#  http://github.com/ryanb/dotfiles/tree/master
+# 
+# $ railsapp simple_haml_git mynewapp
+function railsapp {
+  template=$1
+  appname=$2
+  shift 2
+  rails $appname -m http://github.com/andrewsardone/rails-templates/raw/master/$template.rb $@
+}

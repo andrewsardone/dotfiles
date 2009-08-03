@@ -1,0 +1,2 @@
+export PATH=$HOME/bin:/usr/local/bin:/opt/local/bin:$JRUBY_BIN:$PATH
+export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
