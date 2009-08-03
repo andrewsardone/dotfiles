@@ -1,4 +1,6 @@
 .DS_Store
+.svn
+*~
 *.swp
 *~.nib
 
