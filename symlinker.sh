@@ -1,3 +1,6 @@
+# DEPRECATED
+# Use `rake install`
+
 DIR="$PWD"
 pushd $DIR
 for f in *; do
