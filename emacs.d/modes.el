@@ -19,4 +19,7 @@
 (setq auto-mode-alist
    (cons '("\\.sass" . sass-mode) auto-mode-alist))
 
+; YAML
+(add-to-list 'auto-mode-alist '("\\.yml" . yaml-mode))
+
 (provide 'modes)

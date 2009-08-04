@@ -37,6 +37,10 @@
 (add-to-list 'load-path "~/.emacs.d/vendor/rinari")
 (require 'rinari)
 
+;; yaml-mode
+(add-to-list 'load-path "~/.emacs.d/vendor/yaml-mode.el")
+(require 'yaml-mode)
+
 ;; fuzzy-find-in-project
 ;; When in a new project directory, set the project root:
 ;;   (fuzzy-find-project-root "~/path/to/project")
