@@ -11,6 +11,6 @@ if [ -f ~/.localrc ]; then
   . ~/.localrc
 fi
 
-if [ -f /etc/bashrc ]; then
-   . /etc/bashrc
-fi
+# if [ -f /etc/bashrc ]; then
+#    . /etc/bashrc
+# fi
