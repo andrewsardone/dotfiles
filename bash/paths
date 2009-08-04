@@ -1,2 +1,2 @@
-export PATH=$HOME/bin:/usr/local/bin:/opt/local/bin:$JRUBY_BIN:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/opt/local/bin:$PATH:$JRUBY_BIN
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
