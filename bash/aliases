@@ -1,4 +1,4 @@
-alias ls="/bin/ls -G"
+# alias ls="/bin/ls -G"
 alias chmod="/bin/chmod"
 alias dock2d="defaults write com.apple.dock no-glass -boolean YES; killall Dock"
 alias dock3d="defaults write com.apple.dock no-glass -boolean NO; killall Dock"

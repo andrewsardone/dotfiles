@@ -1,9 +1,9 @@
 # Shell Style
-CLICOLOR="YES"; export CLICOLOR
+# CLICOLOR="YES"; export CLICOLOR
 # Magenta directories
-#LSCOLORS="fxgxcxdxbxegedabagacad"
-# Green and Gold
-LSCOLORS="dxfxcxdxbxegedabagacad"
+# LSCOLORS="fxgxcxdxbxegedabagacad"
+# # Green and Gold
+# LSCOLORS="dxfxcxdxbxegedabagacad"
 export LSCOLORS
 export PS1="\w$ "
 
