@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 DIR="$PWD"
 pushd $DIR
 for f in *; do
