@@ -22,4 +22,11 @@
 ; YAML
 (add-to-list 'auto-mode-alist '("\\.yml" . yaml-mode))
 
+; magit
+;; Use auto-fill minor mode within magit-log-edit-mode
+;; Set textwidth to 72 characters, keeping with git 
+;; best practices (see http://www.tpope.net/node/106)
+(setq-default fill-column 72)
+(add-hook 'magit-log-edit-mode-hook 'turn-on-auto-fill)
+
 (provide 'modes)
