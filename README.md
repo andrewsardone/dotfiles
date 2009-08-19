@@ -8,7 +8,7 @@ This is my emacs configuration, mainly targeted at Cocoa Emacs. It's focused on 
    On the Mac, I suggest downloading the [latest source](http://ftp.gnu.org/pub/gnu/emacs/) and building (see nextstep/INSTALL for Mac OS X instructions), or grabbing a [nightly build](http://atomized.org/wp-content/cocoa-emacs-nightly/) (more cutting edge).
 
    Otherwise, use your OS's available package manager.
-2. Clone the my emacs repository and run `symlinker.sh` to symlink the `.emacs.d` directory in your home folder.
+2. Clone the my emacs repository and run `install` to symlink the `.emacs.d` directory in your home folder.
 
         git clone git://github.com/andrewsardone/emacs.git
         ./install
