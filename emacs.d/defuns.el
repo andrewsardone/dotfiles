@@ -61,4 +61,13 @@
            (position (cdr (assoc selected-symbol name-and-pos))))
       (goto-char position))))
 
+(defun run-coding-hook ()
+  "Enable things that are convenient across all coding buffers."
+  (run-hooks 'coding-hook))
+
+(defun coding-custom ()
+  "coding-hook"
+  (linum-mode))
+(add-hook 'coding-hook '(lambda() (coding-custom)))
+
 (provide 'defuns)

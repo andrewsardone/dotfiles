@@ -7,4 +7,7 @@
   (setenv "PATH" (concat "/opt/local/bin:/usr/local/bin:" (getenv "PATH")))
   (push "/opt/local/bin" exec-path))
 
+(defvar coding-hook nil
+  "Hook that gets run on activation of any programming mode.")
+
 (provide 'misc)

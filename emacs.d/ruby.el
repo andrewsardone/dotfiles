@@ -50,7 +50,7 @@ exec-to-string command, but it works and seems fast"
              (delete-region (point-min) (point-max))))))
      (ad-activate 'ruby-do-run-w/compilation)))
 
-(add-hook 'ruby-mode-hook 'coding-hook)
+(add-hook 'ruby-mode-hook 'run-coding-hook)
 
 (require 'ruby-electric)
 
