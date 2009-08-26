@@ -31,4 +31,6 @@
 (setq-default fill-column 72)
 (add-hook 'magit-log-edit-mode-hook 'turn-on-auto-fill)
 
+(add-hook 'emacs-lisp-mode-hook 'run-coding-hook)
+
 (provide 'modes)
