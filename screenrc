@@ -1,0 +1,12 @@
+
+# .screenrc
+# Basic
+vbell           on
+defscrollback   10000
+autodetach      on
+
+# status
+hardstatus alwayslastline "%{= kw}%{g}[ %{R}%H %{g}] %{Y} %{g}[%=%{ =kw}%{w}%-w%{Y}[%{W}%n-%t%{Y}]%{w}%+w%=%{g}][ %{w}%m-%d %{Y}%c %{g}]"
+
+# add caption
+caption splitonly "%{= kw}%?%-Lw%?%{kw}%n*%t%f %?(%u)%?%{= kw}%?%+Lw%?"
