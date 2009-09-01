@@ -14,13 +14,13 @@ export VISUAL="open -a Emacs.app"
 
 export DYLD_LIBRARY_PATH=${DYLD_LIBRARY_PATH}
 
-# User Installed Shared Developer libraries
-export SHARED_DEV_LIB=/Users/Shared/Developer/lib
+# User Installed Shared Developer libraries on Mac OS X
+# export SHARED_DEV_LIB=/Users/Shared/Developer/lib
 
 # JRuby
-export JRUBY_HOME=$SHARED_DEV_LIB/jruby/current
-export JRUBY_BIN=$JRUBY_HOME/bin
-export CLASSPATH=$CLASSPATH:`find -L $JRUBY_HOME/lib -name '*.jar'|tr '\n' ':'`.
+# export JRUBY_HOME=$SHARED_DEV_LIB/jruby/current
+# export JRUBY_BIN=$JRUBY_HOME/bin
+# export CLASSPATH=$CLASSPATH:`find -L $JRUBY_HOME/lib -name '*.jar'|tr '\n' ':'`.
 
 # Terminal Window Title
 export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}: ${PWD/#$HOME/~}\007"'
