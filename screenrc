@@ -10,3 +10,6 @@ hardstatus alwayslastline "%{= kw}%{g}[ %{R}%H %{g}] %{Y} %{g}[%=%{ =kw}%{w}%-w%
 
 # add caption
 caption splitonly "%{= kw}%?%-Lw%?%{kw}%n*%t%f %?(%u)%?%{= kw}%?%+Lw%?"
+
+# xterm scrollback
+termcapinfo xterm ti@:te@
