@@ -1,5 +1,7 @@
-
 # .screenrc
+# via fhsm on CrunchBang Linux forums
+# http://crunchbanglinux.org/forums/topic/2532/screenrc-files/
+
 # Basic
 vbell           on
 defscrollback   10000
