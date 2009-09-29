@@ -1,0 +1,14 @@
+#name : @implementation ... init ...
+# --
+@implementation ${1:ClassName}
+
+- (id)init
+{
+    if((self = [super init]))
+    {
+        $0
+    }
+    return self;
+}
+
+@end

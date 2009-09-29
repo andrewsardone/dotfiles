@@ -54,4 +54,9 @@
 (yas/initialize)
 (yas/load-directory "~/.emacs.d/vendor/yasnippet-0.6.0c/snippets")
 
+;; Obj-C / Obj-J
+(add-to-list 'load-path "/path/to/objc-c-mode.el")
+(add-to-list 'load-path "/path/to/objj-mode.el")
+(require 'objj-mode)
+
 (provide 'init)
