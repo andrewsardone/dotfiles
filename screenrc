@@ -14,3 +14,4 @@ caption splitonly "%{= kw}%?%-Lw%?%{kw}%n*%t%f %?(%u)%?%{= kw}%?%+Lw%?"
 
 # xterm scrollback
 termcapinfo xterm ti@:te@
+startup_message	off
