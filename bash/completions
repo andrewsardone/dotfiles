@@ -1,2 +1,7 @@
 source ~/.bash/completion_scripts/git-completion.sh
 complete -C ~/.bash/completion_scripts/rake_completion -o default rake
+
+if which brew > /dev/null; then
+  source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
+fi
+
