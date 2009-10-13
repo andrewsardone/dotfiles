@@ -4,4 +4,5 @@ tmp/
 emacs.d/auto-save-list/
 emacs.d/elpa/archive-contents
 emacs.d/elpa/builtin-packages
+emacs.d/tramp
 *.elc
