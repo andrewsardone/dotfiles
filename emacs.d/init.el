@@ -59,4 +59,8 @@
 (add-to-list 'load-path "/path/to/objj-mode.el")
 (require 'objj-mode)
 
+;; anything
+(add-to-list 'load-path "~/.emacs.d/vendor/anything.el")
+(require 'anything)
+
 (provide 'init)
