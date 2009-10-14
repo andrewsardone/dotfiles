@@ -63,4 +63,9 @@
 (add-to-list 'load-path "~/.emacs.d/vendor/anything.el")
 (require 'anything)
 
+;; ri-emacs
+(setq ri-ruby-script (expand-file-name "~/.emacs.d/vendor/ri-emacs/ri-emacs.rb"))
+;(load "~/.emacs.d/vendor/ri-emacs/ri-ruby.el")
+(autoload 'ri (expand-file-name "~/.emacs.d/vendor/ri-emacs/ri-ruby.el") nil t)
+
 (provide 'init)
