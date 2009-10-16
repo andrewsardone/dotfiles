@@ -4,7 +4,7 @@
 (color-theme-initialize)
 (setq color-theme-is-global t)
 
-(color-theme-railscasts)
+(color-theme-twilight)
 
 (setq mac-allow-anti-aliasing t)
 
