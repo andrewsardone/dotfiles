@@ -4,6 +4,7 @@ alias dock2d="defaults write com.apple.dock no-glass -boolean YES; killall Dock"
 alias dock3d="defaults write com.apple.dock no-glass -boolean NO; killall Dock"
 alias emacs="open -a Emacs.app"
 alias emacsclient="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -nw"
+alias mate="open -a TextMate.app"
 
 # alternative to "rails" command to use templates
 # Grabbed from ryanb's dotfiles
