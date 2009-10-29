@@ -5,6 +5,7 @@ alias dock3d="defaults write com.apple.dock no-glass -boolean NO; killall Dock"
 alias emacs="open -a Emacs.app"
 alias emacsclient="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -nw"
 alias mate="open -a TextMate.app"
+alias reload_textmate_bundles="osascript -e 'tell app \"TextMate\" to reload bundles'"
 
 # alternative to "rails" command to use templates
 # Grabbed from ryanb's dotfiles
