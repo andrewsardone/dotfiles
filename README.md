@@ -10,7 +10,7 @@ This is my emacs configuration, mainly targeted at Cocoa Emacs. It's focused on 
    Otherwise, use your OS's available package manager.
 2. Clone the my emacs repository and run `install` to symlink the `.emacs.d` directory in your home folder.
 
-        git clone git://github.com/andrewsardone/emacs.git
+        git clone git://github.com/andrewsardone/emacs-config.git
         ./install
 
 3. I use the [Rinari](http://rinari.rubyforge.org/), a Ruby on Rails Minor Mode for Emacs, and have it included as a git submodule. You'll need pull down the Rinari submodule and its submodules (jump.el and ert.git)
