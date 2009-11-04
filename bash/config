@@ -33,5 +33,5 @@ export RAILS_TEMPLATES=http://github.com/andrewsardone/rails-templates/raw/maste
 ZIPOPT="-rug"; export ZIPOPT
 
 # Objective-J / Cappuccino
-export CAPP_SRC="~/code/cappuccino"
+export CAPP_SRC="$HOME/code/cappuccino"
 export CAPP_BUILD="$CAPP_SRC/Build"
