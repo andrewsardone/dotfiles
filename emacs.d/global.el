@@ -2,7 +2,7 @@
 (setq inhibit-startup-screen t)
 
 ; no toolbar
-(tool-bar-mode 0)
+;; (tool-bar-mode 0)
 
 ; no menubar
 (menu-bar-mode 0)
