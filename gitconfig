@@ -2,8 +2,7 @@
 	name = Andrew Sardone
 	email = andrew.sardone@gmail.com
 [color]
-	status = auto
-	branch = auto
+	ui = auto
 [github]
 	user = andrewsardone
 	token = 97b14bc57a893fe2b5bee78f920f4658
@@ -12,4 +11,3 @@
     editor = vi
 [alias]
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
-	df = diff --color
