@@ -1,11 +1,11 @@
 # Emacs Configuration
 
-This is my emacs configuration, mainly targeted at Cocoa Emacs. It's focused on being light, simple and consistent with an emphasis on dynamic languages.
+This is my emacs configuration, targeted at the NeXTSTEP/Cocoa Emacs not built on top of Aqua. It's focused on being light, simple and consistent with an emphasis on dynamic languages.
 
 ## Installation
 
 1. Install Emacs, version >= 23.
-   On the Mac, I suggest downloading the [latest source](http://ftp.gnu.org/pub/gnu/emacs/) and building (see nextstep/INSTALL for Mac OS X instructions), or grabbing a [nightly build](http://atomized.org/wp-content/cocoa-emacs-nightly/) (more cutting edge).
+   I suggest you use [Homebrew](http://github.com/mxcl/homebrew) and install the included `emacs` formula.
 
    Otherwise, use your OS's available package manager.
 2. Clone the my emacs repository and run `install` to symlink the `.emacs.d` directory in your home folder.
