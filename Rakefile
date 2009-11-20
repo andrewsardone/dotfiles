@@ -1,6 +1,6 @@
 require 'rake'
 
-task :daemonize => [:check_sudo, :write_plist, :load]
+task :daemonize => [:write_plist, :load]
 
 task :check_sudo do
   unless `whoami`.chop == 'root'
@@ -11,7 +11,7 @@ end
 
 desc 'write a launchd plist to start an emacs daemon'
 task :write_plist do
-  @plist_path = '/Library/LaunchAgents/gnu.emacs.daemon.plist'
+  @plist_path = ENV['HOME'] + '/Library/LaunchAgents/gnu.emacs.daemon.plist'
   @plist_content = <<-EOS
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" 
