@@ -28,6 +28,7 @@
 ; no tabs
 (setq-default indent-tabs-mode nil)
 
-(setenv "PATH" (concat "/usr/local/git/bin/" ":" (getenv "PATH")))
+(setenv "PATH" (concat "/usr/local/homebrew/bin:" (getenv "PATH")))
+(push "/usr/local/homebrew/bin" exec-path)
 
 (provide 'global)
