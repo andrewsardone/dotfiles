@@ -1,0 +1,50 @@
+# GNU screen configuration file for a Rails project
+
+# Basic
+defscrollback   10000
+autodetach      on
+
+# status
+hardstatus alwayslastline "%{= kw}%{g}[ %{R}%H %{g}] %{Y} %{g}[%=%{ =kw}%{w}%-w%{Y}[%{W}%n-%t%{Y}]%{w}%+w%=%{g}][ %{w}%m-%d %{Y}%c %{g}]"
+
+# add caption
+caption splitonly "%{= kw}%?%-Lw%?%{kw}%n*%t%f %?(%u)%?%{= kw}%?%+Lw%?"
+
+# xterm scrollback
+termcapinfo xterm ti@:te@
+startup_message	off
+
+# Tell Screen to write its copy buffer to a temporary file (defaults to
+# /tmp/screen-exchange), and then send that file to `pbcopy`.
+# Bound the command to C-a b
+# http://www.samsarin.com/blog/2007/03/11/gnu-screen-working-with-the-scrollback-buffer/
+#
+# NOTE: This is Mac OS X specific
+bind b eval "writebuf" "exec sh -c 'pbcopy < /tmp/screen-exchange'"
+
+# Start four named windows
+#
+#   - window 0: the RAILS_ROOT directory
+#   - window 1: script/server
+#   - window 2: script/console
+#   - window 3: script/autospec
+#
+# Then, split the window horizontally with the RAILS_ROOT window on top and autospec
+# running on the bottom
+screen -t "src" 0
+
+screen -t "server" 1
+stuff "./script/server\012"
+
+screen -t "console" 2
+stuff "./script/console\012"
+
+split
+
+focus down
+
+screen -t "autospec" 3
+stuff "./script/autospec\012"
+
+focus top
+select 0
