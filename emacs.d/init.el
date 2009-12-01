@@ -68,4 +68,9 @@
 ;(load "~/.emacs.d/vendor/ri-emacs/ri-ruby.el")
 (autoload 'ri (expand-file-name "~/.emacs.d/vendor/ri-emacs/ri-ruby.el") nil t)
 
+;; cucumber-mode
+(add-to-list 'load-path "~/.emacs.d/vendor/cucumber-mode/feature-mode")
+(require 'feature-mode)
+(add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
+
 (provide 'init)
