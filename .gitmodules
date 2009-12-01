@@ -7,3 +7,6 @@
 [submodule "emacs.d/vendor/cucumber-mode"]
 	path = emacs.d/vendor/cucumber-mode
 	url = git://github.com/michaelklishin/cucumber.el.git
+[submodule "emacs.d/vendor/rspec-mode"]
+	path = emacs.d/vendor/rspec-mode
+	url = git://github.com/pezra/rspec-mode.git

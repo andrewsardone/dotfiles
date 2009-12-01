@@ -33,6 +33,14 @@
 (require 'ido)
 (ido-mode t)
 
+;;mode-compile
+(autoload 'mode-compile "mode-compile"
+ "Command to compile current buffer file based on the major mode" t)
+(global-set-key "\C-cc" 'mode-compile)
+(autoload 'mode-compile-kill "mode-compile"
+ "Command to kill a compilation launched by `mode-compile'" t)
+(global-set-key "\C-ck" 'mode-compile-kill)
+
 ;; Rinari
 (add-to-list 'load-path "~/.emacs.d/vendor/rinari")
 (require 'rinari)
@@ -73,4 +81,10 @@
 (require 'feature-mode)
 (add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
 
+;; rspec-mode
+(add-to-list 'load-path "~/.emacs.d/vendor/rspec-mode")
+(require 'rspec-mode)
+(add-to-list 'auto-mode-alist '("\\_spec.rb$" . rspec-mode))
+
 (provide 'init)
+
