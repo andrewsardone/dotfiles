@@ -17,3 +17,10 @@ function railsapp {
   shift 2
   rails $appname -m $RAILS_TEMPLATES/$template.rb $@
 }
+
+function torquebox {
+  export TORQUEBOX_HOME=/usr/local/torquebox/current
+  export JBOSS_HOME=$TORQUEBOX_HOME/jboss
+  export JRUBY_HOME=$TORQUEBOX_HOME/jruby
+  export PATH=$JRUBY_HOME/bin:$PATH
+}
