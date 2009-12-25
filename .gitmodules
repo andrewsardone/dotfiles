@@ -1,12 +1,12 @@
-[submodule "emacs.d/vendor/rinari"]
-	path = emacs.d/vendor/rinari
-	url = git://github.com/eschulte/rinari.git
-[submodule "emacs.d/vendor/fuzzy-find-in-project"]
-	path = emacs.d/vendor/fuzzy-find-in-project
-	url = git://github.com/avvo/fuzzy-find-in-project.git
-[submodule "emacs.d/vendor/cucumber-mode"]
-	path = emacs.d/vendor/cucumber-mode
-	url = git://github.com/michaelklishin/cucumber.el.git
-[submodule "emacs.d/vendor/rspec-mode"]
-	path = emacs.d/vendor/rspec-mode
-	url = git://github.com/pezra/rspec-mode.git
+[submodule "vendor/rinari"]
+        path = vendor/rinari
+        url = git://github.com/eschulte/rinari.git
+[submodule "vendor/fuzzy-find-in-project"]
+        path = vendor/fuzzy-find-in-project
+        url = git://github.com/avvo/fuzzy-find-in-project.git
+[submodule "vendor/cucumber-mode"]
+        path = vendor/cucumber-mode
+        url = git://github.com/michaelklishin/cucumber.el.git
+[submodule "vendor/rspec-mode"]
+        path = vendor/rspec-mode
+        url = git://github.com/pezra/rspec-mode.git
