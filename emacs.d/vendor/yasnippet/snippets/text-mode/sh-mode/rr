@@ -1,0 +1,7 @@
+#name : require root
+#group : misc
+# --
+if [[ $(/usr/bin/id -u) -ne 0 ]]; then
+  echo "${0:message}"
+  exit
+fi
