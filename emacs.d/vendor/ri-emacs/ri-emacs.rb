@@ -1,3 +1,5 @@
+#!/usr/bin/ruby
+
 ## ri-emacs.rb helper script for use with ri-ruby.el
 #
 # Author: Kristof Bastiaensen <kristof@vleeuwen.org>
