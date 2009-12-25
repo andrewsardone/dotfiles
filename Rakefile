@@ -14,10 +14,10 @@ task :write_plist do
   @plist_path = ENV['HOME'] + '/Library/LaunchAgents/gnu.emacs.daemon.plist'
   @plist_content = <<-EOS
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" 
-    "http://www.apple.com/DTDs/PropertyList-1.0.dtd"> 
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+    "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-  <dict> 
+  <dict>
     <key>Label</key>
     <string>gnu.emacs.daemon</string>
     <key>ProgramArguments</key>
@@ -42,4 +42,23 @@ desc 'load the plist into launchd'
 task :load do
   puts "\tRunning `launchctl load -w #{@plist_path}`"
   `launchctl load -w #{@plist_path}`
+end
+
+desc 'install the emacs configuration into the user\'s home directory'
+task :install do
+  dir = File.expand_path(File.dirname(__FILE__))
+  emacsd = '.emacs.d'
+  link = lambda { system %Q{ln -s #{dir} "$HOME/#{emacsd}"}; puts '.emacs.d linked' }
+  if File.exist?(File.join(ENV['HOME'], emacsd))
+    print "overwrite ~/#{emacsd}? [yn] "
+    case $stdin.gets.chomp
+    when 'y'
+      system %Q{rm -rf "$HOME/#{emacsd}"}
+      link.call
+    else
+      puts "not linking emacs.d"
+    end
+  else
+    link.call
+  end
 end
