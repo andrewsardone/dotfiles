@@ -172,6 +172,11 @@
   (lambda()
   (local-set-key (kbd "<return>") 'newline-and-indent)))
 
+;; cucumber-mode
+(add-to-list 'load-path "~/.emacs.d/vendor/feature-mode")
+(require 'feature-mode)
+(add-to-list 'auto-mode-alist '("\\.feature$" . feature-mode))
+
 ;; DTD mode
 (autoload 'dtd-mode "tdtd" "Major mode for SGML and XML DTDs." t)
 (autoload 'dtd-etags "tdtd" "Execute etags on FILESPEC and match on DTD-specific regular expressions." t)
