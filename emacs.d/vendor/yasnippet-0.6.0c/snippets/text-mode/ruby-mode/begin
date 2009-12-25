@@ -1,8 +1,0 @@
-#name : begin ... rescue ... end
-#group : general
-# --
-begin
-  $0
-rescue ${1:Exception} => ${2:e}
-  
-end
