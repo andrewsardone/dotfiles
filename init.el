@@ -43,10 +43,16 @@
 (global-set-key "\C-x\C-i" 'ido-imenu)
 
 ; fuzzy matching / file finding
-(global-set-key "\M-f" 'fuzzy-find-in-project)
+;; (global-set-key "\M-f" 'fuzzy-find-in-project)
 
 ;; Completion that uses many different methods to find options.
 (global-set-key (kbd "C-'") 'dabbrev-expand)
+
+;; backward-kill-word mapped to C-w (like bash)
+;; http://steve.yegge.googlepages.com/effective-emacs#item3
+(global-set-key "\C-w" 'backward-kill-word)
+(global-set-key "\C-x\C-k" 'kill-region)
+(global-set-key "\C-c\C-k" 'kill-region)
 
 ; random defuns
 ;; insert date into buffer at point
