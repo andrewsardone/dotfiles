@@ -26,11 +26,9 @@
 (column-number-mode 1)
 
 ;; Get rid of toolbar, scrollbar, menubar
-(progn
-  (when (equal invocation-name '"Emacs")
-    (tool-bar-mode 0)
-    (scroll-bar-mode 0))
-  (menu-bar-mode 0))
+(if (fboundp 'toolbar-bar-mode) (toolbar-bar-mode 0))
+(if (fboundp 'scroll-bar-mode) (scroll-bar-mode 0))
+(if (fboundp 'menu-bar-mode) (menu-bar-mode 0))
 
 (when (equal system-type 'darwin)
   (setenv "PATH" (concat "/opt/local/bin:/usr/local/bin:" (getenv "PATH")))
