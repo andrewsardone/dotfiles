@@ -271,8 +271,8 @@ makes)."
 
 ;; javascript
 (add-to-list  'load-path "~/.emacs.d/plugins/javascript")
-(add-to-list 'auto-mode-alist '("\\.js$" . javascript-mode))
-(autoload 'javascript-mode "javascript" nil t)
+;; (add-to-list 'auto-mode-alist '("\\.js$" . javascript-mode))
+;; (autoload 'javascript-mode "javascript" nil t)
 
 (defvar javascript-identifier-regexp "[a-zA-Z0-9.$_]+")
 
@@ -332,6 +332,10 @@ makes)."
     (local-set-key (kbd "<return>") 'newline-and-indent)
   )
 t)
+
+;; js2-mode
+(autoload 'js2-mode "~/.emacs.d/vendor/js2/js2.elc" nil t)
+(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 
 ;; Interactively Do Things (highly recommended, but not strictly required)
 (require 'ido)
@@ -500,3 +504,16 @@ t)
    (add-hook 'ruby-mode-hook
              (lambda ()
                (setq ac-omni-completion-sources '(("\\.\\=" ac-source-rcodetools)))));)
+
+(custom-set-variables
+  ;; custom-set-variables was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(js2-basic-offset 2))
+(custom-set-faces
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ )
