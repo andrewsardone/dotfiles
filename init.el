@@ -53,6 +53,13 @@
 (global-set-key "\C-c\C-k" 'kill-region)
 
 ; random defuns
+;; refresh-file via f5
+(defun refresh-file ()
+  (interactive)
+  (revert-buffer t t t))
+
+(global-set-key [f5] 'refresh-file)
+
 ;; insert date into buffer at point
 ;; via spastorino's emacs configuration
 ;; http://github.com/spastorino
