@@ -31,8 +31,8 @@
 (if (fboundp 'menu-bar-mode) (menu-bar-mode 0))
 
 (when (equal system-type 'darwin)
-  (setenv "PATH" (concat "/opt/local/bin:/usr/local/bin:" (getenv "PATH")))
-  (push "/opt/local/bin" exec-path))
+  (setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin:/usr/local/homebrew/bin"))
+  (setq exec-path (append exec-path '("/usr/local/bin" "/usr/local/homebrew/bin"))))
 
 ; bindings
 (define-key global-map [(alt return)] 'mac-toggle-max-window)
