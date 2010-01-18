@@ -276,6 +276,16 @@ makes)."
 (setq auto-mode-alist
   (cons '("\\.haml" . haml-mode) auto-mode-alist))
 
+;; ispell
+(add-to-list 'load-path "~/.emacs.d/vendor/ispell")
+(setq ispell-dictionary-alist
+      '((nil
+	 "[A-Za-z]" "[^A-Za-z]" "[']" nil
+	 ("-B" "-d" "english" "--dict-dir"
+	  "/Library/Application Support/cocoAspell/aspell6-en-6.0-0")
+	 nil iso-8859-1)))
+;; (require 'ispell-mode)
+
 ;; javascript
 (add-to-list  'load-path "~/.emacs.d/plugins/javascript")
 ;; (add-to-list 'auto-mode-alist '("\\.js$" . javascript-mode))
