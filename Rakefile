@@ -22,7 +22,7 @@ task :write_plist do
     <string>gnu.emacs.daemon</string>
     <key>ProgramArguments</key>
     <array>
-      <string>/usr/local/homebrew/bin/emacs</string>
+      <string>/usr/local/bin/emacs</string>
       <string>--daemon</string>
     </array>
     <key>RunAtLoad</key>
