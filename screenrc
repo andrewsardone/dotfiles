@@ -2,6 +2,8 @@
 # based on fhsm's .screenrc on CrunchBang Linux forums
 # http://crunchbanglinux.org/forums/topic/2532/screenrc-files/
 
+shell -$SHELL
+
 # Basic
 defscrollback   10000
 autodetach      on
