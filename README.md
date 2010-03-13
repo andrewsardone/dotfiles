@@ -22,8 +22,3 @@ This is my emacs configuration. It's focused on being light, simple and consiste
         cd emacs.d/vendor/rinari
         git submodule init
         git submodule update
-
-## TODO
-
-- Fix `/bin/bash: markdown: command not found` on `markdown-preview`
-

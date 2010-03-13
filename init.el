@@ -278,13 +278,19 @@ makes)."
 
 ;; ispell
 (add-to-list 'load-path "~/.emacs.d/vendor/ispell")
+(setq ispell-program-name "aspell"
+  ispell-extra-args '("--sug-mode=ultra"))
 (setq ispell-dictionary-alist
       '((nil
-	 "[A-Za-z]" "[^A-Za-z]" "[']" nil
-	 ("-B" "-d" "english" "--dict-dir"
-	  "/Library/Application Support/cocoAspell/aspell6-en-6.0-0")
-	 nil iso-8859-1)))
-;; (require 'ispell-mode)
+   "[A-Za-z]" "[^A-Za-z]" "[']" nil
+   ("-B" "-d" "english" "--dict-dir"
+    "/usr/local/homebrew/Cellar/aspell/0.60.6/lib/aspell-0.60")
+   nil iso-8859-1)))
+;; You might check out using flyspell-mode, adding it as a
+;; mode hook:
+;; (add-hook 'org-mode-hook
+;;   (lambda()
+;;     (flyspell-mode 1)))
 
 ;; javascript
 (add-to-list  'load-path "~/.emacs.d/plugins/javascript")
