@@ -17,7 +17,8 @@ export ZSH_THEME="andrewsardone"
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=~/bin:$PATH
+export PATH=~/bin:/usr/local/bin:$PATH
+alias ls="ls -hG"
 alias emacsx="open -a Emacs.app"
 alias em="emacsclient -nw"
 alias mate="open -a TextMate.app"
