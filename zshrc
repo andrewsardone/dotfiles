@@ -30,7 +30,7 @@ alias dock3d="defaults write com.apple.dock no-glass -boolean NO; killall Dock"
 function xcode() {
   if (( $# == 0 )); then
     open *.xcodeproj
-    return 0
+    return
   fi
   open -a Xcode.app $1
 }
