@@ -26,6 +26,15 @@ alias reload_textmate_bundles="osascript -e 'tell app \"TextMate\" to reload bun
 alias dock2d="defaults write com.apple.dock no-glass -boolean YES; killall Dock"
 alias dock3d="defaults write com.apple.dock no-glass -boolean NO; killall Dock"
 
+# Xcode convenience function
+function xcode() {
+  if (( $# == 0 )); then
+    open *.xcodeproj
+    return 0
+  fi
+  open -a Xcode.app $1
+}
+
 # rvm
 if [[ -s /Users/andrew/.rvm/scripts/rvm ]] ; then source /Users/andrew/.rvm/scripts/rvm ; fi
 
