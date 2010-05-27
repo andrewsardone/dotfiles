@@ -36,7 +36,7 @@ function xcode() {
 }
 
 # rvm
-if [[ -s /Users/andrew/.rvm/scripts/rvm ]] ; then source /Users/andrew/.rvm/scripts/rvm ; fi
+if [[ -s $HOME/.rvm/scripts/rvm ]] ; then source $HOME/.rvm/scripts/rvm ; fi
 
 if [[ $TERM = "eterm-color" ]]; then
    export TERM="xterm"
