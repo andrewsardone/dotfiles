@@ -35,9 +35,6 @@ function xcode() {
   open -a Xcode.app $1
 }
 
-# rvm
-if [[ -s $HOME/.rvm/scripts/rvm ]] ; then source $HOME/.rvm/scripts/rvm ; fi
-
 if [[ $TERM = "eterm-color" ]]; then
    export TERM="xterm"
 fi
@@ -69,3 +66,6 @@ preexec_functions+=autojump_preexec
 alias jumpstat="autojump --stat"
 
 function j { local new_path="$(autojump $@)";if [ -n "$new_path" ]; then echo -e "\\033[31m${new_path}\\033[0m"; cd "$new_path";fi }
+
+# rvm
+[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
