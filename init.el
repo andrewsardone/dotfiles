@@ -391,6 +391,10 @@ t)
 (add-to-list 'auto-mode-alist '("\\.md" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.markdown" . markdown-mode))
 
+;; php
+(add-to-list 'load-path "~/.emacs.d/vendor/php")
+(require 'php-mode)
+
 ;; rdebug
 (add-to-list 'load-path "~/.emacs.d/vendor/rdebug")
 (require 'rdebug)
