@@ -144,7 +144,7 @@
 (color-theme-initialize)
 (setq color-theme-is-global t)
 (when (equal invocation-name '"Emacs")
-  (color-theme-twilight))
+  (color-theme-ir-black))
 
 (when (equal system-type 'darwin)
   (setq mac-allow-anti-aliasing t))
@@ -159,11 +159,12 @@
 ;;; To install it, visit http://ftp.gnome.org/pub/GNOME/sources/ttf-bitstream-vera/1.10/
 ;;; Otherwise, uncomment the set-face-font declaration below and comment out the bitstream one
 ;;; (set-face-font 'default "-apple-monaco-medium-r-normal--13-130-72-72-m-130-iso10646-1")
-(set-face-font 'default "-apple-Bitstream_Vera_Sans_Mono-medium-normal-normal-*-14-*-*-*-m-0-iso10646-1")
+;; (set-face-font 'default "-apple-Bitstream_Vera_Sans_Mono-medium-normal-normal-*-14-*-*-*-m-0-iso10646-1")
+(set-face-font 'default "-apple-Menlo-medium-normal-normal-*-12-*-*-*-m-0-iso10646-1")
 
 ;; cursor
-(setq-default cursor-type 'bar)
-(set-cursor-color "yellow")
+(setq-default cursor-type 'box)
+(set-cursor-color "orange")
 (blink-cursor-mode 1)
 
 ; plugins
