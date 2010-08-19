@@ -464,6 +464,19 @@ t)
 (setq auto-mode-alist
    (cons '("\\.sass" . sass-mode) auto-mode-alist))
 
+;; scratch-el
+;;
+;; http://atomized.org/2010/08/scratch-buffers-for-emacs/
+;;
+;; Invoke with M-x scratch to present a scratch buffer with the same 
+;; mode as your current buffer.
+;;
+;; Invoke with C-u M-x scratch to prompt for the mode to uses
+;;
+;; To save your resulting work, simple C-x C-w
+(add-to-list 'load-path "~/.emacs.d/vendor/scratch")
+(require 'scratch)
+
 ;; tabkey2
 ;(load "~/.emacs.d/plugins/nxhtml/util/tabkey2.el")
 
