@@ -7,3 +7,4 @@ emacs.d/elpa/builtin-packages
 emacs.d/tramp
 *.elc
 tramp
+url/

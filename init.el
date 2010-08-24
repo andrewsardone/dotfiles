@@ -468,7 +468,7 @@ t)
 ;;
 ;; http://atomized.org/2010/08/scratch-buffers-for-emacs/
 ;;
-;; Invoke with M-x scratch to present a scratch buffer with the same 
+;; Invoke with M-x scratch to present a scratch buffer with the same
 ;; mode as your current buffer.
 ;;
 ;; Invoke with C-u M-x scratch to prompt for the mode to uses
@@ -476,6 +476,13 @@ t)
 ;; To save your resulting work, simple C-x C-w
 (add-to-list 'load-path "~/.emacs.d/vendor/scratch")
 (require 'scratch)
+
+;; simplenote
+(add-to-list 'load-path "~/.emacs.d/vendor/simplenote")
+(require 'simplenote)
+(setq simplenote-email "andrew.sardone@gmail.com")
+(setq simplenote-directory "~/Dropbox/Sync/simplenote")
+(simplenote-setup)
 
 ;; tabkey2
 ;(load "~/.emacs.d/plugins/nxhtml/util/tabkey2.el")

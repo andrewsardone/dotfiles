@@ -7,3 +7,6 @@
 [submodule "vendor/scratch"]
 	path = vendor/scratch
 	url = git://github.com/ieure/scratch-el.git
+[submodule "vendor/simplenote"]
+	path = vendor/simplenote
+	url = git://github.com/cefstat/simplenote.el.git
