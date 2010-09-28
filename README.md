@@ -1,11 +1,13 @@
-# Emacs Configuration
+# Overview
 
-This is my emacs configuration. It's focused on being light, simple and consistent with an emphasis on dynamic languages.
+This is simply the Emacs configuration that works for me. It's gone through a lot of iterations and is perpetually changing. I try to keep it light with a focus on dynamic languages.
+
+Heavily influenced by Alex Payne's [setup](http://github.com/al3x/emacs).
 
 ## Installation
 
 1. Install Emacs, version >= 23.
-   I suggest you both use [Homebrew](http://github.com/mxcl/homebrew) and install the included `emacs` formula, as well as grabbing the download from [Emacs for Mac OS X](http://emacsformacosx.com/).
+   I suggest you both use [Homebrew](http://github.com/mxcl/homebrew) to install the included `emacs` formula, as well as grabbing the download from [Emacs for Mac OS X](http://emacsformacosx.com/).
 
    Otherwise, use your OS's available package manager.
 
