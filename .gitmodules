@@ -1,12 +1,22 @@
-[submodule "vendor/rinari"]
-        path = vendor/rinari
-        url = git://github.com/eschulte/rinari.git
-[submodule "vendor/feature-mode"]
-	path = vendor/feature-mode
-	url = git://github.com/michaelklishin/cucumber.el.git
 [submodule "vendor/scratch"]
-	path = vendor/scratch
-	url = git://github.com/ieure/scratch-el.git
-[submodule "vendor/simplenote"]
-	path = vendor/simplenote
-	url = git://github.com/cefstat/simplenote.el.git
+  path = vendor/scratch
+  url = git://github.com/ieure/scratch-el.git
+[submodule "vendor/rinari"]
+  path = vendor/rinari
+  url = git://github.com/eschulte/rinari.git
+[submodule "vendor/rails-reloaded"]
+  path = vendor/rails-reloaded
+  url = git://github.com/dima-exe/emacs-rails-reloaded.git
+[submodule "vendor/textmate"]
+  path = vendor/textmate
+  url = git://github.com/defunkt/textmate.el.git
+[submodule "vendor/magit"]
+  path = vendor/magit
+  url = git://gitorious.org/magit/mainline.git
+[submodule "vendor/mo-git-blame"]
+  path = vendor/mo-git-blame
+  url = git://git.bunkus.org/mo-git-blame.git
+[submodule "vendor/smart-tab"]
+  path = vendor/smart-tab
+  url = git://github.com/haxney/smart-tab.git
+  
