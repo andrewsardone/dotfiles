@@ -1,10 +1,10 @@
 .DS_Store
 *~
 tmp/
-emacs.d/auto-save-list/
-emacs.d/elpa/archive-contents
-emacs.d/elpa/builtin-packages
-emacs.d/tramp
+auto-save-list/
+elpa/archive-contents
+elpa/builtin-packages
+tramp
 *.elc
 tramp
 url/
