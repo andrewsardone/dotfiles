@@ -34,7 +34,3 @@
 
 ; jump to a definition in the current file.
 (global-set-key (kbd "C-x C-i") 'ido-imenu)
-
-; smooth scrolling
-(require 'centered-cursor-mode)
-(global-centered-cursor-mode t)

@@ -19,7 +19,6 @@
 
 ; load vendor modes
 ; configured in customizations/aps-modes.el
-(vendor 'centered-cursor-mode)
 (vendor 'color-theme)
 (vendor 'ido-menu)
 (vendor 'magit)
