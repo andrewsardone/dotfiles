@@ -1,6 +1,6 @@
 ; Textmate
-(require 'textmate)
-(texmate-mode t)
+;; (require 'textmate)
+;; (texmate-mode)
 
 ; Git
 (require 'magit)
@@ -19,6 +19,7 @@
 ; JavaScript
 (autoload 'js2-mode "js2" nil t)
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.json$" . js2-mode))
 
 ; Ruby
 (autoload 'ruby-mode "ruby-mode" "Mode for editing ruby source files" t)
@@ -29,5 +30,5 @@
 (setq auto-mode-alist (cons '("\\.rake" . ruby-mode) auto-mode-alist))
 
 ; Rails
-(require 'rinari)
-(setq rinari-tags-file-name "TAGS")
+;; (require 'rinari)
+;; (setq rinari-tags-file-name "TAGS")

@@ -23,6 +23,7 @@
 (vendor 'ido-menu)
 (vendor 'magit)
 (vendor 'nav)
+(vendor 'php-mode)
 (vendor 'textmate)
 (vendor 'yaml-mode)
 
