@@ -14,3 +14,5 @@
   co = checkout
   shortsha = rev-parse --short HEAD
   st = status
+[diff "localizablestrings"]
+  textconv = "iconv -f utf-16 -t utf-8"
