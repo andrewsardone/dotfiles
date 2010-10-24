@@ -17,7 +17,7 @@ export ZSH_THEME="andrewsardone"
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=~/bin:/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=~/bin:/usr/local/Cellar/python/2.7/bin:/usr/local/bin:/usr/local/sbin:$PATH
 alias ls="ls -hG"
 alias emacsx="open -a Emacs.app"
 alias em="emacsclient -nw"
