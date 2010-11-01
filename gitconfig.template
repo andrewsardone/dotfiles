@@ -13,6 +13,6 @@
   lg = log --graph --pretty=format:'%Cred%h%Creset %C(cyan)%an%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
   co = checkout
   shortsha = rev-parse --short HEAD
-  st = status
+  st = status --short --branch
 [diff "localizablestrings"]
   textconv = "iconv -f utf-16 -t utf-8"
