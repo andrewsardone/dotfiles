@@ -22,6 +22,7 @@
 (vendor 'color-theme)
 (vendor 'ido-menu)
 (vendor 'magit)
+(vendor 'markdown-mode)
 (vendor 'nav)
 (vendor 'php-mode)
 (vendor 'textmate)

@@ -25,3 +25,6 @@
 [submodule "vendor/color-theme-ir-black"]
 	path = vendor/color-theme-ir-black
 	url = https://github.com/burke/color-theme-ir-black.git
+[submodule "vendor/markdown-mode"]
+	path = vendor/markdown-mode
+	url = git://jblevins.org/git/markdown-mode.git
