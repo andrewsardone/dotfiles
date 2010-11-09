@@ -22,3 +22,6 @@
 [submodule "vendor/twilight-emacs"]
 	path = vendor/twilight-emacs
 	url = git://github.com/crafterm/twilight-emacs.git
+[submodule "vendor/color-theme-ir-black"]
+	path = vendor/color-theme-ir-black
+	url = https://github.com/burke/color-theme-ir-black.git

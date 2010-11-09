@@ -24,6 +24,7 @@
 (color-theme-initialize)
 (setq color-theme-is-global t)
 (when (equal invocation-name '"Emacs")
+  (load-file "~/.emacs.d/vendor/color-theme-ir-black/color-theme-ir-black.el")
   (color-theme-ir-black))
 
 ;; ; colors
