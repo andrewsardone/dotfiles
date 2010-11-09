@@ -7,7 +7,10 @@ Heavily influenced by Alex Payne's [setup](http://github.com/al3x/emacs).
 ## Installation
 
 1. Install Emacs, version >= 23.
-   I suggest you both use [Homebrew](http://github.com/mxcl/homebrew) to install the included `emacs` formula, as well as grabbing the download from [Emacs for Mac OS X](http://emacsformacosx.com/).
+   I suggest you use [Homebrew](http://github.com/mxcl/homebrew) to install the included `emacs` formula:
+
+        brew install emacs --cocoa
+        ln -s `brew --prefix`/Cellar/emacs/23.2/Emacs.app /Applications/Emacs.app
 
    Otherwise, use your OS's available package manager.
 
