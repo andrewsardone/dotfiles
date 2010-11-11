@@ -34,3 +34,6 @@
 ; load customizations
 ; loaded after vendor modes to allow for custom extensions
 (mapcar 'load-directory '("~/.emacs.d/customizations"))
+
+; start a server for usage with emacsclient
+(add-hook 'after-init-hook 'server-start)
