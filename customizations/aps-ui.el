@@ -22,10 +22,28 @@
 ; theme
 (require 'color-theme)
 (color-theme-initialize)
-(setq color-theme-is-global t)
-(when (equal invocation-name '"Emacs")
-  (load-file "~/.emacs.d/vendor/color-theme-ir-black/color-theme-ir-black.el")
-  (color-theme-ir-black))
+(load-file "~/.emacs.d/vendor/twilight-emacs/color-theme-twilight.el")
+;; First color-theme is for Cocoa emacs, second is for terminal-based emacs
+(setq color-theme-choices '(color-theme-twilight color-theme-standard))
+(funcall (lambda (cols)
+           (let ((color-theme-is-global nil))
+             (eval
+              (append '(if (window-system))
+                      (mapcar (lambda (x) (cons x nil))
+                              cols)))))
+           color-theme-choices)
+(fset 'test-win-sys
+      (funcall (lambda (cols)
+                 (lexical-let ((cols cols))
+                   (lambda (frame)
+                     (let ((color-theme-is-global nil))
+                       (select-frame frame)
+                       (eval
+                        (append '(if (window-system frame))
+                                (mapcar (lambda (x) (cons x nil))
+                                        cols)))))))
+                 color-theme-choices ))
+(add-hook 'after-make-frame-functions 'test-win-sys)
 
 ;; ; colors
 ;; (custom-set-faces
