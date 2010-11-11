@@ -26,7 +26,7 @@ alias reload_textmate_bundles="osascript -e 'tell app \"TextMate\" to reload bun
 alias dock2d="defaults write com.apple.dock no-glass -boolean YES; killall Dock"
 alias dock3d="defaults write com.apple.dock no-glass -boolean NO; killall Dock"
 
-export EDITOR=emacsclient -nw
+export EDITOR="emacsclient -nw"
 
 # Xcode convenience function
 function xcode() {
