@@ -19,14 +19,18 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=~/bin:/usr/local/Cellar/python/2.7/bin:/usr/local/bin:/usr/local/sbin:$PATH
 alias ls="ls -hG"
-alias emacsx="open -a Emacs.app"
-alias em="emacsclient -nw"
 alias mate="open -a TextMate.app"
 alias reload_textmate_bundles="osascript -e 'tell app \"TextMate\" to reload bundles'"
 alias dock2d="defaults write com.apple.dock no-glass -boolean YES; killall Dock"
 alias dock3d="defaults write com.apple.dock no-glass -boolean NO; killall Dock"
 
 export EDITOR="emacsclient -nw"
+
+# Emacs setup
+alias em="emacsclient -nw"  # Open a new Emacs frame on the current terminal
+function emacs() {
+  emacsclient -n $@ > /dev/null 2>&1 || open -a Emacs.app $@
+}
 
 # Xcode convenience function
 function xcode() {
