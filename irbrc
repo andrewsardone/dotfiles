@@ -1,11 +1,20 @@
-require 'rubygems'
-require 'wirble'
-require 'hirb'
+begin
+  require 'wirble'
 
-Wirble.init
-Wirble.colorize
+  Wirble.init
+  Wirble.colorize
 
-Hirb.enable
+rescue LoadError => err
+  warn "Couldn't load Wirble: #{err}"
+end
+
+begin
+  require 'hirb'
+
+  Hirb.enable
+rescue LoadError => err
+  warn "Couldn't load Hirb: #{err}"
+end
 
 class Object
   def local_methods
