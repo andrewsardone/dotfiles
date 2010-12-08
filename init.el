@@ -25,6 +25,7 @@
 (vendor 'markdown-mode)
 (vendor 'nav)
 (vendor 'php-mode)
+(vendor 'rvm)
 (vendor 'textmate)
 (vendor 'yaml-mode)
 

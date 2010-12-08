@@ -29,6 +29,10 @@
 (setq auto-mode-alist (cons '("Capfile" . ruby-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.rake" . ruby-mode) auto-mode-alist))
 
+; RVM
+(require 'rvm)
+(rvm-use-default)
+
 ; Rails
 ;; (require 'rinari)
 ;; (setq rinari-tags-file-name "TAGS")
