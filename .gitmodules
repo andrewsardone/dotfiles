@@ -31,3 +31,6 @@
 [submodule "vendor/rvm"]
 	path = vendor/rvm
 	url = https://github.com/senny/rvm.el.git
+[submodule "vendor/http-twiddle"]
+	path = vendor/http-twiddle
+	url = https://github.com/hassy/http-twiddle.git

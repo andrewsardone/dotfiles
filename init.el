@@ -20,6 +20,7 @@
 ; load vendor modes
 ; configured in customizations/aps-modes.el
 (vendor 'color-theme)
+(vendor 'http-twiddle)
 (vendor 'ido-menu)
 (vendor 'magit)
 (vendor 'markdown-mode)
