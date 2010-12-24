@@ -41,9 +41,12 @@
 ;; (setq rinari-tags-file-name "TAGS")
 
 ; Markdown
-(add-hook 'markdown-mode-hook '(lambda() (longlines-mode)))
- (autoload 'markdown-mode "markdown-mode.el"
-   "Major mode for editing Markdown files" t)
+(autoload 'markdown-mode "markdown-mode.el"
+  "Major mode for editing Markdown files" t)
+(add-hook 'markdown-mode-hook 
+  (lambda () 
+    (longlines-mode t)
+    (flyspell-mode t)))
 (add-to-list 'auto-mode-alist '("\\.markdown$" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.mkd$" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
