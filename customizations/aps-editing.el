@@ -34,3 +34,7 @@
 
 ; jump to a definition in the current file.
 (global-set-key (kbd "C-x C-i") 'ido-imenu)
+
+; spelling
+(setq ispell-program-name "aspell"
+      ispell-extra-args '("--sug-mode=ultra"))
