@@ -7,6 +7,9 @@
 ; use ibuffer instead of the built in buffer list
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
+; use browse-kill-ring instead of default yank actions
+(browse-kill-ring-default-keybindings)
+
 ; pick up changes to files on disk automatically (ie, after git pull)
 (global-auto-revert-mode 1)
 
