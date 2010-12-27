@@ -17,9 +17,12 @@
 (add-to-list 'auto-mode-alist '("\\.yaml$" . yaml-mode))
 
 ; JavaScript
-(autoload 'js2-mode "js2" nil t)
-(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
+(defun aps-js-mode-hook ()
+  (setq js-indent-level 2)
+  (sane-coding-return-key js-mode-map)
+  (message "APS js-mode hook"))
+(add-hook 'js-mode-hook 'aps-js-mode-hook)
 
 ; Ruby
 (autoload 'ruby-mode "ruby-mode" "Mode for editing ruby source files" t)

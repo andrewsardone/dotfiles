@@ -31,9 +31,6 @@
 (vendor 'textmate)
 (vendor 'yaml-mode)
 
-; load third-party modes that the vendor function can't handle
-(add-to-list 'load-path "~/.emacs.d/vendor/js2")
-
 ; load customizations
 ; loaded after vendor modes to allow for custom extensions
 (mapcar 'load-directory '("~/.emacs.d/customizations"))
