@@ -19,3 +19,9 @@
 ; Unbind C-z so it doesn't minimize the window
 ; (I'm constantly hitting this binding by accident)
 (global-unset-key "\C-z")
+
+(defun sane-coding-return-key (keymap)
+  "Bind RET to newline-and-indent within the KEYMAP keymap. 
+Also sets M-RET to simply newline (this mimics TextMate)."
+  (define-key keymap (kbd "<return>") 'newline-and-indent)
+  (define-key keymap (kbd "M-<return>") 'newline))
