@@ -34,3 +34,6 @@
 [submodule "vendor/http-twiddle"]
 	path = vendor/http-twiddle
 	url = https://github.com/hassy/http-twiddle.git
+[submodule "vendor/coffee-mode"]
+	path = vendor/coffee-mode
+	url = https://github.com/defunkt/coffee-mode.git

@@ -20,6 +20,7 @@
 ; load vendor modes
 ; configured in customizations/aps-modes.el
 (vendor 'browse-kill-ring)
+(vendor 'coffee-mode)
 (vendor 'color-theme)
 (vendor 'http-twiddle)
 (vendor 'ido-menu)

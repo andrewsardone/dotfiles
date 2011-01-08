@@ -2,6 +2,10 @@
 ;; (require 'textmate)
 ;; (texmate-mode)
 
+; CoffeeScript
+(add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
+(add-to-list 'auto-mode-alist '("Cakefile" . coffee-mode))
+
 ; Git
 (require 'magit)
 (autoload 'magit-status "magit" nil t)
