@@ -12,7 +12,7 @@
 	url = git://github.com/defunkt/textmate.el.git
 [submodule "vendor/magit"]
 	path = vendor/magit
-	url = git://gitorious.org/magit/mainline.git
+	url = https://github.com/philjackson/magit.git
 [submodule "vendor/mo-git-blame"]
 	path = vendor/mo-git-blame
 	url = git://git.bunkus.org/mo-git-blame.git
