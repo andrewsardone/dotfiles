@@ -23,8 +23,9 @@
 (require 'color-theme)
 (color-theme-initialize)
 (load-file "~/.emacs.d/vendor/twilight-emacs/color-theme-twilight.el")
+(load-file "~/.emacs.d/customizations/color-theme-aps.el")
 ;; First color-theme is for Cocoa emacs, second is for terminal-based emacs
-(setq color-theme-choices '(color-theme-twilight color-theme-standard))
+(setq color-theme-choices '(color-theme-twilight color-theme-aps))
 (funcall (lambda (cols)
            (let ((color-theme-is-global nil))
              (eval
