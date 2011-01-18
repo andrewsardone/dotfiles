@@ -16,9 +16,13 @@
 (global-set-key "\C-x\C-k" 'kill-region)
 (global-set-key "\C-c\C-k" 'kill-region)
 
-; Unbind C-z so it doesn't minimize the window
+; personal key-bindings, using C-z as a prefix
+
+; First, unbind C-z so it doesn't minimize the window
 ; (I'm constantly hitting this binding by accident)
 (global-unset-key "\C-z")
+
+(global-set-key (kbd "C-z b") 'browse-url-at-point)
 
 (defun sane-coding-return-key (keymap)
   "Bind RET to newline-and-indent within the KEYMAP keymap. 
