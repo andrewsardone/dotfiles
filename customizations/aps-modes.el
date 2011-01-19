@@ -26,6 +26,11 @@
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.yaml$" . yaml-mode))
 
+; Emacs Lisp
+(defun aps-emacs-lisp-mode-hook ()
+  (sane-coding-return-key emacs-lisp-mode-map))
+(add-hook 'emacs-lisp-mode-hook 'aps-emacs-lisp-mode-hook)
+
 ; JavaScript
 (add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
 (defun aps-js-mode-hook ()
@@ -41,9 +46,9 @@
 (setq auto-mode-alist (cons '("Rakefile" . ruby-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("Capfile" . ruby-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.rake" . ruby-mode) auto-mode-alist))
-(eval-after-load 'ruby-mode
-  '(progn
-     (define-key ruby-mode-map (kbd "RET") 'reindent-then-newline-and-indent)))
+(defun aps-ruby-mode-hook ()
+  (sane-coding-return-key ruby-mode-map))
+(add-hook 'ruby-mode-hook 'aps-ruby-mode-hook)
 
 ; RVM
 (require 'rvm)
