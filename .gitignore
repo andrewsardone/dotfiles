@@ -1,3 +1,5 @@
 .DS_Store
 *~
 gitconfig
+config/pianobar/config
+config/pianobar/eventcmd

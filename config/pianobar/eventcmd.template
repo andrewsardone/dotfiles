@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# eventcmd file for scrobbling pianobar songs via scrobbular
+#   http://scrobbular.appspot.com/
+
+# create variables
+while read L; do
+    k="`echo "$L" | cut -d '=' -f 1`"
+    v="`echo "$L" | cut -d '=' -f 2`"
+    export "$k=$v"
+done < <(grep -e '^\(title\|artist\|album\|stationName\|pRet\|pRetStr\|wRet\|wRetStr\|songDuration\|songPlayed\|rating\)=' /dev/stdin) # don't overwrite $1...
+
+username='__GOOGLE_USERNAME__';
+secret='__SCROBBULAR_SECRET__';
+
+case "$1" in
+    songfinish)
+        # scrobble if 75% of the song has been played but only if the song hasn't been banned
+        if [ -n "$songDuration" ] &&
+                [ $(echo "scale=4; ($songPlayed/$songDuration*100)>50" | bc) -eq 1 ] &&
+                [ "$rating" -ne 2 ]; then
+            curl -X POST --data-urlencode "username=$username" \
+                --data-urlencode "s=$secret" \
+                --data-urlencode "track=$title" \
+                --data-urlencode "artist=$artist" \
+                --data-urlencode "duration=$((songDuration/1000))" \
+                --data-urlencode "album=$album" \
+                http://scrobbular.appspot.com/scrobble
+        fi; 
+        ;;  
+
+    songstart)
+        curl -X POST --data-urlencode "username=$username" \
+            --data-urlencode "s=$secret" \
+            --data-urlencode "track=$title" \
+            --data-urlencode "artist=$artist" \
+            --data-urlencode "album=$album" \
+            http://scrobbular.appspot.com/now_playing
+        ;;  
+esac
