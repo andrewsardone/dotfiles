@@ -23,6 +23,7 @@ alias mate="open -a TextMate.app"
 alias reload_textmate_bundles="osascript -e 'tell app \"TextMate\" to reload bundles'"
 alias dock2d="defaults write com.apple.dock no-glass -boolean YES; killall Dock"
 alias dock3d="defaults write com.apple.dock no-glass -boolean NO; killall Dock"
+alias ql="qlmanage -p"
 
 export EDITOR="emacsclient -nw"
 
