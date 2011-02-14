@@ -9,6 +9,6 @@
     (region-beginning) (region-end) mac-pbcopy-cmd nil t t))
 
 (defun mac-pbpaste ()
-  "Paste Mac OS X's clipboard into the bugger at point."
+  "Paste Mac OS X's clipboard into the buffer at point."
   (interactive)
   (call-process mac-pbpaste-cmd nil t t))
