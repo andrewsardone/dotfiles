@@ -48,7 +48,7 @@ function xcode() {
 }
 
 if [[ $TERM = "eterm-color" ]]; then
-   export TERM="xterm"
+   export TERM="xterm-color"
 fi
 
 #autojump
