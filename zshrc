@@ -17,7 +17,11 @@ export ZSH_THEME="andrewsardone"
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=~/bin:/usr/local/Cellar/python/2.7/bin:/usr/local/bin:/usr/local/sbin:$PATH
+
+JAVA_HOME="/usr/local/soylatte16-amd64"
+
+export PATH=~/bin:/usr/local/Cellar/python/2.7/bin:/usr/local/bin:/usr/local/sbin:/usr/local/soylatte16-amd64/bin:$PATH
+
 alias ls="ls -hG"
 alias mate="open -a TextMate.app"
 alias reload_textmate_bundles="osascript -e 'tell app \"TextMate\" to reload bundles'"
