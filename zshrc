@@ -24,6 +24,7 @@ alias reload_textmate_bundles="osascript -e 'tell app \"TextMate\" to reload bun
 alias dock2d="defaults write com.apple.dock no-glass -boolean YES; killall Dock"
 alias dock3d="defaults write com.apple.dock no-glass -boolean NO; killall Dock"
 alias ql="qlmanage -p"
+alias t='python /usr/local/bin/t.py --task-dir ~/Dropbox/tasks --list task'
 
 export EDITOR="emacsclient -nw"
 
