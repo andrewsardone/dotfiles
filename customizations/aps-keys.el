@@ -24,8 +24,17 @@
 
 (global-set-key (kbd "C-z b") 'browse-url-at-point)
 
+(global-unset-key (kbd "C-z t"))
+(defun create-terminal ()
+  "Create a new terminal buffer"
+  (interactive)
+  (ansi-term "/bin/zsh"))
+(global-set-key (kbd "C-z t") 'create-terminal)
+
 (defun sane-coding-return-key (keymap)
   "Bind RET to newline-and-indent within the KEYMAP keymap. 
 Also sets M-RET to simply newline (this mimics TextMate)."
   (define-key keymap (kbd "<return>") 'newline-and-indent)
   (define-key keymap (kbd "M-<return>") 'newline))
+
+
