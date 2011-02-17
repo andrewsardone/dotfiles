@@ -30,10 +30,10 @@ alias dock3d="defaults write com.apple.dock no-glass -boolean NO; killall Dock"
 alias ql="qlmanage -p"
 alias t='python /usr/local/bin/t.py --task-dir ~/Dropbox/tasks --list task'
 
-export EDITOR="emacsclient -nw"
+export EDITOR="emacsclient"
 
 # Emacs setup
-alias em="emacsclient -nw"  # Open a new Emacs frame on the current terminal
+alias em="emacsclient"  # Open a new Emacs frame on the current terminal
 function emacs() {
   emacsclient -n $@ > /dev/null 2>&1 || open -a Emacs.app $@
 }
