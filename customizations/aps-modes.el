@@ -12,6 +12,12 @@
 (autoload 'mo-git-blame-file "mo-git-blame" nil t)
 (autoload 'mo-git-blame-current "mo-git-blame" nil t)
 
+; ielm
+(add-hook 'ielm-mode-hook 
+  (lambda () 
+    (local-set-key (kbd "<up>") 'comint-previous-input)
+    (local-set-key (kbd "<down>") 'comint-next-input)))
+
 ; Nav
 (require 'nav)
 
