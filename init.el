@@ -26,6 +26,7 @@
 (vendor 'ido-menu)
 (vendor 'magit)
 (vendor 'markdown-mode)
+(vendor 'mustache-mode)
 (vendor 'nav)
 (vendor 'php-mode)
 (vendor 'rvm)
