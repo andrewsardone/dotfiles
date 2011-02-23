@@ -30,6 +30,10 @@ alias dock3d="defaults write com.apple.dock no-glass -boolean NO; killall Dock"
 alias ql="qlmanage -p"
 alias t='python /usr/local/bin/t.py --task-dir ~/Dropbox/tasks --list task'
 
+# For an mds process using up a lot of CPU, erasing and 
+# rebuilding the indexes for all volumes can fix the problem
+alias reset_mds='sudo mdutil -aE'
+
 export EDITOR="emacsclient"
 
 # Emacs setup
