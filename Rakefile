@@ -28,7 +28,7 @@
 require 'rake'
 
 desc "install the dot files into user's home directory"
-task :install => [:generate_gitconfig_from_template, :generate_pianobar_config_from_template] do
+task :install => [:generate_gitconfig_from_template] do
   replace_all = false
   Dir['*'].each do |file|
     # edit
@@ -69,31 +69,6 @@ task :generate_gitconfig_from_template do
   temp = IO.read('gitconfig.template')
   repl.each { |k,v| temp.gsub!(k,v) }
   File.new(gitconfig_name, File::WRONLY|File::TRUNC|File::CREAT).puts temp
-end
-
-desc "generate pianobar's config files from the template based on your input"
-task :generate_pianobar_config_from_template => :generate_scrobbular_eventcmd do
-  pianobar_config_name = 'config/pianobar/config'
-  repl = {}
-  puts "\nGenerating pianobar config"
-  print("Your Pandora Username: "); STDOUT.flush; repl['__USER_NAME__'] = STDIN.gets.chomp
-  print("Your Pandora Password: "); STDOUT.flush; repl['__PASSWORD__'] = STDIN.gets.chomp
-  repl['__EVENTCMD_PATH__'] = "/Users/#{`whoami`.chomp}/.config/pianobar/eventcmd"
-  temp = IO.read('config/pianobar/config.template')
-  repl.each { |k,v| temp.gsub!(k,v) }
-  File.new(pianobar_config_name, File::WRONLY|File::TRUNC|File::CREAT).puts temp
-end
-
-desc "generate scrobbular eventcmd http://scrobbular.appspot.com/howto"
-task :generate_scrobbular_eventcmd do
-  pianobar_eventcmd_name = 'config/pianobar/eventcmd'
-  repl = {}
-  puts "\nGenerating pianobar config"
-  print("Your Scrobbular Google Username: "); STDOUT.flush; repl['__GOOGLE_USERNAME__'] = STDIN.gets.chomp
-  print("Your Scrobbular Secret Key: "); STDOUT.flush; repl['__SCROBBULAR_SECRET__'] = STDIN.gets.chomp
-  temp = IO.read('config/pianobar/eventcmd.template')
-  repl.each { |k,v| temp.gsub!(k,v) }
-  File.new(pianobar_eventcmd_name, File::WRONLY|File::TRUNC|File::CREAT, 0755).puts temp
 end
 
 def replace_file(file)

@@ -1,4 +1,0 @@
-user = __USER_NAME__
-password = __PASSWORD__
-
-event_command = __EVENTCMD_PATH__
