@@ -24,6 +24,8 @@
 
 (global-set-key (kbd "C-z b") 'browse-url-at-point)
 
+(global-set-key (kbd "C-z R") 'rename-buffer)
+
 (global-unset-key (kbd "C-z t"))
 (defun create-terminal ()
   "Create a new terminal buffer"
