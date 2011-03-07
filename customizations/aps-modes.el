@@ -70,4 +70,4 @@
 (add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
 
 ; Mustache
-(require 'mustache)
+(require 'mustache-mode)
