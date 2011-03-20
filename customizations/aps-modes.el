@@ -6,6 +6,9 @@
 (add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
 (add-to-list 'auto-mode-alist '("Cakefile" . coffee-mode))
 
+; CSS
+(setq css-indent-offset 2)
+
 ; Git
 (require 'magit)
 (autoload 'magit-status "magit" nil t)
