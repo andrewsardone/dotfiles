@@ -22,22 +22,10 @@ JAVA_HOME="/usr/local/soylatte16-amd64"
 
 export PATH=~/bin:/usr/local/Cellar/python/2.7/bin:/usr/local/bin:/usr/local/sbin:/usr/local/soylatte16-amd64/bin:$PATH
 
-alias ls="ls -hG"
-alias mate="open -a TextMate.app"
-alias reload_textmate_bundles="osascript -e 'tell app \"TextMate\" to reload bundles'"
-alias dock2d="defaults write com.apple.dock no-glass -boolean YES; killall Dock"
-alias dock3d="defaults write com.apple.dock no-glass -boolean NO; killall Dock"
-alias ql="qlmanage -p"
-alias t='python /usr/local/bin/t.py --task-dir ~/Dropbox/tasks --list task'
-
-# For an mds process using up a lot of CPU, erasing and 
-# rebuilding the indexes for all volumes can fix the problem
-alias reset_mds='sudo mdutil -aE'
-
 export EDITOR="emacsclient"
 
 # Emacs setup
-alias em="emacsclient"  # Open a new Emacs frame on the current terminal
+
 function emacs() {
   emacsclient -n $@ > /dev/null 2>&1 || open -a Emacs.app $@
 }
