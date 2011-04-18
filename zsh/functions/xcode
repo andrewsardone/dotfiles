@@ -1,0 +1,8 @@
+# Xcode convenience function
+function xcode() {
+  if (( $# == 0 )); then
+    open *.xcodeproj
+    return
+  fi
+  open -a Xcode.app $1
+}

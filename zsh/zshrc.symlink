@@ -30,15 +30,6 @@ function emacs() {
   emacsclient -n $@ > /dev/null 2>&1 || open -a Emacs.app $@
 }
 
-# Xcode convenience function
-function xcode() {
-  if (( $# == 0 )); then
-    open *.xcodeproj
-    return
-  fi
-  open -a Xcode.app $1
-}
-
 if [[ $TERM = "eterm-color" ]]; then
    export TERM="xterm-color"
 fi
