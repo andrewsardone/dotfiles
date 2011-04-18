@@ -24,12 +24,6 @@ export PATH=~/bin:/usr/local/Cellar/python/2.7/bin:/usr/local/bin:/usr/local/sbi
 
 export EDITOR="emacsclient"
 
-# Emacs setup
-
-function emacs() {
-  emacsclient -n $@ > /dev/null 2>&1 || open -a Emacs.app $@
-}
-
 if [[ $TERM = "eterm-color" ]]; then
    export TERM="xterm-color"
 fi
