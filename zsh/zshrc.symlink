@@ -2,8 +2,3 @@ JAVA_HOME="/usr/local/soylatte16-amd64"
 
 export PATH=~/bin:/usr/local/Cellar/python/2.7/bin:/usr/local/bin:/usr/local/sbin:/usr/local/soylatte16-amd64/bin:$PATH
 
-export EDITOR="emacsclient"
-
-if [[ $TERM = "eterm-color" ]]; then
-   export TERM="xterm-color"
-fi
