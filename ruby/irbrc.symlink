@@ -1,6 +1,10 @@
 #!/usr/bin/ruby
 require 'irb/completion'
 
+IRB.conf[:PROMPT_MODE] = :SIMPLE
+
+IRB.conf[:AUTO_INDENT] = true
+
 class Object
   def local_methods
     (methods - Object.instance_methods).sort
