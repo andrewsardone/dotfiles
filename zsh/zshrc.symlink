@@ -1,0 +1,9 @@
+# shortcut to this dotfiles path is $ZSH
+export DOTFILES=$HOME/.dotfiles
+
+# source every .zsh file in this rep
+for config_file ($DOTFILES/**/*.zsh) source $config_file
+
+# initialize autocomplete here, otherwise functions won't be loaded
+autoload -U compinit
+compinit
