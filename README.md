@@ -3,7 +3,7 @@ Andrew Sardone's Dot Files
 
 Inspired by others to put my dot files under git's control.
 
-*08/03/2009* - Reorganized files to be cleaner and more modular, taking influence from [Ryan Bates](http://github.com/ryanb/dotfiles/tree/master).
+Reorganized files to be cleaner and more modular, taking influence from [Zach Holman](http://github.com/holman/dotfiles).
 
 ### Installation
 
