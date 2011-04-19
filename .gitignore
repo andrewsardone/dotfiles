@@ -1,5 +1,5 @@
 .DS_Store
 *~
-gitconfig
+gitconfig.symlink
 config/pianobar/config
 config/pianobar/eventcmd
