@@ -37,6 +37,10 @@ need_push () {
   fi
 }
 
+function collapse_pwd {
+  echo $(pwd | sed -e "s,^$HOME,~,")
+}
+
 directory_name(){
   echo %{$fg_bold[blue]%}$(collapse_pwd)%{$reset_color%}
 }
