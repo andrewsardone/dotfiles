@@ -1,3 +1,4 @@
+alias l="ls -la"
 alias ls="ls -hG"
 
 alias mate="open -a TextMate.app"
