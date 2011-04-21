@@ -1,3 +1,10 @@
+; Global Coding
+
+(defun coding-hook ()
+  "Hook to setup configurations that are convenient across all
+coding buffers"
+  (linum-mode 1))
+
 ; Textmate
 ;; (require 'textmate)
 ;; (texmate-mode)
@@ -37,6 +44,7 @@
 ; JavaScript
 (add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
 (defun aps-js-mode-hook ()
+  (coding-hook)
   (setq js-indent-level 2)
   (sane-coding-return-key js-mode-map)
   (message "APS js-mode hook"))
@@ -50,6 +58,7 @@
 (setq auto-mode-alist (cons '("Capfile" . ruby-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.rake" . ruby-mode) auto-mode-alist))
 (defun aps-ruby-mode-hook ()
+  (coding-hook)
   (sane-coding-return-key ruby-mode-map))
 (add-hook 'ruby-mode-hook 'aps-ruby-mode-hook)
 
