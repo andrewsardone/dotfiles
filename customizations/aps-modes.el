@@ -38,7 +38,8 @@ coding buffers"
 
 ; Emacs Lisp
 (defun aps-emacs-lisp-mode-hook ()
-  (sane-coding-return-key emacs-lisp-mode-map))
+  (sane-coding-return-key emacs-lisp-mode-map)
+  (coding-hook))
 (add-hook 'emacs-lisp-mode-hook 'aps-emacs-lisp-mode-hook)
 
 ; JavaScript
