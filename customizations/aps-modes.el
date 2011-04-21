@@ -51,6 +51,10 @@ coding buffers"
   (message "APS js-mode hook"))
 (add-hook 'js-mode-hook 'aps-js-mode-hook)
 
+; re-builder
+(require 're-builder)
+(setq reb-re-builder 'string)
+
 ; Ruby
 (autoload 'ruby-mode "ruby-mode" "Mode for editing ruby source files" t)
 (autoload 'run-ruby "inf-ruby" "Run an inferior Ruby process")
