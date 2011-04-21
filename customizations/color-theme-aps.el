@@ -226,7 +226,7 @@ Basically just generated via `color-theme-print'."
      (lazy-highlight ((t (:background "turquoise3"))))
      (link ((t (:foreground "blue" :underline t))))
      (link-visited ((t (:underline t :foreground "magenta4"))))
-     (linum ((t (:foreground "green"))))
+     (linum ((t (:foreground "Grey11"))))
      (magit-branch ((t (:bold t :weight bold))))
      (magit-diff-add ((t (:foreground "green4"))))
      (magit-diff-del ((t (:foreground "red4"))))
