@@ -46,7 +46,7 @@ directory_name(){
 }
 
 end_prompt() {
-  echo %{$fg_bold[green]%}\\n› %{$reset_color%}
+  echo %{$fg_bold[green]%}\\n\> %{$reset_color%}
 }
 
 export PROMPT=$'\n$(directory_name)$(git_dirty)$(need_push)$(end_prompt)'
