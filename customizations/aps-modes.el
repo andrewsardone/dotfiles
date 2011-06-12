@@ -9,6 +9,12 @@ coding buffers"
 ;; (require 'textmate)
 ;; (texmate-mode)
 
+; ansi-term
+
+(setq ansi-term-color-vector
+  [unspecified "#616161" "#ff8277" "#b3fa86" "#fffdc9" "#a6d6fb"
+   "#ff90f7" "#d1d2fb" "#f1f1f1"])
+
 ; CoffeeScript
 (add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
 (add-to-list 'auto-mode-alist '("Cakefile" . coffee-mode))
