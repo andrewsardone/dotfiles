@@ -22,10 +22,10 @@
 ; theme
 (require 'color-theme)
 (color-theme-initialize)
-(load-file "~/.emacs.d/vendor/twilight-emacs/color-theme-twilight.el")
-(load-file "~/.emacs.d/customizations/color-theme-aps.el")
+(load-file "~/.emacs.d/vendor/color-theme-ir-black/color-theme-ir-black.el")
+(load-file "~/.emacs.d/customizations/color-theme-aps-term.el")
 ;; First color-theme is for Cocoa emacs, second is for terminal-based emacs
-(setq color-theme-choices '(color-theme-twilight color-theme-aps))
+(setq color-theme-choices '(color-theme-ir-black color-theme-aps-term))
 (funcall (lambda (cols)
            (let ((color-theme-is-global nil))
              (eval
