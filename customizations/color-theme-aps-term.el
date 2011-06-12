@@ -1,10 +1,11 @@
 (eval-when-compile    (require 'color-theme))
-(defun color-theme-aps ()
+
+(defun color-theme-aps-term ()
   "Color theme by Andrew Sardone, created 2011-01-18.
 Basically just generated via `color-theme-print'."
   (interactive)
   (color-theme-install
-   '(color-theme-aps
+   '(color-theme-aps-term
      ((background-color . "black")
       (background-mode . dark)
       (border-color . "white")
@@ -362,4 +363,4 @@ Basically just generated via `color-theme-print'."
      (widget-inactive ((t (:foreground "dim gray"))))
      (widget-single-line-field ((t (:background "gray85" :foreground "black"))))
      (yaml-tab-face ((t (:bold t :background "red" :foreground "red" :weight bold)))))))
-(add-to-list 'color-themes '(color-theme-aps  "color-theme-aps" "Andrew Sardone"))
+(add-to-list 'color-themes '(color-theme-aps-term  "color-theme-aps-term" "Andrew Sardone"))
