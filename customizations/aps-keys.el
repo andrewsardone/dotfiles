@@ -16,6 +16,9 @@
 (global-set-key "\C-x\C-k" 'kill-region)
 (global-set-key "\C-c\C-k" 'kill-region)
 
+(global-unset-key (kbd "C-\-"))
+(global-set-key (kbd "C-\-") 'undo)
+
 ; personal key-bindings, using C-z as a prefix
 
 ; First, unbind C-z so it doesn't minimize the window
