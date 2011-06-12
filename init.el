@@ -30,6 +30,7 @@
 (vendor 'nav)
 (vendor 'php-mode)
 (vendor 'rvm)
+(vendor 'smooth-scrolling)
 (vendor 'textmate)
 (vendor 'yaml-mode)
 
