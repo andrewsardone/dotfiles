@@ -94,3 +94,8 @@ coding buffers"
 
 ; Mustache
 (require 'mustache-mode)
+
+; narrow-to-region,
+;   enable with C-x n n
+;   disable with C-x n w
+(put 'narrow-to-region 'disabled nil)
