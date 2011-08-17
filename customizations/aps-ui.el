@@ -44,7 +44,8 @@
                                 (mapcar (lambda (x) (cons x nil))
                                         cols)))))))
                  color-theme-choices ))
-(add-hook 'after-make-frame-functions 'test-win-sys)
+;; (add-hook 'after-make-frame-functions 'test-win-sys)
+(load-theme 'wombat)
 
 ; colors
 (custom-set-faces
