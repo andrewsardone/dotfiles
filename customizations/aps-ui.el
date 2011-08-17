@@ -4,8 +4,11 @@
 ; don't display scratch message
 (setq initial-scratch-message nil)
 
-; no toolbar
+; no toolbar, Emacs 23
 (if (fboundp 'toolbar-bar-mode) (toolbar-bar-mode 0))
+
+; no toolbar, Emacs 24
+(if (fboundp 'tool-bar-mode) (tool-bar-mode 0))
 
 ; no scrollbar
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode 0))
