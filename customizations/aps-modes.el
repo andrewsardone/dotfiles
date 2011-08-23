@@ -57,6 +57,11 @@ coding buffers"
   (message "APS js-mode hook"))
 (add-hook 'js-mode-hook 'aps-js-mode-hook)
 
+(add-to-list 'load-path "/usr/local/lib/node_modules/jshint-mode")
+(require 'flymake-jshint)
+(add-hook 'javascript-mode-hook
+     (lambda () (flymake-mode t)))
+
 ; re-builder
 (require 're-builder)
 (setq reb-re-builder 'string)
