@@ -32,6 +32,9 @@
 ; apply syntax highlighting to all buffers
 (global-font-lock-mode t)
 
+; Give each line of text jue one screen line
+(setq truncate-lines t)
+
 ; jump to a definition in the current file.
 (global-set-key (kbd "C-x C-i") 'ido-imenu)
 

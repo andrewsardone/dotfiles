@@ -36,6 +36,8 @@
   (ansi-term "/bin/zsh"))
 (global-set-key (kbd "C-z t") 'create-terminal)
 
+(global-set-key (kbd "C-z T") 'toggle-truncate-lines)
+
 (defun sane-coding-return-key (keymap)
   "Bind RET to newline-and-indent within the KEYMAP keymap. 
 Also sets M-RET to simply newline (this mimics TextMate)."
