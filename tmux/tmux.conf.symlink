@@ -1,0 +1,19 @@
+# My prefix key, same as I use in GNU screen
+unbind-key C-b
+set-option -g prefix C-]
+
+set -g status-bg black
+set -g status-fg white
+
+set-window-option -g window-status-alert-fg red
+set-window-option -g window-status-alert-bg white
+
+set -g pane-border-bg black
+set -g pane-border-fg white
+set -g pane-active-border-bg black
+set -g pane-active-border-fg blue
+
+set-option -g status-keys emacs
+set-window-option -g mode-keys emacs
+
+set -g default-terminal "screen-256color"
