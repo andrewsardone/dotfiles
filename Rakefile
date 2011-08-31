@@ -40,7 +40,7 @@ task :install => [:generate_gitconfig_from_template] do
     overwrite = false
     backup = false
 
-    file = linkable.split('/').last.split('.').first
+    file = linkable.split('/').last.split('.symlink').last
     target = "#{ENV["HOME"]}/.#{file}"
 
     if File.exists?(target) || File.symlink?(target)
