@@ -28,6 +28,11 @@ coding buffers"
 (autoload 'mo-git-blame-file "mo-git-blame" nil t)
 (autoload 'mo-git-blame-current "mo-git-blame" nil t)
 
+; http-twiddle
+(add-hook 'http-twiddle-mode-hook
+  (lambda ()
+    (local-set-key (kbd "C-c C-u") 'uuid-insert)))
+
 ; ielm
 (add-hook 'ielm-mode-hook 
   (lambda () 
