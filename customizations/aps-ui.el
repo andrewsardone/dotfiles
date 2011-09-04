@@ -51,25 +51,28 @@
 (load-theme 'wombat)
 
 ; colors
-(custom-set-faces
- '(flymake-errline ((t :underline "red")))
- '(flymake-warnline ((t :underline "green"))))
 
-; pretty diff-mode
-(custom-set-faces
- '(diff-added ((t (:foreground "#b3fa86"))))
- '(diff-context ((t nil)))
- '(diff-file-header ((((class color) (min-colors 88) (background dark)) (:foreground "RoyalBlue1"))))
- '(diff-function ((t (:foreground "#00bbdd"))))
- '(diff-header ((((class color) (min-colors 88) (background dark)) (:foreground "RoyalBlue1"))))
- '(diff-hunk-header ((t (:foreground "#d1d2fb"))))
- '(diff-nonexistent ((t (:inherit diff-file-header :strike-through nil))))
- '(diff-refine-change ((((class color) (min-colors 88) (background dark)) (:background "#182042"))))
- '(diff-removed ((t (:foreground "#ff8277")))))
+(eval-after-load 'flymake-mode
+  '(custom-set-faces
+    '(flymake-errline ((t :underline "red")))
+    '(flymake-warnline ((t :underline "green")))))
 
-; pretty magit diffs (based on colors for diff-mode above)
-(set-face-attribute 'magit-diff-add nil :foreground "#b3fa86")
-(set-face-attribute 'magit-diff-del nil :foreground "#ff8277")
-(set-face-attribute 'magit-diff-file-header nil :foreground "RoyalBlue1")
-(set-face-attribute 'magit-diff-hunk-header nil :foreground "#d1d2fb")
-(set-face-attribute 'magit-item-highlight nil :background "black")
+(eval-after-load 'diff-mode
+  '(custom-set-faces
+    '(diff-added ((t (:foreground "#b3fa86"))))
+    '(diff-context ((t nil)))
+    '(diff-header ((((class color) (min-colors 88) (background dark)) (:foreground "RoyalBlue1"))))
+    '(diff-file-header ((((class color) (min-colors 88) (background dark)) (:foreground "RoyalBlue1"))))
+    '(diff-function ((t (:foreground "#00bbdd"))))
+    '(diff-hunk-header ((t (:foreground "#d1d2fb"))))
+    '(diff-nonexistent ((t (:inherit diff-file-header :strike-through nil))))
+    '(diff-refine-change ((((class color) (min-colors 88) (background dark)) (:background "#182042"))))
+    '(diff-removed ((t (:foreground "#ff8277"))))))
+
+(eval-after-load 'magit
+  '(custom-set-faces
+     '(magit-diff-add ((t :foreground "#b3fa86")))
+     '(magit-diff-del ((t :foreground "#ff8277")))
+     '(magit-diff-file-header ((t :foreground "RoyalBlue1")))
+     '(magit-diff-hunk-header ((t :foreground "#d1d2fb")))
+     '(magit-item-highlight ((t :background "black")))))
