@@ -22,35 +22,8 @@
 ; no bell
 (setq ring-bell-function 'ignore)
 
-; theme
-(require 'color-theme)
-(color-theme-initialize)
-(load-file "~/.emacs.d/vendor/color-theme-ir-black/color-theme-ir-black.el")
-(load-file "~/.emacs.d/customizations/color-theme-aps-term.el")
-;; First color-theme is for Cocoa emacs, second is for terminal-based emacs
-(setq color-theme-choices '(color-theme-ir-black color-theme-aps-term))
-(funcall (lambda (cols)
-           (let ((color-theme-is-global nil))
-             (eval
-              (append '(if (window-system))
-                      (mapcar (lambda (x) (cons x nil))
-                              cols)))))
-           color-theme-choices)
-(fset 'test-win-sys
-      (funcall (lambda (cols)
-                 (lexical-let ((cols cols))
-                   (lambda (frame)
-                     (let ((color-theme-is-global nil))
-                       (select-frame frame)
-                       (eval
-                        (append '(if (window-system frame))
-                                (mapcar (lambda (x) (cons x nil))
-                                        cols)))))))
-                 color-theme-choices ))
-;; (add-hook 'after-make-frame-functions 'test-win-sys)
-(load-theme 'wombat)
-
 ; colors
+(load-theme 'wombat)
 
 (eval-after-load 'flymake-mode
   '(custom-set-faces
