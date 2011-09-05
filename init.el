@@ -1,5 +1,7 @@
 ;;; init.el
 
+(setq init-start-time (current-time))
+
 ; Common Lisp support
 (require 'cl)
 
@@ -31,7 +33,6 @@
 (vendor 'php-mode)
 (vendor 'rvm)
 (vendor 'smooth-scrolling)
-(vendor 'textmate)
 (vendor 'yaml-mode)
 
 ; load customizations
@@ -40,3 +41,6 @@
 
 ; start a server for usage with emacsclient
 (add-hook 'after-init-hook 'server-start)
+
+(message "My .emacs loaded in %ds" (destructuring-bind (hi lo ms) (current-time)
+                                     (- (+ hi lo) (+ (first init-start-time) (second init-start-time)))))
