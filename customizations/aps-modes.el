@@ -80,9 +80,8 @@ coding buffers"
 (autoload 'rvm-use-default "rvm")
 (rvm-use-default)
 
-; Rails
-;; (require 'rinari)
-;; (setq rinari-tags-file-name "TAGS")
+; shell
+(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
 
 ; Markdown
 (autoload 'markdown-mode "markdown-mode.el"
