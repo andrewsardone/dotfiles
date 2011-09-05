@@ -10,7 +10,6 @@
 (set-selection-coding-system 'utf-8)
 
 ; line numbering
-(require 'linum)
 (global-linum-mode 0)
 (setq linum-format "%d ") ; space after line number
 

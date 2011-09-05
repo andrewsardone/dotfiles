@@ -23,7 +23,6 @@ coding buffers"
 (setq css-indent-offset 2)
 
 ; Git
-(require 'magit)
 (autoload 'magit-status "magit" nil t)
 (autoload 'mo-git-blame-file "mo-git-blame" nil t)
 (autoload 'mo-git-blame-current "mo-git-blame" nil t)
@@ -39,11 +38,7 @@ coding buffers"
     (local-set-key (kbd "<up>") 'comint-previous-input)
     (local-set-key (kbd "<down>") 'comint-next-input)))
 
-; Nav
-(require 'nav)
-
 ; YAML
-(require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.yaml$" . yaml-mode))
 
@@ -55,20 +50,18 @@ coding buffers"
 
 ; JavaScript
 (add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
+(add-to-list 'load-path "/usr/local/lib/node_modules/jshint-mode")
+
 (defun aps-js-mode-hook ()
+  (require 'flymake-jshint)
+  (flymake-mode t)
   (coding-hook)
   (setq js-indent-level 2)
-  (sane-coding-return-key js-mode-map)
-  (message "APS js-mode hook"))
+  (sane-coding-return-key js-mode-map))
+
 (add-hook 'js-mode-hook 'aps-js-mode-hook)
 
-(add-to-list 'load-path "/usr/local/lib/node_modules/jshint-mode")
-(require 'flymake-jshint)
-(add-hook 'javascript-mode-hook
-     (lambda () (flymake-mode t)))
-
 ; re-builder
-(require 're-builder)
 (setq reb-re-builder 'string)
 
 ; Ruby
@@ -84,7 +77,7 @@ coding buffers"
 (add-hook 'ruby-mode-hook 'aps-ruby-mode-hook)
 
 ; RVM
-(require 'rvm)
+(autoload 'rvm-use-default "rvm")
 (rvm-use-default)
 
 ; Rails
@@ -101,9 +94,6 @@ coding buffers"
 (add-to-list 'auto-mode-alist '("\\.markdown$" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.mkd$" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
-
-; Mustache
-(require 'mustache-mode)
 
 ; narrow-to-region,
 ;   enable with C-x n n
