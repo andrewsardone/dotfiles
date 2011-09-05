@@ -1,10 +1,3 @@
-; Global Coding
-
-(defun coding-hook ()
-  "Hook to setup configurations that are convenient across all
-coding buffers"
-  (linum-mode 1))
-
 ; Textmate
 ;; (require 'textmate)
 ;; (texmate-mode)
@@ -46,8 +39,8 @@ coding buffers"
 
 ; Emacs Lisp
 (defun aps-emacs-lisp-mode-hook ()
-  (sane-coding-return-key emacs-lisp-mode-map)
-  (coding-hook))
+  (sane-coding-return-key emacs-lisp-mode-map))
+
 (add-hook 'emacs-lisp-mode-hook 'aps-emacs-lisp-mode-hook)
 
 ; JavaScript
@@ -57,11 +50,19 @@ coding buffers"
 (defun aps-js-mode-hook ()
   (require 'flymake-jshint)
   (flymake-mode t)
-  (coding-hook)
   (setq js-indent-level 2)
   (sane-coding-return-key js-mode-map))
 
 (add-hook 'js-mode-hook 'aps-js-mode-hook)
+
+; prog-mode
+; "Major mode for editing programming language source code"
+; Global Coding
+
+(defun aps-prog-mode-hook ()
+  (linum-mode 1))
+
+(add-hook 'prog-mode-hook 'aps-prog-mode-hook)
 
 ; re-builder
 (setq reb-re-builder 'string)
@@ -74,7 +75,6 @@ coding buffers"
 (setq auto-mode-alist (cons '("Capfile" . ruby-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.rake" . ruby-mode) auto-mode-alist))
 (defun aps-ruby-mode-hook ()
-  (coding-hook)
   (sane-coding-return-key ruby-mode-map))
 (add-hook 'ruby-mode-hook 'aps-ruby-mode-hook)
 
