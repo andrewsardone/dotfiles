@@ -28,15 +28,17 @@ coding buffers"
 (autoload 'mo-git-blame-current "mo-git-blame" nil t)
 
 ; http-twiddle
-(add-hook 'http-twiddle-mode-hook
-  (lambda ()
-    (local-set-key (kbd "C-c C-u") 'uuid-insert)))
+(defun aps-http-twiddle-mode-hook ()
+  (local-set-key (kbd "C-c C-u") 'uuid-insert))
+
+(add-hook 'http-twiddle-mode-hook 'aps-http-twiddle-mode-hook)
 
 ; ielm
-(add-hook 'ielm-mode-hook 
-  (lambda () 
-    (local-set-key (kbd "<up>") 'comint-previous-input)
-    (local-set-key (kbd "<down>") 'comint-next-input)))
+(defun aps-ielm-mode-hook ()
+  (local-set-key (kbd "<up>") 'comint-previous-input)
+  (local-set-key (kbd "<down>") 'comint-next-input))
+  
+(add-hook 'ielm-mode-hook 'aps-ielm-mode-hook)
 
 ; YAML
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
@@ -86,10 +88,13 @@ coding buffers"
 ; Markdown
 (autoload 'markdown-mode "markdown-mode.el"
   "Major mode for editing Markdown files" t)
-(add-hook 'markdown-mode-hook 
-  (lambda () 
-    (longlines-mode t)
-    (flyspell-mode t)))
+
+(defun aps-markdown-mode-hook ()
+  (longlines-mode t)
+  (flyspell-mode t))
+
+(add-hook 'markdown-mode-hook 'aps-markdown-mode-hook)
+
 (add-to-list 'auto-mode-alist '("\\.markdown$" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.mkd$" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
