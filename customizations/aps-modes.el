@@ -39,7 +39,10 @@
 
 ; Emacs Lisp
 (defun aps-emacs-lisp-mode-hook ()
-  (sane-coding-return-key emacs-lisp-mode-map))
+  (sane-coding-return-key emacs-lisp-mode-map)
+  (turn-on-eldoc-mode)
+  (define-key emacs-lisp-mode-map (kbd "C-z C-f f") 'find-function-at-point)
+  (define-key emacs-lisp-mode-map (kbd "C-z C-f v") 'find-variable-at-point))
 
 (add-hook 'emacs-lisp-mode-hook 'aps-emacs-lisp-mode-hook)
 
