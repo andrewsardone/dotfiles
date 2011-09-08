@@ -24,6 +24,7 @@
 
 ; colors
 (load-theme 'wombat)
+(custom-set-faces '(cursor ((t :background "Orange"))))
 
 (eval-after-load 'flymake-mode
   '(custom-set-faces
