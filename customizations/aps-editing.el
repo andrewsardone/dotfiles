@@ -34,6 +34,9 @@
 ; Give each line of text jue one screen line
 (setq truncate-lines t)
 
+; Delete trailing whitespace
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
 ; jump to a definition in the current file.
 (global-set-key (kbd "C-x C-i") 'ido-imenu)
 
