@@ -2,8 +2,7 @@
 *~
 tmp/
 auto-save-list/
-elpa/archive-contents
-elpa/builtin-packages
+elpa/*
 tramp
 *.elc
 tramp
