@@ -21,6 +21,7 @@
 (autoload 'mo-git-blame-current "mo-git-blame" nil t)
 
 ; http-twiddle
+(autoload 'http-twiddle-mode "http-twiddle" nil t)
 (defun aps-http-twiddle-mode-hook ()
   (local-set-key (kbd "C-c C-u") 'uuid-insert))
 
