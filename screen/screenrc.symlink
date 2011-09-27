@@ -20,6 +20,8 @@ caption splitonly "%{= kw}%?%-Lw%?%{kw}%n*%t%f %?(%u)%?%{= kw}%?%+Lw%?"
 termcapinfo xterm ti@:te@
 startup_message	off
 
+term screen-256color
+
 # Tell Screen to write its copy buffer to a temporary file (defaults to
 # /tmp/screen-exchange), and then send that file to `pbcopy`.
 # Bound the command to C-a b
