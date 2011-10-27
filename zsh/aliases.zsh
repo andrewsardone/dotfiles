@@ -19,3 +19,7 @@ alias reload!='. ~/.zshrc'
 
 # Open a new Emacs frame on the current terminal
 alias em="emacsclient"
+
+# Serve a directory at localhost:8000
+# example: `cd directory_with_index_html; serve_this`
+alias serve_this="python -m SimpleHTTPServer"
