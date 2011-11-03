@@ -15,6 +15,9 @@
 ; CSS
 (setq css-indent-offset 2)
 
+; cua-mode
+(setq cua-enable-cua-keys nil)
+
 ; Git
 (autoload 'magit-status "magit" nil t)
 (autoload 'mo-git-blame-file "mo-git-blame" nil t)
