@@ -12,7 +12,7 @@ escape ^]^]
 
 # status
 screen
-screen $SHELL -c 'screen -X hardstatus alwayslastline "%{= kw}%{g}[ %{R}$STY %{g}] %{Y} %{g}[%=%{ =kw}%{w}%-w%{Y}[%{W}%n-%t%{Y}]%{w}%+w%=%{g}][ %{w}%m-%d %{Y}%c %{g}]"'
+screen $SHELL -c 'screen -X hardstatus alwayslastline "%{= kw}%{g}[ %{R}$STY %{g}] %{Y} %{g}[%=%{ =kw}%{w}%-w%{Y}%{g}[%{W}%{y}%n-%t%{Y}%{g}]%{w}%+w%=%{g}][ %{w}%m-%d %{Y}%c %{g}]"'
 
 # add caption
 caption splitonly "%{= kw}%?%-Lw%?%{kw}%n*%t%f %?(%u)%?%{= kw}%?%+Lw%?"
