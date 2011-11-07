@@ -31,7 +31,6 @@
 (vendor 'mustache-mode)
 (vendor 'nav)
 (vendor 'php-mode)
-(vendor 'rvm)
 (vendor 'smooth-scrolling)
 (vendor 'yaml-mode)
 

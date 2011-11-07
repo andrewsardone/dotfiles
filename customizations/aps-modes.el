@@ -85,10 +85,6 @@
   (sane-coding-return-key ruby-mode-map))
 (add-hook 'ruby-mode-hook 'aps-ruby-mode-hook)
 
-; RVM
-(autoload 'rvm-use-default "rvm")
-(rvm-use-default)
-
 ; shell
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
 
