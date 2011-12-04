@@ -1,45 +1,27 @@
-;;; init.el
+;; Modify PATH to include my local stuff (mostly homebrew)
+(if (eq system-type 'darwin)
+    (push "/usr/local/bin" exec-path))
 
-(setq init-start-time (current-time))
+(defvar aps-root-dir (file-name-directory load-file-name)
+  "The root directory of my Emacs configuration.")
 
-; Common Lisp support
-(require 'cl)
+(defvar aps-modules-dir (concat aps-root-dir "modules/")
+  "The directory where my personal configurations live in a modular,
+fashion, reminiscent of Emacs Prelude's setup.")
 
-(push "/usr/local/bin" exec-path)
+(defvar aps-vendor-dir (concat aps-root-dir "vendor/")
+  "The vendor directory for third-party packages that aren't available
+in ELPA.")
 
-; setup load path
-(add-to-list 'load-path "~/.emacs.d")
-(add-to-list 'load-path "~/.emacs.d/customizations")
-(add-to-list 'load-path "~/.emacs.d/utilities")
-(add-to-list 'load-path "~/.emacs.d/vendor")
+;; setup the load-path
+(add-to-list 'load-path aps-modules-dir)
+(add-to-list 'load-path aps-vendor-dir)
 
-; handy function to load all elisp files in a directory
-(load-file "~/.emacs.d/load-directory.el")
+(require 'aps-packages)
+(require 'aps-core)
+(require 'aps-ui)
+(require 'aps-editor)
+(require 'aps-global-keybindings)
 
-; load utilities
-(mapcar 'load-directory '("~/.emacs.d/utilities"))
-
-; load vendor modes
-; configured in customizations/aps-modes.el
-(vendor 'browse-kill-ring)
-(vendor 'coffee-mode)
-(vendor 'color-theme)
-(vendor 'http-twiddle)
-(vendor 'ido-menu)
-(vendor 'magit)
-(vendor 'markdown-mode)
-(vendor 'mustache-mode)
-(vendor 'nav)
-(vendor 'php-mode)
-(vendor 'smooth-scrolling)
-(vendor 'yaml-mode)
-
-; load customizations
-; loaded after vendor modes to allow for custom extensions
-(mapcar 'load-directory '("~/.emacs.d/customizations"))
-
-; start a server for usage with emacsclient
-(add-hook 'after-init-hook 'server-start)
-
-(message "My .emacs loaded in %ds" (destructuring-bind (hi lo ms) (current-time)
-                                     (- (+ hi lo) (+ (first init-start-time) (second init-start-time)))))
+(require 'aps-emacs-lisp)
+(require 'aps-clojure)
