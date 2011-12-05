@@ -65,4 +65,11 @@
 ; don't use the cua-mode keys (I only like the rectangle support)
 (setq cua-enable-cua-keys nil)
 
+;; allow for narrowing
+;; see:
+;;   narrow-to-region C-x n n
+;;   narrow-to-page   C-x n p
+;;   narrow-to-defun  C-x n d
+(put 'narrow-to-region 'disabled nil)
+
 (provide 'aps-editor)
