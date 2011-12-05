@@ -3,6 +3,9 @@
 ; no tabs, just spaces!
 (setq-default indent-tabs-mode nil)
 
+;; delete trailing whitespace on save
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
 ;; store all backup and autosave files in the tmp dir
 (setq backup-directory-alist
       `((".*" . ,temporary-file-directory)))
