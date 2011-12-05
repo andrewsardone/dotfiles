@@ -92,4 +92,14 @@ Emacs load path."
       (find-file (concat "/sudo:root@localhost:" (ido-read-file-name "File: ")))
     (find-alternate-file (concat "/sudo:root@localhost:" buffer-file-name))))
 
+(defun prelude-turn-on-whitespace ()
+  "A turn-on-* function for whitespace that's not a lambda so it can
+go into a hook."
+  (whitespace-mode +1))
+
+(defun prelude-turn-off-whitespace ()
+    "A turn-off-* function for whitespace that's not a lambda so it can
+go into a hook."
+  (whitespace-mode -1))
+
 (provide 'prelude-defuns)
