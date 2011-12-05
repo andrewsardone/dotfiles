@@ -25,3 +25,4 @@ in ELPA.")
 
 (require 'aps-emacs-lisp)
 (require 'aps-clojure)
+(require 'aps-markdown)
