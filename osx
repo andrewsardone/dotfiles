@@ -2,7 +2,7 @@
 #   https://github.com/mathiasbynens/dotfiles/blob/master/.osx
 
 # Enable subpixel font rendering on non-Apple LCDs
-defaults write NSGlobalDomain AppleFontSmoothing -int 2
+defaults -currentHost write -globalDomain AppleFontSmoothing -int 2
 
 # Repeat keystroke, using Emacs' default keybinding for
 # universal-argument
