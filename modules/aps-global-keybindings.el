@@ -33,6 +33,14 @@
 (global-unset-key (kbd "C-\-"))
 (global-set-key (kbd "C-\-") 'undo)
 
+;; comment or uncomment
+;; removes the default C-/ keybinding for `undo', but I already
+;; use the default C-x u or my custom C--
+(global-unset-key (kbd "C-/"))
+(global-set-key (kbd "C-/") 'comment-or-uncomment-region-or-line)
+(if (eq system-type 'darwin)
+    (global-set-key (kbd "s-/") 'comment-or-uncomment-region-or-line))
+
 ;; use hippie-expand instead of dabbrev
 (global-set-key (kbd "M-/") 'hippie-expand)
 

@@ -72,4 +72,7 @@
 ;;   narrow-to-defun  C-x n d
 (put 'narrow-to-region 'disabled nil)
 
+;; enable sensible commenting/uncommenting
+(aps-define-comment-or-uncomment-line)
+
 (provide 'aps-editor)

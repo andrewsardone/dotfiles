@@ -63,4 +63,29 @@
   (interactive)
   (insert (aps-uuid-create)))
 
+(defmacro allow-line-as-region-for-function (orig-function)
+  "Adds an *-or-line version of the given function that
+normally requires region arguments.
+
+This code comes from Aquamac's osxkeys.el and is licensed under
+the GPL."
+`(defun ,(intern (concat (symbol-name orig-function) "-or-line"))
+   ()
+   ,(format "Like `%s', but acts on the current line if mark is not active."
+            orig-function)
+   (interactive)
+   (if mark-active
+       (call-interactively (function ,orig-function))
+     (save-excursion
+       ;; define a region (temporarily) -- so any C-u prefixes etc. are preserved.
+       (beginning-of-line)
+       (set-mark (point))
+       (end-of-line)
+       (call-interactively (function ,orig-function))))))
+
+;; taken from Chris Wanstrath's textmate.el
+(defun aps-define-comment-or-uncomment-line ()
+  (unless (fboundp 'comment-or-uncomment-region-or-line)
+    (allow-line-as-region-for-function comment-or-uncomment-region)))
+
 (provide 'aps-core)
