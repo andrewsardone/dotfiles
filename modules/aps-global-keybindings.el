@@ -6,6 +6,10 @@
 (global-set-key "\C-x\C-k" 'kill-region)
 (global-set-key "\C-c\C-k" 'kill-region)
 
+;; s-" to cycle backwords through windows, regardless of
+;; which frame it is on (compliments s-' and (`next-multiframe-window'))
+(global-set-key (kbd "s-\"") 'previous-multiframe-window)
+
 ;; Jump to a definition in the current file. (This is awesome.)
 (global-set-key (kbd "M-i") 'prelude-ido-goto-symbol)
 
