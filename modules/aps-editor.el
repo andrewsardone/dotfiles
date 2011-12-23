@@ -75,4 +75,28 @@
 ;; enable sensible commenting/uncommenting
 (aps-define-comment-or-uncomment-line)
 
+;; special-display-function setup
+;; stolen from Gary Bernhardt
+(setq special-display-regexps
+        '("^\\*Completions\\*$"
+          "^\\*Help\\*$"
+          "^\\*grep\\*$"
+          "^\\*Apropos\\*$"
+          "^\\*elisp macroexpansion\\*$"
+          "^\\*local variables\\*$"
+          "^\\*Compile-Log\\*$"
+          "^\\*Quail Completions\\*$"
+          "^\\*Occur\\*$"
+          "^\\*frequencies\\*$"
+          "^\\*compilation\\*$"
+          "^\\*Locate\\*$"
+          "^\\*Colors\\*$"
+          "^\\*tumme-display-image\\*$"
+          "^\\*SLIME Description\\*$"
+          "^\\*.* output\\*$"           ; tex compilation buffer
+          "^\\*TeX Help\\*$"
+          "^\\*Shell Command Output\\*$"
+          "^\\*Async Shell Command\\*$"))
+(setq special-display-function #'grb-special-display)
+
 (provide 'aps-editor)
