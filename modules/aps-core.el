@@ -6,6 +6,9 @@
 ;; load the stuff I grabbed from the emacs-prelude project
 (require 'prelude-defuns)
 
+;; load the stuff I grabbed from Gary Berndardt
+(require 'grb-defuns)
+
 ;; add the first level subfolders of vendor automatically
 (prelude-add-subfolders-to-load-path aps-vendor-dir)
 

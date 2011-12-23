@@ -8,3 +8,5 @@
     (with-selected-window window
       (switch-to-buffer buffer)
       window)))
+
+(provide 'grb-defuns)
