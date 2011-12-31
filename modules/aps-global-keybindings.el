@@ -52,14 +52,12 @@
 ; (I'm constantly hitting this binding by accident)
 (global-unset-key "\C-z")
 
-(global-set-key (kbd "C-z b") 'browse-url-at-point)
+(global-set-key (kbd "C-c b") 'browse-url-at-point)
 
-(global-set-key (kbd "C-z R") 'rename-buffer)
+(global-set-key (kbd "C-c R") 'rename-buffer)
 
-(global-unset-key (kbd "C-z t"))
+(global-set-key (kbd "C-c t") 'aps-create-terminal)
 
-(global-set-key (kbd "C-z t") 'aps-create-terminal)
-
-(global-set-key (kbd "C-z T") 'toggle-truncate-lines)
+(global-set-key (kbd "C-c T") 'toggle-truncate-lines)
 
 (provide 'aps-global-keybindings)
