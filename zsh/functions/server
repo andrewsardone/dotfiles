@@ -1,0 +1,9 @@
+# Starts a webserver from the current directory.
+#
+# via https://gist.github.com/1525217
+#
+# @param [optional, Integer] bind port number, default 8080.
+function server() {
+    local port="${1:-8080}"
+    open "http://localhost:${port}/" && python -m SimpleHTTPServer "$port"
+}
