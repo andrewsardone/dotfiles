@@ -15,6 +15,18 @@ Emacs load path."
                  (not (equal f ".")))
         (add-to-list 'load-path name)))))
 
+(defun prelude-open-with ()
+  "Simple function that allows us to open the underlying
+file of a buffer in an external program."
+  (interactive)
+  (when buffer-file-name
+    (shell-command (concat
+                    (if (eq system-type 'darwin)
+                        "open"
+                      (read-shell-command "Open current file with: "))
+                    " "
+                    buffer-file-name))))
+
 (defun prelude-eval-and-replace ()
   "Replace the preceding sexp with its value."
   (interactive)
