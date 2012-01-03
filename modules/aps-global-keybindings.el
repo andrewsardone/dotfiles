@@ -21,6 +21,9 @@
                                 (interactive)
                                 (other-window -1))) ;; back one
 
+;; magit
+(global-set-key (kbd "C-c g") 'magit-status)
+
 ;; Should be able to eval-and-replace anywhere.
 (global-set-key (kbd "C-c e") 'prelude-eval-and-replace)
 
