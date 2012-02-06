@@ -9,7 +9,8 @@
 
 (defun aps-clojure-mode-hook ()
   "A hook for clojure mode"
-  (aps-lisp-coding-hook))
+  (aps-lisp-coding-hook)
+  (setq inferior-lisp-program "lein repl"))
 
 (add-hook 'clojure-mode-hook 'aps-clojure-mode-hook)
 
