@@ -30,7 +30,7 @@
 (add-to-list 'custom-theme-load-path (concat aps-root-dir "themes/"))
 
 ;; use zenburn as the default theme
-(load-theme 'zenburn t)
+(load-theme 'tango-dark t)
 
 ;; custom color tweaks
 (custom-set-faces '(cursor ((t :background "Orange"))))
