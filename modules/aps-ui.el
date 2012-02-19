@@ -70,4 +70,7 @@
      (set-face-font 'default "-apple-Menlo-medium-normal-normal-*-11-*-*-*-m-0-iso10646-1")
      (global-set-key (kbd "s-<return>") 'ns-toggle-fullscreen)))
 
+;; bind shift-{left,right,up,down} to window movement
+(windmove-default-keybindings)
+
 (provide 'aps-ui)
