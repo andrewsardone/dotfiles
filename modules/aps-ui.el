@@ -67,7 +67,7 @@
      (setq browse-url-browser-function 'browse-url-default-macosx-browser)
      (setq delete-by-moving-to-trash t)
      (setq ns-pop-up-frames nil)
-     (set-face-font 'default "-apple-Menlo-medium-normal-normal-*-11-*-*-*-m-0-iso10646-1")
+     (set-face-font 'default "-apple-Menlo-medium-normal-normal-*-13-*-*-*-m-0-iso10646-1")
      (global-set-key (kbd "s-<return>") 'ns-toggle-fullscreen)))
 
 ;; bind shift-{left,right,up,down} to window movement
