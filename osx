@@ -28,3 +28,6 @@ defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 
 # Avoid creating .DS_Store files on network volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+# Enable debug menu in iCal
+defaults write com.apple.iCal IncludeDebugMenu -int 1
