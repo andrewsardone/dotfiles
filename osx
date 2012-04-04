@@ -34,3 +34,6 @@ defaults write com.apple.iCal IncludeDebugMenu -int 1
 
 # Disable delay to show Dock
 defaults write com.apple.Dock autohide-delay -float 0
+
+echo "Kill affected applications"
+for app in iCal Finder Dock SystemUIServer; do killall "$app" >/dev/null 2>&1; done
