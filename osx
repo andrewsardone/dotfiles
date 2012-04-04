@@ -31,3 +31,6 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
 # Enable debug menu in iCal
 defaults write com.apple.iCal IncludeDebugMenu -int 1
+
+# Disable delay to show Dock
+defaults write com.apple.Dock autohide-delay -float 0
