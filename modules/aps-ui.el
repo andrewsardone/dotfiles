@@ -33,7 +33,8 @@
 (load-theme 'darkclean t)
 
 ;; custom color tweaks
-(custom-set-faces '(cursor ((t :background "Orange"))))
+(custom-set-faces '(cursor ((t :background "Orange")))
+                  '(region ((t (:background "#363d41")))))
 
 ;; ansi-term colors
 (setq ansi-term-color-vector
