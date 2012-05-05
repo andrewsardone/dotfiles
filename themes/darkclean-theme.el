@@ -23,6 +23,10 @@
 ;; higher (some background color transitions are tenuous and might be
 ;; too strong on low color depths). Created by Fernando Carmona Varo
 
+;;; Commentary:
+
+;; Some basic tweaks to fit what I like -- APS
+
 (deftheme darkclean
   "Simple theme that makes use of dark background colors for some special modes (hl-line, whitespace, flymake). Best seen at 16-bit color depth or higher.")
 
@@ -43,7 +47,7 @@
  '(font-lock-comment-face ((t (:foreground "#B9B"))))
  '(font-lock-comment-delimiter-face ((nil (:weight bold :foreground "#999"))))
  '(font-lock-constant-face ((t (:slant italic :foreground "#8EB"))))
- '(font-lock-doc-face ((t (:height 1.1 :slant italic :foreground "#BCD"))))
+ '(font-lock-doc-face ((t (:slant italic :foreground "#BCD"))))
  '(font-lock-keyword-face ((t (:weight bold :foreground "cyan"))))
  '(font-lock-string-face ((t (:slant italic :foreground "#FA8"))))
  '(font-lock-type-face ((t (:weight bold :foreground "#9B3"))))
