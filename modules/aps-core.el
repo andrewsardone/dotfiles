@@ -88,4 +88,11 @@ the GPL."
   (unless (fboundp 'comment-or-uncomment-region-or-line)
     (allow-line-as-region-for-function comment-or-uncomment-region)))
 
+(defun aps-add-to-auto-mode-alist (mode file-types)
+  "Add FILE-TYPES to the `auto-mode-alist' for the given MODE."
+  (mapcar
+   (lambda (file-type)
+     (add-to-list 'auto-mode-alist `(,file-type . ,mode)))
+   file-types))
+
 (provide 'aps-core)
