@@ -10,9 +10,10 @@
   excludesfile = $HOME/.gitexcludes
   editor = emacsclient
 [alias]
-  lg = log --graph --pretty=format:'%Cred%h%Creset %C(cyan)%an%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
   co = checkout
   shortsha = rev-parse --short HEAD
   st = status --short --branch
+
+  lg = "!source ~/.githelpers && pretty_git_log"
 [diff "localizablestrings"]
   textconv = "iconv -f utf-16 -t utf-8"
