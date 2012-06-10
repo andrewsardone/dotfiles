@@ -2,6 +2,11 @@
 unbind-key C-b
 set-option -g prefix C-]
 
+# Mouse setup
+set -g mode-mouse on
+setw -g mouse-select-window on
+setw -g mouse-select-pane on
+
 set -g status-bg black
 set -g status-fg white
 
