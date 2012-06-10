@@ -7,6 +7,23 @@ set -g mode-mouse on
 setw -g mouse-select-window on
 setw -g mouse-select-pane on
 
+# Saner splitting.
+bind v split-window -h
+bind s split-window -v
+bind S choose-session
+
+# Vim-style pane movement
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+
+# Pane resizing
+bind -r C-h resize-pane -L 5
+bind -r C-j resize-pane -D 5
+bind -r C-k resize-pane -U 5
+bind -r C-l resize-pane -R 5
+
 set -g status-bg black
 set -g status-fg white
 
