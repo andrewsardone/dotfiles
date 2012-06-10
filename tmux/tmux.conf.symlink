@@ -2,18 +2,55 @@
 unbind-key C-b
 set-option -g prefix C-]
 
-set -g status-bg black
-set -g status-fg white
+# Mouse setup
+set -g mode-mouse on
+setw -g mouse-select-window on
+setw -g mouse-select-pane on
 
-set-window-option -g window-status-alert-fg red
-set-window-option -g window-status-alert-bg white
+# Saner splitting.
+bind v split-window -h
+bind s split-window -v
+bind S choose-session
 
-set -g pane-border-bg black
-set -g pane-border-fg white
-set -g pane-active-border-bg black
-set -g pane-active-border-fg blue
+# Vim-style pane movement
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+
+# Pane resizing
+bind -r C-h resize-pane -L 5
+bind -r C-j resize-pane -D 5
+bind -r C-k resize-pane -U 5
+bind -r C-l resize-pane -R 5
+
+# Reload the config.
+bind r source-file ~/.tmux.conf \; display "Reloaded ~/.tmux.conf"
+
+# Fix copy/paste w/ Mac OS X
+# Make sure you have reattach-to-user-namespace installed
+#   brew install reattach-to-user-namespace
+set -g default-command "reattach-to-user-namespace -l zsh"
+bind b run "tmux show-buffer | reattach-to-user-namespace pbcopy" \; display "Current tmux buffer copied"
 
 set-option -g status-keys emacs
-set-window-option -g mode-keys emacs
+set-window-option -g mode-keys vi
 
 set -g default-terminal "screen-256color"
+
+# status line
+set -g status-left-length 32
+set -g status-right-length 150
+
+set -g status-fg white
+set -g status-bg colour234
+set -g pane-border-fg colour245
+set -g pane-active-border-fg colour39
+set -g message-fg colour16
+set -g message-bg colour221
+set -g message-attr bold
+
+set -g status-left '#[fg=colour235,bg=colour252,bold] #S '
+set -g window-status-format '#[fg=white,bg=colour234] #I #W '
+set -g window-status-current-format '#[fg=colour25,bg=colour39,noreverse,bold] #I #W '
+set -g status-right '#[fg=colour240]%m-%d %H:%M '
