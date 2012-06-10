@@ -27,6 +27,11 @@ bind -r C-l resize-pane -R 5
 # Reload the config.
 bind r source-file ~/.tmux.conf \; display "Reloaded ~/.tmux.conf"
 
+# Fix copy/paste w/ Mac OS X
+# Make sure you have reattach-to-user-namespace installed
+#   brew install reattach-to-user-namespace
+set -g default-command "reattach-to-user-namespace -l zsh"
+bind b run "tmux show-buffer | reattach-to-user-namespace pbcopy" \; display "Current tmux buffer copied"
 
 set-option -g status-keys emacs
 set-window-option -g mode-keys vi
