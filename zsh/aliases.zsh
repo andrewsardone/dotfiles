@@ -19,3 +19,6 @@ alias reload!='. ~/.zshrc'
 
 # Open a new Emacs frame on the current terminal
 alias em="emacsclient"
+
+# lolXcode
+alias ded='rm -rf ~/Library/Developer/Xcode/DerivedData/'
