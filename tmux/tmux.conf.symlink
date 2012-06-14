@@ -27,6 +27,11 @@ bind -r C-l resize-pane -R 5
 # Reload the config.
 bind r source-file ~/.tmux.conf \; display "Reloaded ~/.tmux.conf"
 
+# open a man page in new pane or window
+# via @andyfowler
+bind m command-prompt -p "man page:" "split-window -v 'exec man %%'"
+bind M command-prompt -p "Man page:" "new-window -n 'man %1' 'exec man %1'"
+
 # Fix copy/paste w/ Mac OS X
 # Make sure you have reattach-to-user-namespace installed
 #   brew install reattach-to-user-namespace
