@@ -18,6 +18,14 @@ set expandtab
 set listchars=tab:\ \ ,trail:·
 set autoindent
 
+" searching
+set hlsearch
+set incsearch
+" make searches case-sensitive only if they contain upper-case characters
+set ignorecase smartcase
+" clear highlighted search on return
+:nnoremap <CR> :nohlsearch<cr>
+
 " backup
 set backup
 set backupdir=~/.vim/backup
