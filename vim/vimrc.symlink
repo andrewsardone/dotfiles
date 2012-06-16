@@ -9,6 +9,15 @@ set number
 let mapleader=","
 set cmdheight=2
 
+" whitespace
+set nowrap
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set listchars=tab:\ \ ,trail:·
+set autoindent
+
 " backup
 set backup
 set backupdir=~/.vim/backup
