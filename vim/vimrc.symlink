@@ -1,8 +1,13 @@
 "-----------------------------------------------------------------------------
 " BASIC EDITING CONFIGURATION
 "-----------------------------------------------------------------------------
+set nocompatible
+set hidden
 syntax on
 set ruler
+set number
+let mapleader=","
+set cmdheight=2
 
 " backup
 set backup
