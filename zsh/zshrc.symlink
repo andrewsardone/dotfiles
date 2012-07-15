@@ -1,9 +1,39 @@
-# shortcut to this dotfiles path is $ZSH
-export DOTFILES=$HOME/.dotfiles
+# path
+[ -z "$APS_PATH" ] && export APS_PATH="$HOME/bin:/usr/local/bin"
+[ -z "$DEFAULT_PATH" ] && export DEFAULT_PATH=$PATH
+export PATH="$APS_PATH:$DEFAULT_PATH"
+export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 
-# source every .zsh file in this rep
-for config_file ($DOTFILES/**/*.zsh) source $config_file
+# colors
+export LSCOLORS="exfxcxdxbxegedabagacad"
+export CLICOLOR=true
 
-# initialize autocomplete here, otherwise functions won't be loaded
-autoload -U compinit
-compinit
+# sensible ls
+alias ls="ls -hG"
+alias l="ls -a"
+alias ll="ls -la"
+
+# lolXcode
+alias ded='rm -rf ~/Library/Developer/Xcode/DerivedData/'
+
+# editor / readline setup
+export EDITOR=vim
+bindkey -e
+
+# prompt
+autoload -U colors && colors
+
+function aps_end_prompt() {
+  echo %{$fg_bold[green]%}\\n\> %{$reset_color%}
+}
+
+export PROMPT="$(aps_end_prompt)"
+
+# history
+setopt APPEND_HISTORY # adds history
+setopt INC_APPEND_HISTORY SHARE_HISTORY  # adds history incrementally and share it across sessions
+setopt HIST_IGNORE_ALL_DUPS  # don't record dupes in history
+setopt HIST_REDUCE_BLANKS
+
+# pager
+export LESS="-RIM"
