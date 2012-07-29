@@ -8,7 +8,6 @@
   token = __GITHUB_TOKEN__
 [core]
   excludesfile = $HOME/.gitexcludes
-  editor = emacsclient
 [alias]
   co = checkout
   shortsha = rev-parse --short HEAD
