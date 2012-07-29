@@ -3,3 +3,4 @@
 gitconfig.symlink
 config/pianobar/config
 config/pianobar/eventcmd
+.netrwhist
