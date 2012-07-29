@@ -43,5 +43,11 @@ defaults write com.apple.Dock autohide-delay -float 0
 # Pin Dock to the start position
 defaults write com.apple.dock pinning -string start
 
+# Expand save panel by default
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+
+# Set a blazingly fast keyboard repeat rate
+defaults write NSGlobalDomain KeyRepeat -int 0
+
 echo "Kill affected applications"
 for app in iCal Finder Dock SystemUIServer; do killall "$app" >/dev/null 2>&1; done
