@@ -1,6 +1,11 @@
 # inspired by mathiasbynens' .osx dotfiles
 #   https://github.com/mathiasbynens/dotfiles/blob/master/.osx
 
+# Set computer name (as done via System Preferences → Sharing)
+scutil --set ComputerName "wiggum"
+scutil --set HostName "wiggum"
+scutil --set LocalHostName "wiggum"
+
 # Enable subpixel font rendering on non-Apple LCDs
 defaults -currentHost write -globalDomain AppleFontSmoothing -int 2
 
