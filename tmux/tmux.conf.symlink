@@ -1,6 +1,6 @@
 # My prefix key, same as I use in GNU screen
 unbind-key C-b
-set-option -g prefix C-]
+set-option -g prefix C-g
 
 # Mouse setup
 set -g mode-mouse on

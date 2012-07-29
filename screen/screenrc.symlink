@@ -8,7 +8,7 @@ shell -$SHELL
 defscrollback   10000
 autodetach      on
 
-escape ^]^]
+escape ^g^g
 
 # status
 screen
