@@ -70,3 +70,5 @@ endif
 " SHORTCUTS
 "-----------------------------------------------------------------------------
 map <leader>w :w!<cr>
+" quicker escaping
+inoremap jj <ESC>
