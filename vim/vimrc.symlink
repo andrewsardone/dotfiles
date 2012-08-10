@@ -72,3 +72,9 @@ endif
 map <leader>w :w!<cr>
 " quicker escaping
 inoremap jj <ESC>
+
+"-----------------------------------------------------------------------------
+" PLUGINS
+"-----------------------------------------------------------------------------
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+set runtimepath^=~/.vim/bundle/Tabular
