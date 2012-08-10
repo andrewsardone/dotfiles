@@ -58,3 +58,6 @@ setopt HIST_REDUCE_BLANKS
 
 # pager
 export LESS="-RIM"
+
+# rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
