@@ -34,6 +34,9 @@ function aps_popd {
 }
 alias d=aps_popd
 
+alias fh=f ~
+alias cdh=cd ~ && pwd
+
 # lolXcode
 alias ded='rm -rf ~/Library/Developer/Xcode/DerivedData/'
 
