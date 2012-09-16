@@ -73,6 +73,11 @@ map <leader>w :w!<cr>
 " quicker escaping
 inoremap jj <ESC>
 
+" map semicolon to colon
+" via http://vim.wikia.com/wiki/Map_semicolon_to_colon
+map ; :
+noremap ;; ;
+
 "-----------------------------------------------------------------------------
 " PLUGINS
 "-----------------------------------------------------------------------------
