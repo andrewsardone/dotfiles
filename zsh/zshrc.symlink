@@ -42,7 +42,8 @@ alias ded='rm -rf ~/Library/Developer/Xcode/DerivedData/'
 
 # editor / readline setup
 export EDITOR=vim
-bindkey -e
+bindkey -v
+bindkey "^R" history-incremental-search-backward
 
 # prompt
 autoload -U colors && colors
