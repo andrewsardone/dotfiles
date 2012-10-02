@@ -1,3 +1,6 @@
 " make searches case-sensitive only if they contain upper-case characters
 set ignorecase
 set smartcase
+
+" quicker jumping to file counterparts (.h/.m toggling)
+map ,c :ncounterpart<cr>
