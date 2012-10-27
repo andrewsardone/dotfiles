@@ -6,3 +6,7 @@ set smartcase
 map ,c :ncounterpart<cr>
 
 map ,w :w<cr>
+
+" forward/back history navigation
+map ,d :xccmd goBackInHistoryByCommand<cr>
+map ,f :xccmd goForwardInHistoryByCommand<cr>
