@@ -4,3 +4,5 @@ set smartcase
 
 " quicker jumping to file counterparts (.h/.m toggling)
 map ,c :ncounterpart<cr>
+
+map ,w :w<cr>
