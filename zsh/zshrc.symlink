@@ -44,6 +44,11 @@ alias ded='rm -rf ~/Library/Developer/Xcode/DerivedData/'
 export EDITOR=vim
 bindkey -e
 
+# C-x C-e bash-ism to edit the current command
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey '\C-x\C-e' edit-command-line
+
 # prompt
 autoload -U colors && colors
 
