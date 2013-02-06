@@ -27,6 +27,9 @@ bind -r C-l resize-pane -R 5
 # Reload the config.
 bind r source-file ~/.tmux.conf \; display "Reloaded ~/.tmux.conf"
 
+# Fix slow escaping to normal mode
+set -sg escape-time 0
+
 # open a man page in new pane or window
 # via @andyfowler
 bind m command-prompt -p "man page:" "split-window -h 'exec man %%'"
