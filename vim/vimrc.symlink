@@ -83,5 +83,11 @@ set pastetoggle=<leader>p
 "-----------------------------------------------------------------------------
 " PLUGINS
 "-----------------------------------------------------------------------------
+" ctrlp config
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_custom_ignore = {
+\   'file': '\.pyc$\|\.class$',
+\   'dir': 'build',
+\ }
+
 set runtimepath^=~/.vim/bundle/Tabular
