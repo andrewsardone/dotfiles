@@ -82,3 +82,6 @@ export LESS="-RIM"
 
 # rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# nutshell
+eval "$(/Users/andrew/source/nutshell/nub/bin/nub init -)"
