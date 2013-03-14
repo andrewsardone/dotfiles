@@ -34,8 +34,8 @@ set showmatch
 
 " backup
 set backup
-set backupdir=~/.vim/backup
-set directory=~/.vim/backup
+set backupdir=~/tmp/vim/backup
+set directory=~/tmp/vim/backup
 
 " use emacs-style tab completion when selecting files, etc
 set wildmode=longest,list
