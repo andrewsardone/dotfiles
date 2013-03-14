@@ -49,6 +49,9 @@ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 # Set a blazingly fast keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 0
 
+# IntelliJ IDEA key repeat fix
+defaults write com.jetbrains.intellij.ce ApplePressAndHoldEnabled -bool false
+
 # Delay standby mode for 24 hours. This helps speed up my MacBook Pro's awake
 # from sleep time.
 # via http://www.ewal.net/2012/09/09/slow-wake-for-macbook-pro-retina/
