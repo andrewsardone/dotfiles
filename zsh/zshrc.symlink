@@ -4,6 +4,9 @@
 export PATH="$APS_PATH:$DEFAULT_PATH"
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 
+# rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
 # colors
 export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=true
