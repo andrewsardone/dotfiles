@@ -99,3 +99,6 @@ function ns {
 
 # nutshell
 eval "$(/Users/andrew/source/nutshell/nub/bin/nub init -)"
+
+# autocomplete
+autoload -U compinit && compinit
