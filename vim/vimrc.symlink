@@ -47,6 +47,9 @@ set wildmenu
 " http://www.shallowsky.com/linux/noaltscreen.html
 set t_ti= t_te=
 
+" Highlight current line
+set cursorline
+
 " soft wrapping text
 " via http://vimcasts.org/episodes/soft-wrapping-text/
 command! -nargs=* Wrap set wrap linebreak nolist
