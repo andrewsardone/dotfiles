@@ -55,6 +55,12 @@ defaults write com.jetbrains.intellij.ce ApplePressAndHoldEnabled -bool false
 # Disable Dashboard
 defaults write com.apple.dashboard mcx-disabled -bool true
 
+# Disable Preview.app from restoring its content
+# For the most part I like the autorestoring of app documents (e.g., it's
+# a nice to have for untitled documents in TextEdit.app), but in Preview.app
+# I find it annoying.
+defaults write com.apple.Preview NSQuitAlwaysKeepsWindows -int 0
+
 # Delay standby mode for 24 hours. This helps speed up my MacBook Pro's awake
 # from sleep time.
 # via http://www.ewal.net/2012/09/09/slow-wake-for-macbook-pro-retina/
