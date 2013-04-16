@@ -1,5 +1,5 @@
 # path
-[ -z "$APS_PATH" ] && export APS_PATH="$HOME/bin:/usr/local/bin"
+[ -z "$APS_PATH" ] && export APS_PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin"
 [ -z "$DEFAULT_PATH" ] && export DEFAULT_PATH=$PATH
 export PATH="$APS_PATH:$DEFAULT_PATH"
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
