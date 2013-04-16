@@ -115,5 +115,12 @@ alias todos="ack --nogroup '(TODO|FIX(ME)?):'"
 # via http://brettterpstra.com/2013/03/31/a-few-more-of-my-favorite-shell-aliases/
 alias tp='touch todo.taskpaper && open -a "Taskpaper" todo.taskpaper'
 
+# grc
+
+GRC_BASHRC="`brew --prefix`/etc/grc.bashrc"
+if [ -f $GRC_BASHRC ]; then
+  source $GRC_BASHRC
+fi
+
 # via http://thomashunter.name/blog/removing-duplicate-entries-from-finders-open-with-menu/
 alias reset-finder-open-with-menu="/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain system -domain user; killall Finder"
