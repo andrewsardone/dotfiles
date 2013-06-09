@@ -124,3 +124,6 @@ fi
 
 # via http://thomashunter.name/blog/removing-duplicate-entries-from-finders-open-with-menu/
 alias reset-finder-open-with-menu="/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain system -domain user; killall Finder"
+
+# hub, which makes git better with github http://defunkt.io/hub/
+alias git=hub
