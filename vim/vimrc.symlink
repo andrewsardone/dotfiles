@@ -17,6 +17,7 @@ set softtabstop=2
 set expandtab
 set listchars=tab:\ \ ,trail:·
 set autoindent
+map <leader>ws :%s/\s\+$/<cr>
 
 " searching
 set hlsearch
