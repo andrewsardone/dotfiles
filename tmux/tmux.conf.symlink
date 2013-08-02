@@ -6,6 +6,7 @@ set-option -g prefix C-g
 set -g mode-mouse on
 setw -g mouse-select-window on
 setw -g mouse-select-pane on
+setw -g mouse-resize-pane on
 
 # Saner splitting.
 bind v split-window -h
