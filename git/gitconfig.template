@@ -8,6 +8,7 @@
   token = __GITHUB_TOKEN__
 [core]
   excludesfile = $HOME/.gitexcludes
+  attributesfile = $HOME/.gitattributes
 [alias]
   co = checkout
   shortsha = rev-parse --short HEAD
