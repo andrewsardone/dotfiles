@@ -40,4 +40,19 @@
         </item>
     </list>
 
+    <devicevendordef>
+      <vendorname>MICROSOFT</vendorname>
+      <vendorid>0x045e</vendorid>
+    </devicevendordef>
+
+    <item>
+      <name>Swap cmd and opt for external keyboard</name>
+      <identifier>private.deviceproductdef</identifier>
+      <device_only>DeviceVendor::MICROSOFT</device_only>
+      <autogen>__KeyToKey__ KeyCode::COMMAND_L, KeyCode::OPTION_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::OPTION_L, KeyCode::COMMAND_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::OPTION_R, KeyCode::COMMAND_R</autogen>
+      <autogen>__KeyToKey__ KeyCode::PC_APPLICATION, KeyCode::OPTION_R</autogen>
+    </item>
+
 </root>
