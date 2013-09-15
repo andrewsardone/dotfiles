@@ -48,7 +48,30 @@ alias ded='rm -rf ~/Library/Developer/Xcode/DerivedData/'
 
 # editor / readline setup
 export EDITOR=vim
-bindkey -e
+bindkey -v
+bindkey '^R' history-incremental-search-backward # a must have
+
+function block_cursor() { print -n -- "\EPtmux;\E\E]50;CursorShape=0\C-G\E\\" }
+function line_cursor() { print -n -- "\EPtmux;\E\E]50;CursorShape=1\C-G\E\\" }
+
+function zle-keymap-select zle-line-init {
+  # change cursor shape in iTerm2 and in tmux
+  case $KEYMAP in
+    vicmd)      block_cursor;;
+    viins|main) line_cursor;;
+  esac
+
+  zle reset-prompt
+  zle -R
+}
+
+function zle-line-finish {
+  block_cursor
+}
+
+zle -N zle-line-init
+zle -N zle-line-finish
+zle -N zle-keymap-select
 
 # C-x C-e bash-ism to edit the current command
 autoload -U edit-command-line
