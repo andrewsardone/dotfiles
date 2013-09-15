@@ -10,6 +10,9 @@ alias reload!='source ~/.zshrc'
 # rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+# 10ms for key sequences
+KEYTIMEOUT=1
+
 # colors
 export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=true
