@@ -1,1 +1,49 @@
 
+[submodule "vim/vim.symlink/bundle/ctrlp.vim"]
+	path = vim/vim.symlink/bundle/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim.git
+[submodule "vim/vim.symlink/bundle/tabular"]
+	path = vim/vim.symlink/bundle/tabular
+	url = https://github.com/godlygeek/tabular.git
+[submodule "vim/vim.symlink/bundle/vim-commentary"]
+	path = vim/vim.symlink/bundle/vim-commentary
+	url = https://github.com/tpope/vim-commentary.git
+[submodule "vim/vim.symlink/bundle/vim-cucumber"]
+	path = vim/vim.symlink/bundle/vim-cucumber
+	url = https://github.com/tpope/vim-cucumber.git
+[submodule "vim/vim.symlink/bundle/vim-endwise"]
+	path = vim/vim.symlink/bundle/vim-endwise
+	url = https://github.com/tpope/vim-endwise.git
+[submodule "vim/vim.symlink/bundle/vim-fugitive"]
+	path = vim/vim.symlink/bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "vim/vim.symlink/bundle/vim-indentobject"]
+	path = vim/vim.symlink/bundle/vim-indentobject
+	url = https://github.com/austintaylor/vim-indentobject.git
+[submodule "vim/vim.symlink/bundle/vim-javascript"]
+	path = vim/vim.symlink/bundle/vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git
+[submodule "vim/vim.symlink/bundle/jshint.vim"]
+	path = vim/vim.symlink/bundle/jshint.vim
+	url = https://github.com/rmanalan/jshint.vim.git
+[submodule "vim/vim.symlink/bundle/vim-coffee-script"]
+	path = vim/vim.symlink/bundle/vim-coffee-script
+	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "vim/vim.symlink/bundle/vim-ruby"]
+	path = vim/vim.symlink/bundle/vim-ruby
+	url = https://github.com/vim-ruby/vim-ruby.git
+[submodule "vim/vim.symlink/bundle/vim-less"]
+	path = vim/vim.symlink/bundle/vim-less
+	url = https://github.com/groenewege/vim-less.git
+[submodule "vim/vim.symlink/bundle/nerdtree"]
+	path = vim/vim.symlink/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "vim/vim.symlink/bundle/vim-surround"]
+	path = vim/vim.symlink/bundle/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "vim/vim.symlink/bundle/vim-elixir"]
+	path = vim/vim.symlink/bundle/vim-elixir
+	url = https://github.com/elixir-lang/vim-elixir.git
+[submodule "vim/vim.symlink/bundle/ack.vim"]
+	path = vim/vim.symlink/bundle/ack.vim
+	url = https://github.com/mileszs/ack.vim.git
