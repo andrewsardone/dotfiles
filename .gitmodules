@@ -20,3 +20,12 @@
 [submodule "vim/vim.symlink/bundle/vim-indentobject"]
 	path = vim/vim.symlink/bundle/vim-indentobject
 	url = https://github.com/austintaylor/vim-indentobject.git
+[submodule "vim/vim.symlink/bundle/vim-javascript"]
+	path = vim/vim.symlink/bundle/vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git
+[submodule "vim/vim.symlink/bundle/jshint.vim"]
+	path = vim/vim.symlink/bundle/jshint.vim
+	url = https://github.com/rmanalan/jshint.vim.git
+[submodule "vim/vim.symlink/bundle/vim-coffee-script"]
+	path = vim/vim.symlink/bundle/vim-coffee-script
+	url = https://github.com/kchmck/vim-coffee-script.git
