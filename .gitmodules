@@ -17,3 +17,6 @@
 [submodule "vim/vim.symlink/bundle/vim-fugitive"]
 	path = vim/vim.symlink/bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
+[submodule "vim/vim.symlink/bundle/vim-indentobject"]
+	path = vim/vim.symlink/bundle/vim-indentobject
+	url = https://github.com/austintaylor/vim-indentobject.git
