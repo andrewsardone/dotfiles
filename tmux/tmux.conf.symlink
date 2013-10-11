@@ -2,6 +2,8 @@
 unbind-key C-b
 set-option -g prefix C-g
 
+set -g default-command "reattach-to-user-namespace -l zsh"
+
 # Mouse setup
 set -g mode-mouse on
 setw -g mouse-select-window on
