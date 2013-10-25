@@ -17,3 +17,5 @@
   lg = "!source ~/.githelpers && pretty_git_log"
 [diff "localizablestrings"]
   textconv = "iconv -f utf-16 -t utf-8"
+[hub]
+	http-clone = true
