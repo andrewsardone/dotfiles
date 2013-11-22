@@ -109,3 +109,7 @@ autocmd VimResized * :wincmd =
 autocmd BufNewFile,BufRead Gemfile set filetype=ruby
 autocmd BufNewFile,BufRead Podfile set filetype=ruby
 autocmd BufNewFile,BufRead *.ru set filetype=ruby
+
+if filereadable(".vim.custom")
+  so .vim.custom
+endif
