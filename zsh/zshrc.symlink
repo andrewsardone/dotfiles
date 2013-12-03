@@ -176,3 +176,10 @@ function _completemarks {
 
 compctl -K _completemarks jump
 compctl -K _completemarks unmark
+
+# Pairing in git
+# via http://thepugautomatic.com/2013/11/git-pairing/
+alias pair='echo "Committing as: `git config user.name` <`git config user.email`>"'
+alias unpair="git config --remove-section user 2> /dev/null; echo Unpaired.; pair"
+
+alias pairm="git config user.pair 'AS+ML' && git config user.name 'Andrew Sardone and Mike Linington' && git config user.email 'developers+asardone+mlinington@nutshell.com'; pair"
