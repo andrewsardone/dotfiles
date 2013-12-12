@@ -12,3 +12,5 @@ build/
 *.perspectivev3
 *.mode1v3
 *.tm_build_errors
+
+.vim.custom
