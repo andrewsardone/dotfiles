@@ -113,3 +113,21 @@ autocmd BufNewFile,BufRead *.ru set filetype=ruby
 if filereadable(".vim.custom")
   so .vim.custom
 endif
+
+" Configure for a nicer prose writing environment
+nnoremap <leader>P :call ProseToggle()<cr>
+command! Prose :call ProseToggle()
+let g:prose_is_toggled = 0
+function! ProseToggle()
+  if g:prose_is_toggled
+    set nowrap
+    nunmap j
+    nunmap k
+    let g:prose_is_toggled = 0
+  else
+    set wrap linebreak nolist
+    noremap j gj
+    noremap k gk
+    let g:prose_is_toggled = 1
+  endif
+endfunction
