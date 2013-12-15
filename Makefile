@@ -11,3 +11,4 @@ install: dependencies
 	stow sqlite
 	stow tig
 	stow tmux
+	stow xvim
