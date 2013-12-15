@@ -9,3 +9,4 @@ install: dependencies
 	stow screen
 	stow slate
 	stow sqlite
+	stow tig
