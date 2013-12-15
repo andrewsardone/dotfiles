@@ -79,6 +79,7 @@ zle -N zle-keymap-select
 # C-x C-e bash-ism to edit the current command
 autoload -U edit-command-line
 zle -N edit-command-line
+bindkey -M vicmd v edit-command-line
 bindkey '\C-x\C-e' edit-command-line
 
 # prompt
