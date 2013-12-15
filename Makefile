@@ -3,7 +3,10 @@ default: install
 dependencies:
 	@command -v stow >/dev/null 2>&1 || { echo >&2 "Please install GNU stow"; exit 1; }
 
-install: dependencies
+submodules:
+	git submodule update --init
+
+install: dependencies submodules
 	stow git
 	stow misc
 	stow ruby
