@@ -5,6 +5,7 @@ dependencies:
 
 install: dependencies
 	stow git
+	stow misc
 	stow ruby
 	stow screen
 	stow slate
