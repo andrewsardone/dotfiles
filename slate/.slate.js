@@ -80,5 +80,25 @@ S.bindAll({
     "width" : "screenSizeX/2",
     "height" : "screenSizeY/2"
   }),
+
+  // window movement
+  "left:up,ctrl,shift,cmd:toggle": S.op("nudge", {
+    "x": "-10%", "y": "+0"
+  }),
+  "right:up,ctrl,shift,cmd:toggle": S.op("nudge", {
+    "x": "+10%", "y": "+0"
+  }),
+  "up:up,ctrl,shift,cmd:toggle": S.op("nudge", {
+    "x": "+0", "y": "-10%"
+  }),
+  "down:up,ctrl,shift,cmd:toggle": S.op("nudge", {
+    "x": "+0", "y": "+10%"
+  }),
   "g:up,ctrl,shift,cmd": fullScreenOp,
+
+  // push to edges
+  "h:down,ctrl,shift,cmd:toggle": S.op("push", { "direction" : "left" }),
+  "j:down,ctrl,shift,cmd:toggle": S.op("push", { "direction" : "bottom" }),
+  "k:down,ctrl,shift,cmd:toggle": S.op("push", { "direction" : "top" }),
+  "l:down,ctrl,shift,cmd:toggle": S.op("push", { "direction" : "right" }),
 });
