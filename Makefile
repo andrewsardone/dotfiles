@@ -5,3 +5,4 @@ dependencies:
 
 install: dependencies
 	stow git
+	stow ruby
