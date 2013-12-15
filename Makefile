@@ -8,3 +8,4 @@ install: dependencies
 	stow ruby
 	stow screen
 	stow slate
+	stow sqlite
