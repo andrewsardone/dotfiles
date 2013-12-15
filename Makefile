@@ -7,3 +7,4 @@ install: dependencies
 	stow git
 	stow ruby
 	stow screen
+	stow slate
