@@ -12,3 +12,4 @@ install: dependencies
 	stow tig
 	stow tmux
 	stow xvim
+	stow zsh --ignore=functions
