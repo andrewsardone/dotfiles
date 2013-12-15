@@ -86,12 +86,8 @@ bindkey '\C-x\C-e' edit-command-line
 
 # prompt
 autoload -U colors && colors
-
-function aps_end_prompt() {
-  echo %{$fg_bold[green]%}\\n\> %{$reset_color%}
-}
-
-export PROMPT="$(aps_end_prompt)"
+autoload -U promptinit && promptinit
+prompt pure
 
 # history
 setopt APPEND_HISTORY # adds history
