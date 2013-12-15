@@ -40,8 +40,8 @@ defaults write com.apple.iCal IncludeDebugMenu -int 1
 # Disable delay to show Dock
 defaults write com.apple.Dock autohide-delay -float 0
 
-# Pin Dock to the start position
-defaults write com.apple.dock pinning -string start
+# Pin Dock to the bottom
+defaults write com.apple.dock pinning -string end
 
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
