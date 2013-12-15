@@ -10,3 +10,4 @@ install: dependencies
 	stow slate
 	stow sqlite
 	stow tig
+	stow tmux
