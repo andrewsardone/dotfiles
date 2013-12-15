@@ -1,3 +1,8 @@
+var fullScreenOp = S.op("move", {
+  "x": "screenOriginX", "y": "screenOriginY",
+  "width": "screenSizeX", "height": "screenSizeY"
+});
+
 // Configuration
 S.configAll({
   "modalEscapeKey": "esc"
@@ -22,12 +27,14 @@ S.bindAll({
   "down:left,ctrl,shift,cmd:toggle": S.op("resize", { "width": "+0", "height":"+10%", "anchor": "top-right" }),
   "left:left,ctrl,shift,cmd:toggle": S.op("resize", { "width": "+10%", "height": "+0", "anchor": "top-right" }),
   "up:left,ctrl,shift,cmd:toggle": S.op("resize", { "width": "+0", "height": "-10%", "anchor": "top-right" }),
+  "g:left,ctrl,shift,cmd": fullScreenOp,
 
   // Resize Right/Down
   "right:right,ctrl,shift,cmd:toggle": S.op("resize", { "width": "+10%", "height": "+0", "anchor": "top-left" }),
   "down:right,ctrl,shift,cmd:toggle": S.op("resize", { "width": "+0", "height":"+10%", "anchor": "top-left" }),
   "left:right,ctrl,shift,cmd:toggle": S.op("resize", { "width": "-10%", "height": "+0", "anchor": "top-left" }),
   "up:right,ctrl,shift,cmd:toggle": S.op("resize", { "width": "+0", "height": "-10%", "anchor": "top-left" }),
+  "g:right,ctrl,shift,cmd": fullScreenOp,
 
   // Window hints
   "esc:cmd,shift": S.op("hint"),
@@ -53,4 +60,5 @@ S.bindAll({
     "width" : "screenSizeX/2",
     "height" : "screenSizeY"
   }),
+  "g:up,ctrl,shift,cmd": fullScreenOp,
 });
