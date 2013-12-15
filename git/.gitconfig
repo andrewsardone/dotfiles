@@ -1,11 +1,8 @@
 [user]
-  name = __USER_NAME__
-  email = __USER_EMAIL__
+  name = Andrew Sardone
+  email = andrew@andrewsardone.com
 [color]
   ui = auto
-[github]
-  user = __GITHUB_USER__
-  token = __GITHUB_TOKEN__
 [core]
   excludesfile = $HOME/.gitexcludes
   attributesfile = $HOME/.gitattributes
@@ -13,9 +10,12 @@
   co = checkout
   shortsha = rev-parse --short HEAD
   st = status --short --branch
-
   lg = "!source ~/.githelpers && pretty_git_log"
 [diff "localizablestrings"]
   textconv = "iconv -f utf-16 -t utf-8"
+[credential]
+	helper = osxkeychain
 [hub]
 	http-clone = true
+[github]
+	user = andrewsardone
