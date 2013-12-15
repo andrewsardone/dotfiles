@@ -45,9 +45,19 @@ S.bindAll({
     "width" : "screenSizeX/2",
     "height" : "screenSizeY"
   }),
+  "h:up,ctrl,shift,alt": S.op("corner", {
+    "direction" : "top-left",
+    "width" : "screenSizeX/2",
+    "height" : "screenSizeY/2"
+  }),
   "j:up,ctrl,shift,cmd": S.op("corner", {
     "direction" : "bottom-left",
     "width" : "screenSizeX",
+    "height" : "screenSizeY/2"
+  }),
+  "j:up,ctrl,shift,alt": S.op("corner", {
+    "direction" : "bottom-left",
+    "width" : "screenSizeX/2",
     "height" : "screenSizeY/2"
   }),
   "k:up,ctrl,shift,cmd": S.op("corner", {
@@ -55,10 +65,20 @@ S.bindAll({
     "width" : "screenSizeX",
     "height" : "screenSizeY/2"
   }),
+  "k:up,ctrl,shift,alt": S.op("corner", {
+    "direction" : "top-right",
+    "width" : "screenSizeX/2",
+    "height" : "screenSizeY/2"
+  }),
   "l:up,ctrl,shift,cmd": S.op("corner", {
     "direction" : "top-right",
     "width" : "screenSizeX/2",
     "height" : "screenSizeY"
+  }),
+  "l:up,ctrl,shift,alt": S.op("corner", {
+    "direction" : "bottom-right",
+    "width" : "screenSizeX/2",
+    "height" : "screenSizeY/2"
   }),
   "g:up,ctrl,shift,cmd": fullScreenOp,
 });
