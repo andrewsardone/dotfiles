@@ -4,6 +4,8 @@
 export PATH="$APS_PATH:$DEFAULT_PATH"
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 
+fpath=( "$HOME/.zfunctions" $fpath )
+
 # zshrc reloading
 alias reload!='source ~/.zshrc'
 

@@ -17,4 +17,4 @@ install: dependencies submodules
 	stow tmux
 	stow vim
 	stow xvim
-	stow zsh --ignore=functions
+	stow zsh
