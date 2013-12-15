@@ -12,5 +12,6 @@ install: dependencies
 	stow sqlite
 	stow tig
 	stow tmux
+	stow vim
 	stow xvim
 	stow zsh --ignore=functions
