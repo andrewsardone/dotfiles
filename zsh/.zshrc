@@ -175,3 +175,10 @@ function _completemarks {
 
 compctl -K _completemarks jump
 compctl -K _completemarks unmark
+
+
+# json processing via `jsc`
+# Example:
+#   > json=$(curl -s 'http://httpbin.org/ip') && jsc -e "var json = $json; print(json['origin']);"
+#   98.250.104.203
+alias jsc=/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Resources/jsc
