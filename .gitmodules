@@ -34,9 +34,6 @@
 [submodule "vim/.vim/bundle/vim-less"]
 	path = vim/.vim/bundle/vim-less
 	url = https://github.com/groenewege/vim-less.git
-[submodule "vim/.vim/bundle/nerdtree"]
-	path = vim/.vim/bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
 [submodule "vim/.vim/bundle/vim-surround"]
 	path = vim/.vim/bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
@@ -55,3 +52,6 @@
 [submodule "vim/.vim/bundle/vim-colors-solarized"]
 	path = vim/.vim/bundle/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "vim/.vim/bundle/vim-vinegar"]
+	path = vim/.vim/bundle/vim-vinegar
+	url = https://github.com/tpope/vim-vinegar
