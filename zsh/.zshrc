@@ -126,7 +126,7 @@ function ns {
 }
 
 # nutshell
-eval "$(/Users/andrew/source/nutshell/nub/bin/nub init -)"
+command -v nub >/dev/null 2>&1 && eval "$(/Users/andrew/source/nutshell/nub/bin/nub init -)"
 
 # autocomplete
 autoload -U compinit && compinit
