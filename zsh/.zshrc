@@ -151,7 +151,7 @@ fi
 alias reset-finder-open-with-menu="/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain system -domain user; killall Finder"
 
 # hub, which makes git better with github http://defunkt.io/hub/
-alias git=hub
+command -v hub >/dev/null 2>&1 && alias git=hub
 
 # Filesystem marks
 # via http://jeroenjanssens.com/2013/08/16/quickly-navigate-your-filesystem-from-the-command-line.html
