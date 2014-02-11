@@ -96,6 +96,11 @@ S.bindAll({
   }),
   "g:up,ctrl,shift,cmd": fullScreenOp,
 
+  // screen toggling
+  "n:up,ctrl,shift,cmd": S.op("throw", {
+    "screen": "next"
+  }),
+
   // push to edges
   "h:down,ctrl,shift,cmd:toggle": S.op("push", { "direction" : "left" }),
   "j:down,ctrl,shift,cmd:toggle": S.op("push", { "direction" : "bottom" }),
