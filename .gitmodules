@@ -55,3 +55,6 @@
 [submodule "vim/.vim/bundle/vim-vinegar"]
 	path = vim/.vim/bundle/vim-vinegar
 	url = https://github.com/tpope/vim-vinegar
+[submodule "vim/.vim/bundle/taskpaper.vim"]
+	path = vim/.vim/bundle/taskpaper.vim
+	url = https://github.com/davidoc/taskpaper.vim
