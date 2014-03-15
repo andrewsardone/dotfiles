@@ -18,3 +18,4 @@ install: dependencies submodules
 	stow vim
 	stow xvim
 	stow zsh
+	stow lldb
