@@ -6,7 +6,7 @@ dependencies:
 submodules:
 	git submodule update --init
 
-install: dependencies submodules
+stow:
 	stow git
 	stow misc
 	stow ruby
@@ -19,3 +19,5 @@ install: dependencies submodules
 	stow xvim
 	stow zsh
 	stow lldb
+
+install: dependencies submodules stow
