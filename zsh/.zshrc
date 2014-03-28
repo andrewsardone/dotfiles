@@ -139,7 +139,7 @@ alias todos="ack --nogroup '(TODO|FIX(ME)?):'"
 
 # create a Taskpaper todo file in the current folder
 # via http://brettterpstra.com/2013/03/31/a-few-more-of-my-favorite-shell-aliases/
-alias tp='touch todo.taskpaper && open -a "Taskpaper" todo.taskpaper'
+alias tp='touch todo.taskpaper && vi todo.taskpaper'
 
 # grc
 
