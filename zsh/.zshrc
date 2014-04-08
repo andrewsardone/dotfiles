@@ -112,20 +112,6 @@ export LESS="-RIM"
 # rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-# A Poor Man's Notational Velocity
-# via http://onethingwell.org/post/457674798/a-poor-mans-notational-velocity
-function n {
-  vi "~/Dropbox/Documents/Notes/$*.txt"
-}
-
-function ns {
-  if [ "$#" == "0" ]; then
-    ls -c ~/Dropbox/Documents/Notes
-  else
-    ls -c ~/Dropbox/Documents/Notes | grep $1
-  fi
-}
-
 # nutshell
 command -v nub >/dev/null 2>&1 && eval "$(/Users/andrew/source/nutshell/nub/bin/nub init -)"
 
