@@ -58,3 +58,6 @@
 [submodule "vim/.vim/bundle/taskpaper.vim"]
 	path = vim/.vim/bundle/taskpaper.vim
 	url = https://github.com/davidoc/taskpaper.vim
+[submodule "vim/.vim/bundle/rust.vim"]
+	path = vim/.vim/bundle/rust.vim
+	url = https://github.com/wting/rust.vim
