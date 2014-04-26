@@ -64,3 +64,6 @@
 [submodule "vim/.vim/bundle/golang.vim"]
 	path = vim/.vim/bundle/golang.vim
 	url = https://github.com/jnwhiteh/vim-golang
+[submodule "vim/.vim/bundle/vim-airline"]
+	path = vim/.vim/bundle/vim-airline
+	url = https://github.com/bling/vim-airline
