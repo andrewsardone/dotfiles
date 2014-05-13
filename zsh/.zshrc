@@ -100,8 +100,10 @@ export HISTSIZE=100000 SAVEHIST=100000 HISTFILE=~/.zhistory
 # Stores all history into log files
 # via http://blog.andrewhays.net/love-your-terminal
 function precmd() {
+  log_dir="$HOME/.logs"
+  mkdir -p $log_dir
   if [ "$(id -u)" -ne 0 ]; then
-    FULL_CMD_LOG="$HOME/.logs/zsh-history-$(date -u "+%Y-%m-%d").log"
+    FULL_CMD_LOG="$log_dir/zsh-history-$(date -u "+%Y-%m-%d").log"
     echo "$USER@`hostname`:`pwd` [$(date -u)] `\history -1`" >> ${FULL_CMD_LOG}
   fi
 }
