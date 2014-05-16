@@ -171,3 +171,7 @@ compctl -K _completemarks unmark
 #   > json=$(curl -s 'http://httpbin.org/ip') && jsc -e "var json = $json; print(json['origin']);"
 #   98.250.104.203
 alias jsc=/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Resources/jsc
+
+# Go path setup
+export GOPATH=$HOME/code/gopath
+export PATH=$PATH:$GOPATH/bin
