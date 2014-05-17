@@ -1,10 +1,5 @@
 " set up pathogen, https://github.com/tpope/vim-pathogen
 "
-filetype on " without this vim emits a zero exit status, later, because of :ft off
-filetype off
-call pathogen#infect()
-filetype plugin indent on
-
 set nocompatible                                             " don't bother with vi compatibility
 syntax enable                                                " enable syntax highlighting
 let mapleader = ','
@@ -44,6 +39,12 @@ set mouse=a
 if exists('$TMUX')  " Support resizing in tmux
   set ttymouse=xterm2
 endif
+
+" plugin configuration
+filetype on " without this vim emits a zero exit status, later, because of :ft off
+filetype off
+call pathogen#infect()
+filetype plugin indent on
 
 " keyboard shortcuts
 map <C-h> <C-w>h
