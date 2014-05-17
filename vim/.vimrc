@@ -13,7 +13,6 @@ set autoindent
 set autoread                                                 " reload files when changed on disk, i.e. via `git checkout`
 set backspace=2                                              " Fix broken backspace in some setups
 set backupcopy=yes                                           " see :help crontab
-set cmdheight=2
 set cursorline                                               " highlight current line
 set directory-=.                                             " don't store swapfiles in the current directory
 set encoding=utf-8
