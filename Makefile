@@ -6,6 +6,9 @@ dependencies:
 submodules:
 	git submodule update --init
 
+vim-plugins: submodules
+	vim +PluginInstall +qall
+
 stow:
 	stow git
 	stow misc
@@ -20,4 +23,4 @@ stow:
 	stow zsh
 	stow lldb
 
-install: dependencies submodules stow
+install: dependencies submodules stow vim-plugins
