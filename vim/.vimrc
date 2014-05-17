@@ -108,6 +108,8 @@ autocmd VimResized * :wincmd =
 autocmd BufNewFile,BufRead Gemfile set filetype=ruby
 autocmd BufNewFile,BufRead Podfile set filetype=ruby
 autocmd BufNewFile,BufRead *.ru set filetype=ruby
+" gradle
+autocmd BufNewFile,BufRead *.gradle setf groovy
 
 if filereadable(".vim.custom")
   so .vim.custom
