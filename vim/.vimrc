@@ -1,10 +1,5 @@
 " set up pathogen, https://github.com/tpope/vim-pathogen
 "
-filetype on " without this vim emits a zero exit status, later, because of :ft off
-filetype off
-call pathogen#infect()
-filetype plugin indent on
-
 set nocompatible                                             " don't bother with vi compatibility
 syntax enable                                                " enable syntax highlighting
 let mapleader = ','
@@ -44,6 +39,42 @@ set mouse=a
 if exists('$TMUX')  " Support resizing in tmux
   set ttymouse=xterm2
 endif
+
+" plugin configuration
+filetype on " without this vim emits a zero exit status, later, because of :ft off
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+Plugin 'kien/ctrlp.vim'
+Plugin 'godlygeek/tabular'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-cucumber'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-fugitive'
+Plugin 'austintaylor/vim-indentobject'
+Plugin 'pangloss/vim-javascript'
+Plugin 'rmanalan/jshint.vim'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'groenewege/vim-less'
+Plugin 'tpope/vim-surround'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'mileszs/ack.vim'
+Plugin 'mattn/gist-vim'
+Plugin 'mattn/webapi-vim'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-vinegar'
+Plugin 'davidoc/taskpaper.vim'
+Plugin 'wting/rust.vim'
+Plugin 'jnwhiteh/vim-golang'
+Plugin 'bling/vim-airline'
+
+call vundle#end()
+filetype plugin indent on
 
 " keyboard shortcuts
 map <C-h> <C-w>h

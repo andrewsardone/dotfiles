@@ -4,3 +4,5 @@ gitconfig.symlink
 config/pianobar/config
 config/pianobar/eventcmd
 .netrwhist
+vim/.vim/bundle/*
+!vim/.vim/bundle/Vundle.vim
