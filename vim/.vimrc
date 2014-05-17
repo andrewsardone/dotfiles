@@ -67,9 +67,12 @@ inoremap jj <ESC>
 
 " color setup
 :set t_Co=256 " 256 colors
-:color aps256
 set background=dark
-colorscheme solarized
+try
+  colorscheme solarized
+catch /^Vim\%((\a\+)\)\=:E185/
+  color aps256
+endtry
 
 " tmux and iTerm2 cursor fun
 " via @andyfowler https://gist.github.com/1195581
