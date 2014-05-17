@@ -67,7 +67,6 @@ inoremap jj <ESC>
 
 " color setup
 :set t_Co=256 " 256 colors
-:set background=dark
 :color aps256
 set background=dark
 colorscheme solarized
