@@ -115,7 +115,8 @@ export LESS="-RIM"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # nutshell
-command -v nub >/dev/null 2>&1 && eval "$(/Users/andrew/source/nutshell/nub/bin/nub init -)"
+NUB_BIN="$HOME/source/nutshell/nub/bin/nub"
+[ -f $NUB_BIN ] && eval "$($NUB_BIN init -)"
 
 # autocomplete
 autoload -U compinit && compinit
