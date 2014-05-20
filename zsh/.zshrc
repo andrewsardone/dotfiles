@@ -176,3 +176,6 @@ alias jsc=/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Resourc
 # Go path setup
 export GOPATH=$HOME/code/gopath
 export PATH=$PATH:$GOPATH/bin
+
+nutshell_zshrc="$HOME/.nutshell.zshrc"
+[ -f $nutshell_zshrc ] && source $nutshell_zshrc
