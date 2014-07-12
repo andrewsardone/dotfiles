@@ -72,6 +72,7 @@ Plugin 'davidoc/taskpaper.vim'
 Plugin 'wting/rust.vim'
 Plugin 'jnwhiteh/vim-golang'
 Plugin 'bling/vim-airline'
+Plugin 'tpope/vim-markdown'
 
 call vundle#end()
 filetype plugin indent on
