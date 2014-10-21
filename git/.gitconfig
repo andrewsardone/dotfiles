@@ -19,3 +19,5 @@
 	http-clone = true
 [github]
 	user = andrewsardone
+[merge]
+	defaultToUpstream = true
