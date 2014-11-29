@@ -10,9 +10,6 @@ fpath=( "$HOME/.zfunctions" $fpath )
 # zshrc reloading
 alias reload!='source ~/.zshrc'
 
-# rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
 # 10ms for key sequences
 KEYTIMEOUT=1
 
@@ -110,9 +107,6 @@ function precmd() {
 
 # pager
 export LESS="-RIM"
-
-# rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # nutshell
 NUB_BIN="$HOME/source/nutshell/nub/bin/nub"
