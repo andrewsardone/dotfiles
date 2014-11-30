@@ -87,6 +87,9 @@ autoload -U colors && colors
 autoload -U promptinit && promptinit
 prompt pure
 
+# pure prompt config
+PURE_GIT_PULL=0
+
 # history
 setopt APPEND_HISTORY # adds history
 setopt INC_APPEND_HISTORY SHARE_HISTORY  # adds history incrementally and share it across sessions
