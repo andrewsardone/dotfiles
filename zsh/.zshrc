@@ -90,6 +90,9 @@ prompt pure
 # pure prompt config
 PURE_GIT_PULL=0
 
+# Fish shell like syntax highlighting for Zsh
+source $HOME/.zfunctions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 # history
 setopt APPEND_HISTORY # adds history
 setopt INC_APPEND_HISTORY SHARE_HISTORY  # adds history incrementally and share it across sessions
