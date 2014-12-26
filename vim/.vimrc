@@ -166,3 +166,6 @@ function! ProseToggle()
     let g:prose_is_toggled = 1
   endif
 endfunction
+
+" Send last yanked text to clipper – https://github.com/wincent/clipper
+nnoremap <leader>y :call system('nc localhost 8377', @0)<CR>
