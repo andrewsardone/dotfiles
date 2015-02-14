@@ -24,3 +24,6 @@ stow:
 	stow lldb
 
 install: dependencies submodules stow vim-plugins
+
+install-no-vim: dependencies submodules stow
+	@command echo 'To setup vim, `make vim-plugins` from a shell'
