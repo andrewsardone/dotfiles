@@ -73,6 +73,7 @@ Plugin 'wting/rust.vim'
 Plugin 'jnwhiteh/vim-golang'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-markdown'
+Plugin 'mustache/vim-mustache-handlebars'
 
 call vundle#end()
 filetype plugin indent on
