@@ -144,6 +144,8 @@ autocmd BufNewFile,BufRead Podfile set filetype=ruby
 autocmd BufNewFile,BufRead *.ru set filetype=ruby
 " gradle
 autocmd BufNewFile,BufRead *.gradle setf groovy
+" handlebars & erb
+autocmd BufRead,BufNewFile *.{handlebars,handlebars.erb,hbs,hbs.erb} setl ft=html syntax=mustache
 
 if filereadable(".vim.custom")
   so .vim.custom
