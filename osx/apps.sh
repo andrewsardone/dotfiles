@@ -35,6 +35,7 @@ apps=(
   quicksilver
   rowanj-gitx
   screenflow
+  screenhero
   sequel-pro
   skype
   slate
