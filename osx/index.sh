@@ -2,6 +2,8 @@
 
 set -e
 
-sh osx-defaults
-sh binaries.sh
-sh apps.sh
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
+sh $DIR/osx-defaults
+sh $DIR/binaries.sh
+sh $DIR/apps.sh

@@ -2,8 +2,10 @@
 
 set -e
 
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
 # Check for Homebrew
-sh install-homebrew.sh
+sh $DIR/install-homebrew.sh
 
 # Update homebrew
 brew update
