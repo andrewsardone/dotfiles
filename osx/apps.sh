@@ -2,6 +2,10 @@
 
 set -e
 
+echo ""
+echo "### Installing homebrew-cask apps"
+echo ""
+
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
 # Check for Homebrew
