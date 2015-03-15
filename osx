@@ -1,73 +1,260 @@
-# inspired by mathiasbynens' .osx dotfiles
-#   https://github.com/mathiasbynens/dotfiles/blob/master/.osx
+# inspired by brandonb927's osx-for-hackers.sh
+#   https://gist.github.com/brandonb927/3195465
 
-# Set computer name (as done via System Preferences → Sharing)
-scutil --set ComputerName "wiggum"
-scutil --set HostName "wiggum"
-scutil --set LocalHostName "wiggum"
+# Set the colours you can use
+black='\033[0;30m'
+white='\033[0;37m'
+red='\033[0;31m'
+green='\033[0;32m'
+yellow='\033[0;33m'
+blue='\033[0;34m'
+magenta='\033[0;35m'
+cyan='\033[0;36m'
+ 
+# Resets the style
+reset=`tput sgr0`
+ 
+# Color-echo. Improved. [Thanks @joaocunha]
+# arg $1 = message
+# arg $2 = Color
+cecho() {
+  echo "${2}${1}${reset}"
+  return
+}
+ 
+# Set continue to false by default
+CONTINUE=false
+ 
+echo ""
+cecho "###############################################" $red
+cecho "#        DO NOT RUN THIS SCRIPT BLINDLY       #" $red
+cecho "#         YOU'LL PROBABLY REGRET IT...        #" $red
+cecho "#                                             #" $red
+cecho "#              READ IT THOROUGHLY             #" $red
+cecho "#         AND EDIT TO SUIT YOUR NEEDS         #" $red
+cecho "###############################################" $red
+echo ""
+ 
+echo ""
+cecho "Have you read through the script you're about to run and " $red
+cecho "understood that it will make changes to your computer? (y/n)" $red
+read -r response
+if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
+  CONTINUE=true
+fi
+ 
+if ! $CONTINUE; then
+  # Check if we're continuing and output a message if not
+  cecho "Please go read the script, it only takes a few minutes" $red
+  exit
+fi
 
-# Enable subpixel font rendering on non-Apple LCDs
-defaults -currentHost write -globalDomain AppleFontSmoothing -int 2
+# Here we go.. ask for the administrator password upfront and run a
+# keep-alive to update existing `sudo` time stamp until script has finished
+sudo -v
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# Repeat keystroke, using Emacs' default keybinding for
-# universal-argument
-defaults write -g NSRepeatCountBinding -string "^u"
+###############################################################################
+# General UI/UX
+###############################################################################
+ 
+echo ""
+echo "Would you like to set your computer name (as done via System Preferences >> Sharing)?  (y/n)"
+read -r response
+if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
+  echo "What would you like it to be?"
+  read COMPUTER_NAME
+  sudo scutil --set ComputerName $COMPUTER_NAME
+  sudo scutil --set HostName $COMPUTER_NAME
+  sudo scutil --set LocalHostName $COMPUTER_NAME
+  sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string $COMPUTER_NAME
+fi
 
-# Automatically hide and show the Dock
-defaults write com.apple.dock autohide -bool true
-
-# Disable menu bar transparency
-defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
-
-# Expand print panel by default
-defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
-
-# Disable the “Are you sure you want to open this application?” dialog
-defaults write com.apple.LaunchServices LSQuarantine -bool false
-
-# Disable window animations
-defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
-
-# Enable AirDrop over Ethernet and on unsupported Macs running Lion
-defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
-
-# Avoid creating .DS_Store files on network volumes
-defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
-
-# Enable debug menu in iCal
-defaults write com.apple.iCal IncludeDebugMenu -int 1
-
-# Disable delay to show Dock
-defaults write com.apple.Dock autohide-delay -float 0
-
-# Pin Dock to the bottom
-defaults write com.apple.dock pinning -string end
-
-# Expand save panel by default
+echo ""
+echo "Expanding the save and print panel by default"
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
 
-# Set a blazingly fast keyboard repeat rate
+###############################################################################
+# General Power and Performance modifications
+###############################################################################
+
+echo ""
+echo "Disable the menubar transparency? (y/n)"
+read -r response
+if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
+  defaults write com.apple.universalaccess reduceTransparency -bool true
+fi
+ 
+echo ""
+echo "Speeding up wake from sleep to 24 hours from an hour"
+# http://www.cultofmac.com/221392/quick-hack-speeds-up-retina-macbooks-wake-from-sleep-os-x-tips/
+sudo pmset -a standbydelay 86400
+
+################################################################################
+# Trackpad, mouse, keyboard, Bluetooth accessories, and input
+################################################################################
+
+echo ""
+echo "Enabling full keyboard access for all controls (enable Tab in modal dialogs, menu windows, etc.)"
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+
+echo ""
+echo "Setting a blazingly fast keyboard repeat rate"
 defaults write NSGlobalDomain KeyRepeat -int 0
 
-# IntelliJ IDEA key repeat fix
-defaults write com.jetbrains.intellij.ce ApplePressAndHoldEnabled -bool false
+echo ""
+echo "Enable repeat keystroke using Emacs’s default keybinding for universal-argument ^u"
+defaults write -g NSRepeatCountBinding -string "^u"
 
-# Disable Dashboard
-defaults write com.apple.dashboard mcx-disabled -bool true
+###############################################################################
+# Screen
+###############################################################################
 
-# Disable Preview.app from restoring its content
-# For the most part I like the autorestoring of app documents (e.g., it's
-# a nice to have for untitled documents in TextEdit.app), but in Preview.app
-# I find it annoying.
-defaults write com.apple.Preview NSQuitAlwaysKeepsWindows -int 0
+echo ""
+echo "Enabling subpixel font rendering on non-Apple LCDs"
+defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
-# Do not hide the Library folder w/in Finder
+###############################################################################
+# Finder
+###############################################################################
+ 
+echo ""
+echo "Show icons for hard drives, servers, and removable media on the desktop? (y/n)"
+if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
+  defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
+fi
+
+echo ""
+echo "Show status bar in Finder by default? (y/n)"
+read -r response
+if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
+  defaults write com.apple.finder ShowStatusBar -bool true
+fi
+
+echo ""
+echo "Avoid creation of .DS_Store files on network volumes? (y/n)"
+read -r response
+if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
+  defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+fi
+
+echo ""
+echo "Allowing text selection in Quick Look/Preview in Finder by default"
+defaults write com.apple.finder QLEnableTextSelection -bool true
+
+echo ""
+echo "Show item info near icons on the desktop and in other icon views? (y/n)"
+read -r response
+if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
+  /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
+  /usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
+  /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
+fi
+
+echo ""
+echo "Show item info to the right of the icons on the desktop? (y/n)"
+read -r response
+if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
+  /usr/libexec/PlistBuddy -c "Set DesktopViewSettings:IconViewSettings:labelOnBottom false" ~/Library/Preferences/com.apple.finder.plist
+fi
+
+echo ""
+echo "Enable snap-to-grid for icons on the desktop and in other icon views? (y/n)"
+read -r response
+if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
+  /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+  /usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+  /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+fi
+
+echo ""
+echo "Disable the “Are you sure you want to open this application?” dialog
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+
+echo ""
+echo "Do not hide the Library folder w/in Finder"
 chflags nohidden ~/Library/
 
-# Delay standby mode for 24 hours. This helps speed up my MacBook Pro's awake
-# from sleep time.
-# via http://www.ewal.net/2012/09/09/slow-wake-for-macbook-pro-retina/
-sudo -p "Enter password to delay standby mode for 24 hours: " pmset -a standbydelay 86400
+###############################################################################
+# Dock & Mission Control
+###############################################################################
 
-echo "Kill affected applications"
-for app in iCal Finder Dock SystemUIServer; do killall "$app" >/dev/null 2>&1; done
+echo ""
+echo "Speeding up Mission Control animations and grouping windows by application"
+defaults write com.apple.dock expose-animation-duration -float 0.1
+defaults write com.apple.dock "expose-group-by-app" -bool true
+ 
+echo ""
+echo "Set Dock to auto-hide and remove the auto-hiding delay? (y/n)"
+read -r response
+if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
+  defaults write com.apple.dock autohide -bool true
+  defaults write com.apple.dock autohide-delay -float 0
+  defaults write com.apple.dock autohide-time-modifier -float 0
+fi
+
+echo ""
+echo "Disable Dashboard"
+defaults write com.apple.dashboard mcx-disabled -bool true
+
+###############################################################################
+# Chrome, Safari, & WebKit
+###############################################################################
+
+echo ""
+echo "Privacy: Don’t send search queries to Apple"
+defaults write com.apple.Safari UniversalSearchEnabled -bool false
+defaults write com.apple.Safari SuppressSearchSuggestions -bool true
+
+echo ""
+echo "Enabling Safari's debug menu"
+defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+
+echo ""
+echo "Adding a context menu item for showing the Web Inspector in web views"
+defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+
+echo ""
+echo "Using the system-native print preview dialog in Chrome"
+defaults write com.google.Chrome DisablePrintPreview -bool true
+defaults write com.google.Chrome.canary DisablePrintPreview -bool true
+
+###############################################################################
+# Mail
+###############################################################################
+ 
+echo ""
+echo "Setting email addresses to copy as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Mail.app"
+defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
+
+###############################################################################
+# IntelliJ
+###############################################################################
+
+echo ""
+echo "Disable IntelliJ IDEA key repeat fix"
+defaults write com.jetbrains.intellij.ce ApplePressAndHoldEnabled -bool false
+
+###############################################################################
+# Kill affected applications
+###############################################################################
+ 
+echo ""
+cecho "Done!" $cyan
+echo ""
+echo ""
+cecho "################################################################################" $white
+echo ""
+echo ""
+cecho "Note that some of these changes require a logout/restart to take effect." $red
+cecho "Killing some open applications in order to take effect." $red
+echo ""
+ 
+find ~/Library/Application\ Support/Dock -name "*.db" -maxdepth 1 -delete
+for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
+  "Dock" "Finder" "Mail" "Messages" "Safari" "SystemUIServer" \
+  "Terminal" "Transmission"; do
+  killall "${app}" > /dev/null 2>&1
+done
