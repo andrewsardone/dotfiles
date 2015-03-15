@@ -27,3 +27,6 @@ install: dependencies submodules stow vim-plugins
 
 install-no-vim: dependencies submodules stow
 	@echo 'To setup vim, `make vim-plugins` from a shell'
+
+mac: install
+	./osx
