@@ -17,6 +17,7 @@ apps=(
   bowtie
   doxie
   firefox
+  fluid
   flux
   framer-studio
   genymotion
