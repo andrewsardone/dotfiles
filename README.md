@@ -21,5 +21,5 @@ make mac
 mackup backup # optional if you want to use https://github.com/lra/mackup
 ```
 
-[tp]:(http://lapwinglabs.com/blog/hacker-guide-to-setting-up-your-mac
+[tp]: http://lapwinglabs.com/blog/hacker-guide-to-setting-up-your-mac
 [asi]: osx/app-store-apps.md
