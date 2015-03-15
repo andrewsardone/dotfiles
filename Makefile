@@ -25,6 +25,7 @@ stow:
 	stow xvim
 	stow zsh
 	stow lldb
+	stow mackup
 
 install: dependencies submodules stow vim-plugins
 

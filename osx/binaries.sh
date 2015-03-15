@@ -22,6 +22,7 @@ binaries=(
   git-extras  grc
   grc
   hub
+  mackup
   node
   ruby
   sqlite
