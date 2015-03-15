@@ -16,6 +16,7 @@ apps=(
   appcleaner
   bowtie
   doxie
+  fantastical
   firefox
   fluid
   flux
