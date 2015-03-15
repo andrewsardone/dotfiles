@@ -170,7 +170,7 @@ if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
 fi
 
 echo ""
-echo "Disable the “Are you sure you want to open this application?” dialog
+echo "Disable the “Are you sure you want to open this application?" dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 echo ""
@@ -185,14 +185,14 @@ echo ""
 echo "Speeding up Mission Control animations and grouping windows by application"
 defaults write com.apple.dock expose-animation-duration -float 0.1
 defaults write com.apple.dock "expose-group-by-app" -bool true
- 
+
 echo ""
 echo "Set Dock to auto-hide and remove the auto-hiding delay? (y/n)"
 read -r response
 if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
   defaults write com.apple.dock autohide -bool true
   defaults write com.apple.dock autohide-delay -float 0
-  defaults write com.apple.dock autohide-time-modifier -float 0
+  defaults write com.apple.dock autohide-time-modifier -float 0.5
 fi
 
 echo ""
@@ -262,7 +262,6 @@ echo ""
  
 find ~/Library/Application\ Support/Dock -name "*.db" -maxdepth 1 -delete
 for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
-  "Dock" "Finder" "Mail" "Messages" "Safari" "SystemUIServer" \
-  "Terminal" "Transmission"; do
+  "Dock" "Finder" "Mail" "Messages" "Safari" "SystemUIServer"; do
   killall "${app}" > /dev/null 2>&1
 done
