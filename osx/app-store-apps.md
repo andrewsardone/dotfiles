@@ -19,5 +19,6 @@ could not figure out a way to automate their installation.
 - Slack
 - TextExpander
 - Timing
+- Tweetbot
 - Xcode
 - xScope
