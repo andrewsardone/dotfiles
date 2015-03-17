@@ -17,6 +17,7 @@ could not figure out a way to automate their installation.
 - Reeder 2
 - Sketch 3
 - Slack
+- TextExpander
 - Timing
 - Xcode
 - xScope
