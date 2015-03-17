@@ -14,7 +14,9 @@ sh $DIR/install-homebrew.sh
 apps=(
   android-studio
   appcleaner
+  bee
   bowtie
+  caffeine
   doxie
   fantastical
   firefox
@@ -23,6 +25,7 @@ apps=(
   framer-studio
   genymotion
   google-chrome
+  hockey
   imageoptim
   iterm2
   karabiner
