@@ -42,6 +42,7 @@ apps=(
   screenflow
   screenhero
   sequel-pro
+  sketch-toolbox
   skype
   slate
   spotify
