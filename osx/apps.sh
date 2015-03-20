@@ -12,6 +12,7 @@ DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 sh $DIR/install-homebrew.sh
 
 apps=(
+  acorn
   android-studio
   appcleaner
   bee
