@@ -47,6 +47,7 @@ apps=(
   skype
   slate
   spotify
+  superduper
   vagrant
   virtualbox
   viscosity
