@@ -34,6 +34,7 @@ apps=(
   keyboard-cleaner
   macvim
   nvalt
+  postico
   qlmarkdown
   qlprettypatch
   qlstephen
