@@ -29,6 +29,7 @@ binaries=(
   tig
   tmux
   tree
+  watchman
   wget
 )
 
