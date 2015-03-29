@@ -1,1 +1,5 @@
 source ~/.vimrc
+
+" forward/back history navigation
+map ,d :action Back<cr>
+map ,f :action Forward<cr>
