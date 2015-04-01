@@ -19,7 +19,7 @@ binaries=(
   ack
   ctags
   git
-  git-extras  grc
+  git-extras
   grc
   hub
   mackup
