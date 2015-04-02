@@ -34,6 +34,7 @@ apps=(
   keyboard-cleaner
   macvim
   nvalt
+  omnioutliner
   postico
   qlmarkdown
   qlprettypatch
