@@ -10,6 +10,7 @@ could not figure out a way to automate their installation.
 - DaisyDisk
 - Dash
 - Day One
+- GIFs – [Mac App Store](https://itunes.apple.com/gb/app/gifs/id961850017?mt=12), [GitHub](https://github.com/orta/GIFs)
 - Keynote
 - OmniFocus 2
 - PDFpen
