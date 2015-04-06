@@ -57,8 +57,7 @@ apps=(
 )
 
 echo "installing cask..."
-brew tap phinze/homebrew-cask
-brew install brew-cask
+brew install caskroom/cask/brew-cask
 
 echo "installing alternate cask version"
 brew tap caskroom/versions
