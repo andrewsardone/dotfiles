@@ -45,6 +45,7 @@ apps=(
   screenflow
   screenhero
   sequel-pro
+  sketch-tool
   sketch-toolbox
   skype
   slate
