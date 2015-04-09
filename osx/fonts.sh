@@ -15,6 +15,7 @@ fonts=(
   font-blokk
   font-kreon
   font-lato
+  font-league-gothic
   font-open-sans
   font-open-sans-condensed
   font-pt-mono
