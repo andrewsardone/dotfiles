@@ -16,6 +16,7 @@ fonts=(
   font-kreon
   font-lato
   font-league-gothic
+  font-libre-baskerville
   font-open-sans
   font-open-sans-condensed
   font-pt-mono
@@ -23,6 +24,10 @@ fonts=(
   font-pt-serif
   font-roboto
   font-source-code-pro
+)
+
+fonts_not_available_in_cask=(
+  "JennaSue http://www.dafont.com/jenna-sue.font"
 )
 
 echo "installing cask..."
