@@ -35,6 +35,7 @@ apps=(
   macvim
   nvalt
   omnioutliner
+  omnipresence
   postico
   qlmarkdown
   qlprettypatch
