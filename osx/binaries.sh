@@ -18,6 +18,7 @@ brew update
 binaries=(
   ack
   ctags
+  dateutils
   git
   git-extras
   grc
