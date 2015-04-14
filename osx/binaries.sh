@@ -32,6 +32,7 @@ binaries=(
   tree
   watchman
   wget
+  xctool
 )
 
 # Install the binaries
