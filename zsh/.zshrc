@@ -179,3 +179,7 @@ export PATH=$PATH:$GOPATH/bin
 
 nutshell_zshrc="$HOME/.nutshell.zshrc"
 [ -f $nutshell_zshrc ] && source $nutshell_zshrc
+
+# chruby setup
+chruby_sh=/usr/local/opt/chruby/share/chruby/chruby.sh
+[ -f $chruby_sh ] && source $chruby_sh

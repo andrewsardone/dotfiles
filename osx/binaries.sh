@@ -17,6 +17,7 @@ brew update
 # Install other useful binaries
 binaries=(
   ack
+  chruby
   ctags
   dateutils
   git
@@ -26,6 +27,7 @@ binaries=(
   mackup
   node
   ruby
+  ruby-install
   sqlite
   tig
   tmux
