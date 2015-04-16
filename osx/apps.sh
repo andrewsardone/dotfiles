@@ -43,7 +43,7 @@ apps=(
   quicklook-json
   quicksilver
   rowanj-gitx
-  screenflow
+  screenflow4
   screenhero
   sequel-pro
   sketch-tool
