@@ -18,6 +18,7 @@ apps=(
   bee
   bowtie
   caffeine
+  daisydisk
   doxie
   fantastical
   firefox
