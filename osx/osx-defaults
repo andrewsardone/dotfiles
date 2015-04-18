@@ -10,10 +10,10 @@ yellow='\033[0;33m'
 blue='\033[0;34m'
 magenta='\033[0;35m'
 cyan='\033[0;36m'
- 
+
 # Resets the style
 reset=`tput sgr0`
- 
+
 # Color-echo. Improved. [Thanks @joaocunha]
 # arg $1 = message
 # arg $2 = Color
@@ -21,10 +21,10 @@ cecho() {
   echo "${2}${1}${reset}"
   return
 }
- 
+
 # Set continue to false by default
 CONTINUE=false
- 
+
 echo ""
 cecho "###############################################" $red
 cecho "#        DO NOT RUN THIS SCRIPT BLINDLY       #" $red
@@ -34,7 +34,7 @@ cecho "#              READ IT THOROUGHLY             #" $red
 cecho "#         AND EDIT TO SUIT YOUR NEEDS         #" $red
 cecho "###############################################" $red
 echo ""
- 
+
 echo ""
 cecho "Have you read through the script you're about to run and " $red
 cecho "understood that it will make changes to your computer? (y/n)" $red
@@ -42,7 +42,7 @@ read -r response
 if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
   CONTINUE=true
 fi
- 
+
 if ! $CONTINUE; then
   # Check if we're continuing and output a message if not
   cecho "Please go read the script, it only takes a few minutes" $red
@@ -57,7 +57,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 # General UI/UX
 ###############################################################################
- 
+
 echo ""
 echo "Would you like to set your computer name (as done via System Preferences >> Sharing)?  (y/n)"
 read -r response
@@ -86,7 +86,7 @@ read -r response
 if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
   defaults write com.apple.universalaccess reduceTransparency -bool true
 fi
- 
+
 echo ""
 echo "Speeding up wake from sleep to 24 hours from an hour"
 # http://www.cultofmac.com/221392/quick-hack-speeds-up-retina-macbooks-wake-from-sleep-os-x-tips/
@@ -119,7 +119,7 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 2
 ###############################################################################
 # Finder
 ###############################################################################
- 
+
 echo ""
 echo "Show icons for hard drives, servers, and removable media on the desktop? (y/n)"
 if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
@@ -224,7 +224,7 @@ defaults write com.google.Chrome.canary DisablePrintPreview -bool true
 ###############################################################################
 # Mail
 ###############################################################################
- 
+
 echo ""
 echo "Setting email addresses to copy as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Mail.app"
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
@@ -248,7 +248,7 @@ chsh -s $(which zsh)
 ###############################################################################
 # Kill affected applications
 ###############################################################################
- 
+
 echo ""
 cecho "Done!" $cyan
 echo ""
@@ -259,7 +259,7 @@ echo ""
 cecho "Note that some of these changes require a logout/restart to take effect." $red
 cecho "Killing some open applications in order to take effect." $red
 echo ""
- 
+
 find ~/Library/Application\ Support/Dock -name "*.db" -maxdepth 1 -delete
 for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
   "Dock" "Finder" "Mail" "Messages" "Safari" "SystemUIServer"; do
