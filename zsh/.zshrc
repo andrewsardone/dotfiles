@@ -54,8 +54,16 @@ export EDITOR=vim
 bindkey -v
 bindkey '^R' history-incremental-search-backward # a must have
 
-function block_cursor() { print -n -- "\EPtmux;\E\E]50;CursorShape=0\C-G\E\\" }
-function line_cursor() { print -n -- "\EPtmux;\E\E]50;CursorShape=1\C-G\E\\" }
+function block_cursor() {
+  if [ ! -z "$TMUX" ]; then
+    print -n -- "\EPtmux;\E\E]50;CursorShape=0\C-G\E\\"
+  fi
+}
+function line_cursor() {
+  if [ ! -z "$TMUX" ]; then
+    print -n -- "\EPtmux;\E\E]50;CursorShape=1\C-G\E\\"
+  fi
+}
 
 function zle-keymap-select zle-line-init {
   # change cursor shape in iTerm2 and in tmux
