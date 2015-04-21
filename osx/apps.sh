@@ -33,6 +33,7 @@ apps=(
   java7
   karabiner
   keyboard-cleaner
+  macdown
   macvim
   nvalt
   omnioutliner
