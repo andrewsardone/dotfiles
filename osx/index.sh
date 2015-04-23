@@ -8,3 +8,4 @@ sh $DIR/osx-defaults
 sh $DIR/binaries.sh
 sh $DIR/apps.sh
 sh $DIR/fonts.sh
+sh $DIR/services/install.sh
