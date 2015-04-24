@@ -24,6 +24,8 @@ binaries=(
   ctags
   dateutils
   exercism
+  ffmpeg
+  gifsicle
   git
   git-extras
   grc
