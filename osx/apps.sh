@@ -35,6 +35,7 @@ apps=(
   keyboard-cleaner
   macdown
   macvim
+  monodraw
   nvalt
   omnioutliner
   omnipresence
