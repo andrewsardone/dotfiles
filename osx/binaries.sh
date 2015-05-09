@@ -25,6 +25,7 @@ binaries=(
   dateutils
   exercism
   ffmpeg
+  fpp
   gifsicle
   git
   git-extras
