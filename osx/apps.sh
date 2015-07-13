@@ -53,7 +53,6 @@ apps=(
   sketch-toolbox
   skype
   slate
-  spotify
   superduper
   vagrant
   virtualbox
