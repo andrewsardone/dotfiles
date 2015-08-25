@@ -17,6 +17,7 @@ fonts=(
   font-lato
   font-league-gothic
   font-libre-baskerville
+  font-montserrat
   font-open-sans
   font-open-sans-condensed
   font-pt-mono
