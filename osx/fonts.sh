@@ -25,6 +25,7 @@ fonts=(
   font-pt-serif
   font-roboto
   font-source-code-pro
+  font-work-sans
 )
 
 fonts_not_available_in_cask=(
