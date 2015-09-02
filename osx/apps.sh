@@ -45,6 +45,7 @@ apps=(
   qlstephen
   quicklook-json
   quicksilver
+  rescuetime
   rowanj-gitx
   screenflow4
   screenhero
