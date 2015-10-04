@@ -82,16 +82,16 @@ S.bindAll({
   }),
 
   // window movement
-  "left:up,ctrl,shift,cmd:toggle": S.op("nudge", {
+  "left:down,ctrl,shift,cmd:toggle": S.op("nudge", {
     "x": "-10%", "y": "+0"
   }),
-  "right:up,ctrl,shift,cmd:toggle": S.op("nudge", {
+  "right:down,ctrl,shift,cmd:toggle": S.op("nudge", {
     "x": "+10%", "y": "+0"
   }),
-  "up:up,ctrl,shift,cmd:toggle": S.op("nudge", {
+  "up:down,ctrl,shift,cmd:toggle": S.op("nudge", {
     "x": "+0", "y": "-10%"
   }),
-  "down:up,ctrl,shift,cmd:toggle": S.op("nudge", {
+  "down:down,ctrl,shift,cmd:toggle": S.op("nudge", {
     "x": "+0", "y": "+10%"
   }),
   "g:up,ctrl,shift,cmd": fullScreenOp,
