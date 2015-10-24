@@ -74,6 +74,7 @@ Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-markdown'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'mtth/scratch.vim'
+Plugin 'scrooloose/syntastic'
 
 call vundle#end()
 filetype plugin indent on
@@ -172,3 +173,12 @@ endfunction
 
 " Send last yanked text to clipper – https://github.com/wincent/clipper
 nnoremap <leader>y :call system('nc localhost 8377', @0)<CR>
+
+" syntastic setup – https://github.com/scrooloose/syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_wq = 0
