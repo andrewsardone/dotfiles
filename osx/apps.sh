@@ -50,6 +50,7 @@ apps=(
   screenflow4
   screenhero
   sequel-pro
+  sketch
   sketch-tool
   sketch-toolbox
   skype
