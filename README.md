@@ -18,7 +18,6 @@ default Mac OS X configuration.
 git clone https://github.com/andrewsardone/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 make mac
-mackup backup # optional if you want to use https://github.com/lra/mackup
 ```
 
 [tp]: http://lapwinglabs.com/blog/hacker-guide-to-setting-up-your-mac
