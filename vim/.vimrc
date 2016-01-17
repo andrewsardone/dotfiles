@@ -29,6 +29,7 @@ set showmatch                                                " jump to matching 
 set smartcase                                                " case-sensitive search if any caps
 set softtabstop=2                                            " insert mode tab and backspace use 2 spaces
 set tabstop=8                                                " actual tabs occupy 8 characters
+set tags=./tags;                                             " start with current file's directory for tags file search, then move up. See http://vim.wikia.com/wiki/Browsing_programs_with_tags
 set timeoutlen=1000 ttimeoutlen=0                            " speed
 set t_ti= t_te=                                              " Prevent Vim from clobbering the scrollback buffer. See http://www.shallowsky.com/linux/noaltscreen.html
 set wildignore=log/**,node_modules/**,target/**,tmp/**,*.rbc
