@@ -191,6 +191,13 @@ autocmd FileType javascript let b:syntastic_checkers = syntastic#util#findFileIn
 
 "" spelling
 " Good tips found here: https://robots.thoughtbot.com/opt-in-project-specific-vim-spell-checking-and-word-completion
+"
+" ## Commands
+"
+" - z= get spelling suggestions when cursor is placed over word
+" - zg add misspelling to dictionary file
+" - [s ]s navigate across misspellings
+"
 autocmd BufRead,BufNewFile *.md set filetype=markdown
 
 " Spell-check Markdown files
