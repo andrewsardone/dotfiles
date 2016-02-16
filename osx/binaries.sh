@@ -23,6 +23,7 @@ binaries=(
   chruby
   ctags
   dateutils
+  diff-so-fancy
   exercism
   ffmpeg
   fpp
