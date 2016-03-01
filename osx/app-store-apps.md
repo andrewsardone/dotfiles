@@ -11,6 +11,7 @@ could not figure out a way to automate their installation.
 - Day One
 - GIFs – [Mac App Store](https://itunes.apple.com/gb/app/gifs/id961850017?mt=12), [GitHub](https://github.com/orta/GIFs)
 - Keynote
+- Markoff – https://robots.thoughtbot.com/markoff-free-markdown-previewer
 - OmniFocus 2
 - PDFpen
 - Pixelmator
