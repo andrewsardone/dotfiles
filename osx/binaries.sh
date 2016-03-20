@@ -20,6 +20,7 @@ brew tap homebrew/binary
 # Install other useful binaries
 binaries=(
   ack
+  ag
   chruby
   ctags
   dateutils
