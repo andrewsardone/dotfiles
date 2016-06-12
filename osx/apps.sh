@@ -50,8 +50,8 @@ apps=(
   sketch-tool
   sketch-toolbox
   skype
-  slate
   slack
+  slate
   superduper
   vagrant
   virtualbox
