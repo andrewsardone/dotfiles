@@ -55,6 +55,7 @@ apps=(
   sketch-toolbox
   skype
   slate
+  slack
   superduper
   vagrant
   virtualbox

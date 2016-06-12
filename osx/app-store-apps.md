@@ -17,7 +17,6 @@ could not figure out a way to automate their installation.
 - Pixelmator
 - Reeder 2
 - Sketch 3
-- Slack
 - TextExpander
 - Timing
 - Tweetbot
