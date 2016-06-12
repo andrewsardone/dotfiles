@@ -30,7 +30,7 @@ apps=(
   hockey
   imageoptim
   iterm2
-  java7
+  java
   karabiner
   keyboard-cleaner
   macdown
