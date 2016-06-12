@@ -15,14 +15,10 @@ apps=(
   acorn
   android-studio
   appcleaner
-  bee
-  bowtie
   caffeine
   daisydisk
-  doxie
   fantastical
   firefox
-  fluid
   flux
   framer-studio
   genymotion
@@ -36,7 +32,6 @@ apps=(
   macdown
   macvim
   microsoft-office
-  monodraw
   nvalt
   omnioutliner
   omnipresence
