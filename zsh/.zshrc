@@ -191,3 +191,7 @@ nutshell_zshrc="$HOME/.nutshell.zshrc"
 # chruby setup
 chruby_sh=/usr/local/opt/chruby/share/chruby/chruby.sh
 [ -f $chruby_sh ] && source $chruby_sh
+
+# awscli completion
+awscli_functions=/usr/local/share/zsh/site-functions/_aws
+[ -f $awscli_functions ] && source $awscli_functions
