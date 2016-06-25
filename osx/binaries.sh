@@ -41,6 +41,7 @@ binaries=(
   tig
   tmux
   tree
+  vim
   watchman
   wget
   xctool
