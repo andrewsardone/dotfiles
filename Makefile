@@ -25,6 +25,7 @@ stow:
 	stow xvim
 	stow zsh
 	stow lldb
+	stow node
 
 install: dependencies submodules stow vim-plugins
 
