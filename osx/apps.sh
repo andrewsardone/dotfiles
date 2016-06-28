@@ -22,6 +22,7 @@ apps=(
   flux
   framer-studio
   genymotion
+  gifs
   google-chrome
   hockey
   imageoptim
