@@ -39,6 +39,7 @@ binaries=(
   ruby-install
   sqlite
   tig
+  tmate
   tmux
   tree
   vim
