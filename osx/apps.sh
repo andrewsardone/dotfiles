@@ -17,6 +17,7 @@ apps=(
   appcleaner
   caffeine
   daisydisk
+  docker
   fantastical
   firefox
   flux
@@ -30,6 +31,7 @@ apps=(
   java
   karabiner
   keyboard-cleaner
+  kinematic-beta
   macdown
   macvim
   microsoft-office
