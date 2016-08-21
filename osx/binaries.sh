@@ -21,6 +21,7 @@ brew tap homebrew/binary
 binaries=(
   ack
   ag
+  aws-elasticbeanstalk
   awscli
   chruby
   ctags
