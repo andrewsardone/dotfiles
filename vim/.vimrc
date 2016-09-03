@@ -44,7 +44,7 @@ set re=1
 
 " Enable basic mouse behavior such as resizing buffers.
 set mouse=a
-if exists('$TMUX')  " Support resizing in tmux
+if exists('$TMUX') && !has('nvim') " Support resizing in tmux
   set ttymouse=xterm2
 endif
 
