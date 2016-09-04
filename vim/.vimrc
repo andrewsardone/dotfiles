@@ -44,15 +44,20 @@ set re=1
 
 " Enable basic mouse behavior such as resizing buffers.
 set mouse=a
-if exists('$TMUX')  " Support resizing in tmux
+if exists('$TMUX') && !has('nvim') " Support resizing in tmux
   set ttymouse=xterm2
 endif
 
 " plugin configuration
 filetype on " without this vim emits a zero exit status, later, because of :ft off
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+if has('nvim')
+  set rtp+=~/.config/nvim/bundle/Vundle.vim
+  call vundle#begin('~/.config/nvim/bundle')
+else
+  set rtp+=~/.vim/bundle/Vundle.vim
+  call vundle#begin()
+endif
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
@@ -84,6 +89,8 @@ Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'mtth/scratch.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'mtscout6/syntastic-local-eslint.vim'
+Plugin 'neomake/neomake'
+Plugin 'benjie/neomake-local-eslint.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -117,6 +124,8 @@ catch /^Vim\%((\a\+)\)\=:E185/
   color aps256
 endtry
 
+" Toggling cursor shape based on insert-mode versus normal-mode
+" ---
 " tmux and iTerm2 cursor fun
 " via @andyfowler https://gist.github.com/1195581
 if exists('$TMUX')
@@ -126,6 +135,7 @@ else
   let &t_SI = "\<Esc>]50;CursorShape=1\x7"
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
 " plugin settings
 let g:ctrlp_match_window = 'order:ttb,max:20'
@@ -194,6 +204,23 @@ let g:syntastic_check_on_wq = 0
 " Use eslint javascript checker if .eslintrc file is present – https://github.com/scrooloose/syntastic/issues/1484
 let g:syntastic_javascript_checkers = []
 autocmd FileType javascript let b:syntastic_checkers = syntastic#util#findFileInParent('.eslintrc', expand('%:p:h', 1)) !=# '' ? ['eslint'] : []
+
+" For NeoVim, we'll use Neomake instead of syntastic
+" See https://robots.thoughtbot.com/my-life-with-neovim#asynchronous-checkers
+if has('nvim')
+  " Run NeoMake on read and write operations
+  autocmd! BufReadPost,BufWritePost * Neomake
+
+  " Disable inherited syntastic
+  let g:syntastic_mode_map = {
+    \ "mode": "passive",
+    \ "active_filetypes": [],
+    \ "passive_filetypes": []
+  \}
+
+  let g:neomake_serialize = 1
+  let g:neomake_serialize_abort_on_error = 1
+endif
 
 "" spelling
 " Good tips found here: https://robots.thoughtbot.com/opt-in-project-specific-vim-spell-checking-and-word-completion

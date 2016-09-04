@@ -26,6 +26,7 @@ stow:
 	stow zsh
 	stow lldb
 	stow node
+	stow xdg_base_directory
 
 install: dependencies submodules stow vim-plugins
 

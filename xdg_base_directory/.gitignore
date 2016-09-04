@@ -1,0 +1,6 @@
+# Ignore everything
+*
+
+# Except…
+!.gitignore
+!/.config/.gitinclude
