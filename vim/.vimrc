@@ -51,8 +51,13 @@ endif
 " plugin configuration
 filetype on " without this vim emits a zero exit status, later, because of :ft off
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+if has('nvim')
+  set rtp+=~/.config/nvim/bundle/Vundle.vim
+  call vundle#begin('~/.config/nvim/bundle')
+else
+  set rtp+=~/.vim/bundle/Vundle.vim
+  call vundle#begin()
+endif
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
