@@ -124,6 +124,8 @@ catch /^Vim\%((\a\+)\)\=:E185/
   color aps256
 endtry
 
+" Toggling cursor shape based on insert-mode versus normal-mode
+" ---
 " tmux and iTerm2 cursor fun
 " via @andyfowler https://gist.github.com/1195581
 if exists('$TMUX')
@@ -133,6 +135,7 @@ else
   let &t_SI = "\<Esc>]50;CursorShape=1\x7"
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
 " plugin settings
 let g:ctrlp_match_window = 'order:ttb,max:20'
