@@ -91,6 +91,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'mtscout6/syntastic-local-eslint.vim'
 Plugin 'neomake/neomake'
 Plugin 'benjie/neomake-local-eslint.vim'
+Plugin 'reedes/vim-colors-pencil'
 
 call vundle#end()
 filetype plugin indent on
@@ -119,10 +120,12 @@ inoremap jj <ESC>
 :set t_Co=256 " 256 colors
 set background=dark
 try
-  colorscheme solarized
+  colorscheme pencil
 catch /^Vim\%((\a\+)\)\=:E185/
   color aps256
 endtry
+
+let g:airline_theme = 'pencil'
 
 " Toggling cursor shape based on insert-mode versus normal-mode
 " ---

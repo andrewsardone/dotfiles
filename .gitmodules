@@ -1,3 +1,6 @@
 [submodule "vim/.vim/bundle/Vundle.vim"]
 	path = vim/.vim/bundle/Vundle.vim
 	url = https://github.com/gmarik/Vundle.vim.git
+[submodule "terminal_profiles/iterm-colors-pencil"]
+	path = terminal_profiles/iterm-colors-pencil
+	url = https://github.com/mattly/iterm-colors-pencil
