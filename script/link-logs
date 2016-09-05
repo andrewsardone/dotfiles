@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+#
+# Usage: ./link-logs
+#
+# Links up my [running storage of all shell command logs][1] to my repository
+# in Dropbox.
+#
+# [1]: https://github.com/andrewsardone/dotfiles/blob/fcf761c539f1f419449f520e78fc86c9018ee309/zsh/.zshrc#L115-L124
+
+set -e
+
+mv ~/.logs ~/.logs.bak
+ln -s ~/Dropbox/Sync/shell-logs ~/.logs
