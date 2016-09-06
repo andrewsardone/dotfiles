@@ -55,6 +55,7 @@ apps=(
   skype
   slack
   slate
+  spotify
   superduper
   vagrant
   virtualbox
