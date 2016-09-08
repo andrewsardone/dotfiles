@@ -93,6 +93,7 @@ Plugin 'mtscout6/syntastic-local-eslint.vim'
 Plugin 'neomake/neomake'
 Plugin 'benjie/neomake-local-eslint.vim'
 Plugin 'reedes/vim-colors-pencil'
+Plugin 'mxw/vim-jsx'
 
 call vundle#end()
 filetype plugin indent on
@@ -127,6 +128,7 @@ catch /^Vim\%((\a\+)\)\=:E185/
 endtry
 
 let g:airline_theme = 'pencil'
+let g:pencil_spell_undercurl = 1
 
 " Toggling cursor shape based on insert-mode versus normal-mode
 " ---
@@ -242,6 +244,9 @@ autocmd FileType markdown setlocal spell
 
 " Spell-check Git messages
 autocmd FileType gitcommit setlocal spell
+
+" jsx
+let g:jsx_ext_required = 0
 
 " Set spellfile to location that is guaranteed to exist,
 " can be symlinked to Dropbox or kept in Git
