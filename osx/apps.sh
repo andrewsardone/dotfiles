@@ -32,6 +32,7 @@ apps=(
   karabiner
   keyboard-cleaner
   kinematic-beta
+  licecap
   macdown
   macvim
   microsoft-office
