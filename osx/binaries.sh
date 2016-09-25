@@ -33,6 +33,7 @@ binaries=(
   git
   git-extras
   grc
+  htop
   hub
   mackup
   neovim/neovim/neovim
