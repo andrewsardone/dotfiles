@@ -94,6 +94,7 @@ Plugin 'neomake/neomake'
 Plugin 'benjie/neomake-local-eslint.vim'
 Plugin 'reedes/vim-colors-pencil'
 Plugin 'mxw/vim-jsx'
+Plugin 'trevordmiller/nova-vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -122,7 +123,7 @@ inoremap jj <ESC>
 :set t_Co=256 " 256 colors
 set background=dark
 try
-  colorscheme pencil
+  colorscheme nova
 catch /^Vim\%((\a\+)\)\=:E185/
   color aps256
 endtry

@@ -4,3 +4,6 @@
 [submodule "terminal_profiles/iterm-colors-pencil"]
 	path = terminal_profiles/iterm-colors-pencil
 	url = https://github.com/mattly/iterm-colors-pencil
+[submodule "terminal_profiles/nova-iterm"]
+	path = terminal_profiles/nova-iterm
+	url = https://github.com/trevordmiller/nova-iterm
