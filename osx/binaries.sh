@@ -35,7 +35,7 @@ binaries=(
   grc
   hub
   mackup
-  neovim/neovim/neovi
+  neovim/neovim/neovim
   node
   ruby
   ruby-install
