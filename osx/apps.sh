@@ -17,6 +17,7 @@ apps=(
   android-studio
   appcleaner
   caffeine
+  colorsnapper
   daisydisk
   docker
   fantastical
