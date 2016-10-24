@@ -27,6 +27,7 @@ binaries=(
   ctags
   dateutils
   exercism
+  exif
   ffmpeg
   fpp
   gifsicle
