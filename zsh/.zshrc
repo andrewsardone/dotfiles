@@ -199,3 +199,7 @@ chruby_sh=/usr/local/opt/chruby/share/chruby/chruby.sh
 # awscli completion
 awscli_functions=/usr/local/share/zsh/site-functions/_aws
 [ -f $awscli_functions ] && source $awscli_functions
+
+# Mac App Store cli config
+# https://github.com/mas-cli/mas
+alias mas='reattach-to-user-namespace mas'

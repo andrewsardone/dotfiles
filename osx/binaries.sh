@@ -37,6 +37,7 @@ binaries=(
   htop
   hub
   mackup
+  mas
   neovim/neovim/neovim
   node
   ruby
