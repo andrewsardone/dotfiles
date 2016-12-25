@@ -63,6 +63,7 @@ apps=(
   virtualbox
   viscosity
   vlc
+  wmail
 )
 
 echo "installing cask..."
