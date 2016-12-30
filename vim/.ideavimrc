@@ -3,3 +3,8 @@ source ~/.vimrc
 " forward/back history navigation
 map ,d :action Back<cr>
 map ,f :action Forward<cr>
+
+" Disable bell
+" via http://superuser.com/a/677312
+set visualbell
+set noerrorbells
