@@ -9,4 +9,10 @@ map ,f :action Forward<cr>
 set visualbell
 set noerrorbells
 
+" Custom mappings for actions provided ivia IdeaVIM
+" For a large list of available actions, see
+" https://gist.github.com/zchee/9c78f91cc5ad771c1f5d
+nmap <leader>e :action ShowErrorDescription<cr>
+nmap <leader>r :action FileStructurePopup<cr>
 nmap <leader>t :action SearchEverywhere<cr>
+nmap <leader>w :action ShowIntentionActions<cr>
