@@ -16,3 +16,5 @@ nmap <leader>e :action ShowErrorDescription<cr>
 nmap <leader>r :action FileStructurePopup<cr>
 nmap <leader>t :action SearchEverywhere<cr>
 nmap <leader>w :action ShowIntentionActions<cr>
+
+map <silent> <leader>V :source ~/.ideavimrc<cr>
