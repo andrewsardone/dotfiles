@@ -8,3 +8,5 @@ map ,f :action Forward<cr>
 " via http://superuser.com/a/677312
 set visualbell
 set noerrorbells
+
+nmap <leader>t :action SearchEverywhere<cr>
