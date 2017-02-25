@@ -7,3 +7,6 @@
 [submodule "terminal_profiles/nova-iterm"]
 	path = terminal_profiles/nova-iterm
 	url = https://github.com/trevordmiller/nova-iterm
+[submodule "vendor/jasonrudolph-keyboard"]
+	path = vendor/jasonrudolph-keyboard
+	url = https://github.com/jasonrudolph/keyboard
