@@ -34,6 +34,7 @@ binaries=(
   gifsicle
   git
   git-extras
+  gpg
   grc
   htop
   hub
