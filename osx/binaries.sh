@@ -31,6 +31,7 @@ binaries=(
   exif
   ffmpeg
   fpp
+  fzf
   gifsicle
   git
   git-extras
