@@ -28,10 +28,13 @@ stow:
 	stow node
 	stow xdg_base_directory
 
+link-bin:
+	@ln -s `pwd`/bin ~/bin
+
 keyboard:
 	@pushd vendor/jasonrudolph-keyboard; script/setup; popd
 
-install: dependencies submodules stow vim-plugins keyboard
+install: dependencies submodules stow vim-plugins keyboard link-bin
 
 install-no-vim: dependencies submodules stow
 	@echo 'To setup vim, `make vim-plugins` from a shell'
