@@ -45,6 +45,7 @@ binaries=(
   node
   ruby
   ruby-install
+  spark
   sqlite
   tig
   tmate
