@@ -1,0 +1,11 @@
+#!/bin/sh
+
+desktop_visible=`defaults read com.apple.finder CreateDesktop`
+
+if [ $desktop_visible = "1" ]; then
+  defaults write com.apple.finder CreateDesktop -bool false
+else
+  defaults write com.apple.finder CreateDesktop -bool true
+fi
+
+killall Finder
