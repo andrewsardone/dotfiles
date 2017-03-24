@@ -16,6 +16,6 @@ nmap <leader>e :action ShowErrorDescription<cr>
 nmap <leader>r :action FileStructurePopup<cr>
 nmap <leader>t :action SearchEverywhere<cr>
 nmap <leader>w :action ShowIntentionActions<cr>
-nmap <leader>b :action Switcher<cr>
+nmap <leader>b :action RecentFiles<cr>
 
 map <silent> <leader>V :source ~/.ideavimrc<cr>
