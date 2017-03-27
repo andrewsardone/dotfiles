@@ -12,7 +12,6 @@ DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 sh $DIR/install-homebrew.sh
 
 apps=(
-  ./Casks/vimr.rb
   acorn
   android-studio
   appcleaner
@@ -36,6 +35,7 @@ apps=(
   kinematic-beta
   licecap
   macdown
+  macvim
   microsoft-office
   nvalt
   omnioutliner

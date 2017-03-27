@@ -41,7 +41,6 @@ binaries=(
   hub
   mackup
   mas
-  neovim/neovim/neovim
   node
   ruby
   ruby-install
