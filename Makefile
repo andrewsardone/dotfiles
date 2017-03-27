@@ -32,7 +32,7 @@ link-bin:
 	@ln -s `pwd`/bin ~/bin
 
 keyboard:
-	@pushd vendor/jasonrudolph-keyboard; script/setup; popd
+	@ln -s `pwd`/vendor/flav-hammerspoon ~/.hammerspoon
 
 install: dependencies submodules stow vim-plugins keyboard link-bin
 
