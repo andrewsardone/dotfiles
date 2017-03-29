@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+# Usage: ./algo
+# Sets up a temporary Algo VPN – https://github.com/trailofbits/algo
+
+set -e
+
+function section() {
+  echo ''
+  echo -e "\033[0;36m${1}\033[0m"
+  echo ''
+}
+
+command -v pip >/dev/null 2>&1 || {
+  echo >&2 "pip is required: sudo easy_install pip"
+  exit 1
+}
+
+pushd /tmp
+
+algo_dir="algo-$(uuidgen)"
+algo_dir_path="/tmp/${algo_dir}"
+
+section "Installing Algo VPN dependencies to ${algo_dir_path}"
+
+git clone https://github.com/trailofbits/algo $algo_dir
+pushd $algo_dir
+
+pip install virtualenv && virtualenv env && source env/bin/activate && pip install -r requirements.txt
+
+section "Starting Algo VPN Setup"
+
+./algo
+
+section "✅\tconfigs within ${algo_dir_path}"
+
+open $algo_dir_path
