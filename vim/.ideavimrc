@@ -18,4 +18,10 @@ nmap <leader>t :action SearchEverywhere<cr>
 nmap <leader>w :action ShowIntentionActions<cr>
 nmap <leader>b :action RecentFiles<cr>
 
+" Inspired by https://github.com/tpope/vim-vinegar
+" Simply press `-` in normal mode to hop into IntelliJ's navigation bar, which
+" sort of acts like vim's netrw mode to give me keyboard-driven filesystem
+" navigation relative to the file I had open.
+noremap - :action ShowNavBar<cr>
+
 map <silent> <leader>V :source ~/.ideavimrc<cr>
