@@ -45,6 +45,7 @@ binaries=(
   ruby
   ruby-install
   spark
+  speedtest_cli
   sqlite
   tig
   tmate
