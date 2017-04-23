@@ -195,9 +195,12 @@ export PATH=$PATH:$GOPATH/bin
 nutshell_zshrc="$HOME/.nutshell.zshrc"
 [ -f $nutshell_zshrc ] && source $nutshell_zshrc
 
-# chruby setup
-chruby_sh=/usr/local/opt/chruby/share/chruby/chruby.sh
-[ -f $chruby_sh ] && source $chruby_sh
+# asdf – Extendable programming language version manager
+# https://github.com/asdf-vm/asdf
+asdf_sh=$HOME/.asdf/asdf.sh
+[ -f $asdf_sh ] && source $asdf_sh
+asdf_completions_sh=$HOME/.asdf/completions/asdf.bash
+[ -f $asdf_completions_sh ] && source $asdf_completions_sh
 
 # awscli completion
 awscli_functions=/usr/local/share/zsh/site-functions/_aws

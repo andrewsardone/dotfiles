@@ -1,0 +1,3 @@
+# Add support for reading .ruby-version files
+# see https://github.com/asdf-vm/asdf-ruby/blob/6586e1e1ee848a0fdac5f7be016659954011f365/README.md#ruby-version-file
+legacy_version_file = yes

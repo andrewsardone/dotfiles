@@ -24,7 +24,6 @@ binaries=(
   ansible
   aws-elasticbeanstalk
   awscli
-  chruby
   ctags
   dateutils
   exercism
@@ -43,7 +42,6 @@ binaries=(
   mas
   node
   ruby
-  ruby-install
   spark
   speedtest_cli
   sqlite
