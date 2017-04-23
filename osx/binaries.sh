@@ -41,7 +41,6 @@ binaries=(
   mackup
   mas
   node
-  ruby
   spark
   speedtest_cli
   sqlite
