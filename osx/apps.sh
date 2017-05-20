@@ -26,6 +26,7 @@ apps=(
   genymotion
   gifs
   google-chrome
+  google-photos-backup
   hockey
   imageoptim
   iterm2
