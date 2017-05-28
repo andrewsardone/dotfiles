@@ -17,6 +17,8 @@ nmap <leader>r :action FileStructurePopup<cr>
 nmap <leader>t :action SearchEverywhere<cr>
 nmap <leader>w :action ShowIntentionActions<cr>
 nmap <leader>b :action RecentFiles<cr>
+nmap <C-6> :action FileStructurePopup<cr>
+imap <C-6> <C-o>:action FileStructurePopup<cr>
 
 " Inspired by https://github.com/tpope/vim-vinegar
 " Simply press `-` in normal mode to hop into IntelliJ's navigation bar, which
