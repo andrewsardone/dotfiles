@@ -96,6 +96,7 @@ Plugin 'benjie/neomake-local-eslint.vim'
 Plugin 'reedes/vim-colors-pencil'
 Plugin 'mxw/vim-jsx'
 Plugin 'trevordmiller/nova-vim'
+Plugin 'Alok/notational-fzf-vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -261,3 +262,9 @@ set complete+=kspell
 " fzf
 " https://github.com/junegunn/fzf
 set rtp+=/usr/local/opt/fzf
+
+" nvALT replacement
+" https://github.com/Alok/notational-fzf-vim
+let g:nv_directories = ['~/Dropbox/Documents/notes']
+let g:nv_use_short_pathnames = 1
+nnoremap <leader>s :NV<CR>
