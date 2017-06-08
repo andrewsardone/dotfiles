@@ -17,6 +17,7 @@ nmap <leader>r :action FileStructurePopup<cr>
 nmap <leader>t :action SearchEverywhere<cr>
 nmap <leader>w :action ShowIntentionActions<cr>
 nmap <leader>b :action RecentFiles<cr>
+nmap <leader>v :action RunClass<cr>
 nmap <C-6> :action FileStructurePopup<cr>
 imap <C-6> <C-o>:action FileStructurePopup<cr>
 
