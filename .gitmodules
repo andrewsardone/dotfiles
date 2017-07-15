@@ -9,7 +9,7 @@
 	url = https://github.com/trevordmiller/nova-iterm
 [submodule "vendor/jasonrudolph-keyboard"]
 	path = vendor/jasonrudolph-keyboard
-	url = https://github.com/jasonrudolph/keyboard
+	url = https://github.com/andrewsardone/keyboard
 [submodule "vendor/flav-hammerspoon"]
 	path = vendor/flav-hammerspoon
 	url = https://github.com/flav/hammerspoon
