@@ -96,6 +96,7 @@ Plugin 'benjie/neomake-local-eslint.vim'
 Plugin 'reedes/vim-colors-pencil'
 Plugin 'mxw/vim-jsx'
 Plugin 'trevordmiller/nova-vim'
+Plugin 'junegunn/fzf.vim'
 Plugin 'Alok/notational-fzf-vim'
 
 call vundle#end()
