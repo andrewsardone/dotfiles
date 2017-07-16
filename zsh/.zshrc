@@ -238,3 +238,11 @@ fshow() {
     fi
   done
 }
+
+# pass
+# https://www.passwordstore.org/
+
+# alias `pass` to fix the following error:
+#   sed: RE error: illegal byte sequence
+# See https://stackoverflow.com/a/23584470 for more info
+alias pass='LC_ALL=C pass'
