@@ -239,6 +239,8 @@ fshow() {
   done
 }
 
+export GPG_TTY=$(tty)
+
 # pass
 # https://www.passwordstore.org/
 
