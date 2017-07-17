@@ -35,6 +35,7 @@ binaries=(
   git
   git-extras
   gpg
+  gpgtools
   grc
   htop
   hub
