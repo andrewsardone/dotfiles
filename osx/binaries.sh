@@ -40,6 +40,7 @@ binaries=(
   grc
   htop
   hub
+  hugo
   mackup
   mas
   node
