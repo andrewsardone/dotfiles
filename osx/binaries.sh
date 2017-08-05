@@ -26,6 +26,7 @@ binaries=(
   awscli
   ctags
   dateutils
+  exa
   exercism
   exif
   ffmpeg

@@ -18,9 +18,9 @@ export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=true
 
 # sensible ls
-alias ls="ls -hG"
-alias l="ls -a"
-alias ll="ls -la"
+alias ls="exa"
+alias l="exa -a"
+alias ll="exa -la --git -h"
 
 function aps_smart_ls {
   clear && pwd
