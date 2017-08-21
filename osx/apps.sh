@@ -21,7 +21,6 @@ apps=(
   docker
   fantastical
   firefox
-  flux
   framer-studio
   genymotion
   gifs
