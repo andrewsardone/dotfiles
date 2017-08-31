@@ -116,7 +116,7 @@ setopt HIST_REDUCE_BLANKS
 export HISTSIZE=100000 SAVEHIST=100000 HISTFILE=~/.zhistory
 
 # Stores all history into log files
-# via http://blog.andrewhays.net/love-your-terminal
+# via http://blog.andrewhays.net/2012/11/29/love-your-terminal.html
 function precmd() {
   log_dir="$HOME/.logs"
   mkdir -p $log_dir
