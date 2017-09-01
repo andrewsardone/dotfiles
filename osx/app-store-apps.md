@@ -14,6 +14,7 @@ could not figure out a way to automate their installation.
 - OmniFocus 2
 - PDFpen
 - Pixelmator
+- Redacted
 - Reeder 2
 - TextExpander
 - Timing
