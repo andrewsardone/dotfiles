@@ -250,4 +250,4 @@ export GPG_TTY=$(tty)
 alias pass='LC_ALL=C pass'
 
 # via https://github.com/flav/dotfiles/commit/1b90051dc06f709e81a725d578a572d77312cf84
-alias weather="curl -s http://wttr.in/arb |head -n 17 |tail -n 10"
+alias weather="curl -s http://wttr.in/arb |head -n 17"
