@@ -57,6 +57,7 @@ apps=(
   skype
   slack
   slate
+  soundcleod
   spotify
   superduper
   vagrant
