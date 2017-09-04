@@ -25,6 +25,7 @@ binaries=(
   aws-elasticbeanstalk
   awscli
   ctags
+  dasht
   dateutils
   exa
   exercism
