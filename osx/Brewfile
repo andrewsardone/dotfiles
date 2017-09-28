@@ -128,8 +128,6 @@ cask "vanilla"
 cask "virtualbox"
 cask "viscosity"
 cask "vlc"
-cask "vox"
-cask "vox-preferences-pane"
 cask "wmail"
 cask "xscope"
 mas "Bear", id: 1091189122
