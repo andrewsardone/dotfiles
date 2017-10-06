@@ -1,0 +1,73 @@
+#!/usr/bin/env bash
+#
+# Inspired (and in some cases, like the helper functions, straight copied) from
+# [jessfraz/dotfiles][1] (see license at end of file), this is a bunch of Bash
+# wrappers for docker run commands.
+#
+# [1]: https://github.com/jessfraz/dotfiles/blob/9ac223d3d866dc326701cf5b7b32b196177ec1f2/.dockerfunc
+
+#
+# Helper Functions
+# via jessfraz/dotfiles
+#
+
+dcleanup(){
+  local containers
+  containers=( $(docker ps -aq 2>/dev/null) )
+  docker rm "${containers[@]}" 2>/dev/null
+  local volumes
+  volumes=( $(docker ps --filter status=exited -q 2>/dev/null) )
+  docker rm -v "${volumes[@]}" 2>/dev/null
+  local images
+  images=( $(docker images --filter dangling=true -q 2>/dev/null) )
+  docker rmi "${images[@]}" 2>/dev/null
+}
+
+del_stopped(){
+  local name=$1
+  local state
+  state=$(docker inspect --format "{{.State.Running}}" "$name" 2>/dev/null)
+
+  if [[ "$state" == "false" ]]; then
+    docker rm "$name"
+  fi
+}
+
+relies_on(){
+  for container in "$@"; do
+    local state
+    state=$(docker inspect --format "{{.State.Running}}" "$container" 2>/dev/null)
+
+    if [[ "$state" == "false" ]] || [[ "$state" == "" ]]; then
+      echo "$container is not running, starting it for you."
+      $container
+    fi
+  done
+}
+
+#
+# Container Aliases
+#
+
+# License for https://github.com/jessfraz/dotfiles
+#
+# The MIT License (MIT)
+#
+# Copyright (c) 2015 Jessie Frazelle
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy of
+# this software and associated documentation files (the "Software"), to deal in
+# the Software without restriction, including without limitation the rights to
+# use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+# the Software, and to permit persons to whom the Software is furnished to do so,
+# subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+# FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+# COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+# IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+# CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

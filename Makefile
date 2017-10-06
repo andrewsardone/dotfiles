@@ -25,6 +25,7 @@ stow:
 	stow node
 	stow xdg_base_directory
 	stow asdf
+	stow docker
 
 link-bin:
 	@ln -s `pwd`/bin ~/bin
