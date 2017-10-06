@@ -49,6 +49,13 @@ relies_on(){
 # Container Aliases
 #
 
+keybase() {
+  docker run --rm -it \
+    -v "${HOME}/.config/keybase:/home/keybase/.config/keybase" \
+    --name keybase \
+    langrisha/keybase:1.0.0 "$@"
+}
+
 # License for https://github.com/jessfraz/dotfiles
 #
 # The MIT License (MIT)
