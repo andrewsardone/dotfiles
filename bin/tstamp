@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Usage: ./algo
+# Prints a time stamp without separators to stdout
+# Handy for snagging a chunk of text to echo back the exact time of execution
+
+date +"%H%M%S"

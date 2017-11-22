@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Usage: ./algo
+# Prints a date stamp to stdout
+# Handy for snagging a dynamic yyyy-mm-dd string
+
+date +"%Y-%m-%d"
