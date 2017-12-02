@@ -1,0 +1,12 @@
+.DS_Store
+*~
+tmp/
+auto-save-list/
+elpa/*
+el-get
+tramp
+*.elc
+tramp
+url/
+bookmarks
+recentf
