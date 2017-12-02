@@ -2,7 +2,14 @@
 (setq package-enable-at-startup nil)
 (package-initialize)
 
-(add-to-list 'load-path (expand-file-name "modules" user-emacs-directory))
+(defvar aps-root-dir (file-name-directory load-file-name)
+  "The root directory of my Emacs configuration.")
+
+(defvar aps-modules-dir (concat aps-root-dir "modules/")
+  "The directory where my personal configurations live in a modular,
+fashion, reminiscent of Emacs Prelude's setup.")
+
+(add-to-list 'load-path aps-modules-dir)
 
 (add-to-list 'exec-path "/usr/local/bin")
 
@@ -12,3 +19,4 @@
 
 (require 'aps-packages)
 (require 'aps-evil)
+(require 'aps-ui)
