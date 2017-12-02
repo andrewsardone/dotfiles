@@ -17,7 +17,9 @@
       scroll-conservatively 100000
       scroll-preserve-screen-position 1)
 
-(line-number-mode t)
+(setq linum-format "%3d ")
+(global-linum-mode t)
+
 (column-number-mode t)
 (size-indication-mode t)
 
