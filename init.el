@@ -18,5 +18,6 @@ fashion, reminiscent of Emacs Prelude's setup.")
 (load custom-file 'noerror)
 
 (require 'aps-packages)
+(require 'aps-editor)
 (require 'aps-evil)
 (require 'aps-ui)
