@@ -26,6 +26,7 @@ stow:
 	stow xdg_base_directory
 	stow asdf
 	stow docker
+	stow emacs
 
 link-bin:
 	@ln -s `pwd`/bin ~/bin
