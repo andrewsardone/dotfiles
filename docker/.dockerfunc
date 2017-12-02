@@ -56,6 +56,13 @@ keybase() {
     langrisha/keybase:1.0.0 "$@"
 }
 
+pandoc() {
+  docker run --rm -it \
+    -v `pwd`:/source \
+    --name pandoc \
+    jagregory/pandoc "$@"
+}
+
 # License for https://github.com/jessfraz/dotfiles
 #
 # The MIT License (MIT)
