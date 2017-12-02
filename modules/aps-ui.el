@@ -43,4 +43,9 @@
 ;; bind shift-{left,right,up,down} to window movement
 (windmove-default-keybindings)
 
+(use-package atom-one-dark-theme
+  :ensure t
+  :config
+  (load-theme 'atom-one-dark t))
+
 (provide 'aps-ui)
