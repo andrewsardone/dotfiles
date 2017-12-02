@@ -5,7 +5,7 @@
   :config
   (setq powerline-default-separator (if (display-graphic-p) 'arrow
                                       nil))
-  (powerline-default-theme))
+  (powerline-vim-theme))
 
 (use-package powerline-evil
   :ensure t)
