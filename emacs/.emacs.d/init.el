@@ -17,6 +17,10 @@ fashion, reminiscent of Emacs Prelude's setup.")
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file 'noerror)
 
+;; Don't litter my filesystem with backup
+(defvar aps-backup-dir (concat aps-root-dir "backups/"))
+(setq backup-directory-alist (list (cons "." aps-backup-dir)))
+
 (require 'aps-packages)
 (require 'aps-editor)
 (require 'aps-evil)
