@@ -12,6 +12,7 @@ set noerrorbells
 " Custom mappings for actions provided ivia IdeaVIM
 " For a large list of available actions, see
 " https://gist.github.com/zchee/9c78f91cc5ad771c1f5d
+nmap <leader>a :action Annotate<cr>
 nmap <leader>c :action QuickJavaDoc<cr>
 nmap <leader>e :action ShowErrorDescription<cr>
 nmap <leader>r :action FileStructurePopup<cr>
