@@ -11,6 +11,7 @@
   co = checkout
   shortsha = rev-parse --short HEAD
   st = status --short --branch
+  ts = st
   lg = "!source ~/.githelpers && pretty_git_log"
   recent = ! git reflog | grep 'checkout: moving from' | head -n 50 | egrep -oh ' \\S+$' | awk '!x[$0]++'
 [diff "localizablestrings"]
