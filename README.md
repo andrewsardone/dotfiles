@@ -1,4 +1,4 @@
-These are my dotfiles. There are many like it, but this one is mine. It is my life.
+These are my dotfiles. There are many like them, but these ones are mine.
 
 ## Installation
 
