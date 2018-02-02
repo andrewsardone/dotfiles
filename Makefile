@@ -27,6 +27,7 @@ stow:
 	stow asdf
 	stow docker
 	stow emacs
+	stow hammerspoon
 
 link-bin:
 	@ln -s `pwd`/bin ~/bin
@@ -37,9 +38,6 @@ asdf:
 	@echo "## Setting up asdf"
 	[[ -d ~/.asdf ]] || git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.3.0
 	[[ -d ~/.asdf/plugins/ruby ]] || ~/.asdf/bin/asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
-
-keyboard:
-	@ln -s `pwd`/vendor/flav-hammerspoon ~/.hammerspoon
 
 install: dependencies submodules stow vim-plugins keyboard link-bin mac
 
