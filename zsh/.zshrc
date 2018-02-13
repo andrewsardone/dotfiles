@@ -254,3 +254,11 @@ alias weather="curl -s http://wttr.in/arb |head -n 17"
 
 docker_func=$HOME/.dockerfunc
 [ -f $docker_func ] && source $docker_func
+
+# Misc specific env files to include
+# h/t Flav https://github.com/flav/dotfiles/blob/633dc88b79652ae38319db22f53dadd9054f21b8/stow/bash/.profile
+if [ -d ~/.vault/env ]; then
+  for e in ~/.vault/env/*.env; do
+    source $e;
+  done
+fi
