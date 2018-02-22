@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+# Via @cdzombak, but slightly modified to clear out all merged branches and not
+# just ones tagged with a cdz prefix.
+# https://github.com/cdzombak/osx-automation/blob/3d413a0d3075689c42ac5cd2c04903ff487fa08f/opt/bin/git-cleanup
+
+set -eu
+
+git fetch origin
+git fetch origin --tags
+git remote prune origin
+git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D
+git prune
+
+echo ""
+echo "Local branches:"
+git branch -vv
+
+echo ""
+echo "Remote branches:"
+if git branch -r; then
+	git branch -rv
+else
+	echo "  (none)"
+fi
