@@ -112,8 +112,10 @@ source $HOME/.zfunctions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # history
 setopt APPEND_HISTORY # adds history
-setopt INC_APPEND_HISTORY SHARE_HISTORY  # adds history incrementally and share it across sessions
-setopt HIST_IGNORE_ALL_DUPS  # don't record dupes in history
+# adds history incrementally and share it across sessions
+setopt INC_APPEND_HISTORY SHARE_HISTORY
+# don't record dupes in history
+setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_REDUCE_BLANKS
 export HISTSIZE=100000 SAVEHIST=100000 HISTFILE=~/.zhistory
 
