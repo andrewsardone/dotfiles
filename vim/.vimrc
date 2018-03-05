@@ -101,6 +101,7 @@ Plugin 'trevordmiller/nova-vim'
 Plugin 'junegunn/fzf.vim'
 Plugin 'Alok/notational-fzf-vim'
 Plugin 'junegunn/goyo.vim'
+Plugin 'keith/swift.vim'
 
 call vundle#end()
 filetype plugin indent on
