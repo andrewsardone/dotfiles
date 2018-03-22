@@ -49,6 +49,17 @@ relies_on(){
 # Container Aliases
 #
 
+algo() {
+  local algo_dir="algo-$(uuidgen)"
+  local algo_dir_path="/tmp/${algo_dir}"
+
+  docker run --rm -it \
+    -v ${algo_dir_path}:/algo/algo-master/configs \
+    andrewsardone/algo
+
+  open $algo_dir_path
+}
+
 keybase() {
   docker run --rm -it \
     -v "${HOME}/.config/keybase:/home/keybase/.config/keybase" \
