@@ -74,6 +74,50 @@ pandoc() {
     jagregory/pandoc "$@"
 }
 
+rails-new() {
+  mkdir $1
+  pushd $1
+
+  cat > Gemfile <<EOL
+source 'https://rubygems.org'
+gem 'rails'
+EOL
+  touch Gemfile.lock
+
+  cat > Dockerfile <<EOL
+FROM andrewsardone/docker-rails-dev
+
+COPY Gemfile /app/Gemfile
+COPY Gemfile.lock /app/Gemfile.lock
+
+RUN bundle install
+
+COPY . /app
+EOL
+
+  cat > docker-compose.yml <<EOL
+version: '3'
+services:
+  db:
+    image: postgres
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data
+  web:
+    build: .
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+EOL
+
+  docker-compose run web rails new . --force --database=postgresql
+
+  popd
+}
+
 # License for https://github.com/jessfraz/dotfiles
 #
 # The MIT License (MIT)
