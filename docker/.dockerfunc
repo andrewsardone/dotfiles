@@ -118,6 +118,26 @@ EOL
   popd
 }
 
+# CLI for the Zeit Now deployment PaaS
+# https://zeit.co/now
+now() {
+  local directory_name=$(basename "$PWD")
+  docker-now() {
+    docker run --rm -it \
+      -v $PWD:/now \
+      andrewsardone/docker-zeit-now \
+      "$@"
+  }
+  if [ $# -eq 0 ]; then
+    # Since we're always deploying from the same directory of /now within the
+    # container, we'll pass in our host's directory as the name of the
+    # application to be deployed.
+    docker-now now -n $directory_name
+  else
+    docker-now now "$@"
+  fi
+}
+
 # License for https://github.com/jessfraz/dotfiles
 #
 # The MIT License (MIT)
