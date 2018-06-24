@@ -270,6 +270,6 @@ set rtp+=/usr/local/opt/fzf
 
 " nvALT replacement
 " https://github.com/Alok/notational-fzf-vim
-let g:nv_directories = ['~/Dropbox/Documents/notes']
+let g:nv_search_paths = ['~/Dropbox/Documents/notes']
 let g:nv_use_short_pathnames = 1
 nnoremap <leader>s :NV<CR>
