@@ -12,12 +12,12 @@
   shortsha = rev-parse --short HEAD
   st = status --short --branch
   ts = st
-  lg = "!source ~/.githelpers && pretty_git_log"
+	lg = log --graph --pretty=format:'%Cred%h%Creset %C(cyan)%an%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
   recent = ! git reflog | grep 'checkout: moving from' | head -n 50 | egrep -oh ' \\S+$' | awk '!x[$0]++'
 [diff "localizablestrings"]
   textconv = "iconv -f utf-16 -t utf-8"
-[credential]
-	helper = osxkeychain
+; [credential]
+; 	helper = osxkeychain
 [hub]
 	http-clone = true
 [github]
@@ -25,4 +25,4 @@
 [merge]
 	defaultToUpstream = true
 [commit]
-	gpgsign = true
+	; gpgsign = true
