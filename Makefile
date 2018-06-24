@@ -28,6 +28,7 @@ stow:
 	stow docker
 	stow emacs
 	stow hammerspoon
+	stow sh-common
 
 link-bin:
 	@ln -s `pwd`/bin ~/bin

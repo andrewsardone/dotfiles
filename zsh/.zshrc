@@ -1,9 +1,10 @@
-# path
-[ -z "$ANDROID_HOME" ] && export ANDROID_HOME=/usr/local/android-sdk/
-[ -z "$APS_PATH" ] && export APS_PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
-[ -z "$DEFAULT_PATH" ] && export DEFAULT_PATH=$PATH
-export PATH="$APS_PATH:$DEFAULT_PATH"
-export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
+# Source the shell scripts and such that I share between bash and zsh.
+sh_common_dir=$HOME/.sh-include
+if [ -d $sh_common_dir ]; then
+  for include in $sh_common_dir/*; do
+    source "$include"
+  done
+fi
 
 fpath=( "$HOME/.zfunctions" $fpath )
 
@@ -16,35 +17,6 @@ KEYTIMEOUT=1
 # colors
 export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=true
-
-# sensible ls
-alias ls="ls -hG"
-alias l="ls -a"
-alias ll="ls -la"
-
-function aps_smart_ls {
-  clear && pwd
-  if [[ `ls -a $* | wc -l` -lt 40 ]]; then
-    ll $*
-  else
-    l $*
-  fi
-}
-alias sl=aps_smart_ls
-
-# navigation
-function aps_pushd {
-  pushd $1 && aps_smart_ls
-}
-alias f=aps_pushd
-
-function aps_popd {
-  popd && aps_smart_ls
-}
-alias d=aps_popd
-
-alias fh=f ~
-alias cdh=cd ~ && pwd
 
 # lolXcode
 alias ded='rm -rf ~/Library/Developer/Xcode/DerivedData/'
@@ -219,29 +191,6 @@ alias mas='reattach-to-user-namespace mas'
 export FZF_DEFAULT_OPTS='--height 40% --reverse --border --multi'
 export FZF_DEFAULT_COMMAND='ag -g ""'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# fshow - git commit browser (enter for show, ctrl-d for diff, ` toggles sort)
-# via https://junegunn.kr/2015/03/browsing-git-commits-with-fzf/
-fshow() {
-  local out shas sha q k
-  while out=$(
-      git log --graph --color=always \
-          --format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" |
-      fzf --ansi --multi --no-sort --reverse --query="$q" \
-          --print-query --expect=ctrl-d --toggle-sort=\`); do
-    q=$(head -1 <<< "$out")
-    k=$(head -2 <<< "$out" | tail -1)
-    shas=$(sed '1,2d;s/^[^a-z0-9]*//;/^$/d' <<< "$out" | awk '{print $1}')
-    [ -z "$shas" ] && continue
-    if [ "$k" = ctrl-d ]; then
-      git diff --color=always $shas | less -R
-    else
-      for sha in $shas; do
-        git show --color=always $sha | less -R
-      done
-    fi
-  done
-}
 
 export GPG_TTY=$(tty)
 
