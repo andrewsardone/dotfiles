@@ -1,5 +1,12 @@
 # sensible ls
-alias ls="ls -hG --color"
+case "`uname`" in
+  Darwin)
+    alias ls="ls -hG"
+  ;;
+  *)
+    alias ls="ls -h --color"
+  ;;
+esac
 alias l="ls -a"
 alias ll="ls -la"
 
