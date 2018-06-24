@@ -28,6 +28,7 @@ stow:
 	stow docker
 	stow emacs
 	stow hammerspoon
+	stow bash
 	stow sh-common
 
 link-bin:
