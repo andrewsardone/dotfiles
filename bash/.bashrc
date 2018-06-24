@@ -60,3 +60,5 @@ export CLICOLOR=1
 
 # Tell grep to highlight matches
 alias grep='grep --color=auto'
+
+[ -f ~/.bash-preexec.sh ] && source ~/.bash-preexec.sh

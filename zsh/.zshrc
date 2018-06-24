@@ -91,17 +91,6 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_REDUCE_BLANKS
 export HISTSIZE=100000 SAVEHIST=100000 HISTFILE=~/.zhistory
 
-# Stores all history into log files
-# via http://blog.andrewhays.net/2012/11/29/love-your-terminal.html
-function precmd() {
-  log_dir="$HOME/.logs"
-  mkdir -p $log_dir
-  if [ "$(id -u)" -ne 0 ]; then
-    FULL_CMD_LOG="$log_dir/zsh-history-$(date -u "+%Y-%m-%d").log"
-    echo "$USER@`hostname`:`pwd` [$(date -u)] `\history -1`" >> ${FULL_CMD_LOG}
-  fi
-}
-
 # pager
 export LESS="-RIM"
 
