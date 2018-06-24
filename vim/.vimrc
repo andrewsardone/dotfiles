@@ -130,7 +130,7 @@ inoremap jj <ESC>
 :set t_Co=256 " 256 colors
 set background=dark
 try
-  colorscheme solarized
+  colorscheme aps256
 catch /^Vim\%((\a\+)\)\=:E185/
   color aps256
 endtry
