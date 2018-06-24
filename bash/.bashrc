@@ -14,6 +14,8 @@ export EDITOR=vim
 set -o vi
 bind -m vi-insert '"\C-x\C-e": edit-and-execute-command'
 
+[ -f ~/.bash_prompt ] && source ~/.bash_prompt
+
 # fzf https://github.com/junegunn/fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
