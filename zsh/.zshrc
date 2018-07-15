@@ -154,7 +154,7 @@ compctl -K _completemarks unmark
 alias jsc=/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Resources/jsc
 
 # Go path setup
-export GOPATH=$HOME/code/gopath
+export GOPATH=$HOME/source/gopath
 export PATH=$PATH:$GOPATH/bin
 
 nutshell_zshrc="$HOME/.nutshell.zshrc"
