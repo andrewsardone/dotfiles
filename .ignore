@@ -1,0 +1,4 @@
+# Directories to ignore for `ag` searching in this project
+# https://github.com/ggreer/the_silver_searcher
+
+vim/.vim/bundle
