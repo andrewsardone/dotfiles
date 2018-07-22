@@ -208,3 +208,8 @@ fi
 # gcloud setup
 gcloud_include='/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
 [ -f $gcloud_include ] && source $gcloud_include
+
+# did.txt
+# https://theptrk.com/2018/07/11/did-txt-file/
+: "${APS_DID_FILE:=~/Dropbox/Documents/notes/did.txt}"
+alias did="vim +'normal Go' +'r!date' +'normal o' ${APS_DID_FILE}"
