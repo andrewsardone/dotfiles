@@ -204,3 +204,7 @@ if [ -d ~/.vault/env ]; then
     source $e;
   done
 fi
+
+# gcloud setup
+gcloud_include='/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+[ -f $gcloud_include ] && source $gcloud_include
