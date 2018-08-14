@@ -27,6 +27,7 @@ set number                                                   " show line numbers
 set pastetoggle=<leader>p
 set ruler                                                    " show where you are
 set scrolloff=3                                              " show context above/below cursorline
+set shell=/bin/bash
 set shiftwidth=2                                             " normal mode indentation commands use 2 spaces
 set showcmd
 set showmatch                                                " jump to matching brackets on insertion
