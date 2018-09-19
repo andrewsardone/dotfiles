@@ -124,13 +124,13 @@ nmap <leader>g :GitGutterToggle<CR>
 nmap <leader>c <Plug>Kwbd
 map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 map <leader>w :w!<cr>
-inoremap jj <ESC>
+inoremap jk <ESC>
 
 " color setup
 :set t_Co=256 " 256 colors
 set background=dark
 try
-  colorscheme aps256
+  colorscheme onehalfdark
 catch /^Vim\%((\a\+)\)\=:E185/
   color aps256
 endtry

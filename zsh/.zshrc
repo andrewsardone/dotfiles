@@ -213,3 +213,5 @@ gcloud_include='/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/pat
 # https://theptrk.com/2018/07/11/did-txt-file/
 : "${APS_DID_FILE:=~/Dropbox/Documents/notes/did.txt}"
 alias did="vim +'normal Go' +'r!date' +'normal o' ${APS_DID_FILE}"
+export PATH="/usr/local/opt/gettext/bin:$PATH"
+if [ /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin/kubectl ]; then source <(kubectl completion zsh); fi
