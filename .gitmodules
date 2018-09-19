@@ -12,4 +12,4 @@
 	url = https://github.com/rcaloras/bash-preexec
 [submodule "vendor/sonph/onehalf"]
 	path = vendor/sonph/onehalf
-	url = https://github.com/sonph/onehalf
+	url = https://github.com/andrewsardone/onehalf
