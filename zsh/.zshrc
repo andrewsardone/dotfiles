@@ -215,3 +215,5 @@ gcloud_include='/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/pat
 alias did="vim +'normal Go' +'r!date' +'normal o' ${APS_DID_FILE}"
 export PATH="/usr/local/opt/gettext/bin:$PATH"
 if [ -f /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin/kubectl ]; then source <(kubectl completion zsh); fi
+
+peek() { tmux split-window -p 33 "$EDITOR" "$@" || exit; }
