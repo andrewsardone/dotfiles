@@ -30,6 +30,7 @@ stow:
 	stow hammerspoon
 	stow bash
 	stow sh-common
+	storw chunkwm
 
 link-bin:
 	@ln -s `pwd`/bin ~/bin

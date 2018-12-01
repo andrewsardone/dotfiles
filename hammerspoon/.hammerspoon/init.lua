@@ -44,6 +44,5 @@ require('logitech-mouse')
 require('markdown')
 require('omnifocus')
 require('super')
-require('windows')
 
 hs.notify.new({title='Hammerspoon', informativeText='Ready ✅ (ctrl-alt-` to reload)'}):send()
