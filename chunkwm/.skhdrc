@@ -49,3 +49,5 @@ shift + alt - d : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-wind
 # open a new terminal
 # matches i3 window manager's default mod-enter behavior
 alt - return : ~/bin/new-iterm-window.scpt
+
+alt - v : open ~/bin/TerminalVim.app
