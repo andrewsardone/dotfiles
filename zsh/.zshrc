@@ -167,14 +167,6 @@ asdf_sh=$HOME/.asdf/asdf.sh
 asdf_completions_sh=$HOME/.asdf/completions/asdf.bash
 [ -f $asdf_completions_sh ] && source $asdf_completions_sh
 
-# awscli completion
-awscli_functions=/usr/local/share/zsh/site-functions/_aws
-[ -f $awscli_functions ] && source $awscli_functions
-
-# Mac App Store cli config
-# https://github.com/mas-cli/mas
-alias mas='reattach-to-user-namespace mas'
-
 # fzf
 # https://github.com/junegunn/fzf
 export FZF_DEFAULT_OPTS='--height 40% --reverse --border --multi'
@@ -190,9 +182,6 @@ export GPG_TTY=$(tty)
 #   sed: RE error: illegal byte sequence
 # See https://stackoverflow.com/a/23584470 for more info
 alias pass='LC_ALL=C pass'
-
-# via https://github.com/flav/dotfiles/commit/1b90051dc06f709e81a725d578a572d77312cf84
-alias weather="curl -s http://wttr.in/arb |head -n 17"
 
 docker_func=$HOME/.dockerfunc
 [ -f $docker_func ] && source $docker_func
@@ -214,6 +203,5 @@ gcloud_include='/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/pat
 : "${APS_DID_FILE:=~/Dropbox/Documents/notes/did.txt}"
 alias did="vim +'normal Go' +'r!date' +'normal o' ${APS_DID_FILE}"
 export PATH="/usr/local/opt/gettext/bin:$PATH"
-if [ -f /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin/kubectl ]; then source <(kubectl completion zsh); fi
 
 peek() { tmux split-window -p 33 "$EDITOR" "$@" || exit; }
