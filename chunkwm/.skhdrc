@@ -51,3 +51,11 @@ shift + alt - d : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-wind
 alt - return : ~/bin/new-iterm-window.scpt
 
 alt - v : open ~/bin/TerminalVim.app
+
+# focus monitor
+ctrl + alt - k  : chunkc tiling::monitor -f prev
+ctrl + alt - j  : chunkc tiling::monitor -f next
+
+# send window to monitor and follow focus
+ctrl + alt - p  : chunkc tiling::window --send-to-monitor prev; chunkc tiling::monitor -f prev
+ctrl + alt - n  : chunkc tiling::window --send-to-monitor next; chunkc tiling::monitor -f next
