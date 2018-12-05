@@ -155,6 +155,7 @@ cask "phinze/cask/virtualbox"
 cask "phinze/cask/viscosity"
 cask "phinze/cask/vlc"
 cask "phinze/cask/wavebox"
+cask "phinze/cask/whichspace"
 cask "phinze/cask/xscope"
 mas "Bear", id: 1091189122
 mas "Calca", id: 635758264
