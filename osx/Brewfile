@@ -61,8 +61,10 @@ brew "youtube-dl"
 brew "crisidev/chunkwm/chunkwm", args: ["HEAD", "with-tmp-logging"]
 brew "koekeishiya/formulae/skhd", args: ["HEAD", "with-logging"]
 cask "brave"
+cask "font-awesome-terminal-fonts"
 cask "font-bitter"
 cask "font-fira-code"
+cask "font-fontawesome"
 cask "font-hack"
 cask "font-ibm-plex"
 cask "font-iosevka"
