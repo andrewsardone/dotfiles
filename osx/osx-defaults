@@ -259,6 +259,10 @@ echo ""
 echo "In Xcode, enable faster build times by leveraging multi-core CPU"
 defaults write com.apple.dt.Xcode IDEBuildOperationMaxNumberOfConcurrentCompileTasks `sysctl -n hw.ncpu`
 
+echo ""
+echo "Dark menubar but not OS-wide dark-mode"
+defaults write -g NSRequiresAquaSystemAppearance -bool Yes
+
 ###############################################################################
 # Kill affected applications
 ###############################################################################
