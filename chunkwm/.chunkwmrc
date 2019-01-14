@@ -23,11 +23,11 @@ chunkc core::unload border.so
 chunkc set global_desktop_mode           bsp
 chunkc set 5_desktop_mode                float
 
-chunkc set global_desktop_offset_top     8
-chunkc set global_desktop_offset_bottom  8
-chunkc set global_desktop_offset_left    8
-chunkc set global_desktop_offset_right   8
-chunkc set global_desktop_offset_gap     8
+chunkc set global_desktop_offset_top     40
+chunkc set global_desktop_offset_bottom  16
+chunkc set global_desktop_offset_left    16
+chunkc set global_desktop_offset_right   16
+chunkc set global_desktop_offset_gap     16
 
 chunkc set desktop_padding_step_size     10.0
 chunkc set desktop_gap_step_size         5.0
