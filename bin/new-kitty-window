@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+kitty_include='/Applications/kitty.app/Contents/MacOS'
+[ -d $kitty_include ] && export PATH="$kitty_include:$PATH"
+
+kitty @ --to unix:/tmp/mykitty new-window --window-type=os
