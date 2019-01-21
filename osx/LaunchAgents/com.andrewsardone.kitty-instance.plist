@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <!--
+  Starts up a daemon of Kitty terminal so I can launch new shells with a
+  universal keyboard shortcut (see my .skhdrc file
+  -->
+  <key>Label</key>
+  <string>com.andrewsardone.kitty-instance</string>
+  <key>WorkingDirectory</key>
+  <string>/Users/andrew</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Applications/kitty.app/Contents/MacOS/kitty</string>
+    <string>--single-instance</string>
+    <string>--listen-on</string>
+    <string>unix:/tmp/mykitty</string>
+  </array>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>KeepAlive</key>
+  <true/>
+</dict>
+</plist>
