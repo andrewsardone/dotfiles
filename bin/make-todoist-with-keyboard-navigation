@@ -1,0 +1,108 @@
+#!/usr/bin/env bash
+#
+# via https://kevinjalbert.com/todoist-with-keyboard-navigation-via-nativefier/
+#
+# Will create a macOS application for Todoist[1] with the handy
+# todoist-shortcuts[2] extension. Outputs a `Todoist.app`.
+#
+# [1]: https://todoist.com
+# [2]: https://github.com/mgsloan/todoist-shortcuts
+
+function check_dependency() {
+  command -v $1 >/dev/null 2>&1 || {
+    echo >&2 "${1} is required. Please install."
+    exit 1
+  }
+}
+
+function main() {
+  check_dependency nativefier
+  check_dependency wget
+
+  DESTINATION_DIR=$(pwd)
+  WORK_DIR=$(mktemp -d)
+
+  pushd $WORK_DIR
+
+  git clone https://github.com/mgsloan/todoist-shortcuts
+  wget 'https://www.dropbox.com/s/lb2yhk0abcu7bpx/todoist-app-icon.icns?raw=1'
+  mv 'todoist-app-icon.icns?raw=1' todoist-app-icon.icns
+
+  # Generate single JS file with app badge count and keyboard shortcuts for
+  # bundling via nativefier.
+  cat << EOF > todoist.js
+// via https://kevinjalbert.com/todoist-with-keyboard-navigation-via-nativefier/
+// Returns the count for the 'Today' list (defaults to 0)
+function currentCount() {
+  return document.querySelector('#top_filters > li:nth-child(2) > span.item_content > small').innerText || 0;
+}
+
+// Returns the title without any annotated count
+function titleWithoutCount() {
+  const title = document.title;
+  const indexOfCount = title.indexOf(" (");
+
+  if (indexOfCount >= 0) {
+    return title.substring(0, indexOfCount);
+  } else {
+    return title;
+  }
+}
+
+// Returns the existing count from the title (defaults to 0)
+function existingCount() {
+  const title = document.title;
+  const indexOfCount = title.indexOf(" (");
+
+  return title.substring(indexOfCount + 2, title.length - 1) || 0
+}
+
+// Update badge count based on the number in Today
+function updateBadgeCount() {
+  const count = currentCount();
+  const title = titleWithoutCount();
+  var newTitle = document.title;
+
+  if (count === 0) {
+    newTitle = title;
+  } else if (count !== existingCount()) {
+    newTitle = title + " (" + count + ")";
+  }
+
+  if (document.title !== newTitle) {
+    document.title = newTitle
+  }
+}
+
+// Update the badge every 5 seconds
+setInterval(updateBadgeCount, 5000);
+
+// Update the badge when the title changes
+new MutationObserver(function(mutations) {
+  updateBadgeCount();
+}).observe(
+  document.querySelector('title'), {
+    subtree: true,
+    characterData: true,
+    childList: true
+  }
+);
+EOF
+  cat ./todoist-shortcuts/src/todoist-shortcuts.js >> todoist.js
+
+  nativefier 'https://todoist.com/' \
+    --name 'Todoist' \
+    --icon ./todoist-app-icon.icns \
+    --inject ./todoist.js \
+    --counter \
+    --bounce \
+    --single-instance \
+    --overwrite
+
+  mv Todoist-darwin-x64/Todoist.app $DESTINATION_DIR/.
+
+  popd
+  rm -rf $WORK_DIR
+}
+
+main
