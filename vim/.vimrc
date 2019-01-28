@@ -103,6 +103,7 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'Alok/notational-fzf-vim'
 Plugin 'junegunn/goyo.vim'
 Plugin 'keith/swift.vim'
+Plugin 'jparise/vim-graphql'
 
 call vundle#end()
 filetype plugin indent on
