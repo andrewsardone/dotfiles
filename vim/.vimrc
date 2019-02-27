@@ -78,7 +78,7 @@ Plug 'tpope/vim-vinegar'
 Plug 'davidoc/taskpaper.vim'
 Plug 'wting/rust.vim'
 Plug 'jnwhiteh/vim-golang'
-Plug 'bling/vim-airline'
+Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-markdown'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'mtth/scratch.vim'
@@ -129,8 +129,10 @@ catch /^Vim\%((\a\+)\)\=:E185/
   color aps256
 endtry
 
-let g:airline_theme = 'pencil'
-let g:pencil_spell_undercurl = 1
+" itchyny/lightline.vim configuration
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }
 
 " Toggling cursor shape based on insert-mode versus normal-mode
 " ---
