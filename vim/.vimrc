@@ -94,6 +94,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'keith/swift.vim'
 Plug 'jparise/vim-graphql'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
 
 call plug#end()
 filetype plugin indent on
