@@ -94,6 +94,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'keith/swift.vim'
 Plug 'jparise/vim-graphql'
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 
@@ -267,3 +268,6 @@ set rtp+=/usr/local/opt/fzf
 let g:nv_search_paths = ['~/Dropbox/Documents/notes']
 let g:nv_use_short_pathnames = 1
 nnoremap <leader>s :NV<CR>
+
+" coc.vim configuration -- https://github.com/neoclide/coc.nvim
+source ~/.vim/coc.vim
