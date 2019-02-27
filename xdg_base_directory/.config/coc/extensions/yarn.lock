@@ -30,6 +30,16 @@ brace-expansion@^1.1.7:
     balanced-match "^1.0.0"
     concat-map "0.0.1"
 
+coc-css@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/coc-css/-/coc-css-1.0.7.tgz#b7a2492165b7a596a093347595d75a9a47ae08e5"
+  integrity sha512-09Bfx+AhO4eMwpJFLdRLRsbXNDuRiYG38+D6z8wsDQjhXLCI779E1nL36+X/DGL4H2LZ3Df1QmofubMkXqZMqw==
+  dependencies:
+    tslib "^1.9.3"
+    vscode-css-languageservice "^3.0.12"
+    vscode-languageserver "^5.1.0"
+    vscode-languageserver-protocol "^3.13.0"
+
 coc-json@^1.0.11:
   version "1.0.11"
   resolved "https://registry.yarnpkg.com/coc-json/-/coc-json-1.0.11.tgz#74feeeb21d102d7cc6e7b9ede9ba71b1af6f84db"
@@ -319,6 +329,14 @@ universalify@^0.1.0:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/universalify/-/universalify-0.1.2.tgz#b646f69be3942dabcecc9d6639c80dc105efaa66"
   integrity sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==
+
+vscode-css-languageservice@^3.0.12:
+  version "3.0.13"
+  resolved "https://registry.yarnpkg.com/vscode-css-languageservice/-/vscode-css-languageservice-3.0.13.tgz#1788735b65fde54181ea458e6a52cc2bd6dd9126"
+  integrity sha512-RWkO/c/A7iXhHEy3OuEqkCqavDjpD4NF2Ca8vjai+ZtEYNeHrm1ybTnBYLP4Ft1uXvvaaVtYA9HrDjD6+CUONg==
+  dependencies:
+    vscode-languageserver-types "^3.13.0"
+    vscode-nls "^4.0.0"
 
 vscode-json-languageservice@^3.2.1:
   version "3.2.1"
