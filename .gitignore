@@ -5,4 +5,5 @@ config/pianobar/config
 config/pianobar/eventcmd
 .netrwhist
 vim/.vim/bundle/*
+vim/.vim/plugged/*
 !vim/.vim/bundle/Vundle.vim
