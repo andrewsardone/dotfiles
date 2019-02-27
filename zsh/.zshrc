@@ -22,17 +22,15 @@ export CLICOLOR=true
 alias ded='rm -rf ~/Library/Developer/Xcode/DerivedData/'
 
 # editor / readline setup
-export EDITOR=vim
+export EDITOR=nvim
 bindkey -v
 bindkey '^R' history-incremental-search-backward # a must have
 if type /usr/local/bin/vim > /dev/null 2>&1; then
   alias vi='/usr/local/bin/vim'
 fi
 if type nvim > /dev/null 2>&1; then
-  # You could alias nvim here if you want to
-  # But right now I am not using nvim
-  # alias vim='nvim'
-  # alias vi='nvim'
+  alias vim='nvim'
+  alias vi='nvim'
 fi
 
 function block_cursor() {
