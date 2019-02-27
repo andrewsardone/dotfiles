@@ -6,8 +6,8 @@ dependencies:
 submodules:
 	git submodule update --init
 
-vim-plugins: submodules
-	vim +PluginInstall +qall
+vim-plugins:
+	vim +PlugInstall
 
 stow:
 	stow git

@@ -56,56 +56,46 @@ endif
 " plugin configuration
 filetype on " without this vim emits a zero exit status, later, because of :ft off
 filetype off
-if has('nvim')
-  set rtp+=~/.config/nvim/bundle/Vundle.vim
-  call vundle#begin('~/.config/nvim/bundle')
-else
-  set rtp+=~/.vim/bundle/Vundle.vim
-  call vundle#begin()
-endif
+call plug#begin('~/.vim/plugged')
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+Plug 'kien/ctrlp.vim'
+Plug 'godlygeek/tabular'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-cucumber'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-fugitive'
+Plug 'austintaylor/vim-indentobject'
+Plug 'pangloss/vim-javascript'
+Plug 'kchmck/vim-coffee-script'
+Plug 'vim-ruby/vim-ruby'
+Plug 'groenewege/vim-less'
+Plug 'tpope/vim-surround'
+Plug 'elixir-lang/vim-elixir'
+Plug 'mileszs/ack.vim'
+Plug 'mattn/gist-vim'
+Plug 'mattn/webapi-vim'
+Plug 'altercation/vim-colors-solarized'
+Plug 'tpope/vim-vinegar'
+Plug 'davidoc/taskpaper.vim'
+Plug 'wting/rust.vim'
+Plug 'jnwhiteh/vim-golang'
+Plug 'bling/vim-airline'
+Plug 'tpope/vim-markdown'
+Plug 'mustache/vim-mustache-handlebars'
+Plug 'mtth/scratch.vim'
+Plug 'scrooloose/syntastic'
+Plug 'mtscout6/syntastic-local-eslint.vim'
+Plug 'neomake/neomake'
+Plug 'benjie/neomake-local-eslint.vim'
+Plug 'reedes/vim-colors-pencil'
+Plug 'mxw/vim-jsx'
+Plug 'trevordmiller/nova-vim'
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'keith/swift.vim'
+Plug 'jparise/vim-graphql'
 
-Plugin 'kien/ctrlp.vim'
-Plugin 'godlygeek/tabular'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-cucumber'
-Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-fugitive'
-Plugin 'austintaylor/vim-indentobject'
-Plugin 'pangloss/vim-javascript'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'groenewege/vim-less'
-Plugin 'tpope/vim-surround'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'mileszs/ack.vim'
-Plugin 'mattn/gist-vim'
-Plugin 'mattn/webapi-vim'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'tpope/vim-vinegar'
-Plugin 'davidoc/taskpaper.vim'
-Plugin 'wting/rust.vim'
-Plugin 'jnwhiteh/vim-golang'
-Plugin 'bling/vim-airline'
-Plugin 'tpope/vim-markdown'
-Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'mtth/scratch.vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'mtscout6/syntastic-local-eslint.vim'
-Plugin 'neomake/neomake'
-Plugin 'benjie/neomake-local-eslint.vim'
-Plugin 'reedes/vim-colors-pencil'
-Plugin 'mxw/vim-jsx'
-Plugin 'trevordmiller/nova-vim'
-Plugin 'junegunn/fzf.vim'
-Plugin 'Alok/notational-fzf-vim'
-Plugin 'junegunn/goyo.vim'
-Plugin 'keith/swift.vim'
-Plugin 'jparise/vim-graphql'
-
-call vundle#end()
+call plug#end()
 filetype plugin indent on
 
 " keyboard shortcuts
