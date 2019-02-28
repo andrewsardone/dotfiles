@@ -4,6 +4,12 @@ alt - f : chunkc tiling::window --toggle fullscreen
 # change focus between tiling / floating windows
 shift + alt - space : chunkc tiling::window --toggle float
 
+# float / unfloat window and center on screen
+# reference:
+#   chunkc tiling::window --grid-layout rows:cols:x:y:width:height
+alt - t : chunkc tiling::window --toggle float;\
+          chunkc tiling::window --grid-layout 4:4:1:1:2:2
+
 # change layout of desktop
 alt - e : chunkc tiling::desktop --layout bsp
 alt - s : chunkc tiling::desktop --layout monocle
