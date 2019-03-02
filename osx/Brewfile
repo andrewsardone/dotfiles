@@ -168,6 +168,7 @@ cask "phinze/cask/wavebox"
 cask "phinze/cask/whichspace"
 cask "phinze/cask/xscope"
 mas "Bear", id: 1091189122
+mas "Better", id: 1121192229
 mas "Calca", id: 635758264
 mas "Day One", id: 1055511498
 mas "Exporter", id: 1099120373
