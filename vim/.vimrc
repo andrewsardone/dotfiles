@@ -131,7 +131,7 @@ endtry
 
 " itchyny/lightline.vim configuration
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'jellybeans',
       \ }
 
 " Toggling cursor shape based on insert-mode versus normal-mode
