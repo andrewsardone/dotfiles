@@ -134,6 +134,12 @@ endtry
 let g:lightline = {
       \ 'colorscheme': 'jellybeans',
       \ }
+let g:lightline.separator = {
+  \   'left': '', 'right': ''
+  \}
+let g:lightline.subseparator = {
+  \   'left': '', 'right': '' 
+  \}
 
 " Toggling cursor shape based on insert-mode versus normal-mode
 " ---
