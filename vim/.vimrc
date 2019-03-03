@@ -96,6 +96,7 @@ Plug 'jparise/vim-graphql'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
+Plug 'edkolev/tmuxline.vim'
 
 call plug#end()
 filetype plugin indent on
