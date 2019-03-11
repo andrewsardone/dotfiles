@@ -64,10 +64,10 @@ coc-phpls@^1.1.0:
     tslib "^1.9.3"
     vscode-languageserver-protocol "^3.13.0"
 
-coc-tsserver@^1.1.28:
-  version "1.1.28"
-  resolved "https://registry.yarnpkg.com/coc-tsserver/-/coc-tsserver-1.1.28.tgz#ff4cd6c206bc76fb3572dd69c077b3a6337895f4"
-  integrity sha512-25N525VqthqgPpkXzwfDe7H4StCvSYNohSzyJYmVSHD6BsZx4sztJjjYGF6fx01AYR9HslTEPc4/5tqvY1OOcA==
+coc-tsserver@^1.1.29:
+  version "1.1.29"
+  resolved "https://registry.yarnpkg.com/coc-tsserver/-/coc-tsserver-1.1.29.tgz#5013d7fd03019080a9a5a07722dcb9b484acffeb"
+  integrity sha512-gHU/KurgsPTY1r3ULWrWcOWUGRrfdIOrKeSkLt+AXRPedEUSkJhi8DQ4RfUww0QIi3mpGZlj/xY9cYhDq5JKyg==
   dependencies:
     fast-diff "^1.2.0"
     find-up "^3.0.0"

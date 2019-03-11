@@ -3,6 +3,6 @@
     "coc-css": "^1.0.7",
     "coc-json": "^1.0.11",
     "coc-phpls": "^1.1.0",
-    "coc-tsserver": "^1.1.28"
+    "coc-tsserver": "^1.1.29"
   }
 }
