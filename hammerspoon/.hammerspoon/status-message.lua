@@ -39,7 +39,7 @@ statusmessage.new = function(messageText)
       background:setFillColor({ red = 0, green = 0, blue = 0, alpha=0.7 })
 
       backgrounds[idx] = background
-      texts[idx] = text
+      -- texts[idx] = text
     end
     return backgrounds, texts
   end
