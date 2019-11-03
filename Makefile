@@ -31,6 +31,7 @@ stow:
 	stow bash
 	stow sh-common
 	stow chunkwm
+	stow homedir.makefile
 
 link-bin:
 	@ln -s `pwd`/bin ~/bin
