@@ -97,6 +97,7 @@ Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'edkolev/tmuxline.vim'
+Plug 'arcticicestudio/nord-vim'
 
 call plug#end()
 filetype plugin indent on
@@ -125,14 +126,14 @@ inoremap jk <ESC>
 :set t_Co=256 " 256 colors
 set background=dark
 try
-  colorscheme onehalfdark
+  colorscheme nord
 catch /^Vim\%((\a\+)\)\=:E185/
   color aps256
 endtry
 
 " itchyny/lightline.vim configuration
 let g:lightline = {
-      \ 'colorscheme': 'jellybeans',
+      \ 'colorscheme': 'nord',
       \ }
 let g:lightline.separator = {
   \   'left': '', 'right': ''

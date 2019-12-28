@@ -13,3 +13,6 @@
 [submodule "tmux/.tmux/plugins/tpm"]
 	path = tmux/.tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
+[submodule "vendor/arcticicestudio/nord-iterm2"]
+	path = vendor/arcticicestudio/nord-iterm2
+	url = https://github.com/arcticicestudio/nord-iterm2.git
