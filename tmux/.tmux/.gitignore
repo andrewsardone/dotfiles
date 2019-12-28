@@ -1,0 +1,3 @@
+# Ignore everything except for tpm as this is a tpm-managed folder.
+*
+!plugins/tpm

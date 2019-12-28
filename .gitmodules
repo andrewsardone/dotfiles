@@ -10,3 +10,6 @@
 [submodule "vendor/sonph/onehalf"]
 	path = vendor/sonph/onehalf
 	url = https://github.com/andrewsardone/onehalf
+[submodule "tmux/.tmux/plugins/tpm"]
+	path = tmux/.tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
