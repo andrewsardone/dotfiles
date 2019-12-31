@@ -20,6 +20,7 @@ set nohlsearch                                               " Don't highlight a
 set ignorecase                                               " case-insensitive search
 set incsearch                                                " search as you type
 set laststatus=2                                             " always show statusline
+set showtabline=2                                            " always show tab bar
 set list                                                     " show trailing whitespace
 set listchars=tab:▸\ ,trail:▫
 set nowrap
