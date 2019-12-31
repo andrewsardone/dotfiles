@@ -33,6 +33,7 @@ stow:
 	stow chunkwm
 	stow skhd
 	stow homedir.makefile
+	stow yabai
 
 link-bin:
 	@ln -s `pwd`/bin ~/bin
