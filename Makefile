@@ -30,7 +30,6 @@ stow:
 	stow hammerspoon
 	stow bash
 	stow sh-common
-	stow chunkwm
 	stow skhd
 	stow homedir.makefile
 	stow yabai
