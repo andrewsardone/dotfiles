@@ -99,6 +99,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'edkolev/tmuxline.vim'
 Plug 'arcticicestudio/nord-vim'
+Plug 'Alok/notational-fzf-vim'
 
 call plug#end()
 filetype plugin indent on
