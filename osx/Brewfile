@@ -65,6 +65,7 @@ brew "watchman"
 brew "yabai"
 brew "yarn"
 brew "youtube-dl"
+brew "cjbassi/gotop/gotop"
 brew "koekeishiya/formulae/skhd", args: ["HEAD", "with-logging"]
 cask "brave-browser"
 cask "font-awesome-terminal-fonts"
