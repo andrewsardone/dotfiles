@@ -2,7 +2,7 @@
 
 # bar settings
 yabai -m config status_bar                   on
-yabai -m config status_bar_text_font         "Hasklug Nerd Font Mono:Medium:14.0"
+yabai -m config status_bar_text_font         "JetBrains Mono:Medium:14.0"
 yabai -m config status_bar_icon_font         "FontAwesome:Regular:14.0"
 yabai -m config status_bar_background_color  0xff2e3440 # via https://www.nordtheme.com
 yabai -m config status_bar_foreground_color  0xffd8dee9 # via https://www.nordtheme.com
