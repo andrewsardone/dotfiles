@@ -64,5 +64,17 @@ alt - t : yabai -m window --toggle float;\
 # change layout of desktop
 #
 alt - e : yabai -m space --layout bsp
-alt - s : yabai -m space --layout monocle
 alt - x : yabai -m space --layout float
+
+## monocle-style support
+# via https://github.com/koekeishiya/yabai/issues/83
+
+# Set all windows on active space to zoom-fullscreen
+alt - s : yabai -m query --windows --space \
+    | jq -re '.[] | select(."zoom-fullscreen" == 0) | .id' \
+        | xargs -I{} yabai -m window {} --toggle zoom-fullscreen
+
+# Set all windows on active space back to normal
+alt - z : yabai -m query --windows --space \
+    | jq -re '.[] | select(."zoom-fullscreen" == 1) | .id' \
+        | xargs -I{} yabai -m window {} --toggle zoom-fullscreen
