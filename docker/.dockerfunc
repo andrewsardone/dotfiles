@@ -57,10 +57,12 @@ keybase() {
 }
 
 pandoc() {
-  docker run --rm -it \
-    -v `pwd`:/source \
-    --name pandoc \
-    jagregory/pandoc "$@"
+  pandoc_version="2.9.2.1"
+  docker run --rm \
+    --volume "`pwd`:/data" \
+    --user `id -u`:`id -g` \
+    pandoc/latex:$pandoc_version \
+    "$@"
 }
 
 rails-new() {
