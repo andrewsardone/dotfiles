@@ -70,9 +70,7 @@ bindkey -M vicmd v edit-command-line
 bindkey '\C-x\C-e' edit-command-line
 
 # prompt
-autoload -U colors && colors
-autoload -U promptinit && promptinit
-prompt pure
+eval "$(starship init zsh)"
 
 # pure prompt config
 PURE_GIT_PULL=0
