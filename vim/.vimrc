@@ -86,6 +86,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'edkolev/tmuxline.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'Alok/notational-fzf-vim'
+Plug 'drewtempelmeyer/palenight.vim'
 Plug 'sheerun/vim-polyglot'
 
 call plug#end()
@@ -115,21 +116,22 @@ inoremap jk <ESC>
 :set t_Co=256 " 256 colors
 set background=dark
 try
-  colorscheme onehalfdark
+  colorscheme palenight
 catch /^Vim\%((\a\+)\)\=:E185/
   color aps256
 endtry
 
-" itchyny/lightline.vim configuration
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ }
-let g:lightline.separator = {
-  \   'left': '', 'right': ''
-  \}
-let g:lightline.subseparator = {
-  \   'left': '', 'right': '' 
-  \}
+if (has("nvim"))
+  "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+endif
+
+"For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
+"Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
+" < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
+if (has("termguicolors"))
+  set termguicolors
+endif
 
 " Toggling cursor shape based on insert-mode versus normal-mode
 " ---
@@ -269,3 +271,5 @@ nnoremap <leader>s :NV<CR>
 
 " coc.vim configuration -- https://github.com/neoclide/coc.nvim
 source ~/.vim/coc.vim
+
+source ~/.vim/statusline.vim
