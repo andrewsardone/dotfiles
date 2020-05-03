@@ -78,3 +78,9 @@ alt - s : yabai -m query --windows --space \
 alt - z : yabai -m query --windows --space \
     | jq -re '.[] | select(."zoom-fullscreen" == 1) | .id' \
         | xargs -I{} yabai -m window {} --toggle zoom-fullscreen
+
+# focus monitor
+ctrl + alt - h : yabai -m window --display next; yabai -m display --focus next
+ctrl + alt - l : yabai -m window --display prev; yabai -m display --focus prev
+ctrl + alt - j : yabai -m display --focus next
+ctrl + alt - k : yabai -m display --focus prev
