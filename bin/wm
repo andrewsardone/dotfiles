@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Usage: ./wm start|stop|restart|status
+# Control starting & stopping my tiling window manager
+# Mostly copied from https://github.com/Who23/dots/blob/5bb598b4cbf779ef9137c08671a7627b4ed62f1f/scripts/wm
+
+if [[ $1 == start ]]; then
+  brew services start yabai &
+  brew services start skhd
+elif [[ $1 == stop ]]; then
+  brew services stop yabai &
+  brew services stop skhd
+elif [[ $1 == restart ]]; then
+  brew services restart yabai &
+  brew services restart skhd
+elif [[ $1 == status ]]; then
+  list=$(brew services list)
+  echo $(grep yabai <<< "$list")
+  echo $(grep skhd <<< "$list")
+fi
