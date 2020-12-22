@@ -25,7 +25,7 @@ fi
 
 git add .
 git commit -q \
-  -a "Automatic Sync <automatic-sync@example.com>" \
+  --author "Automatic Sync <automatic-sync@example.com>" \
   -m "Automatic Sync $(date +"%Y-%m-%d %H:%M:%S")" \
   -m "$(git status --porcelain)"
 
