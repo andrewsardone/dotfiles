@@ -10,6 +10,10 @@ esac
 alias l="ls -a"
 alias ll="ls -la"
 
+# `lsd` is a more modern `ls`
+# https://github.com/Peltoche/lsd
+[ -f `which lsd` ] && alias ls="lsd"
+
 function aps_smart_ls {
   clear && pwd
   if [[ `ls -a $* | wc -l` -lt 40 ]]; then
