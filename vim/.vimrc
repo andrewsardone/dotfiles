@@ -88,6 +88,9 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'Alok/notational-fzf-vim'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'sheerun/vim-polyglot'
+Plug 'morhetz/gruvbox'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 filetype plugin indent on
@@ -116,7 +119,9 @@ inoremap jk <ESC>
 :set t_Co=256 " 256 colors
 set background=dark
 try
-  colorscheme palenight
+  let g:gruvbox_termcolors=16
+  let g:gruvbox_contrast_dark = 'hard'
+  colorscheme gruvbox
 catch /^Vim\%((\a\+)\)\=:E185/
   color aps256
 endtry
@@ -272,4 +277,8 @@ nnoremap <leader>s :NV<CR>
 " coc.vim configuration -- https://github.com/neoclide/coc.nvim
 source ~/.vim/coc.vim
 
-source ~/.vim/statusline.vim
+" Airline
+let g:airline_powerline_fonts = 1
+let g:airline_theme='gruvbox'
+let g:airline#extensions#tabline#enabled = 1
+

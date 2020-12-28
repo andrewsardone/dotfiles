@@ -16,3 +16,6 @@
 [submodule "vendor/arcticicestudio/nord-iterm2"]
 	path = vendor/arcticicestudio/nord-iterm2
 	url = https://github.com/arcticicestudio/nord-iterm2.git
+[submodule "terminal_profiles/iterm2-gruvbox"]
+	path = terminal_profiles/iterm2-gruvbox
+	url = https://github.com/herrbischoff/iterm2-gruvbox
