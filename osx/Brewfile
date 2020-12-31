@@ -71,6 +71,7 @@ brew "yarn"
 brew "youtube-dl"
 brew "cjbassi/ytop/ytop"
 brew "koekeishiya/formulae/skhd", args: ["HEAD", "with-logging"]
+cask "backblaze"
 cask "brave-browser"
 cask "font-awesome-terminal-fonts"
 cask "font-bitter"
