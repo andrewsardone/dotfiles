@@ -288,3 +288,5 @@ let g:airline#extensions#tabline#enabled = 1
 let g:ranger_map_keys = 0
 let g:NERDTreeHijackNetrw = 0
 let g:ranger_replace_netrw = 1
+
+set signcolumn=no
