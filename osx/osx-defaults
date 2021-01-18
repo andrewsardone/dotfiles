@@ -134,6 +134,13 @@ if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
 fi
 
 echo ""
+echo "Show path bar in Finder by default? (y/n)"
+read -r response
+if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
+  defaults write com.apple.finder ShowPathbar -bool true
+fi
+
+echo ""
 echo "Avoid creation of .DS_Store files on network volumes? (y/n)"
 read -r response
 if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
