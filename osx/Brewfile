@@ -179,6 +179,7 @@ cask "phinze/cask/vlc"
 cask "phinze/cask/wavebox"
 cask "phinze/cask/whichspace"
 cask "phinze/cask/xscope"
+cask "ubersicht"
 mas "Bear", id: 1091189122
 mas "Better", id: 1121192229
 mas "Calca", id: 635758264

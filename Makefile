@@ -33,6 +33,7 @@ stow:
 	stow skhd
 	stow homedir.makefile
 	stow yabai
+	stow -t ~/Library/Application\ Support/Übersicht Ubersicht
 
 link-bin:
 	@ln -s `pwd`/bin ~/bin

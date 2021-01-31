@@ -22,3 +22,6 @@
 [submodule "xdg_base_directory/.config/ranger/plugins/ranger_devicons"]
 	path = xdg_base_directory/.config/ranger/plugins/ranger_devicons
 	url = https://github.com/alexanderjeurissen/ranger_devicons
+[submodule "Ubersicht/widgets/simple-bar"]
+	path = Ubersicht/widgets/simple-bar
+	url = https://github.com/Jean-Tinland/simple-bar
