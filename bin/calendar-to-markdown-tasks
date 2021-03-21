@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+#
+# Generates a list of Markdown tasks to stdout from iCal's calendar events.
+# Useful for grabbing copying over your calendar into your day's Markdown
+# scratch file.
+#
+# Usage: calendar-to-markdown-tasks <date:default-today>
+
+function check_dependency() {
+  command -v $1 >/dev/null 2>&1 || {
+    echo >&2 "${1} is required. Please install."
+    exit 1
+  }
+}
+
+check_dependency icalBuddy
+
+DATE=$1
+
+if [ -z "$1" ]; then
+  DATE=`date +%Y-%m-%d`
+fi
+
+icalBuddy \
+  -npn \
+  -nc \
+  -nrd \
+  -df "" \
+  -tf "%H:%M" \
+  -ps "/: /" \
+  -b "- [ ] " \
+  -eep "location,notes,attendees,url,priority" \
+  -po "datetime,title" \
+  eventsFrom:$DATE to:$DATE
