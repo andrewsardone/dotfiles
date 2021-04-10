@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # bar settings
-yabai -m config status_bar                   on
+yabai -m config status_bar                   off
 yabai -m config status_bar_text_font         "JetBrainsMono Nerd Font:Medium:13.0"
 yabai -m config status_bar_icon_font         "JetBrainsMono Nerd Font:Medium:13.0"
 yabai -m config status_bar_background_color  0xff292d3e
