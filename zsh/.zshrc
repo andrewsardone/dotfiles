@@ -111,7 +111,7 @@ alias tp='touch todo.taskpaper && vi todo.taskpaper'
 # grc
 
 command -v brew >/dev/null 2>&1 && GRC_BASHRC="`brew --prefix`/etc/grc.bashrc"
-if [ ! -z "$GRC_BASHRC" ]; then
+if [ -f "$GRC_BASHRC" ]; then
   source $GRC_BASHRC
 fi
 
