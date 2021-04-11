@@ -59,7 +59,6 @@ filetype on " without this vim emits a zero exit status, later, because of :ft o
 filetype off
 call plug#begin('~/.vim/plugged')
 
-Plug 'kien/ctrlp.vim'
 Plug 'godlygeek/tabular'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
@@ -104,11 +103,9 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 map <leader>l :Align
 nmap <leader>a :Ack<space>
-nmap <leader>b :CtrlPBuffer<CR>
-nmap <leader>d :NERDTreeToggle<CR>
+nmap <leader>d :Buffers<CR>
 nmap <leader>f :NERDTreeFind<CR>
 nmap <leader>t :FZF<CR>
-nmap <leader>T :CtrlPClearCache<CR>:CtrlP<CR>
 nmap <leader>] :TagbarToggle<CR>
 nmap <leader><space> :call whitespace#strip_trailing()<CR>
 nmap <leader>g :GitGutterToggle<CR>
@@ -154,7 +151,6 @@ endif
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
 " plugin settings
-let g:ctrlp_match_window = 'order:ttb,max:20'
 let g:NERDSpaceDelims=1
 let g:gitgutter_enabled = 0
 
@@ -164,9 +160,6 @@ if executable('ag')
 
   " Use Ag over Grep
   set grepprg=ag\ --nogroup\ --nocolor
-
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
 
 " fdoc is yaml
