@@ -1,3 +1,5 @@
+puts "Andrew sux"
+
 tap "homebrew/bundle"
 tap "homebrew/services"
 tap "koekeishiya/formulae"
@@ -120,15 +122,8 @@ cask "vlc"
 cask "whichspace"
 mas "Better", id: 1121192229
 mas "Day One", id: 1055511498
-mas "Keynote", id: 409183694
 mas "MindNode", id: 992076693
-mas "Numbers", id: 409203825
 mas "Nutshell", id: 955864065
-mas "OmniFocus", id: 1346203938
-mas "Pages", id: 409201541
 mas "Pixelmator", id: 407963104
-mas "Redacted", id: 984968384
 mas "Reeder", id: 880001334
-mas "Tweetbot", id: 557168941
-mas "UlyssesMac", id: 1225570693
 mas "Vimari", id: 1480933944
