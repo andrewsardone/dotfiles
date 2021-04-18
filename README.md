@@ -4,7 +4,7 @@ These are my dotfiles. There are many like them, but these ones are mine.
 
     git clone https://github.com/andrewsardone/dotfiles.git ~/.dotfiles
     cd ~/.dotfiles
-    make
+    make install
 
 ## Bullet Points
 
