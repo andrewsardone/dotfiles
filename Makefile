@@ -38,6 +38,10 @@ stow:
 link-bin:
 	@ln -s `pwd`/bin ~/bin
 
+.PHONY: jobs
+jobs:
+	cd jobs && make install
+
 # Set up my language version manager
 # https://github.com/asdf-vm/asdf
 asdf:
@@ -45,7 +49,7 @@ asdf:
 	[[ -d ~/.asdf ]] || git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.3.0
 	[[ -d ~/.asdf/plugins/ruby ]] || ~/.asdf/bin/asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
 
-install: dependencies submodules stow vim-plugins link-bin mac
+install: dependencies submodules stow vim-plugins link-bin mac jobs
 
 install-no-vim: dependencies submodules stow
 	@echo 'To setup vim, `make vim-plugins` from a shell'
