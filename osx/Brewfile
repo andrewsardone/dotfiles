@@ -1,5 +1,3 @@
-puts "Andrew sux"
-
 tap "homebrew/bundle"
 tap "homebrew/services"
 tap "koekeishiya/formulae"
