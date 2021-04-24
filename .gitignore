@@ -7,3 +7,4 @@ config/pianobar/eventcmd
 vim/.vim/bundle/*
 vim/.vim/plugged/*
 !vim/.vim/bundle/Vundle.vim
+jobs/tmp
