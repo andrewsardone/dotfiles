@@ -102,6 +102,7 @@ cask "kindle"
 cask "launchbar"
 cask "licecap"
 cask "macdown"
+cask "microsoft-auto-update"
 cask "microsoft-office"
 cask "obsidian"
 cask "pennywise"
@@ -125,6 +126,7 @@ cask "vlc"
 cask "whichspace"
 mas "Better", id: 1121192229
 mas "Day One", id: 1055511498
+cask "zoom"
 mas "Fantastical", id: 975937182
 mas "MindNode", id: 992076693
 mas "Nutshell", id: 955864065
