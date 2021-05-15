@@ -92,6 +92,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'francoiscabrol/ranger.vim'
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
 call plug#end()
 filetype plugin indent on
@@ -102,10 +105,10 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 map <leader>l :Align
-nmap <leader>a :Ack<space>
-nmap <leader>d :Buffers<CR>
+nmap <leader>a :Telescope live_grep<cr>
+nmap <leader>d :Telescope buffers<cr>
 nmap <leader>f :NERDTreeFind<CR>
-nmap <leader>t :FZF<CR>
+nmap <leader>t :Telescope find_files<cr>
 nmap <leader>] :TagbarToggle<CR>
 nmap <leader><space> :call whitespace#strip_trailing()<CR>
 nmap <leader>g :GitGutterToggle<CR>
