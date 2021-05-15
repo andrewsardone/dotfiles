@@ -31,10 +31,11 @@ brew "ical-buddy"
 brew "jq"
 brew "lazygit"
 brew "lsd"
+brew "luajit", args: ["HEAD"]
 brew "mas"
 brew "ncdu"
 brew "neofetch"
-brew "neovim"
+brew "neovim", args: ["HEAD"]
 brew "node"
 brew "parallel"
 brew "tree"
