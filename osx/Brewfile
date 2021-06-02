@@ -126,9 +126,9 @@ cask "transmission"
 cask "vimr"
 cask "vlc"
 cask "whichspace"
+cask "zoom"
 mas "Better", id: 1121192229
 mas "Day One", id: 1055511498
-cask "zoom"
 mas "Fantastical", id: 975937182
 mas "Instapaper", id: 288545208
 mas "Keynote", id: 409183694
