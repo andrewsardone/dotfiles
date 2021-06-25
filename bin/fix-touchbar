@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Usage: ./fix-touchbar
+# Just kill the MacBook TouchBar when it gets in a funky state.
+
+sudo pkill TouchBarServer
+sudo killall ControlStrip
