@@ -80,7 +80,6 @@ Plug 'reedes/vim-colors-pencil'
 Plug 'trevordmiller/nova-vim'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 Plug 'leafgarland/typescript-vim'
 Plug 'edkolev/tmuxline.vim'
 Plug 'arcticicestudio/nord-vim'
@@ -271,9 +270,6 @@ set rtp+=/usr/local/opt/fzf
 let g:nv_search_paths = ['~/Documents/notes']
 let g:nv_use_short_pathnames = 1
 nnoremap <leader>s :NV<CR>
-
-" coc.vim configuration -- https://github.com/neoclide/coc.nvim
-source ~/.vim/coc.vim
 
 " Airline
 let g:airline_powerline_fonts = 1
