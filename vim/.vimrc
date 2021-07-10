@@ -94,6 +94,7 @@ Plug 'francoiscabrol/ranger.vim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'mhinz/vim-startify'
 
 call plug#end()
 filetype plugin indent on
