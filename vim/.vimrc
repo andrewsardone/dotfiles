@@ -74,8 +74,6 @@ Plug 'jnwhiteh/vim-golang'
 Plug 'mtth/scratch.vim'
 Plug 'scrooloose/syntastic'
 Plug 'mtscout6/syntastic-local-eslint.vim'
-Plug 'neomake/neomake'
-Plug 'benjie/neomake-local-eslint.vim'
 Plug 'reedes/vim-colors-pencil'
 Plug 'trevordmiller/nova-vim'
 Plug 'junegunn/fzf.vim'
@@ -216,23 +214,6 @@ let g:syntastic_check_on_wq = 0
 " Use eslint javascript checker if .eslintrc file is present – https://github.com/scrooloose/syntastic/issues/1484
 let g:syntastic_javascript_checkers = []
 autocmd FileType javascript let b:syntastic_checkers = syntastic#util#findFileInParent('.eslintrc', expand('%:p:h', 1)) !=# '' ? ['eslint'] : []
-
-" For NeoVim, we'll use Neomake instead of syntastic
-" See https://robots.thoughtbot.com/my-life-with-neovim#asynchronous-checkers
-if has('nvim')
-  " Run NeoMake on read and write operations
-  autocmd! BufReadPost,BufWritePost * Neomake
-
-  " Disable inherited syntastic
-  let g:syntastic_mode_map = {
-    \ "mode": "passive",
-    \ "active_filetypes": [],
-    \ "passive_filetypes": []
-  \}
-
-  let g:neomake_serialize = 1
-  let g:neomake_serialize_abort_on_error = 1
-endif
 
 "" spelling
 " Good tips found here: https://robots.thoughtbot.com/opt-in-project-specific-vim-spell-checking-and-word-completion
