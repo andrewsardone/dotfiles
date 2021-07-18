@@ -36,7 +36,7 @@ brew "luajit", args: ["HEAD"]
 brew "mas"
 brew "ncdu"
 brew "neofetch"
-brew "neovim", args: ["HEAD"]
+brew "neovim"
 brew "node"
 brew "parallel"
 brew "tree"
