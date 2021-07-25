@@ -63,7 +63,6 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'austintaylor/vim-indentobject'
 Plug 'tpope/vim-surround'
-Plug 'mileszs/ack.vim'
 Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
 Plug 'altercation/vim-colors-solarized'
@@ -153,14 +152,6 @@ let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 " plugin settings
 let g:NERDSpaceDelims=1
 let g:gitgutter_enabled = 0
-
-" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
-if executable('ag')
-  let g:ackprg = 'ag --nogroup --column'
-
-  " Use Ag over Grep
-  set grepprg=ag\ --nogroup\ --nocolor
-endif
 
 " fdoc is yaml
 autocmd BufRead,BufNewFile *.fdoc set filetype=yaml
