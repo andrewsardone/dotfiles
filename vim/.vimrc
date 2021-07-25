@@ -65,7 +65,6 @@ Plug 'austintaylor/vim-indentobject'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
 Plug 'mtth/scratch.vim'
-Plug 'scrooloose/syntastic'
 Plug 'mtscout6/syntastic-local-eslint.vim'
 Plug 'reedes/vim-colors-pencil'
 Plug 'trevordmiller/nova-vim'
@@ -187,11 +186,6 @@ endfunction
 
 " Send last yanked text to clipper – https://github.com/wincent/clipper
 nnoremap <leader>y :call system('nc localhost 8377', @0)<CR>
-
-" syntastic setup – https://github.com/scrooloose/syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
