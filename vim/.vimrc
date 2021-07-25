@@ -1,8 +1,9 @@
-" set up pathogen, https://github.com/tpope/vim-pathogen
-"
+" vim:set ts=2 sts=2 sw=2 expandtab:
+
 set nocompatible                                             " don't bother with vi compatibility
 syntax enable                                                " enable syntax highlighting
 let mapleader = ','
+set hidden                                                   " allow unsaved background buffers and remember marks/undo for them
 
 set autoindent
 set autoread                                                 " reload files when changed on disk, i.e. via `git checkout`
@@ -16,7 +17,7 @@ set diffopt+=vertical                                        " prefer vertical s
 set directory-=.                                             " don't store swapfiles in the current directory
 set encoding=utf-8
 set expandtab                                                " expand tabs to spaces
-set nohlsearch                                               " Don't highlight all search matches, which nvim does by default
+set hlsearch
 set ignorecase                                               " case-insensitive search
 set incsearch                                                " search as you type
 set laststatus=2                                             " always show statusline
@@ -41,6 +42,13 @@ set t_ti= t_te=                                              " Prevent Vim from 
 set wildignore=log/**,node_modules/**,target/**,tmp/**,*.rbc
 set wildmenu                                                 " show a navigable menu for tab completion
 set wildmode=longest,list,full
+" Modelines (comments that set vim options on a per-file basis)
+set modeline
+set modelines=3
+" Completion options.
+"   menu: use a popup menu
+"   preview: show more info in menu
+set completeopt=menu,preview
 
 " Use the old vim regex engine (version 1, as opposed to version 2, which was
 " introduced in Vim 7.3.969). The Ruby syntax highlighting is significantly
