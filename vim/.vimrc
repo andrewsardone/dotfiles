@@ -59,7 +59,6 @@ filetype on " without this vim emits a zero exit status, later, because of :ft o
 filetype off
 call plug#begin('~/.vim/plugged')
 
-Plug 'godlygeek/tabular'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'austintaylor/vim-indentobject'
