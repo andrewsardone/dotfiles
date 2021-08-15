@@ -66,6 +66,7 @@ brew "koekeishiya/formulae/skhd", args: ["HEAD", "with-logging"]
 brew "koekeishiya/formulae/yabai"
 cask "1password"
 cask "appcleaner"
+cask "amazon-workspaces"
 cask "bartender"
 cask "boop"
 cask "caffeine"
