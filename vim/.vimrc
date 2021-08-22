@@ -195,13 +195,6 @@ endfunction
 " Send last yanked text to clipper – https://github.com/wincent/clipper
 nnoremap <leader>y :call system('nc localhost 8377', @0)<CR>
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_wq = 0
-" Use eslint javascript checker if .eslintrc file is present – https://github.com/scrooloose/syntastic/issues/1484
-let g:syntastic_javascript_checkers = []
-autocmd FileType javascript let b:syntastic_checkers = syntastic#util#findFileInParent('.eslintrc', expand('%:p:h', 1)) !=# '' ? ['eslint'] : []
-
 "" spelling
 " Good tips found here: https://robots.thoughtbot.com/opt-in-project-specific-vim-spell-checking-and-word-completion
 "
