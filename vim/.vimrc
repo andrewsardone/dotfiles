@@ -96,12 +96,19 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 nmap <leader>a :Telescope live_grep<cr>
-nmap <leader>d :Telescope buffers<cr>
 nmap <leader>t :Telescope find_files<cr>
 nmap <leader><space> :call whitespace#strip_trailing()<CR>
 map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 map <leader>w :w!<cr>
 inoremap jk <ESC>
+
+" buffer management
+nmap <leader>d :Telescope buffers<cr>
+nmap <leader>T :enew<cr>
+nmap <leader>l :bnext<cr>
+nmap <leader>h :bprevious<cr>
+nmap <leader>bq :bp <bar> bd #<cr>
+nmap <leader>bl :ls<cr>
 
 " color setup
 :set t_Co=256 " 256 colors
