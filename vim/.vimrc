@@ -89,6 +89,7 @@ Plug 'mhinz/vim-startify'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'akinsho/bufferline.nvim'
 Plug 'sbdchd/neoformat'
+Plug 'sudormrfbin/cheatsheet.nvim'
 
 call plug#end()
 filetype plugin indent on
