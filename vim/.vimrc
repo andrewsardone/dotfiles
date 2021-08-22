@@ -243,7 +243,6 @@ nnoremap <leader>s :NV<CR>
 " Airline
 let g:airline_powerline_fonts = 1
 let g:airline_theme='gruvbox'
-let g:airline#extensions#tabline#enabled = 1
 lua << EOF
 require("bufferline").setup{}
 EOF
