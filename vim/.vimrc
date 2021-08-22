@@ -86,6 +86,8 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'mhinz/vim-startify'
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'akinsho/bufferline.nvim'
 
 call plug#end()
 filetype plugin indent on
@@ -239,6 +241,10 @@ nnoremap <leader>s :NV<CR>
 let g:airline_powerline_fonts = 1
 let g:airline_theme='gruvbox'
 let g:airline#extensions#tabline#enabled = 1
+lua << EOF
+require("bufferline").setup{}
+EOF
+
 
 " Ranger
 let g:ranger_map_keys = 0
