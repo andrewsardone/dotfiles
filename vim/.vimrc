@@ -84,6 +84,7 @@ Plug 'rbgrouleff/bclose.vim'
 Plug 'sbdchd/neoformat'
 Plug 'sheerun/vim-polyglot'
 Plug 'sudormrfbin/cheatsheet.nvim'
+Plug 'tek256/simple-dark'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
@@ -121,7 +122,7 @@ set background=dark
 try
   let g:gruvbox_termcolors=16
   let g:gruvbox_contrast_dark = 'hard'
-  colorscheme gruvbox
+  colorscheme simple-dark
 catch /^Vim\%((\a\+)\)\=:E185/
   color aps256
 endtry
@@ -235,7 +236,7 @@ nnoremap <leader>s :NV<CR>
 
 " Airline
 let g:airline_powerline_fonts = 1
-let g:airline_theme='gruvbox'
+let g:airline_theme='base16_grayscale'
 lua << EOF
 require("bufferline").setup{}
 EOF
