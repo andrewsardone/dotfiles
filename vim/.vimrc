@@ -95,15 +95,10 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
-map <leader>l :Align
 nmap <leader>a :Telescope live_grep<cr>
 nmap <leader>d :Telescope buffers<cr>
-nmap <leader>f :NERDTreeFind<CR>
 nmap <leader>t :Telescope find_files<cr>
-nmap <leader>] :TagbarToggle<CR>
 nmap <leader><space> :call whitespace#strip_trailing()<CR>
-nmap <leader>g :GitGutterToggle<CR>
-nmap <leader>c <Plug>Kwbd
 map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 map <leader>w :w!<cr>
 inoremap jk <ESC>
