@@ -2,7 +2,7 @@
 
 set nocompatible                                             " don't bother with vi compatibility
 syntax enable                                                " enable syntax highlighting
-let mapleader = ','
+let mapleader = ' '
 set hidden                                                   " allow unsaved background buffers and remember marks/undo for them
 
 set autoindent
