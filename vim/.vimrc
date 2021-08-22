@@ -88,6 +88,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'mhinz/vim-startify'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'akinsho/bufferline.nvim'
+Plug 'sbdchd/neoformat'
 
 call plug#end()
 filetype plugin indent on
@@ -102,6 +103,7 @@ nmap <leader>t :Telescope find_files<cr>
 nmap <leader><space> :call whitespace#strip_trailing()<CR>
 map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 map <leader>w :w!<cr>
+nmap <leader>fm :Neoformat<cr>
 inoremap jk <ESC>
 
 " buffer management
