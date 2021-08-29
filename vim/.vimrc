@@ -70,6 +70,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'Alok/notational-fzf-vim'
 Plug 'akinsho/bufferline.nvim'
 Plug 'austintaylor/vim-indentobject'
+Plug 'dracula/vim'
 Plug 'edkolev/tmuxline.vim'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'junegunn/fzf.vim'
@@ -119,9 +120,7 @@ nmap <leader>bl :ls<cr>
 :set t_Co=256 " 256 colors
 set background=dark
 try
-  let g:gruvbox_termcolors=16
-  let g:gruvbox_contrast_dark = 'hard'
-  colorscheme gruvbox
+  colorscheme dracula
 catch /^Vim\%((\a\+)\)\=:E185/
   color aps256
 endtry
@@ -235,7 +234,7 @@ nnoremap <leader>s :NV<CR>
 
 " Airline
 let g:airline_powerline_fonts = 1
-let g:airline_theme='gruvbox'
+let g:airline_theme='dracula'
 lua << EOF
 require("bufferline").setup{}
 EOF

@@ -25,3 +25,6 @@
 [submodule "Ubersicht/widgets/simple-bar"]
 	path = Ubersicht/widgets/simple-bar
 	url = https://github.com/Jean-Tinland/simple-bar
+[submodule "terminal_profiles/iterm2-dracula"]
+	path = terminal_profiles/iterm2-dracula
+	url = https://github.com/dracula/iterm.git
