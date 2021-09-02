@@ -108,7 +108,7 @@ nmap <leader>fm :Neoformat<cr>
 inoremap jk <ESC>
 
 " buffer management
-nmap <leader>d :Telescope buffers<cr>
+nmap <leader>r :Telescope buffers<cr>
 nmap <leader>T :enew<cr>
 nmap <leader>l :bnext<cr>
 nmap <leader>h :bprevious<cr>
