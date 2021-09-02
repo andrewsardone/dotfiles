@@ -168,7 +168,7 @@ asdf_completions_sh=$HOME/.asdf/completions/asdf.bash
 # fzf
 # https://github.com/junegunn/fzf
 export FZF_DEFAULT_OPTS='--height 40% --reverse --border --multi'
-export FZF_DEFAULT_COMMAND='ag -g ""'
+export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --no-ignore-vcs -g "!{node_modules,.git}"'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export GPG_TTY=$(tty)
