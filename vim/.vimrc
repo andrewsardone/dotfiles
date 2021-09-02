@@ -106,9 +106,14 @@ nmap <leader>fm :Neoformat<cr>
 inoremap jk <ESC>
 
 " file & buffer management
-nmap <leader>a :Telescope live_grep<cr>
-nmap <leader>t :Telescope find_files<cr>
-nmap <leader>r :Telescope buffers<cr>
+if (isdirectory(".git"))
+  nmap <leader>t :GitFiles --cached --others --exclude-standard<cr>
+else
+  nmap <leader>t :FZF<cr>
+endif
+nmap <leader>a :Find!<Space>
+nmap <leader>e :FZF<cr>
+nmap <leader>r :Buffers<cr>
 nmap <leader>T :enew<cr>
 nmap <leader>l :bnext<cr>
 nmap <leader>h :bprevious<cr>
@@ -226,6 +231,11 @@ set complete+=kspell
 " fzf
 " https://github.com/junegunn/fzf
 set rtp+=/usr/local/opt/fzf
+command! -bang -nargs=* Find
+      \ call fzf#vim#grep(
+      \   'rg --column --line-number --no-heading --follow --color=always --hidden --no-ignore-vcs -g "!{node_modules,.git}" '.<q-args>.' || true',
+      \   1, <bang>0 ? fzf#vim#with_preview('up:60%') : fzf#vim#with_preview('right:50%:hidden', '?'), <bang>0
+      \ )
 
 " nvALT replacement
 " https://github.com/Alok/notational-fzf-vim
