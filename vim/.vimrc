@@ -99,15 +99,15 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
-nmap <leader>a :Telescope live_grep<cr>
-nmap <leader>t :Telescope find_files<cr>
 nmap <leader><space> :call whitespace#strip_trailing()<CR>
 map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 map <leader>w :w!<cr>
 nmap <leader>fm :Neoformat<cr>
 inoremap jk <ESC>
 
-" buffer management
+" file & buffer management
+nmap <leader>a :Telescope live_grep<cr>
+nmap <leader>t :Telescope find_files<cr>
 nmap <leader>r :Telescope buffers<cr>
 nmap <leader>T :enew<cr>
 nmap <leader>l :bnext<cr>
