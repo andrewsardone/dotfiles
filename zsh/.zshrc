@@ -27,13 +27,6 @@ alias ded='rm -rf ~/Library/Developer/Xcode/DerivedData/'
 export EDITOR=nvim
 bindkey -v
 bindkey '^R' history-incremental-search-backward # a must have
-if type /usr/local/bin/vim > /dev/null 2>&1; then
-  alias vi='/usr/local/bin/vim'
-fi
-if type nvim > /dev/null 2>&1; then
-  alias vim='nvim'
-  alias vi='nvim'
-fi
 
 function block_cursor() {
   if [ ! -z "$TMUX" ]; then
