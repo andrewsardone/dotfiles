@@ -28,3 +28,6 @@
 [submodule "terminal_profiles/iterm2-dracula"]
 	path = terminal_profiles/iterm2-dracula
 	url = https://github.com/dracula/iterm.git
+[submodule "vendor/Carbon-Bl4ck/Rofi-Beats"]
+	path = vendor/Carbon-Bl4ck/Rofi-Beats
+	url = https://github.com/Carbon-Bl4ck/Rofi-Beats
