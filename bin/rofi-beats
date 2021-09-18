@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Shim to call the vendorized rofi-beats
+
+sh $(dirname "$0")/../vendor/Carbon-Bl4ck/Rofi-Beats/rofi-beats
