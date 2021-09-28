@@ -138,6 +138,7 @@ cask "vimr"
 cask "vitals"
 cask "vlc"
 cask "whichspace"
+cask "xbar"
 cask "zoom"
 mas "Better", id: 1121192229
 mas "Day One", id: 1055511498
