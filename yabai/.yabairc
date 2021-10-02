@@ -49,6 +49,7 @@ yabai -m config --space 8 layout             float
 
 # window rules
 yabai -m rule --add app="^System Preferences$" manage=off
+yabai -m rule --add app="choose" title="^$" manage=off
 
 # Refresh spaces widget on space change
 yabai -m signal --add event=space_changed action="osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-spaces-jsx\"'"
