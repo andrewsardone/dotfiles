@@ -230,7 +230,12 @@ set complete+=kspell
 
 " fzf
 " https://github.com/junegunn/fzf
-set rtp+=/usr/local/opt/fzf
+if (isdirectory('/opt/homebrew'))
+  " source fzf from the /opt homebrew installation
+  set rtp+=/opt/homebrew/opt/fzf
+else
+  set rtp+=/usr/local/opt/fzf
+endif
 command! -bang -nargs=* Find
       \ call fzf#vim#grep(
       \   'rg --column --line-number --no-heading --follow --color=always --hidden --no-ignore-vcs -g "!{node_modules,.git}" '.<q-args>.' || true',
