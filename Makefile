@@ -39,7 +39,6 @@ stow:
 	stow skhd
 	stow homedir.makefile
 	stow yabai
-	stow -t ~/Library/Application\ Support/Übersicht Ubersicht
 
 .PHONY: link-bin
 link-bin:
