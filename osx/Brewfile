@@ -1,3 +1,4 @@
+tap "andrewsardone/homebrew-capture-one"
 tap "clementtsang/bottom"
 tap "hmarr/tap"
 tap "homebrew/bundle"
@@ -70,6 +71,7 @@ brew "clementtsang/bottom/bottom"
 brew "koekeishiya/formulae/skhd", args: ["HEAD", "with-logging"]
 brew "koekeishiya/formulae/yabai"
 cask "1password"
+cask "andrewsardone/capture-one/capture-one"
 cask "appcleaner"
 cask "amazon-workspaces"
 cask "bartender"
