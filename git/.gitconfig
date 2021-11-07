@@ -25,6 +25,7 @@
 [merge]
 	defaultToUpstream = true
 [commit]
+	verbose = true
 	; gpgsign = true
 [init]
 	defaultBranch = main
