@@ -68,6 +68,10 @@ install-no-vim: dependencies submodules stow
 mac: ## Configure macOS defaults
 	sh osx/index.sh
 
+.PHONY: brew-bundle
+brew-bundle: ## Bundle Homebrew dependencies
+	cd osx && brew bundle
+
 # via https://gist.github.com/prwhite/8168133
 help: ## Show this help.
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
