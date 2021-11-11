@@ -1,5 +1,7 @@
 These are my dotfiles. There are many like them, but these ones are mine.
 
+Hello world!
+
 ## Installation
 
     git clone https://github.com/andrewsardone/dotfiles.git ~/.dotfiles
