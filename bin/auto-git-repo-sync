@@ -8,6 +8,25 @@
 # Example `crontab -e` entry:
 # */5 * * * * ~/bin/auto-git-repo-sync /Volumes/Notes >/dev/null 2>&1
 
+function print_help() {
+    SCRIPT_NAME=$(basename "$0")
+    echo "Usage: $SCRIPT_NAME /path/to/git/repo/to/sync"
+    echo "Example: $SCRIPT_NAME /home/notes-repo"
+}
+
+while getopts ":r:t:h:" opt; do
+  case $opt in
+    r) repo="$OPTARG"
+    ;;
+    t) timeout="$OPTARG"
+    ;;
+    h) print_help && exit 0
+    ;;
+    \?) print_help && exit 1
+    ;;
+  esac
+done
+
 if [ "$#" -ne 1 ]; then
     SCRIPT_NAME=$(basename "$0")
     echo "Usage: $SCRIPT_NAME /path/to/git/repo/to/sync"
