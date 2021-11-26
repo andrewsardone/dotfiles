@@ -58,10 +58,11 @@ asdf:
 
 .PHONY: install
 install: ## Install the entire setup
-install: dependencies submodules stow vim-plugins link-bin mac jobs
+install: dependencies submodules stow vim-plugins link-bin mac jobs amethyst-install
+
 
 .PHONY: install-no-vim
-install-no-vim: dependencies submodules stow
+install-no-vim: dependencies submodules stow amethyst-install
 	@echo 'To setup vim, `make vim-plugins` from a shell'
 
 .PHONY: mac
@@ -71,6 +72,17 @@ mac: ## Configure macOS defaults
 .PHONY: brew-bundle
 brew-bundle: ## Bundle Homebrew dependencies
 	cd osx && brew bundle
+
+AMETHYST_PREF := ~/Library/Preferences/com.amethyst.Amethyst.plist
+.PHONY: amethyst-update
+amethyst-update: ## Update the Amethyst config in the machine's ~/Library/Preferences directory
+	cp $(AMETHYST_PREF) osx/Preferences/.
+
+
+.PHONY: amethyst-install
+amethyst-install: ## Install the repo's Amethyst preferences into ~/Library/Preferences
+	rm -f $(AMETHYST_PREF)
+	ln -sf ~/.dotfiles/osx/LaunchAgents/com.andrewsardone.sync-notes.plist $(AMETHYST_PREF)
 
 # via https://gist.github.com/prwhite/8168133
 help: ## Show this help.
