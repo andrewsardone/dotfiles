@@ -143,7 +143,6 @@ cask "vlc"
 cask "whichspace"
 cask "xbar"
 cask "zoom"
-mas "Better", id: 1121192229
 mas "Day One", id: 1055511498
 mas "Fantastical", id: 975937182
 mas "Instapaper", id: 288545208
