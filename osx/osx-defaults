@@ -250,7 +250,7 @@ defaults write com.jetbrains.intellij.ce ApplePressAndHoldEnabled -bool false
 
 echo ""
 echo "Set zsh as default shell"
-chsh -s $(which zsh)
+chsh -s /opt/homebrew/bin/fish
 
 ###############################################################################
 # Xcode
