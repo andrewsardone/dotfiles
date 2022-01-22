@@ -38,6 +38,7 @@ brew "jq"
 brew "lazygit"
 brew "lsd"
 brew "luajit", args: ["HEAD"]
+brew "maestral"
 brew "mas"
 brew "mpv"
 brew "ncdu"
