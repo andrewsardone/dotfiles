@@ -68,6 +68,7 @@ filetype off
 call plug#begin('~/.vim/plugged')
 
 Plug 'Alok/notational-fzf-vim'
+Plug 'LnL7/vim-nix'
 Plug 'akinsho/bufferline.nvim'
 Plug 'austintaylor/vim-indentobject'
 Plug 'edkolev/tmuxline.vim'
