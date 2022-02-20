@@ -73,7 +73,6 @@ Plug 'akinsho/bufferline.nvim'
 Plug 'austintaylor/vim-indentobject'
 Plug 'edkolev/tmuxline.vim'
 Plug 'francoiscabrol/ranger.vim'
-Plug 'fxn/vim-monochrome', { 'branch': 'main' }
 Plug 'junegunn/fzf.vim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'mhinz/vim-startify'
@@ -126,7 +125,9 @@ nmap <leader>bl :ls<cr>
 :set t_Co=256 " 256 colors
 set background=dark
 try
-  colorscheme monochrome
+  let g:gruvbox_termcolors=16
+  let g:gruvbox_contrast_dark = 'hard'
+  colorscheme gruvbox
 catch /^Vim\%((\a\+)\)\=:E185/
   color aps256
 endtry
@@ -250,7 +251,7 @@ nnoremap <leader>s :NV<CR>
 
 " Airline
 let g:airline_powerline_fonts = 1
-let g:airline_theme='minimalist'
+let g:airline_theme='gruvbox'
 lua << EOF
 require("bufferline").setup{}
 EOF
