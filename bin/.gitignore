@@ -1,0 +1,8 @@
+# Ignore everything to ensure I don't commit proprietary bins
+*
+
+# Except…
+!.gitignore
+
+# Commit scripts via…
+#   git add -f bin/<new-script>
