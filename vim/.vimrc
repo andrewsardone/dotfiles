@@ -263,3 +263,8 @@ let g:NERDTreeHijackNetrw = 0
 let g:ranger_replace_netrw = 1
 
 set signcolumn=no
+
+if has("gui_vimr")
+  " Here goes some VimR specific settings like
+  set guifont=JetBrainsMono\ Nerd\ Font\ Mono:h13
+endif
