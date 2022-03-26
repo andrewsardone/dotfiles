@@ -84,6 +84,10 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+if has('nvim')
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'gfanto/fzf-lsp.nvim', { 'branch': 'main' }
+endif
 
 call plug#end()
 filetype plugin indent on
@@ -260,4 +264,9 @@ set signcolumn=no
 if has("gui_vimr")
   " Here goes some VimR specific settings like
   set guifont=JetBrainsMono\ Nerd\ Font\ Mono:h13
+endif
+
+" Set up Language Server Protocol (LSP)
+if has('nvim')
+  lua require("lsp-config")
 endif
