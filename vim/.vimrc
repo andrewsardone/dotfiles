@@ -26,7 +26,6 @@ set list                                                     " show trailing whi
 set listchars=tab:▸\ ,trail:▫
 set nowrap
 set number                                                   " show line numbers
-set pastetoggle=<leader>p
 set ruler                                                    " show where you are
 set scrolloff=3                                              " show context above/below cursorline
 set shell=/bin/bash
@@ -121,6 +120,9 @@ nmap <leader>l :bnext<cr>
 nmap <leader>h :bprevious<cr>
 nmap <leader>bq :bp <bar> bd #<cr>
 nmap <leader>bl :ls<cr>
+
+" command management
+nmap <leader>p :Commands<cr>
 
 " color setup
 :set t_Co=256 " 256 colors
