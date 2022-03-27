@@ -87,6 +87,10 @@ Plug 'vim-airline/vim-airline-themes'
 if has('nvim')
   Plug 'neovim/nvim-lspconfig'
   Plug 'gfanto/fzf-lsp.nvim', { 'branch': 'main' }
+  Plug 'hrsh7th/nvim-cmp/', { 'branch': 'main' } " Autocompletion Plugin
+  Plug 'hrsh7th/cmp-nvim-lsp', { 'branch': 'main' } " LSP source for nvim-cmp
+  Plug 'saadparwaiz1/cmp_luasnip' " Snippets sourc{ 'branch': 'main' }e for nvim-cmp
+  Plug 'L3MON4D3/LuaSnip' " Snippets plugin
 endif
 
 call plug#end()
