@@ -36,7 +36,7 @@ set smartcase                                                " case-sensitive se
 set softtabstop=2                                            " insert mode tab and backspace use 2 spaces
 set tabstop=8                                                " actual tabs occupy 8 characters
 set tags=./tags;                                             " start with current file's directory for tags file search, then move up. See http://vim.wikia.com/wiki/Browsing_programs_with_tags
-set timeoutlen=1000 ttimeoutlen=0                            " speed
+set timeoutlen=250 ttimeoutlen=0                             " speed
 set t_ti= t_te=                                              " Prevent Vim from clobbering the scrollback buffer. See http://www.shallowsky.com/linux/noaltscreen.html
 set wildignore=log/**,node_modules/**,target/**,tmp/**,*.rbc
 set wildmenu                                                 " show a navigable menu for tab completion
@@ -90,6 +90,7 @@ if has('nvim')
   Plug 'hrsh7th/cmp-nvim-lsp', { 'branch': 'main' } " LSP source for nvim-cmp
   Plug 'saadparwaiz1/cmp_luasnip' " Snippets sourc{ 'branch': 'main' }e for nvim-cmp
   Plug 'L3MON4D3/LuaSnip' " Snippets plugin
+  Plug 'folke/which-key.nvim'
 endif
 
 call plug#end()
@@ -275,4 +276,14 @@ endif
 " Set up Language Server Protocol (LSP)
 if has('nvim')
   lua require("lsp-config")
+endif
+
+" WhichKey setup
+" https://github.com/folke/which-key.nvim
+if has('nvim')
+  lua << EOF
+  require("which-key").setup {
+    -- default settings
+  }
+EOF
 endif
