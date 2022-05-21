@@ -28,3 +28,6 @@
 [submodule "vendor/Carbon-Bl4ck/Rofi-Beats"]
 	path = vendor/Carbon-Bl4ck/Rofi-Beats
 	url = https://github.com/Carbon-Bl4ck/Rofi-Beats
+[submodule "vendor/wfxr/forgit"]
+	path = vendor/wfxr/forgit
+	url = https://github.com/wfxr/forgit
