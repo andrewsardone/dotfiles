@@ -28,3 +28,6 @@
 	; gpgsign = true
 [init]
 	defaultBranch = main
+
+[includeIf "gitdir:~/source-amazon/"]
+	path = .gitconfig-amazon

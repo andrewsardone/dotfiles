@@ -1,0 +1,6 @@
+[user]
+	name = Andrew Sardone
+	email = asardone@amazon.com
+
+[init]
+	defaultBranch = mainline
