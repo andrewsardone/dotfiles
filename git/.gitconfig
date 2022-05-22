@@ -1,3 +1,5 @@
+# vi: ft=gitconfig tabstop=4 shiftwidth=4 noexpandtab
+
 [user]
 	name = Andrew Sardone
 	email = andrew@andrewsardone.com
