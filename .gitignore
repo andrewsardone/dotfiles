@@ -8,3 +8,8 @@ vim/.vim/bundle/*
 vim/.vim/plugged/*
 !vim/.vim/bundle/Vundle.vim
 jobs/tmp
+
+# Not going to track hombrewbrew-bundle lock files for the time being. This is
+# because the lockfiles shoudl drift across machines and architectures.
+## ref https://github.com/Homebrew/homebrew-bundle/pull/552
+Brewfile.lock.json
