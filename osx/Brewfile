@@ -170,6 +170,7 @@ cask "xbar"
 cask "zoom"
 mas "Adobe Lightroom", id: 1451544217
 mas "Day One", id: 1055511498
+mas "Drafts", id: 1435957248
 mas "Fantastical", id: 975937182
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
