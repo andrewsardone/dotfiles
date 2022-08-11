@@ -31,5 +31,5 @@
 [init]
 	defaultBranch = main
 
-[includeIf "gitdir:~/source-amazon/"]
+[includeIf "gitdir:~/source/code.amazon.com/"]
 	path = .gitconfig-amazon
