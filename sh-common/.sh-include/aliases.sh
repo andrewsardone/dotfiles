@@ -16,5 +16,5 @@ if type nvim > /dev/null 2>&1; then
 fi
 
 if command -v btm >/dev/null 2>&1; then
-  alias btm="btm -b --mem_as_value"
+  alias btm="btm -b --mem_as_value --color gruvbox"
 fi
