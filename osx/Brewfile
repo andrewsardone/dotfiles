@@ -1,3 +1,4 @@
+tap "clementtsang/bottom"
 tap "epk/epk"
 tap "hmarr/tap"
 tap "homebrew/bundle"
