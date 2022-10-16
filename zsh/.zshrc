@@ -174,9 +174,6 @@ export GPG_TTY=$(tty)
 # See https://stackoverflow.com/a/23584470 for more info
 alias pass='LC_ALL=C pass'
 
-docker_func=$HOME/.dockerfunc
-[ -f $docker_func ] && source $docker_func
-
 # Misc specific env files to include
 # h/t Flav https://github.com/flav/dotfiles/blob/633dc88b79652ae38319db22f53dadd9054f21b8/stow/bash/.profile
 if [ -d ~/.vault/env ]; then
