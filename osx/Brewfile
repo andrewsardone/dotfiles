@@ -83,6 +83,7 @@ brew "tmux"
 brew "vim"
 brew "watch"
 brew "watchman"
+brew "xcodes"
 brew "yarn"
 brew "youtube-dl"
 brew "koekeishiya/formulae/skhd", args: ["HEAD", "with-logging"]
