@@ -62,36 +62,21 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'Alok/notational-fzf-vim'
 Plug 'LnL7/vim-nix'
-Plug 'akinsho/bufferline.nvim'
 Plug 'austintaylor/vim-indentobject'
 Plug 'edkolev/tmuxline.vim'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'junegunn/fzf.vim'
-Plug 'kyazdani42/nvim-web-devicons'
 Plug 'morhetz/gruvbox'
 Plug 'mtth/scratch.vim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-telescope/telescope.nvim'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'sbdchd/neoformat'
 Plug 'sheerun/vim-polyglot'
-Plug 'sudormrfbin/cheatsheet.nvim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-if has('nvim')
-  Plug 'neovim/nvim-lspconfig'
-  Plug 'gfanto/fzf-lsp.nvim', { 'branch': 'main' }
-  Plug 'hrsh7th/nvim-cmp/', { 'branch': 'main' } " Autocompletion Plugin
-  Plug 'hrsh7th/cmp-nvim-lsp', { 'branch': 'main' } " LSP source for nvim-cmp
-  Plug 'saadparwaiz1/cmp_luasnip' " Snippets sourc{ 'branch': 'main' }e for nvim-cmp
-  Plug 'L3MON4D3/LuaSnip' " Snippets plugin
-  Plug 'folke/which-key.nvim'
-endif
 
 call plug#end()
 filetype plugin indent on
@@ -136,11 +121,6 @@ catch /^Vim\%((\a\+)\)\=:E185/
   color aps256
 endtry
 
-if (has("nvim"))
-  "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
-  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-endif
-
 "For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
 "Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
 " < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
@@ -159,7 +139,6 @@ else
   let &t_SI = "\<Esc>]50;CursorShape=1\x7"
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
-let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
 " plugin settings
 let g:NERDSpaceDelims=1
@@ -256,10 +235,6 @@ nnoremap <leader>s :NV<CR>
 " Airline
 let g:airline_powerline_fonts = 1
 let g:airline_theme='gruvbox'
-lua << EOF
-require("bufferline").setup{}
-EOF
-
 
 " Ranger
 let g:ranger_map_keys = 0
@@ -271,19 +246,4 @@ set signcolumn=no
 if has("gui_vimr")
   " Here goes some VimR specific settings like
   set guifont=JetBrainsMono\ Nerd\ Font\ Mono:h13
-endif
-
-" Set up Language Server Protocol (LSP)
-if has('nvim')
-  lua require("lsp-config")
-endif
-
-" WhichKey setup
-" https://github.com/folke/which-key.nvim
-if has('nvim')
-  lua << EOF
-  require("which-key").setup {
-    -- default settings
-  }
-EOF
 endif
