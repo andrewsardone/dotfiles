@@ -1,6 +1,8 @@
 # Ignore everything
-*
+.config/*
 
 # Except…
 !.gitignore
-!/.config/.gitinclude
+!.config/.gitinclude
+!.config/
+!.config/nvim
