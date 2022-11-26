@@ -31,3 +31,6 @@
 [submodule "vendor/wfxr/forgit"]
 	path = vendor/wfxr/forgit
 	url = https://github.com/wfxr/forgit
+[submodule "vendor/EdenEast/nightfox.nvim"]
+	path = vendor/EdenEast/nightfox.nvim
+	url = https://github.com/EdenEast/nightfox.nvim
