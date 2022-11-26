@@ -65,7 +65,7 @@ return packer.startup(function(use)
     requires = { "rbgrouleff/bclose.vim" },
     config = function ()
       vim.g.ranger_map_keys = 0
-      vim.g.NERDTreeHijackNetrw = 1
+      vim.g.NERDTreeHijackNetrw = 0
       vim.g.ranger_replace_netrw = 1
     end
   }
