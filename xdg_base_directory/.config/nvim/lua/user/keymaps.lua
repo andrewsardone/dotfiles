@@ -48,6 +48,9 @@ keymap("n", "<leader>bl", "<cmd>ls<CR>", opts)
 -- Reload configuration
 keymap("n", "<leader><leader>", "<cmd>Reload<CR>", opts)
 
+-- Nicer prose writing environment, see user/prose.lua
+keymap("n", "<leader>P", ":ProseToggle<CR>")
+
 -- Visual --
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
