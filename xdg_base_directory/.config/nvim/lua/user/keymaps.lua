@@ -51,6 +51,10 @@ keymap("n", "<leader><leader>", "<cmd>Reload<CR>", opts)
 -- Nicer prose writing environment, see user/prose.lua
 keymap("n", "<leader>P", ":ProseToggle<CR>")
 
+-- Quickfix window
+keymap("n", "<leader>qfo", "<cmd>copen<CR>")
+keymap("n", "<leader>qfx", "<cmd>cclose<CR>")
+
 -- Visual --
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
