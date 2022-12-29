@@ -41,6 +41,7 @@ stow:
 	$(STOW_BIN) skhd
 	$(STOW_BIN) homedir.makefile
 	$(STOW_BIN) yabai
+	$(STOW_BIN) vale
 
 .PHONY: link-bin
 link-bin:
