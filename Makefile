@@ -14,31 +14,33 @@ submodules:
 vim-plugins:
 	vim +PlugInstall
 
+STOW_BIN := stow --ignore=.DS_Store
+
 .PHONY: stow
 stow:
-	stow git
-	stow misc
-	stow ruby
-	stow screen
-	stow slate
-	stow sqlite
-	stow tig
-	stow tmux
-	stow vim
-	stow xvim
-	stow zsh
-	stow lldb
-	stow node
-	stow xdg_base_directory
-	stow asdf
-	stow docker
-	stow emacs
-	stow hammerspoon
-	stow bash
-	stow sh-common
-	stow skhd
-	stow homedir.makefile
-	stow yabai
+	$(STOW_BIN) git
+	$(STOW_BIN) misc
+	$(STOW_BIN) ruby
+	$(STOW_BIN) screen
+	$(STOW_BIN) slate
+	$(STOW_BIN) sqlite
+	$(STOW_BIN) tig
+	$(STOW_BIN) tmux
+	$(STOW_BIN) vim
+	$(STOW_BIN) xvim
+	$(STOW_BIN) zsh
+	$(STOW_BIN) lldb
+	$(STOW_BIN) node
+	$(STOW_BIN) xdg_base_directory
+	$(STOW_BIN) asdf
+	$(STOW_BIN) docker
+	$(STOW_BIN) emacs
+	$(STOW_BIN) hammerspoon
+	$(STOW_BIN) bash
+	$(STOW_BIN) sh-common
+	$(STOW_BIN) skhd
+	$(STOW_BIN) homedir.makefile
+	$(STOW_BIN) yabai
 
 .PHONY: link-bin
 link-bin:
