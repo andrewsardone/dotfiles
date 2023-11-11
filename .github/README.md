@@ -5,6 +5,7 @@ These are my dotfiles. There are many like them, but these ones are mine.
     git clone --bare https://github.com/andrewsardone/dotfiles.git $HOME/.dotfiles.git
     alias config='git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME'
     config checkout
+    config config --local status.showUntrackedFiles no
 
 ## Bullet Points
 
