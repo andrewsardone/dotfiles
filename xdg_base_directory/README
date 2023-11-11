@@ -1,8 +1,0 @@
-The `.config/` directory is the root directory for configurations that work
-with the [XDG Base Directory Specification][xdg].
-
-Since this potentially encompasses a lot of configuration that I might not care
-about, I'm gitignoring the entire tree `git add -f`'ing files when the time
-comes.
-
-[xdg]: https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
