@@ -11,7 +11,7 @@
 	path = vendor/sonph/onehalf
 	url = https://github.com/andrewsardone/onehalf
 [submodule "tmux/.tmux/plugins/tpm"]
-	path = tmux/.tmux/plugins/tpm
+	path = .tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
 [submodule "vendor/arcticicestudio/nord-iterm2"]
 	path = vendor/arcticicestudio/nord-iterm2
