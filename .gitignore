@@ -13,3 +13,6 @@ jobs/tmp
 # because the lockfiles shoudl drift across machines and architectures.
 ## ref https://github.com/Homebrew/homebrew-bundle/pull/552
 Brewfile.lock.json
+
+# Ignore itself
+.dotfiles.git

@@ -20,7 +20,7 @@
 	path = terminal_profiles/iterm2-gruvbox
 	url = https://github.com/herrbischoff/iterm2-gruvbox
 [submodule "xdg_base_directory/.config/ranger/plugins/ranger_devicons"]
-	path = xdg_base_directory/.config/ranger/plugins/ranger_devicons
+	path = .config/ranger/plugins/ranger_devicons
 	url = https://github.com/alexanderjeurissen/ranger_devicons
 [submodule "terminal_profiles/iterm2-dracula"]
 	path = terminal_profiles/iterm2-dracula
