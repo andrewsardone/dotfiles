@@ -113,7 +113,7 @@ return packer.startup(function(use)
   use { "folke/trouble.nvim", commit = "897542f90050c3230856bc6e45de58b94c700bbf" }
 
   -- Telescope
-  use { "nvim-telescope/telescope.nvim", commit = "76ea9a898d3307244dce3573392dcf2cc38f340f" }
+  use { "nvim-telescope/telescope.nvim", commit = "7011eaae0ac1afe036e30c95cf80200b8dc3f21a" }
 
   -- Treesitter
   use {
