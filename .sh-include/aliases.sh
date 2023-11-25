@@ -16,7 +16,12 @@ if type nvim > /dev/null 2>&1; then
 fi
 
 if command -v btm >/dev/null 2>&1; then
-  alias btm="btm -b --mem_as_value --battery"
+  interface_style=$(uname | grep Darwin > /dev/null 2>&1 && defaults read -g AppleInterfaceStyle 2>&1)
+  if [ "$interface_style" != "Dark" ]; then
+    alias btm="btm -b --mem_as_value --color default-light"
+  else
+    alias btm="btm -b --mem_as_value --color default"
+  fi
 fi
 
 # root command for managing the bare git repo for dotfiles
