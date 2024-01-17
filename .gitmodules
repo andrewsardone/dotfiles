@@ -1,9 +1,3 @@
-[submodule "terminal_profiles/iterm-colors-pencil"]
-	path = terminal_profiles/iterm-colors-pencil
-	url = https://github.com/mattly/iterm-colors-pencil
-[submodule "terminal_profiles/nova-iterm"]
-	path = terminal_profiles/nova-iterm
-	url = https://github.com/trevordmiller/nova-iterm
 [submodule "vendor/rcaloras/bash-preexec"]
 	path = vendor/rcaloras/bash-preexec
 	url = https://github.com/rcaloras/bash-preexec
@@ -16,15 +10,9 @@
 [submodule "vendor/arcticicestudio/nord-iterm2"]
 	path = vendor/arcticicestudio/nord-iterm2
 	url = https://github.com/arcticicestudio/nord-iterm2.git
-[submodule "terminal_profiles/iterm2-gruvbox"]
-	path = terminal_profiles/iterm2-gruvbox
-	url = https://github.com/herrbischoff/iterm2-gruvbox
 [submodule "xdg_base_directory/.config/ranger/plugins/ranger_devicons"]
 	path = .config/ranger/plugins/ranger_devicons
 	url = https://github.com/alexanderjeurissen/ranger_devicons
-[submodule "terminal_profiles/iterm2-dracula"]
-	path = terminal_profiles/iterm2-dracula
-	url = https://github.com/dracula/iterm.git
 [submodule "vendor/Carbon-Bl4ck/Rofi-Beats"]
 	path = vendor/Carbon-Bl4ck/Rofi-Beats
 	url = https://github.com/Carbon-Bl4ck/Rofi-Beats
