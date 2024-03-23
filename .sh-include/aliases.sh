@@ -15,10 +15,6 @@ if type nvim > /dev/null 2>&1; then
   alias view='nvim -R'
 fi
 
-if command -v btm >/dev/null 2>&1; then
-  alias btm="btm -b --mem_as_value --battery"
-fi
-
 # root command for managing the bare git repo for dotfiles
 # refs https://github.com/andrewsardone/dotfiles/pull/9
 alias config='git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME'
