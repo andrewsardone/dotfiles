@@ -1983,7 +1983,7 @@
                                     "key_code": "delete_or_backspace"
                                 }
                             ]
-                        '',
+                        },
                         {
                             "from": {
                                 "key_code": "delete_or_backspace"
