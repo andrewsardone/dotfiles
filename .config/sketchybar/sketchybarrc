@@ -5,7 +5,7 @@
 
 PLUGIN_DIR="$CONFIG_DIR/plugins"
 
-sketchybar --bar position=top height=32 blur_radius=30 color=0x40000000
+sketchybar --bar position=top height=32 blur_radius=30 color=0xcc161616
 
 ##### Changing Defaults #####
 # We now change some default values, which are applied to all further items.
@@ -15,10 +15,10 @@ sketchybar --bar position=top height=32 blur_radius=30 color=0x40000000
 default=(
   padding_left=5
   padding_right=5
-  icon.font="JetBrainsMono Nerd Font:Medium:15.0"
-  label.font="JetBrainsMono Nerd Font:Medium:12.0"
-  icon.color=0xffffffff
-  label.color=0xffffffff
+  icon.font="JetBrainsMono Nerd Font:Thin:14.0"
+  label.font="JetBrainsMono Nerd Font:Regular:11.0"
+  icon.color=0xffcdcecf
+  label.color=0xffcdcecf
   icon.padding_left=4
   icon.padding_right=4
   label.padding_left=4
@@ -41,7 +41,7 @@ sketchybar --add item space left \
     click_script="aerospace workspace next"
 
 sketchybar --add item chevron left \
-           --set chevron icon= label.drawing=off \
+           --set chevron icon= label.drawing=off icon.font="JetBrainsMono Nerd Font:Thin:12.0" padding_right="-1" \
            --add item front_app left \
            --set front_app icon.drawing=off script="$PLUGIN_DIR/front_app.sh" \
            --subscribe front_app front_app_switched
