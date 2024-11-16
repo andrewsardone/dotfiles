@@ -1,5 +1,4 @@
 # Source the shell scripts and such that I share between bash and zsh.
-export TERM="xterm-256color"
 
 sh_common_dir=$HOME/.sh-include
 if [ -d $sh_common_dir ]; then
