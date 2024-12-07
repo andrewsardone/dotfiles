@@ -135,7 +135,7 @@ return packer.startup(function(use)
   -- https://github.com/mikesmithgh/kitty-scrollback.nvim
   use({
     'mikesmithgh/kitty-scrollback.nvim',
-    commit = "8cdd64f765bea81ec46f337babe050c51313be07",
+    commit = "d52825b2a076586d1af156a066db2d18cd1fd8cb",
     disable = false,
     opt = true,
     cmd = { 'KittyScrollbackGenerateKittens', 'KittyScrollbackCheckHealth' },
