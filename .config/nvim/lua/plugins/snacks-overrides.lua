@@ -13,6 +13,10 @@ return {
   {
     "snacks.nvim",
     opts = {
+      scroll = {
+        -- Disable smooth scrolling
+        enabled = false,
+      },
       dashboard = {
         preset = {
           pick = function(cmd, opts)
