@@ -1,0 +1,42 @@
+{
+  "actions" : [
+    {
+      "type" : "application",
+      "value" : "/Applications/kitty.app",
+      "key" : "t",
+      "label" : "Open Terminal"
+    },
+    {
+      "type" : "group",
+      "key" : "o",
+      "label" : "Open App",
+      "actions" : [
+        {
+          "key" : "b",
+          "type" : "application",
+          "value" : "/Applications/Firefox.app",
+          "label" : ""
+        },
+        {
+          "type" : "application",
+          "value" : "/Applications/Microsoft Outlook.app",
+          "label" : "",
+          "key" : "e"
+        },
+        {
+          "label" : "",
+          "key" : "w",
+          "value" : "/Applications/Obsidian.app",
+          "type" : "application"
+        },
+        {
+          "key" : "c",
+          "type" : "application",
+          "label" : "",
+          "value" : "/Applications/Slack.app"
+        }
+      ]
+    }
+  ],
+  "type" : "group"
+}
