@@ -4,7 +4,4 @@
 set guioptions-=r
 set guioptions-=L
 
-"-----------------------------------------------------------------------------
-" FONT
-"-----------------------------------------------------------------------------
-set guifont=SFMono\ Nerd\ Font\ Mono:h13
+set guifont=JetBrainsMono\ Nerd\ Font\ Mono\ Medium:h13
