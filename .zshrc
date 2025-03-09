@@ -193,9 +193,5 @@ export PATH="/usr/local/opt/gettext/bin:$PATH"
 
 peek() { tmux split-window -p 33 "$EDITOR" "$@" || exit; }
 
-# forgit — A utility tool powered by fzf for using git interactively.
-# https://github.com/wfxr/forgit
-source ~/.dotfiles/vendor/wfxr/forgit/forgit.plugin.zsh
-
 amazon_zshrc="$HOME/.zshrc.amazon"
 [ -f $amazon_zshrc ] && source $amazon_zshrc
