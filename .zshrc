@@ -16,6 +16,7 @@ alias reload!='source ~/.zshrc'
 KEYTIMEOUT=1
 
 # colors
+autoload -U colors && colors
 export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=true
 
