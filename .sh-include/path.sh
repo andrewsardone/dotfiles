@@ -1,6 +1,6 @@
 # path
 [ -z "$ANDROID_HOME" ] && export ANDROID_HOME=/usr/local/android-sdk/
-[ -z "$APS_PATH" ] && export APS_PATH="$HOME/.dotfiles/bin:$HOME/.toolbox/bin:/usr/local/opt/openjdk@11/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
+[ -z "$APS_PATH" ] && export APS_PATH="$HOME/.dotfiles/bin:/usr/local/opt/openjdk@11/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
 [ -z "$DEFAULT_PATH" ] && export DEFAULT_PATH=$PATH
 
 export PATH="$APS_PATH:$DEFAULT_PATH"
