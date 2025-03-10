@@ -32,4 +32,4 @@
 	defaultBranch = main
 
 [includeIf "gitdir:~/source/code.amazon.com/"]
-	path = .gitconfig-amazon
+	path = .gitconfig.amazon
