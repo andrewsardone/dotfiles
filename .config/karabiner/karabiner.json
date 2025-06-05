@@ -1039,6 +1039,37 @@
                             "to": [{ "key_code": "backslash" }]
                         }
                     ]
+                },
+                {
+                  "identifiers": {
+                    "is_keyboard": true,
+                    "is_pointing_device": true,
+                    "product_id": 4097,
+                    "vendor_id": 10730
+                  },
+                  "ignore": false,
+                  "simple_modifications": [
+                    {
+                      "from": {
+                        "key_code": "backslash"
+                      },
+                      "to": [
+                        {
+                          "key_code": "delete_or_backspace"
+                        }
+                      ]
+                    },
+                    {
+                      "from": {
+                        "key_code": "delete_or_backspace"
+                      },
+                      "to": [
+                        {
+                          "key_code": "backslash"
+                        }
+                      ]
+                    }
+                  ]
                 }
             ],
             "fn_function_keys": [
