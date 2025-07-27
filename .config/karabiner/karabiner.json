@@ -4,6 +4,43 @@
             "complex_modifications": {
                 "rules": [
                     {
+                        "description": "Hyper key launch commands",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "b",
+                                    "modifiers": { "mandatory": ["left_command", "left_control", "left_option", "left_shift"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Firefox'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "x",
+                                    "modifiers": { "mandatory": ["left_command", "left_control", "left_option", "left_shift"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Mail'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "w",
+                                    "modifiers": { "mandatory": ["left_command", "left_control", "left_option", "left_shift"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Obsidian'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "t",
+                                    "modifiers": { "mandatory": ["left_command", "left_control", "left_option", "left_shift"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Kitty'" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Akimbo cmd to F12",
                         "manipulators": [
                             {
@@ -1041,35 +1078,23 @@
                     ]
                 },
                 {
-                  "identifiers": {
-                    "is_keyboard": true,
-                    "is_pointing_device": true,
-                    "product_id": 4097,
-                    "vendor_id": 10730
-                  },
-                  "ignore": false,
-                  "simple_modifications": [
-                    {
-                      "from": {
-                        "key_code": "backslash"
-                      },
-                      "to": [
-                        {
-                          "key_code": "delete_or_backspace"
-                        }
-                      ]
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": true,
+                        "product_id": 4097,
+                        "vendor_id": 10730
                     },
-                    {
-                      "from": {
-                        "key_code": "delete_or_backspace"
-                      },
-                      "to": [
+                    "ignore": false,
+                    "simple_modifications": [
                         {
-                          "key_code": "backslash"
+                            "from": { "key_code": "backslash" },
+                            "to": [{ "key_code": "delete_or_backspace" }]
+                        },
+                        {
+                            "from": { "key_code": "delete_or_backspace" },
+                            "to": [{ "key_code": "backslash" }]
                         }
-                      ]
-                    }
-                  ]
+                    ]
                 }
             ],
             "fn_function_keys": [
