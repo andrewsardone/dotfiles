@@ -24,6 +24,14 @@
                             },
                             {
                                 "from": {
+                                    "key_code": "c",
+                                    "modifiers": { "mandatory": ["left_command", "left_control", "left_option", "left_shift"] }
+                                },
+                                "to": [{ "shell_command": "open -a Slack" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
                                     "key_code": "w",
                                     "modifiers": { "mandatory": ["left_command", "left_control", "left_option", "left_shift"] }
                                 },
