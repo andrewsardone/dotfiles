@@ -1,6 +1,8 @@
 after-login-command = []
 after-startup-command = [
-  'exec-and-forget /opt/homebrew/opt/sketchybar/bin/sketchybar'
+  'exec-and-forget /opt/homebrew/opt/sketchybar/bin/sketchybar',
+  'workspace 1',
+  'layout floating',
 ]
 exec-on-workspace-change = [
   '/bin/bash', '-c', '/opt/homebrew/opt/sketchybar/bin/sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
@@ -86,3 +88,8 @@ k = 'resize height -50'
 l = 'resize width +50'
 enter = 'mode main'
 esc = 'mode main'
+
+# Auto-float windows that open on workspace 1
+[[on-window-detected]]
+if.workspace = '1'
+run = 'layout floating'
