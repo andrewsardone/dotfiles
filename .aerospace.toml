@@ -35,6 +35,7 @@ alt-l = 'focus right --boundaries-action wrap-around-the-workspace'
 
 alt-enter = 'exec-and-forget kitty --single-instance -d ~'
 alt-f = 'fullscreen'
+alt-t = 'layout tiling'
 
 alt-shift-h = 'move left'
 alt-shift-j = 'move down'
