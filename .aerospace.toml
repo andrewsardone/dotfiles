@@ -33,6 +33,7 @@ alt-j = 'focus down --boundaries-action wrap-around-the-workspace'
 alt-k = 'focus up --boundaries-action wrap-around-the-workspace'
 alt-l = 'focus right --boundaries-action wrap-around-the-workspace'
 
+alt-enter = 'exec-and-forget kitty --single-instance -d ~'
 alt-f = 'fullscreen'
 
 alt-shift-h = 'move left'
