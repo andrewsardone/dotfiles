@@ -2,6 +2,7 @@ after-login-command = []
 after-startup-command = [
   'workspace 1',
   'layout floating',
+  'exec-and-forget borders active_color=0xCCFF0000 inactive_color=0xff494d64 width=5.0'
 ]
 exec-on-workspace-change = [
 ]
