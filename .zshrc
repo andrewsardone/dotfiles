@@ -196,3 +196,19 @@ peek() { tmux split-window -p 33 "$EDITOR" "$@" || exit; }
 
 amazon_zshrc="$HOME/.zshrc.amazon"
 [ -f $amazon_zshrc ] && source $amazon_zshrc
+
+# Cross-terminal directory history with fzf jump
+DIRHISTORY_FILE="$HOME/.dir_history"
+
+autoload -U add-zsh-hook
+add-zsh-hook chpwd _log_dir
+
+_log_dir() {
+  local f="$DIRHISTORY_FILE"
+  { echo "$PWD"; cat "$f" 2>/dev/null } | awk '!seen[$0]++' | head -200 > "$f.tmp" && mv "$f.tmp" "$f"
+}
+
+j() {
+  local dir
+  dir=$(cat "$DIRHISTORY_FILE" 2>/dev/null | fzf --no-sort) && pushd "$dir"
+}
