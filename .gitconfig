@@ -36,3 +36,6 @@
 
 [includeIf "gitdir:~/workplace/"]
 	path = .gitconfig.amazon
+
+[includeIf "gitdir:/workplace/"]
+	path = .gitconfig.amazon
