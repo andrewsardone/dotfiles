@@ -212,3 +212,17 @@ j() {
   local dir
   dir=$(cat "$DIRHISTORY_FILE" 2>/dev/null | fzf --no-sort) && pushd "$dir"
 }
+
+# tmux session picker
+t() {
+  if ! tmux list-sessions 2>/dev/null; then
+    tmux new-session
+    return
+  fi
+
+  if [ -x "$HOME/.tmux/scripts/window-picker.sh" ]; then
+    "$HOME/.tmux/scripts/window-picker.sh"
+  else
+    tmux list-sessions
+  fi
+}

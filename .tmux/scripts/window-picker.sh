@@ -15,5 +15,9 @@ selected=$(tmux list-windows -a -F '#{session_name}:#{window_index} #{window_nam
 
 if [ -n "$selected" ]; then
   target=$(echo "$selected" | cut -d' ' -f1)
-  tmux switch-client -t "$target"
+  if [ -n "$TMUX" ]; then
+    tmux switch-client -t "$target"
+  else
+    tmux attach-session -t "$target"
+  fi
 fi
