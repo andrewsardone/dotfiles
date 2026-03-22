@@ -7,25 +7,49 @@
     "CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY": "1",
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
   },
-  "enableAllProjectMcpServers": false,
-  "alwaysThinkingEnabled": true,
   "permissions": {
+    "allow": [
+      "Bash(git:*)",
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(grep:*)",
+      "Bash(rg:*)",
+      "Bash(find:*)",
+      "Bash(mkdir:*)",
+      "Bash(touch:*)",
+      "Bash(mv:*)",
+      "Bash(cp:*)",
+      "Bash(echo:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(wc:*)",
+      "Bash(sort:*)",
+      "Bash(uniq:*)",
+      "Bash(awk:*)",
+      "Bash(sed:*)",
+      "Bash(jq:*)",
+      "Bash(which:*)",
+      "Bash(pwd:*)",
+      "Bash(env:*)",
+      "Bash(npm:*)",
+      "Bash(npx:*)",
+      "Bash(node:*)",
+      "Bash(python:*)",
+      "Bash(python3:*)",
+      "Bash(make:*)",
+      "Bash(curl:*)"
+    ],
     "deny": [
-      "Bash(rm -rf *)",
-      "Bash(rm -fr *)",
-      "Bash(sudo *)",
-      "Bash(mkfs *)",
-      "Bash(dd *)",
-      "Bash(wget *|bash*)",
-      "Bash(wget *| bash*)",
-      "Bash(git push --force*)",
-      "Bash(git push *--force*)",
-      "Bash(git reset --hard*)",
-
+      "Bash(rm -rf:*)",
+      "Bash(rm -fr:*)",
+      "Bash(sudo:*)",
+      "Bash(mkfs:*)",
+      "Bash(dd:*)",
+      "Bash(git push --force:*)",
+      "Bash(git reset --hard:*)",
       "Edit(~/.bashrc)",
       "Edit(~/.zshrc)",
       "Edit(~/.ssh/**)",
-
       "Read(~/.ssh/**)",
       "Read(~/.gnupg/**)",
       "Read(~/.aws/**)",
@@ -43,9 +67,13 @@
       "Read(~/Library/Application Support/**/electrum*/**)",
       "Read(~/Library/Application Support/**/exodus*/**)",
       "Read(~/Library/Application Support/**/phantom*/**)",
-      "Read(~/Library/Application Support/**/solflare*/**)"
-    ]
+      "Read(~/Library/Application Support/**/solflare*/**)",
+      "Read(**/.env)",
+      "Read(**/.env.*)"
+    ],
+    "defaultMode": "acceptEdits"
   },
+  "enableAllProjectMcpServers": false,
   "hooks": {
     "PreToolUse": [
       {
@@ -66,5 +94,7 @@
   "statusLine": {
     "type": "command",
     "command": "~/.claude/statusline.sh"
-  }
+  },
+  "alwaysThinkingEnabled": true,
+  "skipDangerousModePermissionPrompt": true
 }
