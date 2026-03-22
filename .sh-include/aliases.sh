@@ -18,3 +18,5 @@ fi
 # root command for managing the bare git repo for dotfiles
 # refs https://github.com/andrewsardone/dotfiles/pull/9
 alias config='git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME'
+
+alias claude-yolo="claude --dangerously-skip-permissions"
