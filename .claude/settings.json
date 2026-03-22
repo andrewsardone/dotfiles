@@ -37,7 +37,8 @@
       "Bash(python:*)",
       "Bash(python3:*)",
       "Bash(make:*)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(config:*)"
     ],
     "deny": [
       "Bash(rm -rf:*)",
