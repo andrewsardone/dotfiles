@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+
+# Ephemeral session data and conversation transcripts
+backups/
+cache/
+debug/
+file-history/
+history.jsonl
+mcp-needs-auth-cache.json
+plugins/
+projects/
+session-env/
+sessions/
+shell-snapshots/
+statsig/
+todos/
+
+# Local-only settings (machine-specific paths, personal experiments)
+settings.local.json
