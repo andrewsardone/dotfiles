@@ -111,7 +111,7 @@ brew "koekeishiya/formulae/skhd", args: ["HEAD", "with-logging"]
 brew "koekeishiya/formulae/yabai"
 brew "saulpw/vd/visidata"
 brew "yqrashawn/goku/goku"
-brew "sst/tap/opencode"
+brew "anomalyco/tap/opencode"
 cask "1password"
 cask "amazon-workspaces"
 cask "appcleaner"
