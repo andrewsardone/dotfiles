@@ -1,7 +1,7 @@
 ---
 name: managing-dotfiles
 description: >
-  Manages dotfiles tracked in a bare git repository using the `config` alias.
+  Manages dotfiles tracked in a bare git repository at ~/.dotfiles.git.
   Use this skill whenever the user mentions dotfiles, wants to track a config
   file, or asks for git operations (status, diff, add, commit, push, pull,
   branch) on files like .zshrc, .gitconfig, .vimrc, .tmux.conf, or any
@@ -14,8 +14,9 @@ description: >
 # Managing Dotfiles
 
 This user tracks dotfiles using a **bare git repository** — a setup where the
-git directory and the working tree are separate. All git operations go through
-the `config` alias, not `git`.
+git directory and the working tree are separate. The user has a `config` shell
+alias, but agents must use the full git command form since aliases are not
+available in non-interactive shells.
 
 ## The Setup
 
@@ -23,41 +24,44 @@ the `config` alias, not `git`.
 - **Work-tree**: `$HOME`
 - **Remote**: `https://github.com/andrewsardone/dotfiles.git`
 - **Default branch**: `master`
-- **`config` alias**: equivalent to
-  `git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME`
+- **Git command prefix**: `git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME`
+  (the user's `config` alias is equivalent to this)
 
-Because `showUntrackedFiles = no` is set, `config status` only shows files
-that are already tracked. New files are invisible until explicitly added.
+Because `showUntrackedFiles = no` is set, status only shows files that are
+already tracked. New files are invisible until explicitly added.
 
 ## Common Operations
 
+Replace `DF` below with `git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME`:
+
 | Task | Command |
 |------|---------|
-| Check what's changed | `config status` |
-| Review a diff | `config diff` |
-| Start tracking a new file | `config add ~/.filename` |
-| Stage changes to a tracked file | `config add ~/.filename` |
-| Commit | `config commit -m "..."` |
-| Push (only when asked) | `config push` |
-| Pull (only when asked) | `config pull` |
-| List all tracked files | `config ls-files` |
-| Show recent history | `config log --oneline` |
+| Check what's changed | `DF status` |
+| Review a diff | `DF diff` |
+| Start tracking a new file | `DF add ~/.filename` |
+| Stage changes to a tracked file | `DF add ~/.filename` |
+| Commit | `DF commit -m "..."` |
+| Push (only when asked) | `DF push` |
+| Pull (only when asked) | `DF pull` |
+| List all tracked files | `DF ls-files` |
+| Show recent history | `DF log --oneline` |
 
 ## Rules
 
-**Always use `config`, never `git`.** The alias carries the `--git-dir` and
-`--work-tree` flags that make the bare repo work. Running `git` in `$HOME`
-will either do nothing or operate on the wrong repo.
+**Always spell out `git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME`.**
+Running plain `git` in `$HOME` will either do nothing or operate on the wrong
+repo. Shell aliases and variables don't expand properly in non-interactive
+shells, so inline the full command every time.
 
 **Never push automatically.** Push and pull are always explicit — commit and
-stop. Only run `config push` or `config pull` if the user specifically asks.
+stop. Only run push or pull if the user specifically asks.
 
 **Use full paths.** Reference files as `~/.zshrc` rather than relative paths,
 since the work-tree is `$HOME` and commands may be run from any directory.
 
 **New files don't appear in status.** If the user asks why a file isn't
 showing up, it's because `showUntrackedFiles = no` hides anything not yet
-tracked. The fix is `config add <path>` to start tracking it.
+tracked. The fix is `DF add <path>` to start tracking it.
 
 ## Branching
 
