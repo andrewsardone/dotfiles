@@ -290,10 +290,38 @@ When multiple valid approaches exist, choose based on:
 
 ## Version Control
 
+### Git Commit Style
+
+Follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
+
+**Subject Line:**
+- Format: `type: short summary`
+- Use imperative mood: "add feature" not "added feature" or "adds feature"
+- Keep to 50 characters or less
+- Do not end with a period
+- Lowercase after the type prefix
+- Common types: `feat`, `fix`, `refactor`, `docs`, `chore`, `test`, `ci`
+
+**Body:**
+- Separate from subject with a blank line
+- Wrap at 72 characters
+- Explain the WHY and WHAT, not the HOW (the diff shows the how)
+- Use bullet points where appropriate (hyphen followed by a single space)
+- Use a hanging indent for multi-line bullets
+
+**Multiple Commits:**
+Split changes into multiple atomic commits when they touch different concerns. One commit per logical change.
+
+| File Count | Minimum Commits |
+|------------|-----------------|
+| 3+ files   | 2+ commits      |
+| 5+ files   | 3+ commits      |
+
+Combine files in the same commit only when tightly coupled (e.g., implementation + its direct test, or a type definition + the only file that uses it).
+
+### Other Rules
+
 - Git commits must only introduce code changes relevant to the logical change at hand
-- Git commit messages need to follow the Conventional Commits specification
-- The first line of a commit message (the subject) should be less than 50 characters
-- The detail of the commit message should wrap at 72 characters
 - Never amend/rebase commits already pushed to shared branches
 - Never push directly to main — use feature branches and PRs
 - Never commit secrets, API keys, or credentials — use `.env` files (gitignored) and environment variables
