@@ -2,71 +2,60 @@
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
   "agents": {
     "sisyphus": {
-      "model": "anthropic/claude-opus-4-6",
-      "variant": "max"
+      "model": "opencode/mimo-v2-pro-free"
     },
     "hephaestus": {
-      "model": "opencode/gpt-5.3-codex",
-      "variant": "medium"
+      "model": "opencode/gpt-5-nano"
     },
     "oracle": {
-      "model": "opencode/gpt-5.4",
-      "variant": "high"
+      "model": "opencode/mimo-v2-pro-free"
     },
     "explore": {
-      "model": "anthropic/claude-haiku-4-5"
+      "model": "opencode/minimax-m2.5-free"
     },
     "multimodal-looker": {
-      "model": "opencode/gpt-5.4",
-      "variant": "medium"
+      "model": "opencode/big-pickle"
     },
     "prometheus": {
-      "model": "anthropic/claude-opus-4-6",
-      "variant": "max"
+      "model": "opencode/mimo-v2-pro-free"
     },
     "metis": {
-      "model": "anthropic/claude-opus-4-6",
-      "variant": "max"
+      "model": "opencode/mimo-v2-pro-free"
     },
     "momus": {
-      "model": "opencode/gpt-5.4",
-      "variant": "xhigh"
+      "model": "opencode/mimo-v2-pro-free"
     },
     "atlas": {
-      "model": "anthropic/claude-sonnet-4-6"
+      "model": "opencode/mimo-v2-pro-free"
     },
     "sisyphus-junior": {
-      "model": "anthropic/claude-sonnet-4-6"
+      "model": "opencode/big-pickle"
     }
   },
   "categories": {
     "visual-engineering": {
-      "model": "opencode/gemini-3.1-pro",
-      "variant": "high"
+      "model": "opencode/big-pickle"
     },
     "ultrabrain": {
-      "model": "opencode/gpt-5.4",
-      "variant": "xhigh"
+      "model": "opencode/mimo-v2-pro-free"
     },
     "deep": {
-      "model": "opencode/gpt-5.3-codex",
-      "variant": "medium"
+      "model": "opencode/mimo-v2-pro-free"
     },
     "artistry": {
-      "model": "opencode/gemini-3.1-pro",
-      "variant": "high"
+      "model": "opencode/big-pickle"
     },
     "quick": {
-      "model": "anthropic/claude-haiku-4-5"
+      "model": "opencode/minimax-m2.5-free"
     },
     "unspecified-low": {
-      "model": "anthropic/claude-sonnet-4-6"
+      "model": "opencode/big-pickle"
     },
     "unspecified-high": {
-      "model": "anthropic/claude-sonnet-4-6"
+      "model": "opencode/mimo-v2-pro-free"
     },
     "writing": {
-      "model": "opencode/gemini-3-flash"
+      "model": "opencode/big-pickle"
     }
   }
 }
