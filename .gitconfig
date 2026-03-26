@@ -39,6 +39,8 @@
 
 [includeIf "gitdir:/workplace/"]
 	path = .gitconfig.amazon
+[includeIf "gitdir:/Volumes/workplace/"]
+	path = .gitconfig.amazon
 [credential "https://github.com"]
 	helper = !/opt/homebrew/bin/gh auth git-credential
 [credential "https://gist.github.com"]
