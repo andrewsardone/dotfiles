@@ -7,7 +7,7 @@ font-size = 13
 adjust-cell-height = 5%
 
 # Window
-macos-titlebar-style = hidden
+macos-titlebar-style = tabs
 window-padding-x = 8
 window-padding-y = 0
 
