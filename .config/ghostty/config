@@ -21,7 +21,7 @@ shell-integration = detect
 keybind = ctrl+shift+e=new_window
 
 # Colors — Nightfox (aps mod)
-background = 161616
+background = 111111
 foreground = cdcecf
 selection-background = 2b3b51
 selection-foreground = cdcecf
