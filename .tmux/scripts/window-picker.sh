@@ -4,7 +4,26 @@ if ! command -v fzf &>/dev/null; then
   exit 0
 fi
 
-selected=$(tmux list-windows -a -F '#{session_name}:#{window_index} #{window_name} #{pane_current_path}' | \
+FOCUS_LOG="$HOME/.tmux/window-focus.log"
+
+# Build an associative lookup of focus timestamps
+declare -A focus_ts
+if [ -f "$FOCUS_LOG" ]; then
+  while IFS=$'\t' read -r ts key; do
+    focus_ts[$key]=$ts
+  done < "$FOCUS_LOG"
+fi
+
+# Annotate each window with its last-focus timestamp, sort, strip timestamp
+# Format after cut: "session:window_index window_name pane_current_path"
+sorted=$(
+  while IFS=$'\t' read -r key rest; do
+    printf '%s\t%s %s\n' "${focus_ts[$key]:-0}" "$key" "$rest"
+  done < <(tmux list-windows -a -F '#{session_name}:#{window_index}'$'\t''#{window_name} #{pane_current_path}') \
+  | sort -rn | cut -f2-
+)
+
+selected=$(echo "$sorted" | \
   fzf \
     --height 100% \
     --no-sort \
