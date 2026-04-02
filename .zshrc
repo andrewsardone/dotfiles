@@ -226,3 +226,17 @@ t() {
     tmux list-sessions
   fi
 }
+
+# tmux session picker
+ts() {
+  if ! tmux list-sessions 2>/dev/null; then
+    tmux new-session
+    return
+  fi
+
+  if [ -x "$HOME/.tmux/scripts/session-picker.sh" ]; then
+    "$HOME/.tmux/scripts/session-picker.sh"
+  else
+    tmux list-sessions
+  fi
+}
