@@ -65,7 +65,9 @@ bindkey -M vicmd v edit-command-line
 bindkey '\C-x\C-e' edit-command-line
 
 # prompt
-eval "$(starship init zsh)"
+if command -v starship >/dev/null 2>&1; then
+  eval "$(starship init zsh)"
+fi
 
 # pure prompt config
 PURE_GIT_PULL=0
