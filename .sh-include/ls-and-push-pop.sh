@@ -12,7 +12,7 @@ alias ll="ls -la"
 
 # `lsd` is a more modern `ls`
 # https://github.com/Peltoche/lsd
-[ -f `which lsd` ] && alias ls="lsd"
+command -v lsd >/dev/null 2>&1 && alias ls="lsd"
 
 function aps_smart_ls {
   clear && pwd
