@@ -10,7 +10,7 @@ fi
 
 # Key bindings
 # ------------
-source "/opt/homebrew/opt/fzf/shell/key-bindings.zsh"
+source "/opt/homebrew/opt/fzf/shell/key-bindings.zsh" 2> /dev/null
 
 # Enhanced fzf functions for glob-based file searching
 # Ctrl+T for file search with glob patterns
