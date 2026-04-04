@@ -62,3 +62,6 @@ export CLICOLOR=1
 alias grep='grep --color=auto'
 
 [ -f ~/.bash-preexec.sh ] && source ~/.bash-preexec.sh
+
+# Added by AIM CLI
+export PATH="$HOME/.aim/mcp-servers:$PATH"

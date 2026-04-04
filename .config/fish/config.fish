@@ -61,3 +61,6 @@ function aps_popd
   popd && aps_smart_ls
 end
 alias d aps_popd
+
+# Added by AIM CLI
+set -gx PATH "$HOME/.aim/mcp-servers" $PATH

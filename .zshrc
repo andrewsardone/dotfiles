@@ -236,3 +236,6 @@ ts() {
     tmux list-sessions
   fi
 }
+
+# Added by AIM CLI
+export PATH="$HOME/.aim/mcp-servers:$PATH"
