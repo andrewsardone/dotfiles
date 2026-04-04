@@ -28,16 +28,8 @@ export EDITOR=nvim
 bindkey -v
 bindkey '^R' history-incremental-search-backward # a must have
 
-function block_cursor() {
-  if [ ! -z "$TMUX" ]; then
-    print -n -- "\EPtmux;\E\E]50;CursorShape=0\C-G\E\\"
-  fi
-}
-function line_cursor() {
-  if [ ! -z "$TMUX" ]; then
-    print -n -- "\EPtmux;\E\E]50;CursorShape=1\C-G\E\\"
-  fi
-}
+function block_cursor() { print -n '\e[2 q' }
+function line_cursor()  { print -n '\e[6 q' }
 
 function zle-keymap-select zle-line-init {
   # change cursor shape in iTerm2 and in tmux
@@ -67,6 +59,8 @@ bindkey '\C-x\C-e' edit-command-line
 # prompt
 if command -v starship >/dev/null 2>&1; then
   eval "$(starship init zsh)"
+else
+  autoload -U promptinit; promptinit; prompt pure
 fi
 
 # pure prompt config
