@@ -37,6 +37,9 @@
       autohide = false;
       autohide-delay = 0.0;
       autohide-time-modifier = 0.5;
+      orientation = "right";
+      tilesize = 20;
+      magnification = false;
       # TODO: expose-group-by-app — verify nix-darwin attr (may be expose-group-apps)
       # expose-group-apps = true;
     };
