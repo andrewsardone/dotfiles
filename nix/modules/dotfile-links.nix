@@ -1,0 +1,115 @@
+{ config, repoPath, ... }:
+let
+  # Create a symlink from $HOME/<dest> → <repoPath>/<src> that points back
+  # into the live repo checkout. Edits take effect immediately without a
+  # rebuild.
+  link = src: {
+    source = config.lib.file.mkOutOfStoreSymlink "${repoPath}/${src}";
+  };
+in
+{
+  # ── Window manager ────────────────────────────────────────────────────
+  home.file.".aerospace.toml".source =
+    config.lib.file.mkOutOfStoreSymlink "${repoPath}/.aerospace.toml";
+
+  # ── Status bar ────────────────────────────────────────────────────────
+  home.file.".config/sketchybar" = link ".config/sketchybar";
+
+  # ── Automation / scripting ────────────────────────────────────────────
+  home.file.".hammerspoon" = link ".hammerspoon";
+
+  # ── Keyboard ──────────────────────────────────────────────────────────
+  home.file.".config/karabiner" = link ".config/karabiner";
+
+  # ── Editor ────────────────────────────────────────────────────────────
+  # LazyVim manages its own plugins; just link the whole config dir.
+  home.file.".config/nvim" = link ".config/nvim";
+
+  # ── Local binaries ────────────────────────────────────────────────────
+  home.file.".local/bin" = link ".local/bin";
+
+  # ── Prompt ────────────────────────────────────────────────────────────
+  # programs.starship is enabled in shell.nix; the actual settings live here.
+  home.file.".config/starship.toml".source =
+    config.lib.file.mkOutOfStoreSymlink "${repoPath}/.config/starship.toml";
+
+  # ── tmux status theme + scripts ──────────────────────────────────────
+  # programs.tmux (tmux.nix) sources ~/.tmux-status.conf at runtime.
+  home.file.".tmux-status.conf".source =
+    config.lib.file.mkOutOfStoreSymlink "${repoPath}/.tmux-status.conf";
+
+  home.file.".tmux/scripts" = link ".tmux/scripts";
+
+  # ── Git helpers ───────────────────────────────────────────────────────
+  # programs.git (git.nix) references ~/.gitconfig.amazon via includeIf.
+  home.file.".gitconfig.amazon".source =
+    config.lib.file.mkOutOfStoreSymlink "${repoPath}/.gitconfig.amazon";
+
+  home.file.".gitexcludes".source =
+    config.lib.file.mkOutOfStoreSymlink "${repoPath}/.gitexcludes";
+
+  home.file.".gitattributes".source =
+    config.lib.file.mkOutOfStoreSymlink "${repoPath}/.gitattributes";
+
+  home.file.".githelpers".source =
+    config.lib.file.mkOutOfStoreSymlink "${repoPath}/.githelpers";
+
+  # ── Fish plugin manifest ───────────────────────────────────────────────
+  # Fisher reads this file; run `fisher update` after first setup to
+  # install jomik/fish-gruvbox and any other listed plugins.
+  home.file.".config/fish/fish_plugins".source =
+    config.lib.file.mkOutOfStoreSymlink "${repoPath}/.config/fish/fish_plugins";
+
+  # ── Misc dotfiles ─────────────────────────────────────────────────────
+  home.file.".tigrc".source =
+    config.lib.file.mkOutOfStoreSymlink "${repoPath}/.tigrc";
+
+  home.file.".ideavimrc".source =
+    config.lib.file.mkOutOfStoreSymlink "${repoPath}/.ideavimrc";
+
+  home.file.".ignore".source =
+    config.lib.file.mkOutOfStoreSymlink "${repoPath}/.ignore";
+
+  home.file.".npmrc".source =
+    config.lib.file.mkOutOfStoreSymlink "${repoPath}/.npmrc";
+
+  home.file.".hushlogin".source =
+    config.lib.file.mkOutOfStoreSymlink "${repoPath}/.hushlogin";
+
+  home.file.".screenrc".source =
+    config.lib.file.mkOutOfStoreSymlink "${repoPath}/.screenrc";
+
+  home.file.".sqliterc".source =
+    config.lib.file.mkOutOfStoreSymlink "${repoPath}/.sqliterc";
+
+  home.file.".lldbinit".source =
+    config.lib.file.mkOutOfStoreSymlink "${repoPath}/.lldbinit";
+
+  home.file.".asdfrc".source =
+    config.lib.file.mkOutOfStoreSymlink "${repoPath}/.asdfrc";
+
+  home.file.".gemrc".source =
+    config.lib.file.mkOutOfStoreSymlink "${repoPath}/.gemrc";
+
+  home.file.".irbrc".source =
+    config.lib.file.mkOutOfStoreSymlink "${repoPath}/.irbrc";
+
+  # Makefile at $HOME for convenience tasks (cleanup, etc.)
+  home.file."Makefile".source =
+    config.lib.file.mkOutOfStoreSymlink "${repoPath}/Makefile";
+
+  # ── NOT linked (managed by programs.* modules) ────────────────────────
+  # .gitconfig          → programs.git  generates ~/.config/git/config
+  # .config/fish/config.fish → programs.fish generates ~/.config/fish/config.fish
+  # .tmux.conf          → programs.tmux generates ~/.config/tmux/tmux.conf
+  # .config/starship.toml is linked above; programs.starship init is
+  #   injected by programs.starship.enable without overwriting the file.
+
+  # ── NOT linked (legacy, inactive) ────────────────────────────────────
+  # .vim/, .vimrc, .gvimrc     — legacy vim (still in repo for reference)
+  # .emacs.d/                  — legacy emacs
+  # .bashrc, .bash_profile, .bash_prompt — legacy bash
+  # .iterm/                    — legacy iTerm config
+  # .yabairc, .skhdrc          — replaced by AeroSpace + Karabiner
+  # vendor/                    — third-party vendored files
+}
