@@ -200,17 +200,6 @@
       alias did="vim +'normal Go' +'r!date' +'normal o' $APS_DID_FILE"
 
       # ── Optional / machine-specific includes ──────────────────────
-      NUB_BIN="$HOME/source/nutshell/nub/bin/nub"
-      [ -f "$NUB_BIN" ] && eval "$($NUB_BIN init -)"
-
-      [ -f "$HOME/.nutshell.zshrc" ] && source "$HOME/.nutshell.zshrc"
-
-      [ -f "$HOME/.asdf/asdf.sh" ] && source "$HOME/.asdf/asdf.sh"
-      [ -f "$HOME/.asdf/completions/asdf.bash" ] && source "$HOME/.asdf/completions/asdf.bash"
-
-      gcloud_inc='/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
-      [ -f "$gcloud_inc" ] && source "$gcloud_inc"
-
       [ -f "$HOME/.zshrc.amazon" ] && source "$HOME/.zshrc.amazon"
 
       if [ -d ~/.vault/env ]; then
