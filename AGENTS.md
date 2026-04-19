@@ -8,8 +8,8 @@ Instructions for AI coding agents (Claude Code and similar) working in this repo
 
 This is a regular git repository. It contains two kinds of things side by side:
 
-1. **Dotfiles** — the actual config files (`.zshrc`, `.gitconfig`, `.tmux.conf`,
-   `.config/sketchybar/`, `.hammerspoon/`, etc.)
+1. **Dotfiles** — the actual config files (`.gitconfig`, `.tmux.conf`,
+   `.hammerspoon/`, `.config/karabiner/`, `.config/nvim/`, etc.)
 2. **Nix configuration** — `flake.nix` and `nix/` which use nix-darwin and
    home-manager to deploy those dotfiles and manage the macOS system
 
@@ -127,8 +127,8 @@ Use a **`mkOutOfStoreSymlink` home.file entry** (dotfile-links.nix) when:
   string buys nothing: no validation, no composability, just rebuild friction
 - An external tool writes back to the file (Karabiner exports `karabiner.json`
   when you change settings in its UI; LazyVim writes into `.config/nvim/`)
-- The file needs a fast iteration loop — sketchybar scripts, Hammerspoon Lua,
-  `.aerospace.toml` are edited, reloaded, and tweaked in seconds; a full
+- The file needs a fast iteration loop — Hammerspoon Lua, Neovim config,
+  Karabiner mappings are edited, reloaded, and tweaked in seconds; a full
   `darwin-rebuild switch` for each tweak is the wrong tradeoff
 
 Never use plain `.source = ./path` (without `mkOutOfStoreSymlink`) — that

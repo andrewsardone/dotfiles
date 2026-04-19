@@ -11,24 +11,17 @@
     };
 
     taps = [
-      "anomalyco/tap"           # opencode
+      "anomalyco/tap"              # opencode
       "autozimu/homebrew-formulas" # unison-fsmonitor
-      "clementtsang/bottom"     # bottom
-      "felixkratz/formulae"     # borders, sketchybar
-      "koekeishiya/formulae"    # yabai, skhd (legacy, kept for reference)
-      "nikitabobko/tap"         # aerospace cask
-      "saulpw/vd"               # visidata
-      "yqrashawn/goku"          # goku (karabiner DSL)
+      "clementtsang/bottom"        # bottom
+      "koekeishiya/formulae"       # yabai, skhd (legacy, kept for reference)
+      "saulpw/vd"                  # visidata
+      "yqrashawn/goku"             # goku (karabiner DSL)
     ];
 
     # CLI formulae not available in nixpkgs, or macOS-specific.
     # Tools that exist in nixpkgs are in nix/modules/packages.nix instead.
     brews = [
-      # Window border renderer (FelixKratz custom tap)
-      "felixkratz/formulae/borders"
-      # Status bar (FelixKratz custom tap)
-      "felixkratz/formulae/sketchybar"
-
       # macOS-specific / not in nixpkgs
       "choose-gui"
       "colima"
@@ -146,7 +139,7 @@
       "mimestream"
       "monitorcontrol"
       "multi"
-      "nikitabobko/tap/aerospace"
+
       "obsidian"
       "pocket-casts"
       "quicklook-json"

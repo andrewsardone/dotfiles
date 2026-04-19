@@ -12,13 +12,6 @@ let
   };
 in
 {
-  # ── Window manager ────────────────────────────────────────────────────
-  home.file.".aerospace.toml".source =
-    config.lib.file.mkOutOfStoreSymlink "${repoPath}/.aerospace.toml";
-
-  # ── Status bar ────────────────────────────────────────────────────────
-  home.file.".config/sketchybar" = link ".config/sketchybar";
-
   # ── Automation / scripting ────────────────────────────────────────────
   home.file.".hammerspoon" = link ".hammerspoon";
 

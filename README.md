@@ -25,7 +25,7 @@ flake.nix
 
 All `home.file` entries use `config.lib.file.mkOutOfStoreSymlink` so the
 symlinks point to `~/.dotfiles/<file>` rather than into the Nix store. This
-means you can edit `.aerospace.toml`, Hammerspoon scripts, sketchybar config,
+means you can edit Hammerspoon scripts, Neovim config, Karabiner mappings,
 etc. in place and changes take effect without running `darwin-rebuild switch`.
 
 ---
@@ -128,10 +128,9 @@ the file in `~/.dotfiles/` (or via the symlink — same thing) and the change
 is live immediately.
 
 ```sh
-# Example: edit sketchybar config
-vim ~/.dotfiles/.config/sketchybar/sketchybarrc
-# Changes are live; restart sketchybar if needed:
-sketchybar --reload
+# Example: edit Hammerspoon config
+vim ~/.dotfiles/.hammerspoon/init.lua
+# Changes are live; reload with Ctrl-Alt-`
 ```
 
 ### Add a new package
