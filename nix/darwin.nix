@@ -18,6 +18,10 @@
 
   system.primaryUser = "andrew";
 
+  # Allow home-manager to replace existing files by backing them up first.
+  # After activation, any *.backup files are safe to delete (identical content).
+  home-manager.backupFileExtension = "backup";
+
   users.users.andrew = {
     name = "andrew";
     home = "/Users/andrew";
