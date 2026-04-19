@@ -120,7 +120,7 @@
       "slack"
       "soulver"
       "spotify"
-      "tailscale"
+      "tailscale-app"
       "thaw"
       "vimr"
       "vlc"
