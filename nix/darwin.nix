@@ -6,9 +6,10 @@
     ./modules/packages.nix
   ];
 
-  # .config/nix/nix.conf already sets experimental-features; declaring here
-  # too so the flake-managed system is self-contained.
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  # Determinate Nix manages its own daemon; disable nix-darwin's Nix management
+  # to avoid conflicts. This means nix.* settings options are unavailable, but
+  # Determinate handles experimental-features and upgrades independently.
+  nix.enable = false;
 
   nixpkgs.hostPlatform = "aarch64-darwin";
 
