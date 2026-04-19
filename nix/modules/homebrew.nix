@@ -95,6 +95,7 @@
       "font-pt-sans"
       "font-pt-serif"
       "google-chrome"
+      "google-drive"
       "homerow"
       "hook"
       "imageoptim"
