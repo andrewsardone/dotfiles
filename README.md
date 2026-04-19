@@ -18,13 +18,13 @@ flake.nix
 │   └── nix/modules/packages.nix         CLI tools from nixpkgs-unstable
 └── home-manager  (user layer — runs as andrew)
     ├── nix/modules/git.nix              programs.git (migrated from .gitconfig)
-    ├── nix/modules/shell.nix            programs.fish + programs.starship
+    ├── nix/modules/shell.nix            programs.zsh + programs.starship
     ├── nix/modules/tmux.nix             programs.tmux (migrated from .tmux.conf)
     └── nix/modules/dotfile-links.nix    home.file symlinks → repo checkout
 ```
 
 All `home.file` entries use `config.lib.file.mkOutOfStoreSymlink` so the
-symlinks point to `~/dotfiles/<file>` rather than into the Nix store. This
+symlinks point to `~/.dotfiles/<file>` rather than into the Nix store. This
 means you can edit `.aerospace.toml`, Hammerspoon scripts, sketchybar config,
 etc. in place and changes take effect without running `darwin-rebuild switch`.
 
@@ -62,13 +62,13 @@ Close and reopen your terminal after installation.
 
 ### 2. Clone this repo
 
-The repo **must** be cloned to `~/dotfiles`. This path is hardcoded in
+The repo **must** be cloned to `~/.dotfiles`. This path is hardcoded in
 `nix/modules/dotfile-links.nix`. If you want a different location, update the
 `repoPath` variable in that file and update these instructions to match.
 
 ```sh
-git clone https://github.com/andrewsardone/dotfiles ~/dotfiles
-cd ~/dotfiles
+git clone https://github.com/andrewsardone/dotfiles ~/.dotfiles
+cd ~/.dotfiles
 ```
 
 ### 3. Bootstrap nix-darwin
@@ -118,18 +118,18 @@ sudo pmset -a standbydelay 86400
 ### Apply Nix changes
 
 ```sh
-darwin-rebuild switch --flake ~/dotfiles#personal-mbp
+darwin-rebuild switch --flake ~/.dotfiles#personal-mbp
 ```
 
 ### Edit a dotfile (no rebuild needed)
 
 All dotfiles managed via `home.file` are symlinks into the repo. Just edit
-the file in `~/dotfiles/` (or via the symlink — same thing) and the change
+the file in `~/.dotfiles/` (or via the symlink — same thing) and the change
 is live immediately.
 
 ```sh
 # Example: edit sketchybar config
-vim ~/dotfiles/.config/sketchybar/sketchybarrc
+vim ~/.dotfiles/.config/sketchybar/sketchybarrc
 # Changes are live; restart sketchybar if needed:
 sketchybar --reload
 ```
@@ -143,24 +143,24 @@ sketchybar --reload
 | CLI tool NOT in nixpkgs | `nix/modules/homebrew.nix` → `homebrew.brews`             |
 | App Store app           | `nix/modules/homebrew.nix` → `homebrew.masApps`           |
 
-Then run `darwin-rebuild switch --flake ~/dotfiles#personal-mbp`.
+Then run `darwin-rebuild switch --flake ~/.dotfiles#personal-mbp`.
 
 ### Update flake inputs
 
 ```sh
-cd ~/dotfiles
+cd ~/.dotfiles
 nix flake update           # updates flake.lock (all inputs)
 # Or update a single input:
 nix flake update nixpkgs
-darwin-rebuild switch --flake ~/dotfiles#personal-mbp
+darwin-rebuild switch --flake ~/.dotfiles#personal-mbp
 git add flake.lock && git commit -m "chore(flake): update inputs"
 ```
 
 ### Validate without applying
 
 ```sh
-nix flake check ~/dotfiles
-nix build ~/dotfiles#darwinConfigurations.personal-mbp.system
+nix flake check ~/.dotfiles
+nix build ~/.dotfiles#darwinConfigurations.personal-mbp.system
 ```
 
 ---

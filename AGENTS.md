@@ -15,7 +15,7 @@ This is a regular git repository. It contains two kinds of things side by side:
 
 home-manager deploys dotfiles by creating symlinks in `$HOME` that point back
 into the repo checkout (via `config.lib.file.mkOutOfStoreSymlink`). The repo
-must be cloned to `~/dotfiles` — this path is defined in
+must be cloned to `~/.dotfiles` — this path is defined in
 `nix/modules/dotfile-links.nix` as `repoPath`.
 
 ---
@@ -23,7 +23,7 @@ must be cloned to `~/dotfiles` — this path is defined in
 ## How to apply changes
 
 ```sh
-darwin-rebuild switch --flake ~/dotfiles#personal-mbp
+darwin-rebuild switch --flake ~/.dotfiles#personal-mbp
 ```
 
 Only the owner of the machine can run this. Agents should never run it.
@@ -34,10 +34,10 @@ Only the owner of the machine can run this. Agents should never run it.
 
 ```sh
 # Check flake evaluation (syntax + type errors)
-nix flake check ~/dotfiles
+nix flake check ~/.dotfiles
 
 # Build without switching (downloads closures, verifies linkage)
-nix build ~/dotfiles#darwinConfigurations.personal-mbp.system
+nix build ~/.dotfiles#darwinConfigurations.personal-mbp.system
 ```
 
 These are safe to run. Run them after any change to `nix/` files.
@@ -95,7 +95,7 @@ nix search nixpkgs <name>
 After any change to `nix/` files, validate before committing:
 
 ```sh
-nix flake check ~/dotfiles
+nix flake check ~/.dotfiles
 ```
 
 ---
@@ -103,7 +103,7 @@ nix flake check ~/dotfiles
 ## Updating flake inputs
 
 ```sh
-cd ~/dotfiles
+cd ~/.dotfiles
 nix flake update                  # update all inputs (nixpkgs, nix-darwin, home-manager)
 nix flake update nixpkgs          # update a single input
 # validate, then commit the lock file
