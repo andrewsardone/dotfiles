@@ -15,6 +15,8 @@
   # Required: matches the nix-darwin major version used at first install.
   system.stateVersion = 5;
 
+  system.primaryUser = "andrew";
+
   users.users.andrew = {
     name = "andrew";
     home = "/Users/andrew";

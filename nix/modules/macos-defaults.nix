@@ -19,8 +19,6 @@
       # Subpixel font rendering on non-Apple LCDs
       AppleFontSmoothing = 2;
 
-      # WebKit developer extras (context menu Web Inspector)
-      WebKitDeveloperExtras = true;
     };
 
     # ── Finder ────────────────────────────────────────────────────────
@@ -43,13 +41,6 @@
       # expose-group-apps = true;
     };
 
-    # ── Safari ────────────────────────────────────────────────────────
-    safari = {
-      UniversalSearchEnabled = false;
-      SuppressSearchSuggestions = true;
-      # TODO: IncludeInternalDebugMenu — verify nix-darwin attr for Safari debug menu
-    };
-
     # ── Mail ─────────────────────────────────────────────────────────
     # TODO: AddressesIncludeNameOnPasteboard — verify nix-darwin mail module attr
     # mail = {
@@ -58,6 +49,11 @@
   };
 
   # ── Settings without nix-darwin equivalents (apply manually once) ──
+  #
+  # defaults write com.apple.Safari UniversalSearchEnabled -bool false
+  # defaults write com.apple.Safari SuppressSearchSuggestions -bool true
+  #   Safari search settings — system.defaults.safari removed from nix-darwin.
+  #   Apply manually.
   #
   # defaults write NSGlobalDomain NSRepeatCountBinding -string "^u"
   #   Enable Emacs ^u repeat count binding — no nix-darwin attr.
