@@ -1,10 +1,15 @@
 # dotfiles
 
-A regular git repository containing both the dotfiles themselves and the Nix
-configuration that deploys them. nix-darwin manages the macOS system layer
-(Homebrew, system preferences, nixpkgs CLI tools) and home-manager deploys
+These are my dotfiles. There are many like them, but these ones are mine.
+
+Building on top of years of tweaking, now a suite of dotfiles and the Nix
+configuration that deploys them. [nix-darwin] manages the macOS system layer
+(Homebrew, system preferences, nixpkgs CLI tools) and [home-manager] deploys
 dotfiles into `$HOME` as symlinks that point back into the repo checkout —
 so edits to any dotfile take effect immediately without a rebuild.
+
+[nix-darwin]: https://github.com/nix-darwin/nix-darwin
+[home-manager]: https://github.com/nix-community/home-manager
 
 ---
 
