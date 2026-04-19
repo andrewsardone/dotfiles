@@ -11,6 +11,8 @@
       { condition = "gitdir:~/brazil-workspaces/";      path = "~/.gitconfig.amazon"; }
     ];
 
+    signing.format = null;
+
     settings = {
       user.name  = "Andrew Sardone";
       user.email = "andrew@andrewsardone.com";
