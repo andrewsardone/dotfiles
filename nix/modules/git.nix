@@ -3,20 +3,6 @@
   programs.git = {
     enable = true;
 
-    userName  = "Andrew Sardone";
-    userEmail = "andrew@andrewsardone.com";
-
-    aliases = {
-      co       = "checkout";
-      shortsha = "rev-parse --short HEAD";
-      st       = "status --short --branch";
-      ts       = "st";
-      lg       = "log --graph --pretty=format:'%Cred%h%Creset %C(cyan)%an%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative";
-      recent   = "! git reflog | grep 'checkout: moving from' | head -n 50 | egrep -oh ' \\S+$' | awk '!x[$0]++'";
-    };
-
-    # .gitconfig.amazon is deployed to $HOME via dotfile-links.nix so these
-    # conditional includes resolve at runtime.
     includes = [
       { condition = "gitdir:~/source/code.amazon.com/"; path = "~/.gitconfig.amazon"; }
       { condition = "gitdir:~/workplace/";              path = "~/.gitconfig.amazon"; }
@@ -25,7 +11,19 @@
       { condition = "gitdir:~/brazil-workspaces/";      path = "~/.gitconfig.amazon"; }
     ];
 
-    extraConfig = {
+    settings = {
+      user.name  = "Andrew Sardone";
+      user.email = "andrew@andrewsardone.com";
+
+      alias = {
+        co       = "checkout";
+        shortsha = "rev-parse --short HEAD";
+        st       = "status --short --branch";
+        ts       = "st";
+        lg       = "log --graph --pretty=format:'%Cred%h%Creset %C(cyan)%an%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative";
+        recent   = "! git reflog | grep 'checkout: moving from' | head -n 50 | egrep -oh ' \\S+$' | awk '!x[$0]++'";
+      };
+
       color.ui = "auto";
 
       core = {
