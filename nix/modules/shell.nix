@@ -117,10 +117,6 @@
       # ── Pager ─────────────────────────────────────────────────────
       export LESS="-RIM"
 
-      # ── grc (colorized command output) ────────────────────────────
-      command -v brew >/dev/null 2>&1 && GRC_BASHRC="$(brew --prefix)/etc/grc.bashrc"
-      [ -f "''${GRC_BASHRC:-}" ] && source "$GRC_BASHRC"
-
       # ── hub (git → github) ────────────────────────────────────────
       command -v hub >/dev/null 2>&1 && alias git=hub
 

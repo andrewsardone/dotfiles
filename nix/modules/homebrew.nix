@@ -25,7 +25,6 @@
       "dateutils"
       "docker"
       "exif"
-      "grc"
       "m-cli"
       "macos-trash"
       "mole"
