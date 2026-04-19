@@ -7,6 +7,11 @@
     # Start in vi insert mode (equivalent to `bindkey -v`)
     defaultKeymap = "viins";
 
+    # Disable home-manager's unconditional `compinit` call; we do it
+    # manually below with a 24-hour cache check to avoid rescanning on
+    # every shell startup (the main source of slow startup time).
+    enableCompletion = false;
+
     history = {
       size          = 100000;
       save          = 100000;
@@ -49,8 +54,16 @@
     };
 
     initContent = ''
-      # ── fpath ─────────────────────────────────────────────────────
+      # ── Completions ───────────────────────────────────────────────
+      # Only rebuild the completion dump when it's older than 24 hours;
+      # otherwise load from cache. Avoids a ~7s rescan on every startup.
       fpath=( "$HOME/.zfunctions" $fpath )
+      autoload -Uz compinit
+      if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
+        compinit
+      else
+        compinit -C
+      fi
 
       # ── Shared shell include files ─────────────────────────────────
       # Sources .sh-include/{path.sh,aliases.sh,docker.sh,...} for PATH
