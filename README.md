@@ -40,7 +40,7 @@ etc. in place and changes take effect without running `darwin-rebuild switch`.
 | App Store apps               | Homebrew `masApps` (homebrew.nix)                                  |
 | CLI tools in nixpkgs         | nixpkgs (packages.nix)                                             |
 | git config                   | home-manager `programs.git` (git.nix)                              |
-| fish shell config            | home-manager `programs.fish` (shell.nix)                           |
+| zsh config                   | home-manager `programs.zsh` (shell.nix)                            |
 | starship prompt              | home-manager `programs.starship` + `.config/starship.toml` symlink |
 | tmux config                  | home-manager `programs.tmux` (tmux.nix)                            |
 | All other dotfiles           | home-manager `home.file` symlinks (dotfile-links.nix)              |
@@ -87,24 +87,7 @@ This will:
 - Deploy dotfile symlinks via home-manager
 - Apply macOS system preferences
 
-### 4. Set fish as default shell
-
-```sh
-# Add Homebrew fish to allowed shells, then set as default
-echo /opt/homebrew/bin/fish | sudo tee -a /etc/shells
-chsh -s /opt/homebrew/bin/fish
-```
-
-### 5. Install fish plugins
-
-```sh
-fish -c "fisher update"
-```
-
-Fisher reads `~/.config/fish/fish_plugins` (symlinked from the repo) and
-installs `jomik/fish-gruvbox` and any other listed plugins.
-
-### 6. Apply manual macOS settings (one-time)
+### 4. Apply manual macOS settings (one-time)
 
 These have no nix-darwin equivalent:
 

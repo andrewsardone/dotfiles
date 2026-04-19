@@ -9,7 +9,7 @@ Instructions for AI coding agents (Claude Code and similar) working in this repo
 This is a regular git repository. It contains two kinds of things side by side:
 
 1. **Dotfiles** — the actual config files (`.zshrc`, `.gitconfig`, `.tmux.conf`,
-   `.config/fish/config.fish`, `.config/sketchybar/`, `.hammerspoon/`, etc.)
+   `.config/sketchybar/`, `.hammerspoon/`, etc.)
 2. **Nix configuration** — `flake.nix` and `nix/` which use nix-darwin and
    home-manager to deploy those dotfiles and manage the macOS system
 

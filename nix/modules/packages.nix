@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   # CLI tools sourced from nixpkgs-unstable.
-  # Tools managed by programs.* modules (git, fish, starship, tmux) are
+  # Tools managed by programs.* modules (git, zsh, starship, tmux) are
   # excluded here to avoid duplication.
   # Tools only available via Homebrew taps or macOS-specific are in
   # homebrew.nix instead.

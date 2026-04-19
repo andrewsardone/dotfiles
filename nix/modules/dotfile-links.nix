@@ -58,11 +58,14 @@ in
   home.file.".githelpers".source =
     config.lib.file.mkOutOfStoreSymlink "${repoPath}/.githelpers";
 
-  # ── Fish plugin manifest ───────────────────────────────────────────────
-  # Fisher reads this file; run `fisher update` after first setup to
-  # install jomik/fish-gruvbox and any other listed plugins.
-  home.file.".config/fish/fish_plugins".source =
-    config.lib.file.mkOutOfStoreSymlink "${repoPath}/.config/fish/fish_plugins";
+  # ── Zsh helpers ───────────────────────────────────────────────────────
+  # Shell include files sourced by programs.zsh initExtra (PATH, aliases,
+  # docker helpers, etc.)
+  home.file.".sh-include" = link ".sh-include";
+
+  # Custom zsh functions and completions (_boom, _brew, prompt_pure_setup,
+  # etc.) added to fpath in programs.zsh initExtra.
+  home.file.".zfunctions" = link ".zfunctions";
 
   # ── Misc dotfiles ─────────────────────────────────────────────────────
   home.file.".tigrc".source =
@@ -103,15 +106,16 @@ in
     config.lib.file.mkOutOfStoreSymlink "${repoPath}/Makefile";
 
   # ── NOT linked (managed by programs.* modules) ────────────────────────
-  # .gitconfig          → programs.git  generates ~/.config/git/config
-  # .config/fish/config.fish → programs.fish generates ~/.config/fish/config.fish
-  # .tmux.conf          → programs.tmux generates ~/.config/tmux/tmux.conf
+  # .gitconfig     → programs.git generates ~/.config/git/config
+  # .zshrc         → programs.zsh generates ~/.zshrc
+  # .tmux.conf     → programs.tmux generates ~/.config/tmux/tmux.conf
   # .config/starship.toml is linked above; programs.starship init is
   #   injected by programs.starship.enable without overwriting the file.
 
   # ── NOT linked (legacy, inactive) ────────────────────────────────────
   # .vim/, .vimrc, .gvimrc     — legacy vim (still in repo for reference)
   # .emacs.d/                  — legacy emacs
+  # .config/fish/              — trialled fish, reverted to zsh; inactive
   # .bashrc, .bash_profile, .bash_prompt — legacy bash
   # .iterm/                    — legacy iTerm config
   # .yabairc, .skhdrc          — replaced by AeroSpace + Karabiner
