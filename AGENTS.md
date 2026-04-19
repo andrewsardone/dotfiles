@@ -50,17 +50,64 @@ Follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
 **Format:** `<type>(<scope>): <subject>`
 
-**Subject:** ≤50 chars, imperative mood, no period, lowercase after prefix.
-
-**Body:** Wrap at 72 chars. Explain _what_ and _why_, not _how_.
-
 **Types:** `feat`, `fix`, `refactor`, `docs`, `chore`, `test`, `ci`
 
 **Scopes for this repo:** `flake`, `homebrew`, `macos-defaults`, `packages`,
 `git`, `shell`, `tmux`, `dotfile-links`, `readme`, `agents`
 
-**Multiple commits:** Split by concern. 3+ files changed → 2+ commits.
-5+ files → 3+ commits. Never squash or amend after committing.
+### Subject line
+
+- ≤50 characters
+- Imperative mood: "add feature" not "added feature" or "adds feature"
+- No trailing period
+- Lowercase after the type prefix
+
+### Body
+
+- Separate from subject with a blank line
+- Wrap at 72 characters
+- Explain the WHY and WHAT, not the HOW (the diff shows the how)
+- Use bullet points where appropriate (hyphen followed by a single space)
+- Use a hanging indent for multi-line bullets
+
+### Multiple commits
+
+Split changes into multiple atomic commits when they touch different concerns.
+One commit per logical change.
+
+| File Count | Minimum Commits |
+|------------|-----------------|
+| 3+ files   | 2+ commits      |
+| 5+ files   | 3+ commits      |
+
+Combine files in the same commit only when tightly coupled (e.g.,
+implementation + its direct test, or a type definition + the only file
+that uses it).
+
+### Other rules
+
+- Commits must only introduce code changes relevant to the logical change at hand
+- Never amend or rebase commits already pushed to shared branches
+- Never commit secrets, API keys, or credentials
+
+---
+
+## Worktrees
+
+Parallel subagents require worktrees. Each subagent MUST work in its own
+worktree (`wt switch <branch>`), not the main repo. Never share working
+directories.
+
+---
+
+## Pull requests
+
+Describe what the code does now — not discarded approaches, prior
+iterations, or alternatives. Only describe what's in the diff.
+
+Use plain, factual language. A bug fix is a bug fix, not a "critical
+stability improvement." Avoid: critical, crucial, essential, significant,
+comprehensive, robust, elegant.
 
 ---
 
