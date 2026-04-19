@@ -58,8 +58,8 @@
   #   Safari search settings — system.defaults.safari removed from nix-darwin.
   #   Apply manually.
   #
-  # defaults write NSGlobalDomain NSRepeatCountBinding -string "^u"
-  #   Enable Emacs ^u repeat count binding — no nix-darwin attr.
+  # defaults delete NSGlobalDomain NSRepeatCountBinding
+  #   Disable Emacs ^u repeat count binding — no nix-darwin attr.
   #
   # defaults write com.apple.LaunchServices LSQuarantine -bool false
   #   Disable "Are you sure?" open dialog — use finder module if attr exists,
