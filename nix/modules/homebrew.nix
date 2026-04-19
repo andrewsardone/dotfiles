@@ -28,7 +28,6 @@
       "grc"
       "m-cli"
       "macos-trash"
-      "markedit"
       "mole"
       "node@22"
       "openjdk@11"
