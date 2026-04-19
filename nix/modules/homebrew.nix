@@ -174,26 +174,9 @@
       "Day One"          = 1055511498;
       "Drafts"           = 1435957248;
       "Dropover"         = 1355679052;
-      "Fantastical"      = 975937182;
-      "GarageBand"       = 682658836;
-      "Gestimer"         = 990588172;
       "HEIC Converter"   = 1294126402;
-      "iMovie"           = 408981434;
-      "Instapaper"       = 288545208;
-      "Irvue"            = 1039633667;
-      "Jiffy"            = 1502527999;
-      "Keynote"          = 409183694;
-      "Mic Drop"         = 1489816366;
-      "MindNode"         = 992076693;
-      "Numbers"          = 409203825;
-      "Nutshell"         = 955864065;
-      "Pages"            = 409201541;
-      "Parcel"           = 639968404;
       "Pixelmator Pro"   = 1289583905;
       "Poolsuite FM"     = 1514817810;
-      "Reeder"           = 1529448980;
-      "Things"           = 904280696;
-      "Vimari"           = 1480933944;
     };
   };
 }
