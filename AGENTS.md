@@ -114,6 +114,29 @@ git commit -m "chore(flake): update inputs"
 
 ---
 
+## When to use a programs.* module vs. a symlink
+
+Use a **`programs.*` home-manager module** when:
+- A module exists that understands the config's structure (e.g. `programs.git`,
+  `programs.zsh`, `programs.tmux`)
+- The file is never written to by an external tool
+- Nix option validation or composability is genuinely useful
+
+Use a **`mkOutOfStoreSymlink` home.file entry** (dotfile-links.nix) when:
+- No useful Nix module exists — inlining the content as a raw `home.file.text`
+  string buys nothing: no validation, no composability, just rebuild friction
+- An external tool writes back to the file (Karabiner exports `karabiner.json`
+  when you change settings in its UI; LazyVim writes into `.config/nvim/`)
+- The file needs a fast iteration loop — sketchybar scripts, Hammerspoon Lua,
+  `.aerospace.toml` are edited, reloaded, and tweaked in seconds; a full
+  `darwin-rebuild switch` for each tweak is the wrong tradeoff
+
+Never use plain `.source = ./path` (without `mkOutOfStoreSymlink`) — that
+copies the file into the read-only Nix store and breaks any tool that tries
+to write to it.
+
+---
+
 ## Adding a new dotfile link
 
 All `home.file` entries live in `nix/modules/dotfile-links.nix`. Use the
@@ -129,9 +152,6 @@ Or use the shorthand for paths that don't need an inline comment:
 ```nix
 home.file.".some-config" = link ".some-config";
 ```
-
-**Never** use plain `.source = ./path` for dotfiles — that copies files into
-the Nix store and breaks in-place editing.
 
 ---
 
