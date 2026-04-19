@@ -1,9 +1,4 @@
 { config, pkgs, ... }:
-let
-  # Repo must be cloned to this path. Update here and in README if you clone
-  # it elsewhere.
-  repoPath = "${config.home.homeDirectory}/dotfiles";
-in
 {
   imports = [
     ./modules/git.nix
@@ -12,7 +7,9 @@ in
     ./modules/dotfile-links.nix
   ];
 
-  _module.args = { inherit repoPath; };
+  # repoPath is defined in modules/dotfile-links.nix as:
+  #   "${config.home.homeDirectory}/dotfiles"
+  # If you clone this repo to a different location, update it there.
 
   home.username = "andrew";
   home.homeDirectory = "/Users/andrew";

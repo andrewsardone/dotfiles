@@ -1,5 +1,9 @@
-{ config, repoPath, ... }:
+{ config, ... }:
 let
+  # Repo must be cloned to this path. Update here and in README if you clone
+  # it elsewhere.
+  repoPath = "${config.home.homeDirectory}/dotfiles";
+
   # Create a symlink from $HOME/<dest> → <repoPath>/<src> that points back
   # into the live repo checkout. Edits take effect immediately without a
   # rebuild.

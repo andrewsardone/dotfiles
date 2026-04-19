@@ -12,7 +12,10 @@
       set -gx PATH /nix/var/nix/profiles/default/bin $PATH
       set -gx PATH ~/.nix-profile/bin $PATH
       set -gx PATH ~/.toolbox/bin $PATH
+      set -gx PATH ~/bin $PATH
       set -gx PATH ~/.local/bin $PATH
+      # Adds relative ./bin to PATH — useful in project roots with local scripts
+      set -gx PATH bin $PATH
       set -gx PATH "$HOME/.aim/mcp-servers" $PATH
     '';
 
@@ -90,10 +93,9 @@
   # Enables shell integration (adds `starship init fish | source` to fish).
   # The actual configuration lives in .config/starship.toml, deployed via
   # dotfile-links.nix.
-  programs.starship = {
-    enable = true;
-    # Disable writing a generated config — dotfile-links.nix provides the
-    # real starship.toml from the repo checkout.
-    settings = { };
-  };
+  # enable = true adds `starship init fish | source` to the fish config.
+  # The actual starship.toml lives in the repo and is symlinked by
+  # dotfile-links.nix. No settings are declared here to avoid home-manager
+  # writing its own ~/.config/starship.toml and conflicting with the link.
+  programs.starship.enable = true;
 }

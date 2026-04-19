@@ -6,15 +6,14 @@
     NSGlobalDomain = {
       # Expand save and print panels by default
       NSNavPanelExpandedStateForSaveMode = true;
-      NSNavPanelExpandedStateForSaveMode2 = true;
       PMPrintingExpandedStateForPrint = true;
       PMPrintingExpandedStateForPrint2 = true;
 
       # Full keyboard access for all controls (Tab in modal dialogs)
       AppleKeyboardUIMode = 3;
 
-      # Fastest key repeat rate; initial repeat delay uses default
-      KeyRepeat = 1; # 0 is not a valid nix-darwin value; 1 is fastest supported
+      # Fastest key repeat; 0 is not a valid nix-darwin value, 1 is minimum
+      KeyRepeat = 1;
       InitialKeyRepeat = 10;
 
       # Subpixel font rendering on non-Apple LCDs
@@ -28,81 +27,74 @@
     finder = {
       ShowStatusBar = true;
       ShowPathbar = true;
-      # Allow text selection in Quick Look
-      QLEnableTextSelection = true;
-      # Avoid .DS_Store on network volumes
-      # NOTE: maps to com.apple.desktopservices DSDontWriteNetworkStores
+      ShowExternalHardDrivesOnDesktop = true;
+      # Disable quarantine dialog ("Are you sure you want to open…")
+      # Mapped to com.apple.LaunchServices LSQuarantine in older scripts.
+      # TODO: verify nix-darwin attribute name for LSQuarantine
     };
 
     # ── Dock ──────────────────────────────────────────────────────────
     dock = {
-      # Speed up Mission Control animations
       expose-animation-duration = 0.1;
-      # Group windows by application in Mission Control
-      expose-group-by-app = true;
-      # Auto-hide with no delay
       autohide = true;
       autohide-delay = 0.0;
       autohide-time-modifier = 0.5;
+      # TODO: expose-group-by-app — verify nix-darwin attr (may be expose-group-apps)
+      # expose-group-apps = true;
     };
 
     # ── Safari ────────────────────────────────────────────────────────
     safari = {
       UniversalSearchEnabled = false;
       SuppressSearchSuggestions = true;
-      # Developer menu / debug
-      IncludeInternalDebugMenu = true;
+      # TODO: IncludeInternalDebugMenu — verify nix-darwin attr for Safari debug menu
     };
 
     # ── Mail ─────────────────────────────────────────────────────────
-    mail = {
-      AddressesIncludeNameOnPasteboard = false;
-    };
-
-    # ── Login window / miscellaneous ─────────────────────────────────
-    loginwindow = { };
-
-    screensaver = { };
+    # TODO: AddressesIncludeNameOnPasteboard — verify nix-darwin mail module attr
+    # mail = {
+    #   AddressesIncludeNameOnPasteboard = false;
+    # };
   };
 
-  # ── Settings without nix-darwin equivalents (apply manually) ──────
+  # ── Settings without nix-darwin equivalents (apply manually once) ──
   #
   # defaults write NSGlobalDomain NSRepeatCountBinding -string "^u"
-  #   Enable key repeat count binding (Emacs ^u universal-argument)
-  #   No nix-darwin attribute; run manually once.
+  #   Enable Emacs ^u repeat count binding — no nix-darwin attr.
   #
   # defaults write com.apple.LaunchServices LSQuarantine -bool false
-  #   Disable "Are you sure you want to open this application?" dialog
-  #   No nix-darwin attribute; run manually once.
+  #   Disable "Are you sure?" open dialog — use finder module if attr exists,
+  #   otherwise run manually.
+  #
+  # defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+  #   Prevent .DS_Store on network volumes — no nix-darwin finder attr.
   #
   # defaults write com.jetbrains.intellij.ce ApplePressAndHoldEnabled -bool false
-  #   Disable press-and-hold for IntelliJ IDEA key repeat
-  #   No nix-darwin attribute; run manually once.
+  #   IntelliJ key repeat — no nix-darwin attr. Run manually.
   #
   # defaults write com.google.Chrome DisablePrintPreview -bool true
   # defaults write com.google.Chrome.canary DisablePrintPreview -bool true
-  #   Use system print dialog in Chrome
-  #   No nix-darwin attribute; run manually once.
+  #   Chrome system print dialog — no nix-darwin attr. Run manually.
   #
   # defaults write com.apple.dashboard mcx-disabled -bool true
-  #   Disable Dashboard (obsolete on modern macOS)
-  #   No nix-darwin attribute.
+  #   Disable Dashboard (obsolete on modern macOS, no effect).
+  #
+  # defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
+  #   Mail address paste format — use mail module if attr exists.
   #
   # defaults write com.apple.dt.Xcode ShowBuildOperationDuration YES
-  # defaults write com.apple.dt.Xcode IDEBuildOperationMaxNumberOfConcurrentCompileTasks ...
-  #   Xcode build time display and parallelism
-  #   No nix-darwin attribute; run manually if needed.
+  # defaults write com.apple.dt.Xcode IDEBuildOperationMaxNumberOfConcurrentCompileTasks...
+  #   Xcode settings — no nix-darwin attr. Run manually.
   #
   # sudo pmset -a standbydelay 86400
-  #   Extend standby delay to 24 hours
-  #   No nix-darwin attribute; run manually with sudo.
+  #   Extend standby delay to 24 hours — no nix-darwin attr. Run with sudo manually.
   #
   # chflags nohidden ~/Library/
-  #   Unhide ~/Library in Finder
-  #   No nix-darwin attribute; run manually once.
+  #   Unhide ~/Library — no nix-darwin attr. Run manually once.
   #
   # chsh -s /opt/homebrew/bin/fish
-  #   Set fish as default shell
-  #   Handle via users.users.andrew.shell in darwin.nix if desired,
-  #   or run manually.
+  #   Set fish as default shell. Can also be done via:
+  #   users.users.andrew.shell = pkgs.fish; in darwin.nix (requires fish in
+  #   /etc/shells, which nix-darwin handles when programs.fish.enable is set
+  #   at the system level).
 }

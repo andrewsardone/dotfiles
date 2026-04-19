@@ -13,7 +13,8 @@
     fzf
     lsd
     ack
-    silver-searcher  # the_silver_searcher
+    # TODO: verify nixpkgs attr name; may be `silver-searcher` or removed
+    # silver-searcher  # the_silver_searcher (ag)
 
     # File / disk utilities
     ncdu
@@ -42,7 +43,6 @@
     # System monitoring
     bottom   # btm
     htop
-    neofetch
     watch
 
     # Network / infra
@@ -64,6 +64,8 @@
     jq
     ranger
     tig
-    lsd
+    # TODO: neofetch is unmaintained; may be removed from nixpkgs.
+    # Replace with fastfetch if missing: https://github.com/fastfetch-cli/fastfetch
+    neofetch
   ];
 }
