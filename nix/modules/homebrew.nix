@@ -109,6 +109,7 @@
       "menubar-colors"
       "middleclick"
       "monitorcontrol"
+      "netnewswire"
       "obsidian"
       "pocket-casts"
       "rectangle"
