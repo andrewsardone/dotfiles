@@ -48,7 +48,7 @@
       claude-yolo = "claude --dangerously-skip-permissions";
     };
 
-    initExtra = ''
+    initContent = ''
       # ── fpath ─────────────────────────────────────────────────────
       fpath=( "$HOME/.zfunctions" $fpath )
 
