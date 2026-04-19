@@ -34,7 +34,7 @@
     # ── Dock ──────────────────────────────────────────────────────────
     dock = {
       expose-animation-duration = 0.1;
-      autohide = true;
+      autohide = false;
       autohide-delay = 0.0;
       autohide-time-modifier = 0.5;
       # TODO: expose-group-by-app — verify nix-darwin attr (may be expose-group-apps)
