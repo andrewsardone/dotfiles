@@ -1,1 +1,0 @@
-../../../vendor/sonph/onehalf/vim/colors/onehalfdark.vim
