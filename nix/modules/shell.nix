@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ ... }:
 {
   # ── Fish ──────────────────────────────────────────────────────────────
   programs.fish = {
@@ -36,12 +36,6 @@
       end
       set -U fish_color_command c397d8
       set -U fish_color_autosuggestion 969896
-
-      # Prompt — starship init is injected by programs.starship below;
-      # this guard is kept for machines where starship isn't available.
-      if not command -qv starship
-        # fallback: no custom prompt
-      end
 
       # ── Smart ls ──────────────────────────────────────────────────
       function aps_smart_ls
@@ -86,16 +80,12 @@
     };
   };
 
-  # fish_plugins file is deployed via dotfile-links.nix so fisher can manage
-  # the gruvbox theme and other plugins. Run `fisher update` after first setup.
+  # fish_plugins is deployed via dotfile-links.nix so fisher can manage
+  # jomik/fish-gruvbox and other plugins. Run `fisher update` after first setup.
 
   # ── Starship ──────────────────────────────────────────────────────────
-  # Enables shell integration (adds `starship init fish | source` to fish).
-  # The actual configuration lives in .config/starship.toml, deployed via
-  # dotfile-links.nix.
-  # enable = true adds `starship init fish | source` to the fish config.
-  # The actual starship.toml lives in the repo and is symlinked by
-  # dotfile-links.nix. No settings are declared here to avoid home-manager
-  # writing its own ~/.config/starship.toml and conflicting with the link.
+  # Injects `starship init fish | source` into the fish config. No settings
+  # are declared here so home-manager doesn't write ~/.config/starship.toml;
+  # that file is symlinked from the repo by dotfile-links.nix.
   programs.starship.enable = true;
 }
