@@ -14,7 +14,7 @@
       "anomalyco/tap"              # opencode
       "autozimu/homebrew-formulas" # unison-fsmonitor
       "clementtsang/bottom"        # bottom
-      "yqrashawn/goku"             # goku (karabiner DSL)
+"yqrashawn/goku"             # goku (karabiner DSL)
     ];
 
     # CLI formulae not available in nixpkgs, or macOS-specific.
@@ -94,7 +94,6 @@
       "font-pt-mono"
       "font-pt-sans"
       "font-pt-serif"
-      "font-sf-mono-nerd-font"
       "google-chrome"
       "homerow"
       "hook"
