@@ -13,6 +13,7 @@
     fzf
     lsd
     ack
+    yazi
     # TODO: verify nixpkgs attr name; may be `silver-searcher` or removed
     # silver-searcher  # the_silver_searcher (ag)
 
