@@ -42,8 +42,6 @@
 
     # Misc
     jq
-    # TODO: neofetch is unmaintained; may be removed from nixpkgs.
-    # Replace with fastfetch if missing: https://github.com/fastfetch-cli/fastfetch
-    neofetch
+    fastfetch
   ];
 }

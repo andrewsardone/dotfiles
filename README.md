@@ -184,8 +184,6 @@ nix build ~/.dotfiles#darwinConfigurations.personal-mbp.system
 - `silver-searcher` (the `ag` command, Brewfile: `the_silver_searcher`) is
   commented out in packages.nix. Verify the correct nixpkgs attribute name
   and uncomment if available.
-- `neofetch` is unmaintained upstream. If removed from nixpkgs, replace with
-  `fastfetch` in packages.nix.
 - Several macOS defaults in macos-defaults.nix have `TODO:` comments where
   the nix-darwin attribute name is uncertain. Verify against the installed
   nix-darwin version with:
