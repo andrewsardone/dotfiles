@@ -56,14 +56,24 @@ etc. in place and changes take effect without running `darwin-rebuild switch`.
 
 ### 1. Install Nix
 
-Use the Determinate Systems installer (handles Apple Silicon, sets up
-`/nix`, enables flakes automatically):
+The recommended installer for this setup is the
+[Determinate Systems installer](https://github.com/DeterminateSystems/nix-installer).
+It is a third-party tool (not the official Nix project installer), but it
+enables flakes automatically and handles macOS-specific edge cases better. It
+also ships an uninstaller.
 
 ```sh
 curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
 ```
 
 Close and reopen your terminal after installation.
+
+If you prefer the official Nix project installer, use:
+```sh
+sh <(curl --proto '=https' --tlsv1.2 -L https://nixos.org/nix/install)
+```
+You will then need to manually enable flakes by adding
+`experimental-features = nix-command flakes` to `/etc/nix/nix.conf`.
 
 ### 2. Clone this repo
 
