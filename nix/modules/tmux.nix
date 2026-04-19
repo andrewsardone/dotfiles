@@ -13,8 +13,9 @@
     # Everything that doesn't have a direct programs.tmux option.
     # .tmux-status.conf and .tmux/scripts/ are deployed via dotfile-links.nix.
     extraConfig = ''
-      # Ensure Homebrew and system binaries are available in tmux
-      set-environment -g PATH "/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin"
+      # Start new windows/panes as login shells so /etc/zprofile is sourced
+      # and Nix/Homebrew paths are available.
+      set -g default-command "zsh -l"
 
       # True colour support
       set -as terminal-features ',xterm*:RGB'
