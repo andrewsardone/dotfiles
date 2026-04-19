@@ -19,7 +19,6 @@
     # File / disk utilities
     ncdu
     tree
-    stow
     sqlite
 
     # Build / dev tools
@@ -31,39 +30,18 @@
     uv
     gh       # github-cli
     lazygit
-    entr
 
     # Media / web
-    ffmpeg
-    mpv
-    gifsicle
     wget
-    hugo
 
     # System monitoring
     bottom   # btm
-    htop
-    watch
-
-    # Network / infra
-    socat
-    tmate
-    restic
 
     # Editors / coding
     neovim
-    vim
-
-    # Language tooling
-    vale
-
-    # Cloud
-    awscli2
 
     # Misc
     jq
-    ranger
-    tig
     # TODO: neofetch is unmaintained; may be removed from nixpkgs.
     # Replace with fastfetch if missing: https://github.com/fastfetch-cli/fastfetch
     neofetch

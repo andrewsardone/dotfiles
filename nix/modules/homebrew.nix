@@ -14,8 +14,6 @@
       "anomalyco/tap"              # opencode
       "autozimu/homebrew-formulas" # unison-fsmonitor
       "clementtsang/bottom"        # bottom
-      "koekeishiya/formulae"       # yabai, skhd (legacy, kept for reference)
-      "saulpw/vd"                  # visidata
       "yqrashawn/goku"             # goku (karabiner DSL)
     ];
 
@@ -23,26 +21,20 @@
     # Tools that exist in nixpkgs are in nix/modules/packages.nix instead.
     brews = [
       # macOS-specific / not in nixpkgs
-      "choose-gui"
       "colima"
-      "dasht"
       "dateutils"
       "docker"
       "exif"
       "grc"
-      "ical-buddy"
       "m-cli"
       "macos-trash"
       "markedit"
       "mole"
       "node@22"
       "openjdk@11"
-      "pass"
       "pipes-sh"
       "reattach-to-user-namespace"
-      "shpotify"
       "spark"
-      "spotify_player"
       "switchaudio-osx"
       "terminal-notifier"
       "toipe"
@@ -58,13 +50,8 @@
       "pnpm"
 
       # Custom taps
-      "saulpw/vd/visidata"
       "yqrashawn/goku/goku"
       "anomalyco/tap/opencode"
-
-      # Legacy window manager (kept, inactive)
-      "koekeishiya/formulae/yabai"
-      "koekeishiya/formulae/skhd"
 
       # Other tools not confidently in nixpkgs
       "align"
@@ -72,13 +59,10 @@
       "the_silver_searcher"
       "parallel"
       "prettier"
-      "speedtest-cli"
-      "watchman"
     ];
 
     casks = [
       "1password"
-      "amazon-workspaces"
       "appcleaner"
       "arq"
       "boop"
@@ -88,7 +72,6 @@
       "discord"
       "figma"
       "firefox"
-      "flux"
       "font-awesome-terminal-fonts"
       "font-fira-code"
       "font-fontawesome"
@@ -113,58 +96,34 @@
       "font-pt-sans"
       "font-pt-serif"
       "font-sf-mono-nerd-font"
-      "gfxcardstatus"
       "google-chrome"
-      "hammerspoon"
       "homerow"
       "hook"
       "imageoptim"
       "karabiner-elements"
       "keyboard-cleaner"
       "keyboard-maestro"
-      "kindle"
       "kitty"
       "launchbar"
       "launchcontrol"
-      "leader-key"
-      "licecap"
-      "little-snitch"
       "macdown"
       "maestral"
       "menubar-colors"
-      "micro-snitch"
-      "microsoft-auto-update"
-      "microsoft-office"
       "middleclick"
-      "mimestream"
       "monitorcontrol"
-      "multi"
-
       "obsidian"
       "pocket-casts"
-      "quicklook-json"
-      "quip"
       "rectangle"
       "sensiblesidebuttons"
       "sf-symbols"
-      "shortcat"
       "signal"
-      "sketch"
       "slack"
       "soulver"
       "spotify"
-      "stats"
-      "superduper"
       "tailscale"
-      "tempbox"
       "thaw"
-      "topnotch"
-      "transmission"
       "vimr"
-      "viu"
       "vlc"
-      "whichspace"
-      "xbar"
       "zoom"
     ];
 
