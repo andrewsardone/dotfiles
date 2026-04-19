@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-# Usage: ./fix-webcam
-# Just kill some camera processes to reconnect an external webcam
-
-sudo killall VDCAssistant && sudo killall AppleCameraAssistant
