@@ -49,7 +49,17 @@
     # mail = {
     #   AddressesIncludeNameOnPasteboard = false;
     # };
+
+    # ── Menu Bar Clock ──────────────────────────────────────────────
+    menuExtraClock = {
+      Show24Hour = true;
+      ShowDate = 2; # 0 = when space allows, 1 = always, 2 = never
+      ShowSeconds = false;
+    };
   };
+
+  # ── Timezone ──────────────────────────────────────────────────────
+  time.timeZone = "America/New_York";
 
   # ── Settings without nix-darwin equivalents (apply manually once) ──
   #
