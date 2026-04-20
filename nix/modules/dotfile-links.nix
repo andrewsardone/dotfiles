@@ -12,6 +12,11 @@ let
   };
 in
 {
+  # ── Claude Code ───────────────────────────────────────────────────────
+  # Runtime data (projects/, sessions/, history.jsonl, etc.) is excluded
+  # via .claude/.gitignore so the whole directory can be symlinked safely.
+  home.file.".claude" = link ".claude";
+
   # ── Automation / scripting ────────────────────────────────────────────
   home.file.".hammerspoon" = link ".hammerspoon";
 
