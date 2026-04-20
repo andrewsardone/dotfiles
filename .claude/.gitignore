@@ -1,6 +1,10 @@
 # macOS
 .DS_Store
 
+# Ignore all skills by default, so we can seletively git add the ones we cache
+# about sharing and publishing for reuse.
+skills/
+
 backups/
 # Ephemeral session data and conversation transcripts
 cache/
