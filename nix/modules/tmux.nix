@@ -11,7 +11,7 @@
     terminal    = "tmux-256color";
 
     # Everything that doesn't have a direct programs.tmux option.
-    # .tmux-status.conf and .tmux/scripts/ are deployed via dotfile-links.nix.
+    # .tmux-status.conf is deployed via dotfile-links.nix.
     extraConfig = ''
       # Start new windows/panes as login shells so /etc/zprofile is sourced
       # and Nix/Homebrew paths are available.
@@ -59,10 +59,6 @@
 
       # Toggle status bar visibility
       bind-key b set-option status
-
-      # fzf-powered window/session pickers (scripts deployed via dotfile-links)
-      bind-key W display-popup -E -x 0 -y 0 -w 100% -h 100% ~/.tmux/scripts/window-picker.sh
-      bind-key S display-popup -E -x 0 -y 0 -w 100% -h 100% ~/.tmux/scripts/session-picker.sh
     '';
   };
 }

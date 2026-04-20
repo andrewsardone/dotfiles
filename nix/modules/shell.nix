@@ -169,30 +169,9 @@
       }
 
       # ── tmux helpers ──────────────────────────────────────────────
-      # t: fzf window picker (or new session if none exist)
+      # t: attach to existing session or create a new one
       t() {
-        if ! tmux list-sessions 2>/dev/null; then
-          tmux new-session
-          return
-        fi
-        if [ -x "$HOME/.tmux/scripts/window-picker.sh" ]; then
-          "$HOME/.tmux/scripts/window-picker.sh"
-        else
-          tmux list-sessions
-        fi
-      }
-
-      # ts: fzf session picker
-      ts() {
-        if ! tmux list-sessions 2>/dev/null; then
-          tmux new-session
-          return
-        fi
-        if [ -x "$HOME/.tmux/scripts/session-picker.sh" ]; then
-          "$HOME/.tmux/scripts/session-picker.sh"
-        else
-          tmux list-sessions
-        fi
+        tmux attach 2>/dev/null || tmux new-session
       }
 
       # peek: open file in a 33% tmux split

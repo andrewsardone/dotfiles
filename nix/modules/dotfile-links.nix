@@ -51,8 +51,6 @@ in
   home.file.".tmux-status.conf".source =
     config.lib.file.mkOutOfStoreSymlink "${repoPath}/.tmux-status.conf";
 
-  home.file.".tmux/scripts" = link ".tmux/scripts";
-
   # ── Git helpers ───────────────────────────────────────────────────────
   # programs.git (git.nix) references ~/.gitconfig.amazon via includeIf.
   home.file.".gitconfig.amazon".source =
