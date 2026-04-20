@@ -25,7 +25,9 @@ in
 
   # ── Editor ────────────────────────────────────────────────────────────
   # LazyVim manages its own plugins; just link the whole config dir.
-  home.file.".config/nvim" = link ".config/nvim";
+  home.file.".config/nvim"     = link ".config/nvim";
+  home.file.".config/kitty"   = link ".config/kitty";
+  home.file.".config/opencode" = link ".config/opencode";
 
   # ── Local binaries ────────────────────────────────────────────────────
   # Symlink individual scripts so ~/.local/bin stays a real directory;
@@ -70,9 +72,8 @@ in
   # docker helpers, etc.)
   home.file.".sh-include" = link ".sh-include";
 
-  # Custom zsh functions and completions (_boom, _brew, prompt_pure_setup,
-  # etc.) added to fpath in programs.zsh initExtra.
-  home.file.".zfunctions" = link ".zfunctions";
+  home.file.".fzf.zsh"    = link ".fzf.zsh";
+  home.file.".dockerfunc" = link ".dockerfunc";
 
   # ── Misc dotfiles ─────────────────────────────────────────────────────
   home.file.".tigrc".source =
