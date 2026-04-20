@@ -54,7 +54,30 @@ etc. in place and changes take effect without running `darwin-rebuild switch`.
 
 ## Bootstrap (new machine)
 
-### 1. Install Nix
+### 1. Install Xcode Command Line Tools
+
+Git and other build tools are required before anything else. On a fresh Mac,
+running `git` will prompt you, or you can trigger it directly:
+
+```sh
+xcode-select --install
+```
+
+### 2. Install Homebrew
+
+nix-darwin manages Homebrew packages but does not install Homebrew itself.
+Install it before running the Nix bootstrap:
+
+```sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+### 3. Sign into the App Store
+
+`mas` (which installs `masApps`) requires an active App Store session. Sign in
+via the App Store app before continuing, or the MAS step will fail silently.
+
+### 4. Install Nix
 
 The recommended installer for this setup is the
 [Determinate Systems installer](https://github.com/DeterminateSystems/nix-installer).
@@ -75,7 +98,7 @@ sh <(curl --proto '=https' --tlsv1.2 -L https://nixos.org/nix/install)
 You will then need to manually enable flakes by adding
 `experimental-features = nix-command flakes` to `/etc/nix/nix.conf`.
 
-### 2. Clone this repo
+### 5. Clone this repo
 
 The repo **must** be cloned to `~/.dotfiles`. This path is hardcoded in
 `nix/modules/dotfile-links.nix`. If you want a different location, update the
@@ -86,7 +109,7 @@ git clone https://github.com/andrewsardone/dotfiles ~/.dotfiles
 cd ~/.dotfiles
 ```
 
-### 3. Bootstrap nix-darwin
+### 6. Bootstrap nix-darwin
 
 The first run uses `nix run` because `darwin-rebuild` doesn't exist yet:
 
@@ -97,12 +120,11 @@ nix run nix-darwin -- switch --flake .#personal-mbp
 This will:
 
 - Build and link nix-darwin
-- Run Homebrew to install casks, brews, and App Store apps (`mas` must be
-  signed in to the App Store first)
+- Run Homebrew to install casks, brews, and App Store apps
 - Deploy dotfile symlinks via home-manager
 - Apply macOS system preferences
 
-### 4. Apply manual macOS settings (one-time)
+### 7. Apply manual macOS settings (one-time)
 
 These have no nix-darwin equivalent:
 
