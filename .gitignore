@@ -16,3 +16,9 @@ Brewfile.lock.json
 
 # Ignore itself
 .dotfiles.git
+
+# nix build output symlink
+result
+
+# direnv flake integration
+.direnv
