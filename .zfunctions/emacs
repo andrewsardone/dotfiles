@@ -1,3 +1,0 @@
-function emacs() {
-  emacsclient -n $@ > /dev/null 2>&1 || open -a Emacs.app $@
-}

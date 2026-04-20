@@ -57,7 +57,6 @@
       # ── Completions ───────────────────────────────────────────────
       # Only rebuild the completion dump when it's older than 24 hours;
       # otherwise load from cache. Avoids a ~7s rescan on every startup.
-      fpath=( "$HOME/.zfunctions" $fpath )
       autoload -Uz compinit
       if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
         compinit
@@ -116,11 +115,6 @@
 
       # ── Prompt ────────────────────────────────────────────────────
       # programs.starship adds `eval "$(starship init zsh)"` automatically.
-      # pure prompt is kept as a fallback for machines without starship.
-      if ! command -v starship >/dev/null 2>&1; then
-        autoload -U promptinit; promptinit; prompt pure
-      fi
-      PURE_GIT_PULL=0
 
       # ── History (options not covered by programs.zsh.history) ─────
       setopt APPEND_HISTORY
