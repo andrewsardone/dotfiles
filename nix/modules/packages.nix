@@ -31,6 +31,7 @@
     uv
     gh       # github-cli
     lazygit
+    tig
 
     # Media / web
     wget
