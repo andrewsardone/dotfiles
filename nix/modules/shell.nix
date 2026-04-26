@@ -174,6 +174,25 @@
         tmux attach 2>/dev/null || tmux new-session
       }
 
+      # ts: pick a tmux session (fzf if available, else choose-tree)
+      ts() {
+        if ! tmux list-sessions 2>/dev/null; then
+          tmux new-session
+          return
+        fi
+        if ! command -v fzf &>/dev/null; then
+          tmux choose-tree -Zs
+          return
+        fi
+        local target
+        target=$(tmux list-sessions -F '#{session_name}' | fzf --height=40% --reverse) || return
+        if [ -n "$TMUX" ]; then
+          tmux switch-client -t "$target"
+        else
+          tmux attach-session -t "$target"
+        fi
+      }
+
       # peek: open file in a 33% tmux split
       peek() { tmux split-window -p 33 "$EDITOR" "$@" || exit; }
 
