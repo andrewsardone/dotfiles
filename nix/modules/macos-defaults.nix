@@ -44,6 +44,11 @@
       # expose-group-apps = true;
     };
 
+    # ── Trackpad ──────────────────────────────────────────────────────
+    trackpad = {
+      Clicking = true;  # tap to click
+    };
+
     # ── Mail ─────────────────────────────────────────────────────────
     # TODO: AddressesIncludeNameOnPasteboard — verify nix-darwin mail module attr
     # mail = {
