@@ -37,11 +37,26 @@
       autohide = false;
       autohide-delay = 0.0;
       autohide-time-modifier = 0.5;
-      orientation = "right";
+      orientation = "bottom";
       tilesize = 20;
       magnification = false;
       # TODO: expose-group-by-app — verify nix-darwin attr (may be expose-group-apps)
       # expose-group-apps = true;
+      persistent-apps = [
+        "/System/Library/CoreServices/Finder.app"
+        "/Applications/Obsidian.app"
+        "/System/Applications/Mail.app"
+        "/System/Applications/Calendar.app"
+        "/System/Applications/Reminders.app"
+        "/Applications/kitty.app"
+        "/Applications/Firefox.app"
+        "/System/Applications/Messages.app"
+        "/Applications/Signal.app"
+        "/Applications/WhatsApp.app"
+        "/Applications/Discord.app"
+        "/Applications/Claude.app"
+        "/Applications/Day One.app"
+      ];
     };
 
     # ── Trackpad ──────────────────────────────────────────────────────
