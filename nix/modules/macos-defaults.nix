@@ -19,13 +19,20 @@
       # Subpixel font rendering on non-Apple LCDs
       AppleFontSmoothing = 2;
 
+      AppleInterfaceStyleSwitchesAutomatically = true;
+
     };
 
     # ── Finder ────────────────────────────────────────────────────────
     finder = {
       ShowStatusBar = true;
       ShowPathbar = true;
-      ShowExternalHardDrivesOnDesktop = true;
+      FXPreferredViewStyle = "Nlsv";  # list view
+      NewWindowTarget = "Home";
+      ShowExternalHardDrivesOnDesktop = false;
+      ShowRemovableMediaOnDesktop = false;
+      ShowMountedServersOnDesktop = false;
+      ShowHardDrivesOnDesktop = false;
       # Disable quarantine dialog ("Are you sure you want to open…")
       # Mapped to com.apple.LaunchServices LSQuarantine in older scripts.
       # TODO: verify nix-darwin attribute name for LSQuarantine
@@ -62,6 +69,7 @@
     # ── Trackpad ──────────────────────────────────────────────────────
     trackpad = {
       Clicking = true;  # tap to click
+      TrackpadThreeFingerDrag = true;
     };
 
     # ── Mail ─────────────────────────────────────────────────────────
@@ -76,10 +84,50 @@
       ShowDate = 2; # 0 = when space allows, 1 = always, 2 = never
       ShowSeconds = false;
     };
+
+    # ── Accessibility ─────────────────────────────────────────────────
+    # Hold Control and scroll to zoom the screen.
+    universalaccess.closeViewScrollWheelToggle = true;
+
+    # ── Control Center ────────────────────────────────────────────────
+    controlcenter = {
+      AirDrop = false;
+      Bluetooth = false;
+      Display = false;
+      FocusModes = false;
+      NowPlaying = false;
+      Sound = true;
+    };
   };
 
   # ── Timezone ──────────────────────────────────────────────────────
   time.timeZone = "America/New_York";
+
+  system.defaults.CustomUserPreferences = {
+    # Control (⌃) as the scroll-to-zoom modifier (1 << 18 = 262144).
+    "com.apple.universalaccess" = {
+      HIDScrollZoomModifierMask = 262144;
+      closeViewSmoothImages = false;  # uncheck "Smooth images" → crisp, pixelated zoom
+    };
+    # Disable macOS screenshot keyboard shortcuts in favor of CleanShot X.
+    "com.apple.symbolichotkeys" = {
+      AppleSymbolicHotKeys = {
+        "28"  = { enabled = false; };  # ⌘⇧3  screenshot to file
+        "29"  = { enabled = false; };  # ⌘⌃⇧3 screenshot to clipboard
+        "30"  = { enabled = false; };  # ⌘⇧4  area to file
+        "31"  = { enabled = false; };  # ⌘⌃⇧4 area to clipboard
+        "184" = { enabled = false; };  # ⌘⇧5  screenshot & recording options
+        # Show Desktop (Exposé) → ⌃⌘3   ascii=51 keycode=20 mods=ctrl+cmd(1310720)
+        "36" = {
+          enabled = true;
+          value = {
+            parameters = [ 51 20 1310720 ];
+            type = "standard";
+          };
+        };
+      };
+    };
+  };
 
   # ── Settings without nix-darwin equivalents (apply manually once) ──
   #
