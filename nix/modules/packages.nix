@@ -38,6 +38,7 @@
 
     # System monitoring
     bottom   # btm
+    btop
 
     # Editors / coding
     neovim
