@@ -7,6 +7,9 @@
     "CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY": "1",
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
   },
+  "attribution": {
+    "commit": ""
+  },
   "permissions": {
     "allow": [
       "Bash(git:*)",
@@ -75,9 +78,6 @@
     "defaultMode": "acceptEdits"
   },
   "enableAllProjectMcpServers": false,
-  "attribution": {
-    "commit": ""
-  },
   "hooks": {
     "PreToolUse": [
       {
@@ -100,5 +100,6 @@
     "command": "~/.claude/statusline.sh"
   },
   "alwaysThinkingEnabled": true,
-  "skipDangerousModePermissionPrompt": true
+  "skipDangerousModePermissionPrompt": true,
+  "editorMode": "vim"
 }
