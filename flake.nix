@@ -11,13 +11,15 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    darwin-custom-icons.url = "github:ryanccn/nix-darwin-custom-icons";
   };
 
-  outputs = { self, nixpkgs, nix-darwin, home-manager, ... }: {
+  outputs = { self, nixpkgs, nix-darwin, home-manager, darwin-custom-icons, ... }: {
     darwinConfigurations."personal-mbp" = nix-darwin.lib.darwinSystem {
       system = "aarch64-darwin";
       modules = [
         ./nix/darwin.nix
+        darwin-custom-icons.darwinModules.default
         home-manager.darwinModules.home-manager
         {
           home-manager.useGlobalPkgs = true;

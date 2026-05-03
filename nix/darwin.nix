@@ -32,6 +32,18 @@
   # After activation, any *.backup files are safe to delete (identical content).
   home-manager.backupFileExtension = "backup";
 
+  # Custom app icons — re-applied on every darwin-rebuild switch.
+  environment.customIcons = {
+    enable = true;
+    icons = [{
+      path = "/Applications/kitty.app";
+      icon = pkgs.fetchurl {
+        url = "https://raw.githubusercontent.com/DinkDonk/kitty-icon/v1.1.0/kitty-dark.icns";
+        hash = "sha256-MXqOwsmkV+gX+S6WeIKDb1Q9znSyYM/aR6PtKY+y5cg=";
+      };
+    }];
+  };
+
   users.users.andrew = {
     name = "andrew";
     home = "/Users/andrew";
