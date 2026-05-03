@@ -2,6 +2,7 @@
 {
   imports = [
     ./modules/homebrew.nix
+    ./modules/launchbar.nix
     ./modules/macos-defaults.nix
     ./modules/packages.nix
   ];
