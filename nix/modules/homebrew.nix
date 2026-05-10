@@ -102,7 +102,6 @@
       "keyboard-cleaner"
       "keyboard-maestro"
       "kitty"
-      "launchbar"
       "launchcontrol"
       "macdown"
       "maestral"
