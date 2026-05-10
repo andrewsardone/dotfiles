@@ -2,7 +2,7 @@
 {
   imports = [
     ./modules/homebrew.nix
-    ./modules/launchbar.nix
+    ./modules/tuna.nix
     ./modules/macos-defaults.nix
     ./modules/packages.nix
   ];
