@@ -1,0 +1,184 @@
+schemaVersion = 1
+
+[[comboMode.bindings]]
+key = 'f'
+url = 'tuna://run/path.%252FSystem%252FLibrary%252FCoreServices%252FFinder.app/Open'
+
+[[comboMode.bindings]]
+key = 't'
+url = 'tuna://run/TunaCore.AllApplicationsCatalog.kitty/Open'
+
+[[comboMode.bindings]]
+key = 'c'
+url = 'tuna://run/TunaCore.AllApplicationsCatalog.Slack/Open'
+
+[[comboMode.bindings]]
+key = 'x'
+url = 'tuna://run/TunaCore.AllApplicationsCatalog.Microsoft%20Outlook/Open'
+
+[[comboMode.bindings]]
+key = 'n'
+url = 'tuna://run/TunaCore.AllApplicationsCatalog.Obsidian/Open'
+
+[[comboMode.bindings]]
+key = 'd'
+url = 'tuna://run/path.%252FUsers%252Fandrew%252FDownloads/Open'
+
+[[comboMode.bindings]]
+key = 'h'
+url = 'tuna://run/path.%252FUsers%252Fandrew/Open'
+
+[[comboMode.bindings]]
+iconPath = '/Applications/Firefox.app'
+key = 'b'
+url = 'tuna://run/TunaCore.AllApplicationsCatalog.Firefox/Open'
+
+[[comboMode.bindings]]
+iconPath = 'macwindow.on.rectangle'
+key = 'w'
+label = 'Window Management'
+
+    [[comboMode.bindings.children]]
+    iconPath = 'inset.filled.lefthalf.rectangle'
+    key = 'h'
+    url = 'tuna://run/TunaSystem.WindowManagementCatalog.Left%20Half/TunaCore.CommonActionsCatalog.Run'
+
+    [[comboMode.bindings.children]]
+    iconPath = 'inset.filled.righthalf.rectangle'
+    key = 'l'
+    url = 'tuna://run/TunaSystem.WindowManagementCatalog.Right%20Half/TunaCore.CommonActionsCatalog.Run'
+
+    [[comboMode.bindings.children]]
+    iconPath = 'inset.filled.topleft.rectangle'
+    key = 'u'
+    url = 'tuna://run/TunaSystem.WindowManagementCatalog.Top%20Left%20Quarter/TunaCore.CommonActionsCatalog.Run'
+
+    [[comboMode.bindings.children]]
+    iconPath = 'inset.filled.bottomleft.rectangle'
+    key = 'j'
+    url = 'tuna://run/TunaSystem.WindowManagementCatalog.Bottom%20Left%20Quarter/TunaCore.CommonActionsCatalog.Run'
+
+    [[comboMode.bindings.children]]
+    iconPath = 'inset.filled.topright.rectangle'
+    key = 'i'
+    url = 'tuna://run/TunaSystem.WindowManagementCatalog.Top%20Right%20Quarter/TunaCore.CommonActionsCatalog.Run'
+
+    [[comboMode.bindings.children]]
+    iconPath = 'inset.filled.bottomtrailing.rectangle'
+    key = 'k'
+    url = 'tuna://run/TunaSystem.WindowManagementCatalog.Bottom%20Right%20Quarter/TunaCore.CommonActionsCatalog.Run'
+
+    [[comboMode.bindings.children]]
+    iconPath = 'inset.filled.center.rectangle'
+    key = 'c'
+    url = 'tuna://run/TunaSystem.WindowManagementCatalog.Center/TunaCore.CommonActionsCatalog.Run'
+
+    [[comboMode.bindings.children]]
+    iconPath = 'macwindow.badge.plus'
+    key = 'm'
+    url = 'tuna://run/TunaSystem.WindowManagementCatalog.Almost%20Maximize/TunaCore.CommonActionsCatalog.Run'
+
+    [[comboMode.bindings.children]]
+    key = 'M'
+    url = 'tuna://run/TunaSystem.WindowManagementCatalog.Maximize/TunaCore.CommonActionsCatalog.Run'
+
+    [[comboMode.bindings.children]]
+    iconPath = 'books.vertical.fill'
+    key = 'b'
+    label = 'Browse Actions'
+    url = 'tuna://run/TunaSystem.WindowManagementCatalog.Window%20Management/Tuna.BasicActionsCatalog.Browse'
+
+[[comboMode.bindings]]
+key = 'q'
+label = 'Show All'
+url = 'tuna://run/Tuna.ModesCatalog.Combo%20Mode/TunaCore.CommonActionsCatalog.Switch'
+
+[hotkeys.app.activate]
+carbonKeyCode = 49
+carbonModifiers = 256
+
+[[hotkeys.custom]]
+id = 'A52489EB-3496-414B-98EB-0C0A156DA91C'
+presentation = 'auto'
+
+    [hotkeys.custom.command]
+    actionIdentifier = 'Tuna.BasicActionsCatalog.Browse'
+    subjectIdentifier = 'TunaEmoji.EmojiSearchCatalog.Emoji'
+
+    [hotkeys.custom.shortcut]
+    carbonKeyCode = 49
+    carbonModifiers = 4352
+
+[settings]
+appPresentationMode = 'never'
+comboModeCheatsheetBehavior = 'always'
+comboModeModifierTrigger = 'hyper'
+comboModeTriggerType = 'modifier'
+themeIdentifier = 'com.brnbw.tuna.themes.default'
+
+[[smartLinks.entries]]
+enabled = false
+name = 'Bing'
+requiresInput = true
+template = 'https://www.bing.com/search?q={{input}}'
+
+[[smartLinks.entries]]
+enabled = false
+name = 'DuckDuckGo'
+requiresInput = true
+template = 'https://duckduckgo.com/?q={{input}}'
+
+[[smartLinks.entries]]
+enabled = false
+name = 'GitHub'
+requiresInput = true
+template = 'https://github.com/search?q={{input}}'
+
+[[smartLinks.entries]]
+enabled = false
+name = 'Google'
+requiresInput = true
+template = 'https://www.google.com/search?q={{input}}'
+
+[[smartLinks.entries]]
+enabled = true
+name = 'Kagi'
+requiresInput = true
+template = 'https://kagi.com/search?q={{input}}'
+
+[[smartLinks.entries]]
+enabled = true
+name = 'Phone Tool'
+requiresInput = true
+template = 'https://atoz.amazon.work/search?scope=PEOPLE&q={{input}}'
+
+[[smartLinks.entries]]
+enabled = false
+name = 'Stack Overflow'
+requiresInput = true
+template = 'https://stackoverflow.com/search?q={{input}}'
+
+[[smartLinks.entries]]
+enabled = false
+name = 'Wikipedia'
+requiresInput = true
+template = 'https://en.wikipedia.org/wiki/Special:Search?search={{input}}'
+
+[[smartLinks.entries]]
+enabled = false
+name = 'YouTube'
+requiresInput = true
+template = 'https://www.youtube.com/results?search_query={{input}}'
+
+[[catalogSettings]]
+catalogIdentifier = 'TunaSystem.WindowManagementCatalog'
+
+    [catalogSettings.values]
+    Cycling = 'sizes'
+    Gap = '16'
+
+[[catalogSettings]]
+catalogIdentifier = 'com.brnbw.tuna.themes.default'
+
+    [catalogSettings.values]
+    ThemeTint = 'system'

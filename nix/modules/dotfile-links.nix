@@ -20,6 +20,9 @@ in
   # ── Automation / scripting ────────────────────────────────────────────
   home.file.".hammerspoon" = link ".hammerspoon";
 
+  # ── Launcher ──────────────────────────────────────────────────────────
+  home.file."Library/Application Support/Tuna/config.toml" = link ".config/tuna/config.toml";
+
   # ── Keyboard ──────────────────────────────────────────────────────────
   home.file.".config/karabiner" = link ".config/karabiner";
 
