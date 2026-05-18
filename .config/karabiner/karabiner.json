@@ -5,51 +5,6 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "Hyper key launch commands",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "b",
-                                    "modifiers": { "mandatory": ["left_command", "left_control", "left_option", "left_shift"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Firefox'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "x",
-                                    "modifiers": { "mandatory": ["left_command", "left_control", "left_option", "left_shift"] }
-                                },
-                                "to": [{ "shell_command": "[ -f ~/.zshrc.amazon ] && open -a 'Microsoft Outlook' || open -a 'Mail'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "c",
-                                    "modifiers": { "mandatory": ["left_command", "left_control", "left_option", "left_shift"] }
-                                },
-                                "to": [{ "shell_command": "open -a Slack" }],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "w",
-                                    "modifiers": { "mandatory": ["left_command", "left_control", "left_option", "left_shift"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Obsidian'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "t",
-                                    "modifiers": { "mandatory": ["left_command", "left_control", "left_option", "left_shift"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Kitty'" }],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "Akimbo cmd to F12",
                         "manipulators": [
                             {
