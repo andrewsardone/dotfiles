@@ -45,6 +45,9 @@
       bind m command-prompt -p "man page:" "split-window -h 'exec man %%'"
       bind M command-prompt -p "Man page:" "new-window -n 'man %1' 'exec man %1'"
 
+      # Set pane title (shown in pane-border-status)
+      bind t command-prompt -p "pane title:" "select-pane -T '%%'"
+
       # Status bar settings
       set-option -g status-keys emacs
 
