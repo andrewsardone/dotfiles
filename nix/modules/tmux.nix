@@ -48,6 +48,9 @@
       # Set pane title (shown in pane-border-status)
       bind t command-prompt -p "pane title:" "select-pane -T '%%'"
 
+      # Window/pane picker showing pane titles at every level
+      bind w choose-tree -ZF '#{?pane_format,#{pane_index}: #{pane_title} (#{pane_current_command}),#{?window_format,#{window_index}: #{window_name} (#{window_panes} panes),#S}}'
+
       # Status bar settings
       set-option -g status-keys emacs
 
