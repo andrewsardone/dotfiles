@@ -192,7 +192,7 @@ template = 'https://www.youtube.com/results?search_query={{input}}'
 catalogIdentifier = 'TunaSystem.WindowManagementCatalog'
 
     [catalogSettings.values]
-    Cycling = 'sizes'
+    Cycling = 'none'
     Gap = '16'
 
 [[catalogSettings]]
