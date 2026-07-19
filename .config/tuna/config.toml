@@ -32,7 +32,7 @@ url = 'tuna://run/TunaCore.ApplicationsCatalog.Slack/TunaCore.CommonActionsCatal
 
 [[comboMode.bindings]]
 key = 'x'
-url = 'tuna://run/TunaCore.AllApplicationsCatalog.Microsoft%20Outlook/Open'
+url = 'tuna://run/TunaCore.ApplicationsCatalog.Mail/TunaCore.CommonActionsCatalog.Open'
 
 [[comboMode.bindings]]
 key = 'n'
@@ -40,7 +40,7 @@ url = 'tuna://run/TunaCore.ApplicationsCatalog.Obsidian/TunaCore.CommonActionsCa
 
 [[comboMode.bindings]]
 key = 'd'
-url = 'tuna://run/path.%252FUsers%252Fandrew%252FDownloads/Open'
+url = 'tuna://run/TunaCore.ApplicationsCatalog.Discord/TunaCore.CommonActionsCatalog.Open'
 
 [[comboMode.bindings]]
 key = 'h'
