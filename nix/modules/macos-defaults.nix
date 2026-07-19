@@ -50,7 +50,6 @@
       # TODO: expose-group-by-app — verify nix-darwin attr (may be expose-group-apps)
       # expose-group-apps = true;
       persistent-apps = [
-        "/System/Library/CoreServices/Finder.app"
         "/Applications/Obsidian.app"
         "/System/Applications/Mail.app"
         "/System/Applications/Calendar.app"
