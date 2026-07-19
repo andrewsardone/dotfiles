@@ -24,11 +24,11 @@ url = 'tuna://run/path.%252FSystem%252FLibrary%252FCoreServices%252FFinder.app/O
 
 [[comboMode.bindings]]
 key = 't'
-url = 'tuna://run/TunaCore.AllApplicationsCatalog.kitty/Open'
+url = 'tuna://run/TunaCore.ApplicationsCatalog.kitty/TunaCore.CommonActionsCatalog.Open'
 
 [[comboMode.bindings]]
 key = 'c'
-url = 'tuna://run/TunaCore.AllApplicationsCatalog.Slack/Open'
+url = 'tuna://run/TunaCore.ApplicationsCatalog.Slack/TunaCore.CommonActionsCatalog.Open'
 
 [[comboMode.bindings]]
 key = 'x'
@@ -36,7 +36,7 @@ url = 'tuna://run/TunaCore.AllApplicationsCatalog.Microsoft%20Outlook/Open'
 
 [[comboMode.bindings]]
 key = 'n'
-url = 'tuna://run/TunaCore.AllApplicationsCatalog.Obsidian/Open'
+url = 'tuna://run/TunaCore.ApplicationsCatalog.Obsidian/TunaCore.CommonActionsCatalog.Open'
 
 [[comboMode.bindings]]
 key = 'd'
@@ -49,7 +49,7 @@ url = 'tuna://run/path.%252FUsers%252Fandrew/Open'
 [[comboMode.bindings]]
 iconPath = '/Applications/Firefox.app'
 key = 'b'
-url = 'tuna://run/TunaCore.AllApplicationsCatalog.Firefox/Open'
+url = 'tuna://run/TunaCore.ApplicationsCatalog.Firefox/TunaCore.CommonActionsCatalog.Open'
 
 [[comboMode.bindings]]
 iconPath = 'macwindow.on.rectangle'
