@@ -1,5 +1,23 @@
 schemaVersion = 1
 
+[catalogs]
+sortOrders = []
+
+    [[catalogs.globalScopes]]
+    catalogIdentifier = 'Tuna.EffectsCatalog'
+    mode = 'none'
+    selectedItemKeys = []
+
+    [[catalogs.globalScopes]]
+    catalogIdentifier = 'TunaEmoji.EmojiCatalog'
+    mode = 'none'
+    selectedItemKeys = []
+
+    [[catalogs.globalScopes]]
+    catalogIdentifier = 'TunaSystem.AllWindowsCatalog'
+    mode = 'none'
+    selectedItemKeys = []
+
 [[comboMode.bindings]]
 key = 'f'
 url = 'tuna://run/path.%252FSystem%252FLibrary%252FCoreServices%252FFinder.app/Open'
