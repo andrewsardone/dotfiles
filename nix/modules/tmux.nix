@@ -48,8 +48,17 @@
       # Set pane title (shown in pane-border-status)
       bind t command-prompt -p "pane title:" "select-pane -T '%%'"
 
-      # Window/pane picker showing pane titles at every level
-      bind w choose-tree -ZF '#{?pane_format,#{pane_index}: #{pane_title} (#{pane_current_command}),#{?window_format,#{window_index}: #{window_name} (#{window_panes} panes),#S}}'
+      # Window/pane picker via tmux-fzf (type-ahead search).
+      # Gracefully degrades to built-in choose-tree when fzf or the
+      # plugin directory is missing.
+      if-shell '[ -x "$(command -v fzf)" ] && [ -f "$HOME/.tmux/plugins/tmux-fzf/main.tmux" ]' {
+        set-environment -g TMUX_FZF_LAUNCH_KEY "F"
+        set-environment -g TMUX_FZF_OPTIONS "-p -w 80% -h 60% -m"
+        run-shell "$HOME/.tmux/plugins/tmux-fzf/main.tmux"
+        bind-key w run-shell -b "TMUX_FZF_CLIENT='#{client_tty}' $HOME/.tmux/plugins/tmux-fzf/scripts/window.sh switch"
+      } {
+        bind w choose-tree -ZF '#{?pane_format,#{pane_index}: #{pane_title} (#{pane_current_command}),#{?window_format,#{window_index}: #{window_name} (#{window_panes} panes),#S}}'
+      }
 
       # Status bar settings
       set-option -g status-keys emacs
