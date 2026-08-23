@@ -8,9 +8,14 @@ skills/
 backups/
 # Ephemeral session data and conversation transcripts
 cache/
+daemon/
+daemon.lock
+daemon.log
+daemon.status.json
 debug/
 file-history/
 history.jsonl
+jobs/
 mcp-needs-auth-cache.json
 paste-cache/
 plugins/
