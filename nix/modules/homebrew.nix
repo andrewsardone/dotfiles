@@ -12,7 +12,6 @@
 
     taps = [
       "anomalyco/tap"              # opencode
-      "autozimu/homebrew-formulas" # unison-fsmonitor
       "clementtsang/bottom"        # bottom
 "yqrashawn/goku"             # goku (karabiner DSL)
     ];
@@ -37,7 +36,6 @@
       "terminal-notifier"
       "toipe"
       "unison"
-      "autozimu/homebrew-formulas/unison-fsmonitor"
       "xcodes"
 
       # Language runtimes (specific versions)
