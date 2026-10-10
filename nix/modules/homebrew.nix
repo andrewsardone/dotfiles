@@ -67,6 +67,7 @@
       "cleanshot"
       "discord"
       "figma"
+      "finicky"
       "firefox"
       "font-awesome-terminal-fonts"
       "font-fira-code"

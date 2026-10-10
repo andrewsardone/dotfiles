@@ -23,6 +23,9 @@ in
   # ── Launcher ──────────────────────────────────────────────────────────
   home.file."Library/Application Support/Tuna/config.toml" = link ".config/tuna/config.toml";
 
+  # ── Browser routing ───────────────────────────────────────────────────
+  home.file.".finicky.js" = link ".finicky.js";
+
   # ── Keyboard ──────────────────────────────────────────────────────────
   home.file.".config/karabiner" = link ".config/karabiner";
 
