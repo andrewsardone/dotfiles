@@ -102,5 +102,6 @@
   "alwaysThinkingEnabled": true,
   "skipDangerousModePermissionPrompt": true,
   "editorMode": "vim",
-  "tui": "fullscreen"
+  "tui": "fullscreen",
+  "enableWorkflows": true
 }
