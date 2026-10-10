@@ -10,12 +10,6 @@
       upgrade = true;
     };
 
-    taps = [
-      "anomalyco/tap"              # opencode
-      "clementtsang/bottom"        # bottom
-"yqrashawn/goku"             # goku (karabiner DSL)
-    ];
-
     # CLI formulae not available in nixpkgs, or macOS-specific.
     # Tools that exist in nixpkgs are in nix/modules/packages.nix instead.
     brews = [
@@ -44,10 +38,6 @@
       "ruby"
       "yarn"
       "pnpm"
-
-      # Custom taps
-      "yqrashawn/goku/goku"
-      "anomalyco/tap/opencode"
 
       # Other tools not confidently in nixpkgs
       "align"

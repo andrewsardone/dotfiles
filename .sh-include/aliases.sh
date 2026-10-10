@@ -16,12 +16,3 @@ if type nvim > /dev/null 2>&1; then
 fi
 
 alias claude-yolo="claude --dangerously-skip-permissions"
-
-if command -v opencode >/dev/null 2>&1; then
-  opencode() {
-    OPENCODE_CONFIG_CONTENT='{"plugin":[]}' command opencode "$@"
-  }
-  omo() {
-    command opencode "$@"
-  }
-fi

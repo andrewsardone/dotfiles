@@ -33,7 +33,6 @@ in
   # LazyVim manages its own plugins; just link the whole config dir.
   home.file.".config/nvim"     = link ".config/nvim";
   home.file.".config/kitty"   = link ".config/kitty";
-  home.file.".config/opencode" = link ".config/opencode";
 
   # ── Local binaries ────────────────────────────────────────────────────
   # Symlink individual scripts so ~/.local/bin stays a real directory;

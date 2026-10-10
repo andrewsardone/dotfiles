@@ -49,7 +49,7 @@
       vim   = "nvim";
       view  = "nvim -R";
 
-      # opencode / claude wrappers
+      # claude wrappers
       claude-yolo = "claude --dangerously-skip-permissions";
     };
 
