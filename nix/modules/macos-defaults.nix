@@ -55,7 +55,7 @@
         "/System/Applications/Calendar.app"
         "/System/Applications/Reminders.app"
         "/Applications/kitty.app"
-        "/Applications/Firefox.app"
+        "/Applications/Google Chrome.app"
         "/System/Applications/Messages.app"
         "/Applications/Signal.app"
         "/Applications/WhatsApp.app"
