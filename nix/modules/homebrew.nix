@@ -1,11 +1,21 @@
-{ ... }:
+{ config, pkgs, ... }:
+let
+  cfg = config.homebrew;
+  brewfile = pkgs.writeText "Brewfile" cfg.brewfile;
+in
 {
+  # Homebrew 7 removed `brew bundle --cleanup`, which nix-darwin's cleanup
+  # option still passes, so cleanup runs as a separate `brew bundle cleanup`.
+  system.activationScripts.postActivation.text = ''
+    echo >&2 "Homebrew cleanup..."
+    sudo --user=${cfg.user} --set-home env HOMEBREW_NO_AUTO_UPDATE=1 \
+      ${cfg.prefix}/bin/brew bundle cleanup --force --zap --file='${brewfile}'
+  '';
+
   homebrew = {
     enable = true;
 
     onActivation = {
-      # Remove any Homebrew package not declared here on `darwin-rebuild switch`.
-      cleanup = "zap";
       autoUpdate = true;
       upgrade = true;
     };
