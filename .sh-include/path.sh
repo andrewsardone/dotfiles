@@ -6,7 +6,7 @@
 export PATH="$APS_PATH:$DEFAULT_PATH"
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 
-# put kitty on path
-# https://sw.kovidgoyal.net/kitty/
-kitty_include='/Applications/kitty.app/Contents/MacOS'
-[ -d $kitty_include ] && export PATH="$kitty_include:$PATH"
+# put ghostty on path
+# https://ghostty.org/
+ghostty_include='/Applications/Ghostty.app/Contents/MacOS'
+[ -d $ghostty_include ] && export PATH="$ghostty_include:$PATH"

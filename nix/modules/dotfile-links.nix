@@ -32,7 +32,7 @@ in
   # ── Editor ────────────────────────────────────────────────────────────
   # LazyVim manages its own plugins; just link the whole config dir.
   home.file.".config/nvim"     = link ".config/nvim";
-  home.file.".config/kitty"   = link ".config/kitty";
+  home.file.".config/ghostty" = link ".config/ghostty";
 
   # ── Local binaries ────────────────────────────────────────────────────
   # Symlink individual scripts so ~/.local/bin stays a real directory;
@@ -41,7 +41,7 @@ in
   home.file.".local/bin/auto-git-repo-sync" = link ".local/bin/auto-git-repo-sync";
   home.file.".local/bin/dstamp"             = link ".local/bin/dstamp";
   home.file.".local/bin/git-cleanup"        = link ".local/bin/git-cleanup";
-  home.file.".local/bin/new-kitty-window"   = link ".local/bin/new-kitty-window";
+  home.file.".local/bin/new-ghostty-window" = link ".local/bin/new-ghostty-window";
   home.file.".local/bin/toggle-desktop"     = link ".local/bin/toggle-desktop";
   home.file.".local/bin/tstamp"             = link ".local/bin/tstamp";
   home.file.".local/bin/wm"                 = link ".local/bin/wm";

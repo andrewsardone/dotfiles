@@ -54,7 +54,7 @@
         "/System/Applications/Mail.app"
         "/System/Applications/Calendar.app"
         "/System/Applications/Reminders.app"
-        "/Applications/kitty.app"
+        "/Applications/Ghostty.app"
         "/Applications/Google Chrome.app"
         "/System/Applications/Messages.app"
         "/Applications/Signal.app"

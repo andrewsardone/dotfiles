@@ -24,7 +24,7 @@ url = 'tuna://run/path.%252FSystem%252FLibrary%252FCoreServices%252FFinder.app/O
 
 [[comboMode.bindings]]
 key = 't'
-url = 'tuna://run/TunaCore.ApplicationsCatalog.kitty/TunaCore.CommonActionsCatalog.Open'
+url = 'tuna://run/TunaCore.ApplicationsCatalog.Ghostty/TunaCore.CommonActionsCatalog.Open'
 
 [[comboMode.bindings]]
 key = 'c'
