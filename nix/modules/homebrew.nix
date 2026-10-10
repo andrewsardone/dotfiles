@@ -121,6 +121,7 @@ in
       "thaw"
       "vimr"
       "vlc"
+      "whatsapp"
       "zoom"
     ];
 
