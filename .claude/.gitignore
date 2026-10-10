@@ -35,3 +35,10 @@ transcripts/
 
 # Local-only settings (machine-specific paths, personal experiments)
 settings.local.json
+
+# Daemon runtime state
+daemon-auth-cooldown
+daemon-auth-status.json
+
+# User-uploaded attachments
+uploads/
