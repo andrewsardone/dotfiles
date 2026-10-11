@@ -103,5 +103,6 @@
   "skipDangerousModePermissionPrompt": true,
   "editorMode": "vim",
   "tui": "fullscreen",
-  "enableWorkflows": true
+  "enableWorkflows": true,
+  "outputStyle": "Concise"
 }
