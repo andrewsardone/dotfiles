@@ -26,6 +26,9 @@ in
   # ── Browser routing ───────────────────────────────────────────────────
   home.file.".finicky.js" = link ".finicky.js";
 
+  # ── Window management ─────────────────────────────────────────────────
+  home.file.".config/dinky" = link ".config/dinky";
+
   # ── Keyboard ──────────────────────────────────────────────────────────
   home.file.".config/karabiner" = link ".config/karabiner";
 
