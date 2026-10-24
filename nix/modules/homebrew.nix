@@ -106,7 +106,6 @@ in
       "maestral"
       "menubar-colors"
       "middleclick"
-      "mikker/tap/dinky"
       "monitorcontrol"
       "netnewswire"
       "obsidian"
@@ -125,11 +124,6 @@ in
       "whatsapp"
       "zoom"
     ];
-
-    # Homebrew 7 refuses to load third-party taps unless they are trusted.
-    extraConfig = ''
-      tap "mikker/tap", trusted: true
-    '';
 
     masApps = {
       "Adobe Lightroom"  = 1451544217;
